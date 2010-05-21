@@ -1,0 +1,175 @@
+# OBJCOPY = avr-objcopy
+# OBJDUMP = avr-objdump
+# CC = avr-gcc
+
+# MCU_TARGET=atmega168
+# AVR_FREQ=7372800L
+
+# OPT = -Os
+# CFLAGS = -c
+# CFLAGS += -g$(DEBUG)
+# CFLAGS += -O$(OPT)
+# CFLAGS += -ffunction-sections
+# CFLAGS += -fdata-sections
+# CFLAGS += -mmcu=$(MCU_TARGET) -DF_CPU=$(AVR_FREQ)
+
+# LDFLAGS = 
+
+# LIBNAME=libArduinoCore.a
+# EXTRALIBDIRS = C:\work\workspace\EmbeddedTddWorkshop\ArduinoCore\
+# SRC = C:\work\workspace\EmbeddedTddWorkshop\ArduinoCore\
+# OBJDIR = C:\work\workspace\EmbeddedTddWorkshop\ArduinoCore\DEBUG\
+# OBJ = $(SRC:%.c=$(OBJDIR)/%.o)
+
+# $(OBJDIR)/%.o : %.c
+# 	$(CC) $(CFLAGS) -I$(SRC) $< -o $@ 
+
+# ArduinoCore: 
+# #	$(CC) $(CFLAGS) -mmcu=$(MCU_TARGET) -DF_CPU=$(AVR_FREQ) -IC:\arduino-0017\arduino-0017\hardware\cores\arduino C:\arduino-0017\arduino-0017\hardware\cores\arduino\pins_arduino.c -oC:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\pins_arduino.c.o 
+# #	$(CC) $(CFLAGS) -mmcu=$(MCU_TARGET) -DF_CPU=$(AVR_FREQ) -I$(EXTRALIBDIRS) C:\arduino-0017\arduino-0017\hardware\cores\arduino\pins_arduino.c -oC:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\pins_arduino.c.o 
+
+# 	avr-gcc -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU=7372800L -IC:\arduino-0017\arduino-0017\hardware\cores\arduino C:\arduino-0017\arduino-0017\hardware\cores\arduino\pins_arduino.c -oC:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\pins_arduino.c.o 
+# 	avr-gcc -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU=7372800L -IC:\arduino-0017\arduino-0017\hardware\cores\arduino C:\arduino-0017\arduino-0017\hardware\cores\arduino\WInterrupts.c -oC:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\WInterrupts.c.o 
+# 	avr-gcc -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU=7372800L -IC:\arduino-0017\arduino-0017\hardware\cores\arduino C:\arduino-0017\arduino-0017\hardware\cores\arduino\wiring.c -oC:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\wiring.c.o 
+# 	avr-gcc -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU=7372800L -IC:\arduino-0017\arduino-0017\hardware\cores\arduino C:\arduino-0017\arduino-0017\hardware\cores\arduino\wiring_analog.c -oC:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\wiring_analog.c.o 
+# 	avr-gcc -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU=7372800L -IC:\arduino-0017\arduino-0017\hardware\cores\arduino C:\arduino-0017\arduino-0017\hardware\cores\arduino\wiring_digital.c -oC:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\wiring_digital.c.o 
+# 	avr-gcc -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU=7372800L -IC:\arduino-0017\arduino-0017\hardware\cores\arduino C:\arduino-0017\arduino-0017\hardware\cores\arduino\wiring_pulse.c -oC:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\wiring_pulse.c.o 
+# 	avr-gcc -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU=7372800L -IC:\arduino-0017\arduino-0017\hardware\cores\arduino C:\arduino-0017\arduino-0017\hardware\cores\arduino\wiring_shift.c -oC:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\wiring_shift.c.o 
+
+# 	avr-g++ -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU=7372800L -IC:\arduino-0017\arduino-0017\hardware\cores\arduino C:\arduino-0017\arduino-0017\hardware\cores\arduino\HardwareSerial.cpp -oC:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\HardwareSerial.cpp.o 
+# 	avr-g++ -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU=7372800L -IC:\arduino-0017\arduino-0017\hardware\cores\arduino C:\arduino-0017\arduino-0017\hardware\cores\arduino\Print.cpp -oC:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\Print.cpp.o 
+# 	avr-g++ -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU=7372800L -IC:\arduino-0017\arduino-0017\hardware\cores\arduino C:\arduino-0017\arduino-0017\hardware\cores\arduino\WMath.cpp -oC:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\WMath.cpp.o 
+
+# 	avr-ar rcs C:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\core.a C:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\pins_arduino.c.o 
+# 	avr-ar rcs C:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\core.a C:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\WInterrupts.c.o 
+# 	avr-ar rcs C:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\core.a C:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\wiring.c.o 
+# 	avr-ar rcs C:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\core.a C:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\wiring_analog.c.o 
+# 	avr-ar rcs C:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\core.a C:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\wiring_digital.c.o 
+# 	avr-ar rcs C:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\core.a C:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\wiring_pulse.c.o 
+# 	avr-ar rcs C:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\core.a C:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\wiring_shift.c.o 
+# 	avr-ar rcs C:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\core.a C:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\HardwareSerial.cpp.o 
+# 	avr-ar rcs C:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\core.a C:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\Print.cpp.o 
+# 	avr-ar rcs C:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\core.a C:\DOCUME~1\donghee\LOCALS~1\Temp\build3215.tmp\WMath.cpp.o 
+
+
+
+
+
+# avr-g++ -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU=7372800L -I"..\..\ArduinoCore" ..\main.cpp -omain.o
+
+# avr-gcc -Os -Wl,--gc-sections -mmcu=atmega168 -o Blinky.elf main.o ..\..\ArduinoCore\Debug\libArduinoCore.a -L"..\..\ArduinoCore" -lm
+
+# avr-gcc -Os -Wl,--gc-sections -o"Blinky.elf"  ./main.o   -lArduinoCore -lm -Wl,-
+# Map,Blinky.map -L"..\..\ArduinoCore\Debug" -mmcu=atmega168
+
+# avr-objcopy -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma.eeprom=0 Blinky.elf Blinky.epp
+
+# avr-objcopy -O ihex -R .eeprom Blinky.elf Blinky.hex
+
+
+
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+-include ../makefile.init
+
+RM := rm -rf
+
+# All of the sources participating in the build are defined here
+-include sources.mk
+-include subdir.mk
+-include objects.mk
+
+ifneq ($(MAKECMDGOALS),clean)
+ifneq ($(strip $(C++_DEPS)),)
+-include $(C++_DEPS)
+endif
+ifneq ($(strip $(C_DEPS)),)
+-include $(C_DEPS)
+endif
+ifneq ($(strip $(ASM_DEPS)),)
+-include $(ASM_DEPS)
+endif
+ifneq ($(strip $(CC_DEPS)),)
+-include $(CC_DEPS)
+endif
+ifneq ($(strip $(CPP_DEPS)),)
+-include $(CPP_DEPS)
+endif
+ifneq ($(strip $(S_DEPS)),)
+-include $(S_DEPS)
+endif
+ifneq ($(strip $(CXX_DEPS)),)
+-include $(CXX_DEPS)
+endif
+ifneq ($(strip $(C_UPPER_DEPS)),)
+-include $(C_UPPER_DEPS)
+endif
+ifneq ($(strip $(S_UPPER_DEPS)),)
+-include $(S_UPPER_DEPS)
+endif
+endif
+
+-include ../makefile.defs
+
+# Add inputs and outputs from these tool invocations to the build variables 
+LSS += \
+Blinky.lss \
+
+FLASH_IMAGE += \
+Blinky.hex \
+
+SIZEDUMMY += \
+sizedummy \
+
+AVRDUDEDUMMY += \
+avrdudedummy \
+
+
+# All Target
+all: Blinky.elf secondary-outputs
+
+# Tool invocations
+Blinky.elf: $(OBJS) $(USER_OBJS)
+	@echo 'Building target: $@'
+	@echo 'Invoking: AVR C++ Linker'
+	avr-gcc --cref -s -Os -o"Blinky.elf" $(OBJS) $(USER_OBJS) $(LIBS) -lm -Wl,-Map,Blinky.map,--cref -L"..\..\ArduinoCore\Debug" -mmcu=atmega168
+	@echo 'Finished building target: $@'
+	@echo ' '
+
+Blinky.lss: Blinky.elf
+	@echo 'Invoking: AVR Create Extended Listing'
+	-avr-objdump -h -S Blinky.elf  >"Blinky.lss"
+	@echo 'Finished building: $@'
+	@echo ' '
+
+Blinky.hex: Blinky.elf
+	@echo 'Create Flash image (ihex format)'
+	-avr-objcopy -R .eeprom -O ihex Blinky.elf  "Blinky.hex"
+	@echo 'Finished building: $@'
+	@echo ' '
+
+sizedummy: Blinky.elf
+	@echo 'Invoking: Print Size'
+	-avr-size --format=avr --mcu=atmega168 Blinky.elf
+	@echo 'Finished building: $@'
+	@echo ' '
+
+avrdudedummy: Blinky.elf
+	@echo 'Invoking: AVRDude'
+	C:\work\WinAVR-20100110\bin\avrdude -pm168 -carduino -PCOM1 -b19200 -F -Uflash:w:Blinky.hex:a
+	@echo 'Finished building: $@'
+	@echo ' '
+
+# Other Targets
+clean:
+	-$(RM) $(OBJS)$(C_DEPS)$(ELFS)$(FLASH_IMAGE)$(LSS)$(S_DEPS)$(CXX_DEPS)$(S_UPPER_DEPS)$(C++_DEPS)$(ASM_DEPS)$(CC_DEPS)$(AVRDUDEDUMMY)$(CPP_DEPS)$(C_UPPER_DEPS)$(SIZEDUMMY) Blinky.elf
+	-@echo ' '
+
+secondary-outputs: $(LSS) $(FLASH_IMAGE) $(SIZEDUMMY) $(AVRDUDEDUMMY)
+
+.PHONY: all clean dependents
+.SECONDARY:
+
+-include ../makefile.targets
