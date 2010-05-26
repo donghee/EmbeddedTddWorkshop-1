@@ -1,0 +1,2846 @@
+
+ArduinoCore\binary.h,18275
+#define Binary_hBinary_h2,17
+#define B0 B04,35
+#define B00 B005,48
+#define B000 B0006,62
+#define B0000 B00007,77
+#define B00000 B000008,93
+#define B000000 B0000009,110
+#define B0000000 B000000010,128
+#define B00000000 B0000000011,147
+#define B1 B112,167
+#define B01 B0113,180
+#define B001 B00114,194
+#define B0001 B000115,209
+#define B00001 B0000116,225
+#define B000001 B00000117,242
+#define B0000001 B000000118,260
+#define B00000001 B0000000119,279
+#define B10 B1020,299
+#define B010 B01021,313
+#define B0010 B001022,328
+#define B00010 B0001023,344
+#define B000010 B00001024,361
+#define B0000010 B000001025,379
+#define B00000010 B0000001026,398
+#define B11 B1127,418
+#define B011 B01128,432
+#define B0011 B001129,447
+#define B00011 B0001130,463
+#define B000011 B00001131,480
+#define B0000011 B000001132,498
+#define B00000011 B0000001133,517
+#define B100 B10034,537
+#define B0100 B010035,552
+#define B00100 B0010036,568
+#define B000100 B00010037,585
+#define B0000100 B000010038,603
+#define B00000100 B0000010039,622
+#define B101 B10140,642
+#define B0101 B010141,657
+#define B00101 B0010142,673
+#define B000101 B00010143,690
+#define B0000101 B000010144,708
+#define B00000101 B0000010145,727
+#define B110 B11046,747
+#define B0110 B011047,762
+#define B00110 B0011048,778
+#define B000110 B00011049,795
+#define B0000110 B000011050,813
+#define B00000110 B0000011051,832
+#define B111 B11152,852
+#define B0111 B011153,867
+#define B00111 B0011154,883
+#define B000111 B00011155,900
+#define B0000111 B000011156,918
+#define B00000111 B0000011157,937
+#define B1000 B100058,957
+#define B01000 B0100059,973
+#define B001000 B00100060,990
+#define B0001000 B000100061,1008
+#define B00001000 B0000100062,1027
+#define B1001 B100163,1047
+#define B01001 B0100164,1063
+#define B001001 B00100165,1080
+#define B0001001 B000100166,1098
+#define B00001001 B0000100167,1117
+#define B1010 B101068,1137
+#define B01010 B0101069,1154
+#define B001010 B00101070,1172
+#define B0001010 B000101071,1191
+#define B00001010 B0000101072,1211
+#define B1011 B101173,1232
+#define B01011 B0101174,1249
+#define B001011 B00101175,1267
+#define B0001011 B000101176,1286
+#define B00001011 B0000101177,1306
+#define B1100 B110078,1327
+#define B01100 B0110079,1344
+#define B001100 B00110080,1362
+#define B0001100 B000110081,1381
+#define B00001100 B0000110082,1401
+#define B1101 B110183,1422
+#define B01101 B0110184,1439
+#define B001101 B00110185,1457
+#define B0001101 B000110186,1476
+#define B00001101 B0000110187,1496
+#define B1110 B111088,1517
+#define B01110 B0111089,1534
+#define B001110 B00111090,1552
+#define B0001110 B000111091,1571
+#define B00001110 B0000111092,1591
+#define B1111 B111193,1612
+#define B01111 B0111194,1629
+#define B001111 B00111195,1647
+#define B0001111 B000111196,1666
+#define B00001111 B0000111197,1686
+#define B10000 B1000098,1707
+#define B010000 B01000099,1725
+#define B0010000 B0010000100,1744
+#define B00010000 B00010000101,1764
+#define B10001 B10001102,1785
+#define B010001 B010001103,1803
+#define B0010001 B0010001104,1822
+#define B00010001 B00010001105,1842
+#define B10010 B10010106,1863
+#define B010010 B010010107,1881
+#define B0010010 B0010010108,1900
+#define B00010010 B00010010109,1920
+#define B10011 B10011110,1941
+#define B010011 B010011111,1959
+#define B0010011 B0010011112,1978
+#define B00010011 B00010011113,1998
+#define B10100 B10100114,2019
+#define B010100 B010100115,2037
+#define B0010100 B0010100116,2056
+#define B00010100 B00010100117,2076
+#define B10101 B10101118,2097
+#define B010101 B010101119,2115
+#define B0010101 B0010101120,2134
+#define B00010101 B00010101121,2154
+#define B10110 B10110122,2175
+#define B010110 B010110123,2193
+#define B0010110 B0010110124,2212
+#define B00010110 B00010110125,2232
+#define B10111 B10111126,2253
+#define B010111 B010111127,2271
+#define B0010111 B0010111128,2290
+#define B00010111 B00010111129,2310
+#define B11000 B11000130,2331
+#define B011000 B011000131,2349
+#define B0011000 B0011000132,2368
+#define B00011000 B00011000133,2388
+#define B11001 B11001134,2409
+#define B011001 B011001135,2427
+#define B0011001 B0011001136,2446
+#define B00011001 B00011001137,2466
+#define B11010 B11010138,2487
+#define B011010 B011010139,2505
+#define B0011010 B0011010140,2524
+#define B00011010 B00011010141,2544
+#define B11011 B11011142,2565
+#define B011011 B011011143,2583
+#define B0011011 B0011011144,2602
+#define B00011011 B00011011145,2622
+#define B11100 B11100146,2643
+#define B011100 B011100147,2661
+#define B0011100 B0011100148,2680
+#define B00011100 B00011100149,2700
+#define B11101 B11101150,2721
+#define B011101 B011101151,2739
+#define B0011101 B0011101152,2758
+#define B00011101 B00011101153,2778
+#define B11110 B11110154,2799
+#define B011110 B011110155,2817
+#define B0011110 B0011110156,2836
+#define B00011110 B00011110157,2856
+#define B11111 B11111158,2877
+#define B011111 B011111159,2895
+#define B0011111 B0011111160,2914
+#define B00011111 B00011111161,2934
+#define B100000 B100000162,2955
+#define B0100000 B0100000163,2974
+#define B00100000 B00100000164,2994
+#define B100001 B100001165,3015
+#define B0100001 B0100001166,3034
+#define B00100001 B00100001167,3054
+#define B100010 B100010168,3075
+#define B0100010 B0100010169,3094
+#define B00100010 B00100010170,3114
+#define B100011 B100011171,3135
+#define B0100011 B0100011172,3154
+#define B00100011 B00100011173,3174
+#define B100100 B100100174,3195
+#define B0100100 B0100100175,3214
+#define B00100100 B00100100176,3234
+#define B100101 B100101177,3255
+#define B0100101 B0100101178,3274
+#define B00100101 B00100101179,3294
+#define B100110 B100110180,3315
+#define B0100110 B0100110181,3334
+#define B00100110 B00100110182,3354
+#define B100111 B100111183,3375
+#define B0100111 B0100111184,3394
+#define B00100111 B00100111185,3414
+#define B101000 B101000186,3435
+#define B0101000 B0101000187,3454
+#define B00101000 B00101000188,3474
+#define B101001 B101001189,3495
+#define B0101001 B0101001190,3514
+#define B00101001 B00101001191,3534
+#define B101010 B101010192,3555
+#define B0101010 B0101010193,3574
+#define B00101010 B00101010194,3594
+#define B101011 B101011195,3615
+#define B0101011 B0101011196,3634
+#define B00101011 B00101011197,3654
+#define B101100 B101100198,3675
+#define B0101100 B0101100199,3694
+#define B00101100 B00101100200,3714
+#define B101101 B101101201,3735
+#define B0101101 B0101101202,3754
+#define B00101101 B00101101203,3774
+#define B101110 B101110204,3795
+#define B0101110 B0101110205,3814
+#define B00101110 B00101110206,3834
+#define B101111 B101111207,3855
+#define B0101111 B0101111208,3874
+#define B00101111 B00101111209,3894
+#define B110000 B110000210,3915
+#define B0110000 B0110000211,3934
+#define B00110000 B00110000212,3954
+#define B110001 B110001213,3975
+#define B0110001 B0110001214,3994
+#define B00110001 B00110001215,4014
+#define B110010 B110010216,4035
+#define B0110010 B0110010217,4054
+#define B00110010 B00110010218,4074
+#define B110011 B110011219,4095
+#define B0110011 B0110011220,4114
+#define B00110011 B00110011221,4134
+#define B110100 B110100222,4155
+#define B0110100 B0110100223,4174
+#define B00110100 B00110100224,4194
+#define B110101 B110101225,4215
+#define B0110101 B0110101226,4234
+#define B00110101 B00110101227,4254
+#define B110110 B110110228,4275
+#define B0110110 B0110110229,4294
+#define B00110110 B00110110230,4314
+#define B110111 B110111231,4335
+#define B0110111 B0110111232,4354
+#define B00110111 B00110111233,4374
+#define B111000 B111000234,4395
+#define B0111000 B0111000235,4414
+#define B00111000 B00111000236,4434
+#define B111001 B111001237,4455
+#define B0111001 B0111001238,4474
+#define B00111001 B00111001239,4494
+#define B111010 B111010240,4515
+#define B0111010 B0111010241,4534
+#define B00111010 B00111010242,4554
+#define B111011 B111011243,4575
+#define B0111011 B0111011244,4594
+#define B00111011 B00111011245,4614
+#define B111100 B111100246,4635
+#define B0111100 B0111100247,4654
+#define B00111100 B00111100248,4674
+#define B111101 B111101249,4695
+#define B0111101 B0111101250,4714
+#define B00111101 B00111101251,4734
+#define B111110 B111110252,4755
+#define B0111110 B0111110253,4774
+#define B00111110 B00111110254,4794
+#define B111111 B111111255,4815
+#define B0111111 B0111111256,4834
+#define B00111111 B00111111257,4854
+#define B1000000 B1000000258,4875
+#define B01000000 B01000000259,4895
+#define B1000001 B1000001260,4916
+#define B01000001 B01000001261,4936
+#define B1000010 B1000010262,4957
+#define B01000010 B01000010263,4977
+#define B1000011 B1000011264,4998
+#define B01000011 B01000011265,5018
+#define B1000100 B1000100266,5039
+#define B01000100 B01000100267,5059
+#define B1000101 B1000101268,5080
+#define B01000101 B01000101269,5100
+#define B1000110 B1000110270,5121
+#define B01000110 B01000110271,5141
+#define B1000111 B1000111272,5162
+#define B01000111 B01000111273,5182
+#define B1001000 B1001000274,5203
+#define B01001000 B01001000275,5223
+#define B1001001 B1001001276,5244
+#define B01001001 B01001001277,5264
+#define B1001010 B1001010278,5285
+#define B01001010 B01001010279,5305
+#define B1001011 B1001011280,5326
+#define B01001011 B01001011281,5346
+#define B1001100 B1001100282,5367
+#define B01001100 B01001100283,5387
+#define B1001101 B1001101284,5408
+#define B01001101 B01001101285,5428
+#define B1001110 B1001110286,5449
+#define B01001110 B01001110287,5469
+#define B1001111 B1001111288,5490
+#define B01001111 B01001111289,5510
+#define B1010000 B1010000290,5531
+#define B01010000 B01010000291,5551
+#define B1010001 B1010001292,5572
+#define B01010001 B01010001293,5592
+#define B1010010 B1010010294,5613
+#define B01010010 B01010010295,5633
+#define B1010011 B1010011296,5654
+#define B01010011 B01010011297,5674
+#define B1010100 B1010100298,5695
+#define B01010100 B01010100299,5715
+#define B1010101 B1010101300,5736
+#define B01010101 B01010101301,5756
+#define B1010110 B1010110302,5777
+#define B01010110 B01010110303,5797
+#define B1010111 B1010111304,5818
+#define B01010111 B01010111305,5838
+#define B1011000 B1011000306,5859
+#define B01011000 B01011000307,5879
+#define B1011001 B1011001308,5900
+#define B01011001 B01011001309,5920
+#define B1011010 B1011010310,5941
+#define B01011010 B01011010311,5961
+#define B1011011 B1011011312,5982
+#define B01011011 B01011011313,6002
+#define B1011100 B1011100314,6023
+#define B01011100 B01011100315,6043
+#define B1011101 B1011101316,6064
+#define B01011101 B01011101317,6084
+#define B1011110 B1011110318,6105
+#define B01011110 B01011110319,6125
+#define B1011111 B1011111320,6146
+#define B01011111 B01011111321,6166
+#define B1100000 B1100000322,6187
+#define B01100000 B01100000323,6207
+#define B1100001 B1100001324,6228
+#define B01100001 B01100001325,6248
+#define B1100010 B1100010326,6269
+#define B01100010 B01100010327,6289
+#define B1100011 B1100011328,6310
+#define B01100011 B01100011329,6330
+#define B1100100 B1100100330,6351
+#define B01100100 B01100100331,6372
+#define B1100101 B1100101332,6394
+#define B01100101 B01100101333,6415
+#define B1100110 B1100110334,6437
+#define B01100110 B01100110335,6458
+#define B1100111 B1100111336,6480
+#define B01100111 B01100111337,6501
+#define B1101000 B1101000338,6523
+#define B01101000 B01101000339,6544
+#define B1101001 B1101001340,6566
+#define B01101001 B01101001341,6587
+#define B1101010 B1101010342,6609
+#define B01101010 B01101010343,6630
+#define B1101011 B1101011344,6652
+#define B01101011 B01101011345,6673
+#define B1101100 B1101100346,6695
+#define B01101100 B01101100347,6716
+#define B1101101 B1101101348,6738
+#define B01101101 B01101101349,6759
+#define B1101110 B1101110350,6781
+#define B01101110 B01101110351,6802
+#define B1101111 B1101111352,6824
+#define B01101111 B01101111353,6845
+#define B1110000 B1110000354,6867
+#define B01110000 B01110000355,6888
+#define B1110001 B1110001356,6910
+#define B01110001 B01110001357,6931
+#define B1110010 B1110010358,6953
+#define B01110010 B01110010359,6974
+#define B1110011 B1110011360,6996
+#define B01110011 B01110011361,7017
+#define B1110100 B1110100362,7039
+#define B01110100 B01110100363,7060
+#define B1110101 B1110101364,7082
+#define B01110101 B01110101365,7103
+#define B1110110 B1110110366,7125
+#define B01110110 B01110110367,7146
+#define B1110111 B1110111368,7168
+#define B01110111 B01110111369,7189
+#define B1111000 B1111000370,7211
+#define B01111000 B01111000371,7232
+#define B1111001 B1111001372,7254
+#define B01111001 B01111001373,7275
+#define B1111010 B1111010374,7297
+#define B01111010 B01111010375,7318
+#define B1111011 B1111011376,7340
+#define B01111011 B01111011377,7361
+#define B1111100 B1111100378,7383
+#define B01111100 B01111100379,7404
+#define B1111101 B1111101380,7426
+#define B01111101 B01111101381,7447
+#define B1111110 B1111110382,7469
+#define B01111110 B01111110383,7490
+#define B1111111 B1111111384,7512
+#define B01111111 B01111111385,7533
+#define B10000000 B10000000386,7555
+#define B10000001 B10000001387,7577
+#define B10000010 B10000010388,7599
+#define B10000011 B10000011389,7621
+#define B10000100 B10000100390,7643
+#define B10000101 B10000101391,7665
+#define B10000110 B10000110392,7687
+#define B10000111 B10000111393,7709
+#define B10001000 B10001000394,7731
+#define B10001001 B10001001395,7753
+#define B10001010 B10001010396,7775
+#define B10001011 B10001011397,7797
+#define B10001100 B10001100398,7819
+#define B10001101 B10001101399,7841
+#define B10001110 B10001110400,7863
+#define B10001111 B10001111401,7885
+#define B10010000 B10010000402,7907
+#define B10010001 B10010001403,7929
+#define B10010010 B10010010404,7951
+#define B10010011 B10010011405,7973
+#define B10010100 B10010100406,7995
+#define B10010101 B10010101407,8017
+#define B10010110 B10010110408,8039
+#define B10010111 B10010111409,8061
+#define B10011000 B10011000410,8083
+#define B10011001 B10011001411,8105
+#define B10011010 B10011010412,8127
+#define B10011011 B10011011413,8149
+#define B10011100 B10011100414,8171
+#define B10011101 B10011101415,8193
+#define B10011110 B10011110416,8215
+#define B10011111 B10011111417,8237
+#define B10100000 B10100000418,8259
+#define B10100001 B10100001419,8281
+#define B10100010 B10100010420,8303
+#define B10100011 B10100011421,8325
+#define B10100100 B10100100422,8347
+#define B10100101 B10100101423,8369
+#define B10100110 B10100110424,8391
+#define B10100111 B10100111425,8413
+#define B10101000 B10101000426,8435
+#define B10101001 B10101001427,8457
+#define B10101010 B10101010428,8479
+#define B10101011 B10101011429,8501
+#define B10101100 B10101100430,8523
+#define B10101101 B10101101431,8545
+#define B10101110 B10101110432,8567
+#define B10101111 B10101111433,8589
+#define B10110000 B10110000434,8611
+#define B10110001 B10110001435,8633
+#define B10110010 B10110010436,8655
+#define B10110011 B10110011437,8677
+#define B10110100 B10110100438,8699
+#define B10110101 B10110101439,8721
+#define B10110110 B10110110440,8743
+#define B10110111 B10110111441,8765
+#define B10111000 B10111000442,8787
+#define B10111001 B10111001443,8809
+#define B10111010 B10111010444,8831
+#define B10111011 B10111011445,8853
+#define B10111100 B10111100446,8875
+#define B10111101 B10111101447,8897
+#define B10111110 B10111110448,8919
+#define B10111111 B10111111449,8941
+#define B11000000 B11000000450,8963
+#define B11000001 B11000001451,8985
+#define B11000010 B11000010452,9007
+#define B11000011 B11000011453,9029
+#define B11000100 B11000100454,9051
+#define B11000101 B11000101455,9073
+#define B11000110 B11000110456,9095
+#define B11000111 B11000111457,9117
+#define B11001000 B11001000458,9139
+#define B11001001 B11001001459,9161
+#define B11001010 B11001010460,9183
+#define B11001011 B11001011461,9205
+#define B11001100 B11001100462,9227
+#define B11001101 B11001101463,9249
+#define B11001110 B11001110464,9271
+#define B11001111 B11001111465,9293
+#define B11010000 B11010000466,9315
+#define B11010001 B11010001467,9337
+#define B11010010 B11010010468,9359
+#define B11010011 B11010011469,9381
+#define B11010100 B11010100470,9403
+#define B11010101 B11010101471,9425
+#define B11010110 B11010110472,9447
+#define B11010111 B11010111473,9469
+#define B11011000 B11011000474,9491
+#define B11011001 B11011001475,9513
+#define B11011010 B11011010476,9535
+#define B11011011 B11011011477,9557
+#define B11011100 B11011100478,9579
+#define B11011101 B11011101479,9601
+#define B11011110 B11011110480,9623
+#define B11011111 B11011111481,9645
+#define B11100000 B11100000482,9667
+#define B11100001 B11100001483,9689
+#define B11100010 B11100010484,9711
+#define B11100011 B11100011485,9733
+#define B11100100 B11100100486,9755
+#define B11100101 B11100101487,9777
+#define B11100110 B11100110488,9799
+#define B11100111 B11100111489,9821
+#define B11101000 B11101000490,9843
+#define B11101001 B11101001491,9865
+#define B11101010 B11101010492,9887
+#define B11101011 B11101011493,9909
+#define B11101100 B11101100494,9931
+#define B11101101 B11101101495,9953
+#define B11101110 B11101110496,9975
+#define B11101111 B11101111497,9997
+#define B11110000 B11110000498,10019
+#define B11110001 B11110001499,10041
+#define B11110010 B11110010500,10063
+#define B11110011 B11110011501,10085
+#define B11110100 B11110100502,10107
+#define B11110101 B11110101503,10129
+#define B11110110 B11110110504,10151
+#define B11110111 B11110111505,10173
+#define B11111000 B11111000506,10195
+#define B11111001 B11111001507,10217
+#define B11111010 B11111010508,10239
+#define B11111011 B11111011509,10261
+#define B11111100 B11111100510,10283
+#define B11111101 B11111101511,10305
+#define B11111110 B11111110512,10327
+#define B11111111 B11111111513,10349
+
+ArduinoCore\Debug\objects.mk,48
+USER_OBJS :=USER_OBJS5,212
+LIBS :=LIBS7,228
+
+ArduinoCore\Debug\sources.mk,653
+O_SRCS := O_SRCS5,212
+CPP_SRCS := CPP_SRCS6,224
+C_UPPER_SRCS := C_UPPER_SRCS7,238
+C_SRCS := C_SRCS8,256
+S_UPPER_SRCS := S_UPPER_SRCS9,268
+S_SRCS := S_SRCS10,286
+OBJ_SRCS := OBJ_SRCS11,298
+ASM_SRCS := ASM_SRCS12,312
+CXX_SRCS := CXX_SRCS13,326
+CC_SRCS := CC_SRCS15,354
+OBJS := OBJS16,367
+C_DEPS := C_DEPS17,377
+LSS := LSS18,389
+S_DEPS := S_DEPS19,398
+CXX_DEPS := CXX_DEPS20,410
+S_UPPER_DEPS := S_UPPER_DEPS21,424
+ASM_DEPS := ASM_DEPS23,456
+CC_DEPS := CC_DEPS24,470
+ARCHIVES := ARCHIVES25,483
+CPP_DEPS := CPP_DEPS26,497
+C_UPPER_DEPS := C_UPPER_DEPS27,511
+SIZEDUMMY := SIZEDUMMY28,529
+SUBDIRS := \SUBDIRS31,609
+
+ArduinoCore\Debug\subdir.mk,0
+
+ArduinoCore\HardwareSerial.cpp,1688
+#define RX_BUFFER_SIZE RX_BUFFER_SIZE34,1322
+struct ring_buffer {ring_buffer36,1350
+  unsigned char buffer[RX_BUFFER_SIZE];buffer37,1371
+  int head;head38,1411
+  int tail;tail39,1423
+ring_buffer rx_buffer = { { 0 }, 0, 0 };rx_buffer42,1439
+ring_buffer rx_buffer1 = { { 0 }, 0, 0 };rx_buffer145,1513
+ring_buffer rx_buffer2 = { { 0 }, 0, 0 };rx_buffer246,1555
+ring_buffer rx_buffer3 = { { 0 }, 0, 0 };rx_buffer347,1597
+inline void store_char(unsigned char c, ring_buffer *rx_buffer)store_char50,1647
+SIGNAL(SIG_USART0_RECV)SIGNAL66,2176
+SIGNAL(SIG_USART1_RECV)SIGNAL72,2260
+SIGNAL(SIG_USART2_RECV)SIGNAL78,2345
+SIGNAL(SIG_USART3_RECV)SIGNAL84,2430
+SIGNAL(SIG_UART_RECV)SIGNAL93,2551
+HardwareSerial::HardwareSerial(ring_buffer *rx_buffer,HardwareSerial110,2825
+void HardwareSerial::begin(long baud)begin131,3360
+uint8_t HardwareSerial::available(void)available168,4479
+int HardwareSerial::read(void)read173,4606
+void HardwareSerial::flush()flush185,4927
+void HardwareSerial::write(uint8_t c)write199,5599
+HardwareSerial Serial(&rx_buffer, &UBRRH, &UBRRL, &UCSRA, &UCSRB, &UDR, RXEN, TXEN, RXCIE, UDRE, U2X);Serial210,5811
+HardwareSerial Serial(&rx_buffer, &UBRR0H, &UBRR0L, &UCSR0A, &UCSR0B, &UDR0, RXEN0, TXEN0, RXCIE0, UDRE0, U2X0);Serial212,5920
+HardwareSerial Serial1(&rx_buffer1, &UBRR1H, &UBRR1L, &UCSR1A, &UCSR1B, &UDR1, RXEN1, TXEN1, RXCIE1, UDRE1, U2X1);Serial1216,6073
+HardwareSerial Serial2(&rx_buffer2, &UBRR2H, &UBRR2L, &UCSR2A, &UCSR2B, &UDR2, RXEN2, TXEN2, RXCIE2, UDRE2, U2X2);Serial2217,6188
+HardwareSerial Serial3(&rx_buffer3, &UBRR3H, &UBRR3L, &UCSR3A, &UCSR3B, &UDR3, RXEN3, TXEN3, RXCIE3, UDRE3, U2X3);Serial3218,6303
+
+ArduinoCore\HardwareSerial.h,541
+#define HardwareSerial_hHardwareSerial_h21,872
+class HardwareSerial : public PrintHardwareSerial29,962
+    ring_buffer *_rx_buffer;_rx_buffer32,1011
+    volatile uint8_t *_ubrrh;_ubrrh33,1040
+    volatile uint8_t *_ubrrl;_ubrrl34,1070
+    volatile uint8_t *_ucsra;_ucsra35,1100
+    volatile uint8_t *_ucsrb;_ucsrb36,1130
+    volatile uint8_t *_udr;_udr37,1160
+    uint8_t _rxen;_rxen38,1188
+    uint8_t _txen;_txen39,1207
+    uint8_t _rxcie;_rxcie40,1226
+    uint8_t _udre;_udre41,1246
+    uint8_t _u2x;_u2x42,1265
+
+ArduinoCore\pins_arduino.c,1327
+#define PA PA68,2126
+#define PB PB69,2139
+#define PC PC70,2152
+#define PD PD71,2165
+#define PE PE72,2178
+#define PF PF73,2191
+#define PG PG74,2204
+#define PH PH75,2217
+#define PJ PJ76,2230
+#define PK PK77,2244
+#define PL PL78,2258
+#define REPEAT8(REPEAT880,2273
+#define BV0TO7 BV0TO781,2315
+#define BV7TO0 BV7TO082,2393
+const uint16_t PROGMEM port_to_mode_PGM[] = {port_to_mode_PGM86,2505
+const uint16_t PROGMEM port_to_output_PGM[] = {port_to_output_PGM102,2669
+const uint16_t PROGMEM port_to_input_PGM[] = {port_to_input_PGM118,2846
+const uint8_t PROGMEM digital_pin_to_port_PGM[] = {digital_pin_to_port_PGM134,3009
+const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {digital_pin_to_bit_mask_PGM209,5159
+const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {digital_pin_to_timer_PGM284,7736
+const uint16_t PROGMEM port_to_mode_PGM[] = {port_to_mode_PGM362,10644
+const uint16_t PROGMEM port_to_output_PGM[] = {port_to_output_PGM370,10744
+const uint16_t PROGMEM port_to_input_PGM[] = {port_to_input_PGM378,10849
+const uint8_t PROGMEM digital_pin_to_port_PGM[] = {digital_pin_to_port_PGM386,10950
+const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {digital_pin_to_bit_mask_PGM409,11131
+const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {digital_pin_to_timer_PGM432,11420
+
+ArduinoCore\pins_arduino.h,1060
+#define Pins_Arduino_hPins_Arduino_h26,942
+#define NOT_A_PIN NOT_A_PIN30,993
+#define NOT_A_PORT NOT_A_PORT31,1013
+#define NOT_ON_TIMER NOT_ON_TIMER33,1035
+#define TIMER0A TIMER0A34,1058
+#define TIMER0B TIMER0B35,1076
+#define TIMER1A TIMER1A36,1094
+#define TIMER1B TIMER1B37,1112
+#define TIMER2 TIMER238,1130
+#define TIMER2A TIMER2A39,1148
+#define TIMER2B TIMER2B40,1166
+#define TIMER3A TIMER3A42,1185
+#define TIMER3B TIMER3B43,1203
+#define TIMER3C TIMER3C44,1221
+#define TIMER4A TIMER4A45,1240
+#define TIMER4B TIMER4B46,1259
+#define TIMER4C TIMER4C47,1278
+#define TIMER5A TIMER5A48,1297
+#define TIMER5B TIMER5B49,1316
+#define TIMER5C TIMER5C50,1335
+#define digitalPinToPort(digitalPinToPort68,2096
+#define digitalPinToBitMask(digitalPinToBitMask69,2175
+#define digitalPinToTimer(digitalPinToTimer70,2261
+#define analogInPinToBit(analogInPinToBit71,2342
+#define portOutputRegister(portOutputRegister72,2374
+#define portInputRegister(portInputRegister73,2472
+#define portModeRegister(portModeRegister74,2568
+
+ArduinoCore\Print.cpp,1155
+void Print::write(const char *str)write32,1117
+void Print::write(const uint8_t *buffer, size_t size)write39,1239
+void Print::print(uint8_t b)print45,1337
+void Print::print(char c)print50,1389
+void Print::print(const char str[])print55,1439
+void Print::print(int n)print60,1494
+void Print::print(unsigned int n)print65,1543
+void Print::print(long n)print70,1610
+void Print::print(unsigned long n)print79,1710
+void Print::print(long n, int base)print84,1772
+void Print::print(double n)print94,1921
+void Print::println(void)println99,1974
+void Print::println(char c)println105,2037
+void Print::println(const char c[])println111,2097
+void Print::println(uint8_t b)println117,2163
+void Print::println(int n)println123,2224
+void Print::println(unsigned int n)println129,2281
+void Print::println(long n)println135,2347
+void Print::println(unsigned long n)println141,2407
+void Print::println(long n, int base)println147,2476
+void Print::println(double n)println153,2550
+void Print::printNumber(unsigned long n, uint8_t base)printNumber161,2692
+void Print::printFloat(double number, uint8_t digits) printFloat182,3066
+
+ArduinoCore\Print.h,179
+#define Print_hPrint_h21,864
+#define DEC DEC26,937
+#define HEX HEX27,952
+#define OCT OCT28,967
+#define BIN BIN29,981
+#define BYTE BYTE30,995
+class PrintPrint32,1011
+
+ArduinoCore\WConstants.h,0
+
+ArduinoCore\WInterrupts.c,669
+volatile static voidFuncPtr intFunc[EXTERNAL_NUM_INTERRUPTS];intFunc35,1120
+#define EICRA EICRA39,1255
+#define EIMSK EIMSK40,1275
+void attachInterrupt(uint8_t interruptNum, void (*userFunc)(void), int mode) {attachInterrupt43,1302
+void detachInterrupt(uint8_t interruptNum) {detachInterrupt102,3131
+SIGNAL(INT0_vect) {SIGNAL155,4205
+SIGNAL(INT1_vect) {SIGNAL160,4289
+SIGNAL(INT2_vect) {SIGNAL165,4373
+SIGNAL(INT3_vect) {SIGNAL170,4457
+SIGNAL(INT4_vect) {SIGNAL175,4541
+SIGNAL(INT5_vect) {SIGNAL180,4625
+SIGNAL(INT6_vect) {SIGNAL185,4709
+SIGNAL(INT7_vect) {SIGNAL190,4793
+SIGNAL(INT0_vect) {SIGNAL197,4884
+SIGNAL(INT1_vect) {SIGNAL202,4968
+
+ArduinoCore\wiring.c,653
+#define MICROSECONDS_PER_TIMER0_OVERFLOW MICROSECONDS_PER_TIMER0_OVERFLOW29,1096
+#define MILLIS_INC MILLIS_INC32,1232
+#define FRACT_INC FRACT_INC37,1503
+#define FRACT_MAX FRACT_MAX38,1570
+volatile unsigned long timer0_overflow_count = 0;timer0_overflow_count40,1601
+volatile unsigned long timer0_millis = 0;timer0_millis41,1651
+static unsigned char timer0_fract = 0;timer0_fract42,1693
+SIGNAL(TIMER0_OVF_vect)SIGNAL44,1733
+unsigned long millis()millis63,2120
+unsigned long micros() {micros77,2391
+void delay(unsigned long ms)delay98,2723
+void delayMicroseconds(unsigned int us)delayMicroseconds109,3001
+void init()init168,4629
+
+ArduinoCore\wiring.h,1618
+#define Wiring_hWiring_h26,957
+#define ARDUINO ARDUINO36,1071
+#define HIGH HIGH39,1098
+#define LOW LOW40,1115
+#define INPUT INPUT42,1133
+#define OUTPUT OUTPUT43,1151
+#define true true45,1171
+#define false false46,1188
+#define PI PI48,1207
+#define HALF_PI HALF_PI49,1252
+#define TWO_PI TWO_PI50,1302
+#define DEG_TO_RAD DEG_TO_RAD51,1350
+#define RAD_TO_DEG RAD_TO_DEG52,1405
+#define SERIAL SERIAL54,1459
+#define DISPLAY DISPLAY55,1479
+#define LSBFIRST LSBFIRST57,1500
+#define MSBFIRST MSBFIRST58,1519
+#define CHANGE CHANGE60,1539
+#define FALLING FALLING61,1556
+#define RISING RISING62,1574
+#define INTERNAL INTERNAL64,1592
+#define DEFAULT DEFAULT65,1611
+#define EXTERNAL EXTERNAL66,1629
+#undef absabs70,1700
+#define min(min73,1719
+#define max(max74,1754
+#define abs(abs75,1789
+#define constrain(constrain76,1821
+#define round(round77,1901
+#define radians(radians78,1963
+#define degrees(degrees79,2003
+#define sq(sq80,2043
+#define interrupts(interrupts82,2068
+#define noInterrupts(noInterrupts83,2095
+#define clockCyclesPerMicrosecond(clockCyclesPerMicrosecond85,2125
+#define clockCyclesToMicroseconds(clockCyclesToMicroseconds86,2182
+#define microsecondsToClockCycles(microsecondsToClockCycles87,2257
+#define lowByte(lowByte89,2333
+#define highByte(highByte90,2377
+#define bitRead(bitRead92,2421
+#define bitSet(bitSet93,2477
+#define bitClear(bitClear94,2532
+#define bitWrite(bitWrite95,2590
+typedef unsigned int word;word97,2685
+#define bit(bit99,2713
+typedef uint8_t boolean;boolean101,2742
+typedef uint8_t byte;byte102,2767
+
+ArduinoCore\wiring_analog.c,225
+uint8_t analog_reference = DEFAULT;analog_reference28,967
+void analogReference(uint8_t mode)analogReference30,1004
+int analogRead(uint8_t pin)analogRead38,1249
+void analogWrite(uint8_t pin, int val)analogWrite77,2448
+
+ArduinoCore\wiring_digital.c,233
+void pinMode(uint8_t pin, uint8_t mode)pinMode28,979
+static inline void turnOffPWM(uint8_t timer)turnOffPWM51,1693
+void digitalWrite(uint8_t pin, uint8_t val)digitalWrite78,2527
+int digitalRead(uint8_t pin)digitalRead97,2984
+
+ArduinoCore\wiring_private.h,658
+#define WiringPrivate_hWiringPrivate_h26,935
+#define cbi(cbi41,1142
+#define sbi(sbi44,1213
+#define EXTERNAL_INT_0 EXTERNAL_INT_047,1272
+#define EXTERNAL_INT_1 EXTERNAL_INT_148,1297
+#define EXTERNAL_INT_2 EXTERNAL_INT_249,1322
+#define EXTERNAL_INT_3 EXTERNAL_INT_350,1347
+#define EXTERNAL_INT_4 EXTERNAL_INT_451,1372
+#define EXTERNAL_INT_5 EXTERNAL_INT_552,1397
+#define EXTERNAL_INT_6 EXTERNAL_INT_653,1422
+#define EXTERNAL_INT_7 EXTERNAL_INT_754,1447
+#define EXTERNAL_NUM_INTERRUPTS EXTERNAL_NUM_INTERRUPTS57,1505
+#define EXTERNAL_NUM_INTERRUPTS EXTERNAL_NUM_INTERRUPTS59,1545
+typedef void (*voidFuncPtr)(void);voidFuncPtr62,1587
+
+ArduinoCore\wiring_pulse.c,89
+unsigned long pulseIn(uint8_t pin, uint8_t state, unsigned long timeout)pulseIn32,1236
+
+ArduinoCore\wiring_shift.c,93
+void shiftOut(uint8_t dataPin, uint8_t clockPin, uint8_t bitOrder, byte val)shiftOut27,936
+
+ArduinoCore\WMath.cpp,398
+void randomSeed(unsigned int seed)randomSeed30,1022
+long random(long howbig)random37,1104
+long random(long howsmall, long howbig)random45,1201
+long map(long x, long in_min, long in_max, long out_min, long out_max)map54,1366
+unsigned int makeWord(unsigned int w) { return w; }makeWord59,1517
+unsigned int makeWord(unsigned char h, unsigned char l) { return (h << 8) | l; makeWord60,1569
+
+ArduinoCore\WProgram.h,61
+#define WProgram_hWProgram_h2,19
+#define word(word18,262
+
+Blinky\main.cpp,202
+int ledPin =  13;    // LED connected to digital pin 13ledPin4,44
+void setup()   {setup7,160
+boolean A;A17,390
+byte firstA;firstA18,402
+byte secondA;secondA19,416
+int main(void) {main21,433
+
+build_ctags.bat,0
+
+ChordedKeyboard\src\AllTests.h,44
+IMPORT_TEST_GROUP(FirstTest);FirstTest1,0
+
+ChordedKeyboard\src\keyevent.c,509
+int keydown_event_count=0;keydown_event_count3,25
+int keydown_event_counts[]={0,0,0,0,0};keydown_event_counts4,53
+int keydown_event=0;keydown_event5,94
+int _key_state=0;_key_state6,116
+int _key_states[]={0,0,0,0,0};_key_states7,135
+int _channel=0;_channel8,167
+void keydown_event_callback() {keydown_event_callback10,186
+void keydown_event_release_callback() {keydown_event_release_callback16,344
+void set_key_state(int state) {set_key_state22,476
+void set_key(int channel) {set_key33,725
+
+ChordedKeyboard\src\keyevent.h,103
+#define ON ON1,0
+#define OFF OFF2,14
+#define PRESSED PRESSED4,31
+#define RELEASED RELEASED5,50
+
+ChordedKeyboard\tests\AllTests.cpp,38
+int main(int ac, char** av)main4,49
+
+ChordedKeyboard\tests\AllTests.h,50
+IMPORT_TEST_GROUP(KeydownEvent);KeydownEvent1,0
+
+ChordedKeyboard\tests\keyevent.c,919
+int keydown_event_count=0;keydown_event_count3,25
+int keydown_event_counts[]={0,0,0,0,0};keydown_event_counts4,53
+int keydown_event=0;keydown_event5,94
+int _p_key_state =0;_p_key_state7,118
+int _key_state=0;_key_state8,140
+int _key_states[]={0,0,0,0,0};_key_states9,159
+int _channel=0;_channel11,193
+int _uncertain_count=0;_uncertain_count12,210
+void keydown_event_callback() {keydown_event_callback14,237
+void keydown_event_release_callback() {keydown_event_release_callback20,392
+void (*keydown_event_cb)(void) = keydown_event_callback;keydown_event_cb25,522
+void set_key(int channel, int state) {set_key27,582
+void set_key_state(int state) {set_key_state32,671
+void set_key_state1(int state) {set_key_state146,920
+int read_key_state(){read_key_state51,1011
+void set_uncertain_count(int count) {set_uncertain_count55,1060
+void process_key_chattering() {process_key_chattering60,1134
+
+ChordedKeyboard\tests\keyevent.h,103
+#define ON ON1,0
+#define OFF OFF2,14
+#define PRESSED PRESSED4,31
+#define RELEASED RELEASED5,50
+
+ChordedKeyboard\tests\test_keyevent.cpp,343
+#define CHAR2VAL(CHAR2VAL9,110
+void assert_keystate(char * in, char * out)assert_keystate16,232
+TEST_GROUP(KeydownEvent)TEST_GROUP33,534
+TEST(KeydownEvent, test_keydown_event_count)TEST48,711
+TEST(KeydownEvent, test_keydown_event)TEST67,1125
+TEST(KeydownEvent, test_key_on)TEST82,1445
+TEST(KeydownEvent, test_key_off)TEST93,1648
+
+CppUTest\CppUTest.mak,2239
+CFG=CppUTest - Win32 DebugCFG3,94
+NULL=NULL23,872
+NULL=nulNULL25,887
+OUTDIR=.\ReleaseOUTDIR30,955
+INTDIR=.\ReleaseINTDIR31,973
+OutDir=.\ReleaseOutDir33,1014
+CPP=cl.exeCPP63,1937
+CPP_PROJ=/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"$(INTDIR)\CppUTest.pch" /YX /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /FD /c CPP_PROJ64,1949
+RSC=rc.exeRSC96,2483
+BSC32=bscmake.exeBSC3297,2495
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CppUTest.bsc" BSC32_FLAGS98,2514
+BSC32_SBRS= \BSC32_SBRS99,2563
+LIB32=link.exe -libLIB32101,2581
+LIB32_FLAGS=/nologo /out:"$(OUTDIR)\CppUTest.lib" LIB32_FLAGS102,2602
+LIB32_OBJS= \LIB32_OBJS103,2654
+OUTDIR=.\DebugOUTDIR129,3447
+INTDIR=.\DebugINTDIR130,3463
+CPP=cl.exeCPP160,4386
+CPP_PROJ=/nologo /MDd /W3 /GX /ZI /Od /I ".\include" /I ".\include\Platforms\VisualCpp" /D "_LIB" /D "WIN32" /D "_DEBUG" /D "_MBCS" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /FD /GZ /c CPP_PROJ161,4398
+RSC=rc.exeRSC193,4959
+BSC32=bscmake.exeBSC32194,4971
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\CppUTest.bsc" BSC32_FLAGS195,4990
+BSC32_SBRS= \BSC32_SBRS196,5039
+LIB32=link.exe -libLIB32198,5057
+LIB32_FLAGS=/nologo /out:"lib\CppUTest.lib" LIB32_FLAGS199,5078
+LIB32_OBJS= \LIB32_OBJS200,5124
+SOURCE=.\src\CppUTest\CommandLineArguments.cppSOURCE237,6124
+SOURCE=.\src\CppUTest\CommandLineTestRunner.cppSOURCE243,6271
+SOURCE=.\src\CppUTest\Failure.cppSOURCE249,6420
+SOURCE=.\src\CppUTest\JUnitTestOutput.cppSOURCE255,6541
+SOURCE=.\src\CppUTest\MemoryLeakDetector.cppSOURCE261,6678
+SOURCE=.\src\CppUTest\MemoryLeakWarningPlugin.cppSOURCE267,6821
+SOURCE=.\src\CppUTest\Extensions\OrderedTest.cppSOURCE273,6974
+SOURCE=.\src\CppUTest\SimpleString.cppSOURCE279,7114
+SOURCE=.\src\CppUTest\Extensions\SimpleStringExtensions.cppSOURCE285,7245
+SOURCE=.\src\CppUTest\TestHarness_c.cppSOURCE291,7407
+SOURCE=.\tests\Extensions\TestOrderedTest.cppSOURCE297,7540
+SOURCE=.\src\CppUTest\TestOutput.cppSOURCE303,7681
+SOURCE=.\src\CppUTest\TestPlugin.cppSOURCE309,7808
+SOURCE=.\src\CppUTest\TestRegistry.cppSOURCE315,7935
+SOURCE=.\src\CppUTest\TestResult.cppSOURCE321,8066
+SOURCE=.\src\CppUTest\Utest.cppSOURCE327,8193
+SOURCE=.\src\Platforms\VisualCpp\UtestPlatform.cppSOURCE333,8310
+
+CppUTest\examples\AllTests\AllTests.cpp,41
+int main(int ac, char** av)main31,1712
+
+CppUTest\examples\AllTests\RunAllTests.sh,0
+
+CppUTest\examples\ApplicationLib\AllTests.h,155
+IMPORT_TEST_GROUP( Printer);Printer28,1604
+IMPORT_TEST_GROUP( CircularBuffer);CircularBuffer29,1633
+IMPORT_TEST_GROUP( HelloWorld);HelloWorld30,1669
+
+CppUTest\examples\ApplicationLib\CircularBuffer.cpp,448
+CircularBuffer::CircularBuffer(int capacity) :CircularBuffer31,1684
+CircularBuffer::~CircularBuffer()~CircularBuffer37,1844
+bool CircularBuffer::IsEmpty()IsEmpty42,1906
+bool CircularBuffer::IsFull()IsFull47,1962
+void CircularBuffer::Put(int i)Put52,2016
+int CircularBuffer::Get()Get61,2194
+int CircularBuffer::Capacity()Capacity74,2395
+int CircularBuffer::Next(int i)Next79,2454
+void CircularBuffer::Print(Printer* p)Print85,2537
+
+CppUTest\examples\ApplicationLib\CircularBuffer.h,297
+#define D_CircularBuffer_HD_CircularBuffer_H29,1659
+class CircularBufferCircularBuffer40,1946
+	int index;index56,2203
+	int outdex;outdex57,2216
+	int* buffer;buffer58,2230
+	int capacity;capacity59,2245
+		CAPACITY = 5CAPACITY62,2272
+	bool empty;empty64,2293
+	bool full;full65,2307
+
+CppUTest\examples\ApplicationLib\CircularBufferTest.cpp,1049
+TEST_GROUP(CircularBuffer)TEST_GROUP33,1780
+TEST(CircularBuffer, EmptyAfterCreation)TEST57,2141
+TEST(CircularBuffer, NotEmpty)TEST62,2219
+TEST(CircularBuffer, NotEmptyThenEmpty)TEST68,2310
+TEST(CircularBuffer, GetPutOneValue)TEST76,2454
+TEST(CircularBuffer, GetPutAFew)TEST82,2557
+TEST(CircularBuffer, Capacity)TEST92,2752
+TEST(CircularBuffer, IsFull)TEST98,2857
+TEST(CircularBuffer, EmptyToFullToEmpty)TEST104,2961
+TEST(CircularBuffer, WrapAround)TEST115,3152
+TEST(CircularBuffer, PutToFull)TEST131,3486
+TEST(CircularBuffer, GetFromEmpty)TEST148,3850
+TEST(CircularBuffer, PrintEmpty)TEST160,4047
+TEST(CircularBuffer, PrintAfterOnePut)TEST170,4230
+TEST(CircularBuffer, PrintNotYetWrappedOrFull)TEST180,4420
+TEST(CircularBuffer, PrintNotYetWrappedAndIsFull)TEST192,4660
+TEST(CircularBuffer, PrintWrappedAndIsFullOldestToNewest)TEST205,4950
+TEST(CircularBuffer, PrintWrappedAndFullOverwriteOldest)TEST220,5285
+TEST(CircularBuffer, PrintBoundary)TEST234,5604
+TEST(CircularBuffer, FillEmptyThenPrint)TEST250,5988
+
+CppUTest\examples\ApplicationLib\hello.c,113
+void printHelloWorld()printHelloWorld4,42
+int (*PrintFormated)(const char*, ...) = printf;PrintFormated9,109
+
+CppUTest\examples\ApplicationLib\hello.h,31
+#define HELLO_H_HELLO_H_2,18
+
+CppUTest\examples\ApplicationLib\HelloTest.cpp,122
+static SimpleString* buffer;buffer10,118
+TEST_GROUP(HelloWorld)TEST_GROUP12,150
+TEST(HelloWorld, PrintOk)TEST32,510
+
+CppUTest\examples\ApplicationLib\MockPrinter.h,385
+#define D_MockPrinter_HD_MockPrinter_H29,1628
+class MockPrinter: public PrinterMockPrinter43,2004
+	explicit MockPrinter()MockPrinter46,2048
+	virtual ~MockPrinter()~MockPrinter49,2078
+	virtual void Print(const char* s)Print53,2109
+	virtual void Print(long int value)Print58,2176
+	std::string getOutput() constgetOutput65,2330
+	std::string savedOutput;savedOutput72,2400
+
+CppUTest\examples\ApplicationLib\Printer.cpp,294
+Printer::Printer()Printer33,1714
+Printer::~Printer()~Printer37,1738
+void Printer::Print(const char* s)Print41,1763
+void Printer::Print(long n)Print47,1852
+Printer& operator<<(Printer& p, const char* s)operator <<52,1923
+Printer& operator<<(Printer& p, long int i)operator <<58,1999
+
+CppUTest\examples\ApplicationLib\Printer.h,70
+#define D_Printer_HD_Printer_H29,1624
+class PrinterPrinter37,1847
+
+CppUTest\examples\ApplicationLib\PrinterTest.cpp,168
+TEST_GROUP(Printer)TEST_GROUP33,1741
+TEST(Printer, PrintConstCharStar)TEST48,1924
+TEST(Printer, PrintLong)TEST55,2073
+TEST(Printer, StreamOperators)TEST61,2177
+
+CppUTest\include\CppUTest\CommandLineArguments.h,540
+#define D_CommandLineArguments_HD_CommandLineArguments_H2,33
+class CommandLineArgumentsCommandLineArguments14,351
+	enum OutputTypeOutputType31,736
+		OUTPUT_ECLIPSE, OUTPUT_JUNITOUTPUT_ECLIPSE33,756
+		OUTPUT_ECLIPSE, OUTPUT_JUNITOUTPUT_JUNIT33,756
+	int ac;ac35,791
+	const char** av;av36,800
+	TestPlugin* plugin_;plugin_37,818
+	bool verbose_;verbose_39,841
+	int repeat_;repeat_40,857
+	SimpleString groupFilter_;groupFilter_41,871
+	SimpleString nameFilter_;nameFilter_42,899
+	OutputType outputType_;outputType_43,926
+
+CppUTest\include\CppUTest\CommandLineTestRunner.h,583
+#define D_CommandLineTestRunner_HD_CommandLineTestRunner_H29,1638
+#define DEF_PLUGIN_MEM_LEAK DEF_PLUGIN_MEM_LEAK43,2007
+#define DEF_PLUGIN_SET_POINTER DEF_PLUGIN_SET_POINTER44,2054
+class CommandLineTestRunnerCommandLineTestRunner46,2105
+	enum OutputTypeOutputType49,2143
+		OUTPUT_NORMAL, OUTPUT_JUNITOUTPUT_NORMAL51,2163
+		OUTPUT_NORMAL, OUTPUT_JUNITOUTPUT_JUNIT51,2163
+	int argc;argc63,2425
+	const char** argv;argv64,2436
+	TestOutput* output_;output_65,2456
+	JUnitTestOutput* jUnitOutput;jUnitOutput66,2478
+	CommandLineArguments* arguments;arguments67,2509
+
+CppUTest\include\CppUTest\Extensions\OrderedTest.h,357
+#define D_OrderedTest_hD_OrderedTest_h29,1656
+class OrderedTest : public UtestOrderedTest31,1683
+   static OrderedTest* _orderedTestsHead;_orderedTestsHead49,2145
+   OrderedTest* _nextOrderedTest;_nextOrderedTest50,2188
+   int _level;_level52,2225
+class OrderedTestInstallerOrderedTestInstaller56,2249
+#define TEST_ORDERED(TEST_ORDERED68,2619
+
+CppUTest\include\CppUTest\Extensions\SimpleStringExtensions.h,70
+#define D_SimpleStringExtensions_HD_SimpleStringExtensions_H38,2140
+
+CppUTest\include\CppUTest\Extensions\SimpleStringFromStdint.h,70
+#define D_SimpleStringExtensions_HD_SimpleStringExtensions_H38,2140
+
+CppUTest\include\CppUTest\Failure.h,348
+#define D_Failure_HD_Failure_H39,1940
+class FailureFailure46,2020
+	SimpleString testName;testName63,2468
+	SimpleString fileName;fileName64,2492
+	long lineNumber;lineNumber65,2516
+	SimpleString message;message66,2534
+class EqualsFailure: public FailureEqualsFailure72,2600
+class ContainsFailure: public FailureContainsFailure84,2872
+
+CppUTest\include\CppUTest\JUnitTestOutput.h,164
+#define D_JUnitTestOutput_hD_JUnitTestOutput_h29,1632
+class JUnitTestOutput: public TestOutputJUnitTestOutput37,1773
+	JUnitTestOutputImpl* impl_;impl_60,2424
+
+CppUTest\include\CppUTest\MemoryLeakAllocator.h,772
+#define D_MemoryLeakAllocator_hD_MemoryLeakAllocator_h2,32
+class MemoryLeakAllocatorMemoryLeakAllocator4,65
+	virtual ~MemoryLeakAllocator()~MemoryLeakAllocator15,354
+	static MemoryLeakAllocator* currentNewAllocator;currentNewAllocator33,948
+	static MemoryLeakAllocator* currentNewArrayAllocator;currentNewArrayAllocator34,998
+	static MemoryLeakAllocator* currentMallocAllocator;currentMallocAllocator35,1053
+class StandardMallocAllocator: public MemoryLeakAllocatorStandardMallocAllocator38,1110
+class StandardNewAllocator: public MemoryLeakAllocatorStandardNewAllocator51,1374
+class StandardNewArrayAllocator: public MemoryLeakAllocatorStandardNewArrayAllocator64,1635
+class NullUnknownAllocator: public MemoryLeakAllocatorNullUnknownAllocator77,1901
+
+CppUTest\include\CppUTest\MemoryLeakDetector.h,2370
+#define D_MemoryLeakDetector_hD_MemoryLeakDetector_h2,31
+#define MEM_LEAK_NONE MEM_LEAK_NONE4,63
+#define MEM_LEAK_HEADER MEM_LEAK_HEADER5,118
+#define MEM_LEAK_LEAK MEM_LEAK_LEAK6,168
+#define MEM_LEAK_FOOTER MEM_LEAK_FOOTER7,271
+#define MEM_LEAK_ALLOC_DEALLOC_MISMATCH MEM_LEAK_ALLOC_DEALLOC_MISMATCH9,322
+#define MEM_LEAK_MEMORY_CORRUPTION MEM_LEAK_MEMORY_CORRUPTION10,404
+#define MEM_LEAK_ALLOC_LOCATION MEM_LEAK_ALLOC_LOCATION11,486
+#define MEM_LEAK_DEALLOC_LOCATION MEM_LEAK_DEALLOC_LOCATION12,574
+#define MEM_LEAK_DEALLOC_NON_ALLOCATED MEM_LEAK_DEALLOC_NON_ALLOCATED13,657
+enum MemLeakPeriodMemLeakPeriod15,735
+	mem_leak_period_all,mem_leak_period_all17,756
+	mem_leak_period_disabled,mem_leak_period_disabled18,778
+	mem_leak_period_enabled,mem_leak_period_enabled19,805
+	mem_leak_period_checkingmem_leak_period_checking20,831
+class MemoryLeakFailureMemoryLeakFailure27,910
+	virtual ~MemoryLeakFailure()~MemoryLeakFailure30,944
+struct SimpleStringBufferSimpleStringBuffer37,1028
+		SIMPLE_STRING_BUFFER_LEN = 4096SIMPLE_STRING_BUFFER_LEN41,1065
+	char buffer[SIMPLE_STRING_BUFFER_LEN];buffer50,1207
+	int positions_filled;positions_filled51,1247
+struct MemoryLeakDetectorNodeMemoryLeakDetectorNode54,1274
+	MemoryLeakDetectorNode() :MemoryLeakDetectorNode56,1306
+	size_t size;size61,1362
+	char* memory;memory62,1376
+	const char* file;file63,1391
+	int line;line64,1410
+	MemoryLeakAllocator* allocator;allocator65,1421
+	MemLeakPeriod period;period66,1454
+	MemoryLeakDetectorNode* next;next70,1526
+struct MemoryLeakDetectorListMemoryLeakDetectorList73,1561
+	MemoryLeakDetectorList() :MemoryLeakDetectorList75,1593
+	MemoryLeakDetectorNode* head;head101,2367
+struct MemoryLeakDetectorTableMemoryLeakDetectorTable104,2402
+		hash_prime = MEMORY_LEAK_HASH_TABLE_SIZEhash_prime123,2864
+	MemoryLeakDetectorList table[hash_prime];table125,2911
+class MemoryLeakDetectorMemoryLeakDetector128,2958
+	~MemoryLeakDetector()~MemoryLeakDetector132,3016
+		memory_corruption_buffer_size = 3memory_corruption_buffer_size163,3883
+	MemoryLeakFailure* reporter;reporter166,3932
+	MemLeakPeriod current_period;current_period167,3962
+	SimpleStringBuffer output_buffer;output_buffer168,3993
+	MemoryLeakDetectorTable memoryTable;memoryTable169,4028
+	bool doAllocationTypeChecking;doAllocationTypeChecking170,4066
+
+CppUTest\include\CppUTest\MemoryLeakWarningPlugin.h,576
+#define D_MemoryLeakWarningPlugin_hD_MemoryLeakWarningPlugin_h29,1640
+#define IGNORE_ALL_LEAKS_IN_TEST(IGNORE_ALL_LEAKS_IN_TEST42,2033
+#define EXPECT_N_LEAKS(EXPECT_N_LEAKS43,2135
+#undef newnew51,2355
+#define new new64,2785
+class MemoryLeakWarningPlugin: public TestPluginMemoryLeakWarningPlugin71,2864
+	MemoryLeakDetector* memLeakDetector;memLeakDetector91,3461
+	bool ignoreAllWarnings;ignoreAllWarnings92,3499
+	int expectedLeaks;expectedLeaks93,3524
+	int failureCount;failureCount94,3544
+	static MemoryLeakWarningPlugin* firstPlugin;firstPlugin96,3564
+
+CppUTest\include\CppUTest\PlatformSpecificFunctions.h,139
+#define PLATFORMSPECIFICFUNCTIONS_H_PLATFORMSPECIFICFUNCTIONS_H_29,1641
+typedef void* PlatformSpecificFile;PlatformSpecificFile69,3155
+
+CppUTest\include\CppUTest\SimpleString.h,287
+#define D_SimpleString_hD_SimpleString_h39,2011
+class SimpleStringSimpleString45,2089
+	char *buffer;buffer77,3050
+class SimpleStringCollectionSimpleStringCollection80,3069
+	SimpleString* collection;collection92,3258
+	SimpleString empty;empty93,3285
+	int _size;_size94,3306
+
+CppUTest\include\CppUTest\TestHarness.h,497
+#define D_TestHarness_hD_TestHarness_h29,1628
+#define UT_NEW_MACROS_ENABLED UT_NEW_MACROS_ENABLED45,2229
+#define UT_NEW_MACROS_ENABLED UT_NEW_MACROS_ENABLED47,2267
+#define UT_NEW_OVERRIDES_ENABLED UT_NEW_OVERRIDES_ENABLED53,2380
+#undef UT_NEW_MACROS_ENABLEDUT_NEW_MACROS_ENABLED54,2415
+#define UT_NEW_MACROS_ENABLED UT_NEW_MACROS_ENABLED55,2444
+#define UT_NEW_OVERRIDES_ENABLED UT_NEW_OVERRIDES_ENABLED57,2482
+#define MEMORY_LEAK_HASH_TABLE_SIZE MEMORY_LEAK_HASH_TABLE_SIZE65,2738
+
+CppUTest\include\CppUTest\TestHarness_c.h,929
+#define D_TestHarness_c_hD_TestHarness_c_h39,1938
+#define CHECK_EQUAL_C_INT(CHECK_EQUAL_C_INT41,1965
+#define CHECK_EQUAL_C_REAL(CHECK_EQUAL_C_REAL44,2075
+#define CHECK_EQUAL_C_CHAR(CHECK_EQUAL_C_CHAR47,2207
+#define CHECK_EQUAL_C_STRING(CHECK_EQUAL_C_STRING50,2319
+#define FAIL_TEXT_C(FAIL_TEXT_C53,2435
+#define FAIL_C(FAIL_C56,2511
+#define CHECK_C(CHECK_C59,2568
+#define UT_MALLOC_MACROS_ENABLED UT_MALLOC_MACROS_ENABLED81,3593
+#define UT_MALLOC_MACROS_ENABLED UT_MALLOC_MACROS_ENABLED83,3634
+#undef mallocmalloc88,3713
+#undef freefree89,3727
+#define malloc malloc90,3739
+#define free free91,3765
+#define calloc calloc92,3787
+#define realloc realloc93,3813
+#undef mallocmalloc95,3861
+#undef freefree96,3875
+#undef reallocrealloc97,3887
+#undef calloccalloc98,3902
+#define malloc(malloc116,4524
+#define calloc(calloc117,4590
+#define realloc(realloc118,4662
+#define free(free119,4736
+
+CppUTest\include\CppUTest\TestOutput.h,768
+#define D_TestOutput_hD_TestOutput_h29,1627
+class TestOutputTestOutput46,2095
+	int dotCount_;dotCount_77,2952
+	bool verbose_;verbose_78,2968
+	const char* progressIndication;progressIndication79,2984
+class ConsoleTestOutput: public TestOutputConsoleTestOutput93,3335
+	explicit ConsoleTestOutput()ConsoleTestOutput96,3388
+	virtual ~ConsoleTestOutput()~ConsoleTestOutput100,3427
+class StringBufferTestOutput: public TestOutputStringBufferTestOutput122,3876
+	explicit StringBufferTestOutput()StringBufferTestOutput125,3934
+	virtual ~StringBufferTestOutput()~StringBufferTestOutput129,3978
+	void print(const char* s)print134,4023
+	void flush()flush139,4072
+	const SimpleString& getOutput()getOutput144,4108
+	SimpleString output;output150,4174
+
+CppUTest\include\CppUTest\TestPlugin.h,673
+#define D_TestPlugin_hD_TestPlugin_h37,1887
+class TestPluginTestPlugin42,1943
+	virtual void preTestAction(Utest&, TestResult&)preTestAction49,2035
+	virtual void postTestAction(Utest&, TestResult&)postTestAction53,2093
+	virtual bool parseArguments(int ac, const char** av, int index)parseArguments57,2152
+	TestPlugin* next_;next_83,2852
+	SimpleString name_;name_84,2872
+	bool enabled_;enabled_85,2893
+class SetPointerPlugin: public TestPluginSetPointerPlugin98,3239
+		MAX_SET = 1024MAX_SET107,3427
+#define UT_PTR_SET(UT_PTR_SET111,3452
+class NullTestPlugin: public TestPluginNullTestPlugin115,3555
+	virtual ~NullTestPlugin()~NullTestPlugin120,3625
+
+CppUTest\include\CppUTest\TestRegistry.h,331
+#define D_TestRegistry_hD_TestRegistry_h37,1874
+class TestRegistryTestRegistry45,1977
+	Utest * tests;tests79,2907
+	SimpleString* nameFilter_;nameFilter_80,2923
+	SimpleString* groupFilter_;groupFilter_81,2951
+	TestPlugin* firstPlugin_;firstPlugin_82,2980
+	static TestRegistry* currentRegistry_;currentRegistry_83,3007
+
+CppUTest\include\CppUTest\TestResult.h,1036
+#define D_TestResult_hD_TestResult_h39,1958
+class TestResultTestResult45,2029
+	int getTestCount() constgetTestCount67,2636
+	int getRunCount() constgetRunCount71,2688
+	int getCheckCount() constgetCheckCount75,2738
+	int getFilteredOutCount() constgetFilteredOutCount79,2792
+	int getIgnoredCount() constgetIgnoredCount83,2858
+	int getFailureCount() constgetFailureCount87,2916
+	TestOutput& output;output99,3162
+	int testCount;testCount100,3183
+	int runCount;runCount101,3199
+	int checkCount;checkCount102,3214
+	int failureCount;failureCount103,3231
+	int filteredOutCount;filteredOutCount104,3250
+	int ignoredCount;ignoredCount105,3273
+	long totalExecutionTime;totalExecutionTime106,3292
+	long timeStarted;timeStarted107,3318
+	long currentTestTimeStarted;currentTestTimeStarted108,3337
+	long currentTestTotalExecutionTime;currentTestTotalExecutionTime109,3367
+	long currentGroupTimeStarted;currentGroupTimeStarted110,3404
+	long currentGroupTotalExecutionTime;currentGroupTotalExecutionTime111,3435
+
+CppUTest\include\CppUTest\TestTestingFixture.h,851
+#define D_TestTestingFixture_HD_TestTestingFixture_H29,1635
+class TestTestingFixtureTestTestingFixture31,1667
+	TestTestingFixture()TestTestingFixture35,1703
+	virtual ~TestTestingFixture()~TestTestingFixture47,1954
+	void setTestFunction(void(*testFunction)())setTestFunction56,2098
+	void setSetup(void(*setupFunction)())setSetup61,2191
+	void setTeardown(void(*teardownFunction)())setTeardown66,2272
+	void runAllTests()runAllTests71,2365
+	int getFailureCount()getFailureCount76,2426
+	void assertPrintContains(const SimpleString& contains)assertPrintContains81,2492
+	static void assertPrintContains(StringBufferTestOutput* output,assertPrintContains86,2596
+	TestRegistry* registry;registry100,2989
+	ExecFunctionTest* genTest;genTest101,3014
+	StringBufferTestOutput* output;output102,3042
+	TestResult * result;result103,3075
+
+CppUTest\include\CppUTest\Utest.h,902
+#define D_UTest_hD_UTest_h32,1722
+class UtestUtest48,1916
+	virtual void testBody()testBody57,2054
+	const char* group_;group_127,4437
+	const char* name_;name_128,4458
+	const char* file_;file_129,4478
+	int lineNumber_;lineNumber_130,4498
+	Utest *next_;next_131,4516
+	static TestResult* testResult_;testResult_132,4531
+	static Utest* currentTest_;currentTest_133,4564
+class NullTest: public UtestNullTest138,4628
+	void testBody()testBody144,4712
+class ExecFunctionTest: public UtestExecFunctionTest162,4977
+	void (*setup_)();setup_165,5024
+	void (*teardown_)();teardown_166,5043
+	void (*_testFunction)();_testFunction167,5065
+	ExecFunctionTest(void(*setup)() = 0, void(*teardown)() = 0) :ExecFunctionTest168,5091
+	void testBody()testBody173,5263
+	virtual void setup()setup177,5324
+	virtual void teardown()teardown181,5376
+class TestInstallerTestInstaller189,5477
+
+CppUTest\include\CppUTest\UtestMacros.h,1404
+#define D_UTestMacros_hD_UTestMacros_h29,1628
+#define TEST_GROUP_BASE(TEST_GROUP_BASE40,1907
+#define TEST_BASE(TEST_BASE44,2049
+#define TEST_GROUP(TEST_GROUP47,2123
+#define TEST_SETUP(TEST_SETUP50,2192
+#define TEST_TEARDOWN(TEST_TEARDOWN53,2239
+#define TEST(TEST56,2292
+#define IGNORE_TEST(IGNORE_TEST64,2730
+#define IMPORT_TEST_GROUP(IMPORT_TEST_GROUP77,3420
+#define CHECK_LOCATION(CHECK_LOCATION83,3583
+#define CHECK(CHECK86,3770
+#define CHECK_EQUAL(CHECK_EQUAL90,3930
+#define CHECK_EQUAL_LOCATION(CHECK_EQUAL_LOCATION93,4030
+#define STRCMP_EQUAL(STRCMP_EQUAL108,4576
+#define STRCMP_EQUAL_LOCATION(STRCMP_EQUAL_LOCATION111,4678
+#define STRCMP_CONTAINS(STRCMP_CONTAINS114,4856
+#define STRCMP_CONTAINS_LOCATION(STRCMP_CONTAINS_LOCATION117,4964
+#define LONGS_EQUAL(LONGS_EQUAL121,5187
+#define LONGS_EQUAL_LOCATION(LONGS_EQUAL_LOCATION124,5285
+#define BYTES_EQUAL(BYTES_EQUAL127,5464
+#define POINTERS_EQUAL(POINTERS_EQUAL130,5555
+#define POINTERS_EQUAL_LOCATION(POINTERS_EQUAL_LOCATION133,5667
+#define DOUBLES_EQUAL(DOUBLES_EQUAL137,5914
+#define DOUBLES_EQUAL_LOCATION(DOUBLES_EQUAL_LOCATION140,6035
+#define FAIL(FAIL146,6346
+#define FAIL_LOCATION(FAIL_LOCATION149,6408
+#define FAIL_TEST(FAIL_TEST153,6549
+#define FAIL_TEST_LOCATION(FAIL_TEST_LOCATION156,6621
+#define UT_PRINT_LOCATION(UT_PRINT_LOCATION159,6758
+#define UT_PRINT(UT_PRINT162,6858
+
+CppUTest\include\CppUTest\VirtualCall.h,256
+#define D_VirtualCall_HD_VirtualCall_H2,24
+#define send(send4,49
+#define send1(send17,105
+#define send2(send210,176
+#define send3(send313,259
+#define send4(send416,354
+#define vBind(vBind19,461
+#define castToDestroyer(castToDestroyer22,532
+
+CppUTest\include\Platforms\Gcc\Platform.h,50
+#define D_Gcc_Platform_HD_Gcc_Platform_H29,1657
+
+CppUTest\include\Platforms\StarterKit\Platform.h,50
+#define D_Gcc_Platform_HD_Gcc_Platform_H29,1657
+
+CppUTest\include\Platforms\Symbian\Platform.h,37
+#define PLATFORM_H_PLATFORM_H_3,21
+
+CppUTest\include\Platforms\VisualCpp\Platform.h,0
+
+CppUTest\makeAndRun.bat,0
+
+CppUTest\makeAndRunTests.sh,0
+
+CppUTest\scripts\checkForCppUTestEnvVariable.sh,65
+checkForCppUTestEnvVariable() {checkForCppUTestEnvVariable2,12
+
+CppUTest\scripts\CppUnitTemplates\ClassName.cpp,78
+ClassName::ClassName()ClassName3,26
+ClassName::~ClassName()~ClassName7,58
+
+CppUTest\scripts\CppUnitTemplates\ClassName.h,74
+#define D_ClassName_HD_ClassName_H2,23
+class ClassNameClassName10,258
+
+CppUTest\scripts\CppUnitTemplates\ClassNameC.c,104
+void ClassName_Create(void)ClassName_Create8,98
+void ClassName_Destroy(void)ClassName_Destroy12,135
+
+CppUTest\scripts\CppUnitTemplates\ClassNameC.h,41
+#define D_ClassName_HD_ClassName_H2,23
+
+CppUTest\scripts\CppUnitTemplates\ClassNameCMultipleInstance.c,250
+typedef struct _ClassName_ClassName6,94
+    int placeHolderForHiddenStructElements;placeHolderForHiddenStructElements8,124
+ClassName* ClassName_Create(void)ClassName_Create11,175
+void ClassName_Destroy(ClassName* self)ClassName_Destroy18,330
+
+CppUTest\scripts\CppUnitTemplates\ClassNameCMultipleInstance.h,95
+#define D_ClassName_HD_ClassName_H2,23
+typedef struct _ClassName Classname;Classname10,258
+
+CppUTest\scripts\CppUnitTemplates\ClassNameCMultipleInstanceTest.cpp,238
+static int fakeRan = 0;fakeRan3,37
+    void virtualFunction_renameThis_fake(ClassName*)virtualFunction_renameThis_fake8,103
+TEST_GROUP(ClassName)TEST_GROUP14,198
+TEST(ClassName, Fake)TEST31,513
+TEST(ClassName, Create)TEST37,631
+
+CppUTest\scripts\CppUnitTemplates\ClassNameCPolymorphic.c,250
+typedef struct _ClassName_ClassName6,94
+    int placeHolderForHiddenStructElements;placeHolderForHiddenStructElements8,124
+ClassName* ClassName_Create(void)ClassName_Create11,175
+void ClassName_Destroy(ClassName* self)ClassName_Destroy18,330
+
+CppUTest\scripts\CppUnitTemplates\ClassNameCPolymorphic.h,103
+#define D_ClassName_HD_ClassName_H2,23
+typedef struct _ClassName ClassnamePiml;ClassnamePiml10,258
+
+CppUTest\scripts\CppUnitTemplates\ClassNameCTest.cpp,74
+TEST_GROUP(ClassName)TEST_GROUP8,81
+TEST(ClassName, Create)TEST21,242
+
+CppUTest\scripts\CppUnitTemplates\ClassNameTest.cpp,284
+class ClassNameTest: public CPPUNIT_NS::TestFixtureClassNameTest5,114
+  ClassName* aClassName;aClassName11,274
+  void setUp()setUp15,313
+  void tearDown()tearDown20,376
+  void testCreate()testCreate25,431
+CPPUNIT_TEST_SUITE_REGISTRATION(ClassNameTest);ClassNameTest31,501
+
+CppUTest\scripts\CppUnitTemplates\InterfaceCTest.cpp,74
+TEST_GROUP(ClassName)TEST_GROUP8,85
+TEST(ClassName, Create)TEST21,242
+
+CppUTest\scripts\CppUnitTemplates\InterfaceTest.cpp,363
+class MockClassNameTest: public CPPUNIT_NS::TestFixtureMockClassNameTest6,142
+    ClassName* aClassName;aClassName12,310
+    MockClassName* mockClassName;mockClassName13,338
+    void setUp()setUp17,386
+    void tearDown()tearDown23,503
+    void testCreate()testCreate28,568
+CPPUNIT_TEST_SUITE_REGISTRATION(MockClassNameTest);MockClassNameTest34,648
+
+CppUTest\scripts\CppUnitTemplates\MockClassName.h,210
+#define D_MockClassName_HD_MockClassName_H2,27
+class MockClassName : public ClassNameMockClassName14,353
+    explicit MockClassName()MockClassName17,409
+    virtual ~MockClassName()~MockClassName19,447
+
+CppUTest\scripts\CppUnitTemplates\MockClassNameC.c,104
+void ClassName_Create(void)ClassName_Create8,98
+void ClassName_Destroy(void)ClassName_Destroy12,135
+
+CppUTest\scripts\CppUnitTemplates\MockClassNameC.h,49
+#define D_FakeClassName_HD_FakeClassName_H2,27
+
+CppUTest\scripts\CppUnitTemplates\ProjectTemplate\include\util\ProjectBuildTime.h,144
+#define D_ProjectBuildTime_HD_ProjectBuildTime_H2,29
+class ProjectBuildTimeProjectBuildTime11,330
+    const char* dateTime;dateTime21,488
+
+CppUTest\scripts\CppUnitTemplates\ProjectTemplate\src\util\ProjectBuildTime.cpp,184
+ProjectBuildTime::ProjectBuildTime()ProjectBuildTime3,31
+ProjectBuildTime::~ProjectBuildTime()~ProjectBuildTime8,107
+const char* ProjectBuildTime::GetDateTime()GetDateTime12,150
+
+CppUTest\scripts\CppUnitTemplates\ProjectTemplate\tests\AllTests.cpp,38
+int main(int ac, char** av)main4,49
+
+CppUTest\scripts\CppUnitTemplates\ProjectTemplate\tests\util\ProjectBuildTimeTest.cpp,88
+TEST_GROUP(ProjectBuildTime)TEST_GROUP4,65
+TEST(ProjectBuildTime, Create)TEST18,264
+
+CppUTest\scripts\filterGcov.sh,267
+flattenGcovOutput() {flattenGcovOutput11,187
+getRidOfCruft() {getRidOfCruft21,316
+getFileNameRootFromErrorFile() {getFileNameRootFromErrorFile29,466
+writeEachNoTestCoverageFile() {writeEachNoTestCoverageFile33,555
+createHtmlOutput() {createHtmlOutput40,642
+
+CppUTest\scripts\GenerateSrcFiles.sh,148
+checkForCppUTestToolsEnvVariable() {checkForCppUTestToolsEnvVariable9,247
+generateFileIfNotAlreadyThere() {generateFileIfNotAlreadyThere77,2113
+
+CppUTest\scripts\InstallScripts.sh,0
+
+CppUTest\scripts\NewCBaseModule.sh,0
+
+CppUTest\scripts\NewCFunction.sh,0
+
+CppUTest\scripts\NewCInterface.sh,0
+
+CppUTest\scripts\NewCIoDriver.sh,0
+
+CppUTest\scripts\NewClass.sh,0
+
+CppUTest\scripts\NewCmiModule.sh,0
+
+CppUTest\scripts\NewCModule.sh,0
+
+CppUTest\scripts\NewHelp.sh,0
+
+CppUTest\scripts\NewInterface.sh,0
+
+CppUTest\scripts\NewLibrary.sh,0
+
+CppUTest\scripts\NewPackageDirs.sh,0
+
+CppUTest\scripts\NewProject.sh,47
+changeProjectName() {changeProjectName21,415
+
+CppUTest\scripts\reformat.sh,0
+
+CppUTest\scripts\squeeze.sh,0
+
+CppUTest\scripts\templates\ClassName.cpp,78
+ClassName::ClassName()ClassName3,26
+ClassName::~ClassName()~ClassName7,58
+
+CppUTest\scripts\templates\ClassName.h,74
+#define D_ClassName_HD_ClassName_H2,23
+class ClassNameClassName10,258
+
+CppUTest\scripts\templates\ClassNameC.c,104
+void ClassName_Create(void)ClassName_Create8,98
+void ClassName_Destroy(void)ClassName_Destroy12,135
+
+CppUTest\scripts\templates\ClassNameC.h,41
+#define D_ClassName_HD_ClassName_H2,23
+
+CppUTest\scripts\templates\ClassNameCIoDriver.c,103
+void ClassName_Create(void)ClassName_Create6,66
+void ClassName_Destroy(void)ClassName_Destroy10,99
+
+CppUTest\scripts\templates\ClassNameCIoDriver.h,41
+#define D_ClassName_HD_ClassName_H2,22
+
+CppUTest\scripts\templates\ClassNameCIoDriverTest.cpp,75
+TEST_GROUP(ClassName)TEST_GROUP9,163
+TEST(ClassName, Create)TEST24,349
+
+CppUTest\scripts\templates\ClassNameCMultipleInstance.c,240
+struct ClassNameClassName6,94
+    int placeHolderForHiddenStructElements;placeHolderForHiddenStructElements8,115
+ClassName* ClassName_Create(void)ClassName_Create11,166
+void ClassName_Destroy(ClassName* self)ClassName_Destroy18,321
+
+CppUTest\scripts\templates\ClassNameCMultipleInstance.h,94
+#define D_ClassName_HD_ClassName_H2,23
+typedef struct ClassName ClassName;ClassName10,258
+
+CppUTest\scripts\templates\ClassNameCMultipleInstanceTest.cpp,75
+TEST_GROUP(ClassName)TEST_GROUP9,143
+TEST(ClassName, Create)TEST24,353
+
+CppUTest\scripts\templates\ClassNameCPolymorphic.c,248
+typedef struct ClassNameClassName6,94
+    int placeHolderForHiddenStructElements;placeHolderForHiddenStructElements8,123
+ClassName* ClassName_Create(void)ClassName_Create11,174
+void ClassName_Destroy(ClassName* self)ClassName_Destroy18,329
+
+CppUTest\scripts\templates\ClassNameCPolymorphic.h,102
+#define D_ClassName_HD_ClassName_H2,23
+typedef struct ClassName ClassNamePiml;ClassNamePiml10,258
+
+CppUTest\scripts\templates\ClassNameCTest.cpp,75
+TEST_GROUP(ClassName)TEST_GROUP9,143
+TEST(ClassName, Create)TEST22,300
+
+CppUTest\scripts\templates\ClassNameTest.cpp,75
+TEST_GROUP(ClassName)TEST_GROUP6,125
+TEST(ClassName, Create)TEST20,299
+
+CppUTest\scripts\templates\FunctionNameC.c,32
+void ClassName()ClassName4,28
+
+CppUTest\scripts\templates\FunctionNameC.h,41
+#define D_ClassName_HD_ClassName_H2,23
+
+CppUTest\scripts\templates\FunctionNameCTest.cpp,75
+TEST_GROUP(ClassName)TEST_GROUP9,143
+TEST(ClassName, Create)TEST20,244
+
+CppUTest\scripts\templates\InterfaceCTest.cpp,75
+TEST_GROUP(ClassName)TEST_GROUP9,147
+TEST(ClassName, Create)TEST22,304
+
+CppUTest\scripts\templates\InterfaceTest.cpp,75
+TEST_GROUP(ClassName)TEST_GROUP7,153
+TEST(ClassName, Create)TEST23,400
+
+CppUTest\scripts\templates\MockClassName.h,210
+#define D_MockClassName_HD_MockClassName_H2,27
+class MockClassName : public ClassNameMockClassName14,353
+    explicit MockClassName()MockClassName17,409
+    virtual ~MockClassName()~MockClassName19,447
+
+CppUTest\scripts\templates\MockClassNameC.c,104
+void ClassName_Create(void)ClassName_Create8,98
+void ClassName_Destroy(void)ClassName_Destroy12,135
+
+CppUTest\scripts\templates\MockClassNameC.h,49
+#define D_FakeClassName_HD_FakeClassName_H2,27
+
+CppUTest\scripts\templates\ProjectTemplate\include\util\ProjectBuildTime.h,144
+#define D_ProjectBuildTime_HD_ProjectBuildTime_H2,29
+class ProjectBuildTimeProjectBuildTime11,330
+    const char* dateTime;dateTime21,488
+
+CppUTest\scripts\templates\ProjectTemplate\src\util\ProjectBuildTime.cpp,184
+ProjectBuildTime::ProjectBuildTime()ProjectBuildTime3,31
+ProjectBuildTime::~ProjectBuildTime()~ProjectBuildTime8,107
+const char* ProjectBuildTime::GetDateTime()GetDateTime12,150
+
+CppUTest\scripts\templates\ProjectTemplate\tests\AllTests.cpp,38
+int main(int ac, char** av)main4,49
+
+CppUTest\scripts\templates\ProjectTemplate\tests\util\ProjectBuildTimeTest.cpp,88
+TEST_GROUP(ProjectBuildTime)TEST_GROUP4,65
+TEST(ProjectBuildTime, Create)TEST18,264
+
+CppUTest\scripts\XTest.cpp,59
+TEST_GROUP(X)TEST_GROUP9,127
+TEST(X, Create)TEST20,209
+
+CppUTest\src\CppUTest\CommandLineArguments.cpp,1223
+CommandLineArguments::CommandLineArguments(int ac, const char** av,CommandLineArguments32,1761
+CommandLineArguments::~CommandLineArguments()~CommandLineArguments39,1995
+bool CommandLineArguments::parse()parse43,2050
+const char* CommandLineArguments::usage() constusage65,2740
+bool CommandLineArguments::isVerbose() constisVerbose70,2877
+int CommandLineArguments::getRepeatCount() constgetRepeatCount75,2950
+SimpleString CommandLineArguments::getGroupFilter() constgetGroupFilter80,3026
+SimpleString CommandLineArguments::getNameFilter() constgetNameFilter85,3116
+void CommandLineArguments::SetRepeatCount(int ac, const char** av, int& i)SetRepeatCount90,3204
+SimpleString CommandLineArguments::getParameterField(int ac, const char** av,getParameterField105,3559
+void CommandLineArguments::SetGroupFilter(int ac, const char** av, int& i)SetGroupFilter114,3788
+void CommandLineArguments::SetNameFilter(int ac, const char** av, int& i)SetNameFilter120,3943
+bool CommandLineArguments::SetOutputType(int ac, const char** av, int& i)SetOutputType125,4072
+bool CommandLineArguments::isEclipseOutput() constisEclipseOutput141,4469
+bool CommandLineArguments::isJUnitOutput() constisJUnitOutput146,4569
+
+CppUTest\src\CppUTest\CommandLineTestRunner.cpp,911
+CommandLineTestRunner::CommandLineTestRunner(int ac, const char** av,CommandLineTestRunner34,1822
+CommandLineTestRunner::~CommandLineTestRunner()~CommandLineTestRunner40,1998
+int CommandLineTestRunner::RunAllTests(int ac, char** av)RunAllTests46,2097
+int CommandLineTestRunner::RunAllTests(int ac, const char** av)RunAllTests51,2221
+int CommandLineTestRunner::runAllTestsMain()runAllTestsMain71,2679
+void CommandLineTestRunner::initializeTestRun()initializeTestRun86,3065
+int CommandLineTestRunner::runAllTests()runAllTests93,3330
+bool CommandLineTestRunner::parseArguments(TestPlugin* plugin)parseArguments110,3729
+bool CommandLineTestRunner::isVerbose()isVerbose125,4047
+int CommandLineTestRunner::getRepeatCount()getRepeatCount130,4129
+SimpleString CommandLineTestRunner::getGroupFilter()getGroupFilter135,4220
+SimpleString CommandLineTestRunner::getNameFilter()getNameFilter140,4320
+
+CppUTest\src\CppUTest\Extensions\OrderedTest.cpp,1118
+OrderedTest* OrderedTest::_orderedTestsHead = 0;_orderedTestsHead32,1750
+OrderedTest::OrderedTest() :OrderedTest34,1802
+OrderedTest::~OrderedTest()~OrderedTest39,1862
+int OrderedTest::getLevel()getLevel43,1899
+void OrderedTest::setLevel(int level)setLevel48,1953
+void OrderedTest::setOrderedTestHead(OrderedTest* test)setOrderedTestHead53,2018
+OrderedTest* OrderedTest::getOrderedTestHead()getOrderedTestHead58,2111
+bool OrderedTest::firstOrderedTest()firstOrderedTest63,2195
+OrderedTest* OrderedTest::addOrderedTest(OrderedTest* test)addOrderedTest68,2279
+void OrderedTest::addOrderedTestToHead(OrderedTest* test)addOrderedTestToHead75,2414
+OrderedTest* OrderedTest::getNextOrderedTest()getNextOrderedTest87,2794
+OrderedTestInstaller::OrderedTestInstaller(OrderedTest* test,OrderedTestInstaller92,2877
+void OrderedTestInstaller::addOrderedTestInOrder(OrderedTest* test)addOrderedTestInOrder106,3321
+void OrderedTestInstaller::addOrderedTestInOrderNotAtHeadPosition(addOrderedTestInOrderNotAtHeadPosition113,3569
+OrderedTestInstaller::~OrderedTestInstaller()~OrderedTestInstaller130,4087
+
+CppUTest\src\CppUTest\Extensions\SimpleStringExtensions.cpp,69
+SimpleString StringFrom(const std::string& value)StringFrom30,1690
+
+CppUTest\src\CppUTest\Extensions\SimpleStringFromStdint.cpp,219
+SimpleString StringFrom(uint64_t i)StringFrom32,1774
+SimpleString StringFrom(uint32_t i)StringFrom51,2262
+SimpleString StringFrom(uint16_t i)StringFrom56,2357
+SimpleString StringFrom(uint8_t i)StringFrom61,2451
+
+CppUTest\src\CppUTest\Failure.cpp,758
+Failure::Failure(Utest* test, const char* fileName, long lineNumber,Failure32,1733
+Failure::Failure(Utest* test, const SimpleString& theMessage) :Failure39,1955
+Failure::Failure(Utest* test, const char* fileName, long lineNum) :Failure45,2153
+Failure::Failure(const Failure& f) :Failure51,2335
+Failure::~Failure()~Failure57,2476
+SimpleString Failure::getFileName() constgetFileName61,2505
+SimpleString Failure::getTestName() constgetTestName66,2575
+int Failure::getLineNumber() constgetLineNumber71,2645
+SimpleString Failure::getMessage() constgetMessage76,2710
+EqualsFailure::EqualsFailure(Utest* test, const char* fileName,EqualsFailure81,2778
+ContainsFailure::ContainsFailure(Utest* test, const char* fileName,ContainsFailure92,3121
+
+CppUTest\src\CppUTest\JUnitTestOutput.cpp,2742
+struct JUnitTestCaseResultNodeJUnitTestCaseResultNode34,1821
+	JUnitTestCaseResultNode() :JUnitTestCaseResultNode36,1856
+	SimpleString name_;name_41,1937
+	long execTime_;execTime_42,1959
+	Failure* failure_;failure_43,1977
+	JUnitTestCaseResultNode* next_;next_44,1998
+struct JUnitTestGroupResultJUnitTestGroupResult47,2038
+	JUnitTestGroupResult() :JUnitTestGroupResult49,2070
+	int testCount_;testCount_54,2183
+	int failureCount_;failureCount_55,2201
+	long startTime_;startTime_56,2222
+	long groupExecTime_;groupExecTime_57,2241
+	SimpleString group_;group_58,2264
+	JUnitTestCaseResultNode* head_;head_59,2287
+	JUnitTestCaseResultNode* tail_;tail_60,2321
+struct JUnitTestOutputImplJUnitTestOutputImpl63,2361
+	JUnitTestGroupResult results_;results_65,2392
+	PlatformSpecificFile file_;file_66,2425
+JUnitTestOutput::JUnitTestOutput() :JUnitTestOutput69,2461
+JUnitTestOutput::~JUnitTestOutput()~JUnitTestOutput74,2540
+void JUnitTestOutput::resetTestGroupResult()resetTestGroupResult80,2627
+void JUnitTestOutput::printTestsStarted()printTestsStarted97,3041
+void JUnitTestOutput::printCurrentGroupStarted(const Utest& test)printCurrentGroupStarted101,3092
+void JUnitTestOutput::printCurrentTestEnded(const TestResult& result)printCurrentTestEnded105,3167
+void JUnitTestOutput::printTestsEnded(const TestResult& result)printTestsEnded111,3330
+void JUnitTestOutput::printCurrentGroupEnded(const TestResult& result)printCurrentGroupEnded115,3403
+void JUnitTestOutput::printCurrentTestStarted(const Utest& test)printCurrentTestStarted122,3614
+static SimpleString createFileName(const SimpleString& group)createFileName139,4139
+void JUnitTestOutput::writeXmlHeader()writeXmlHeader147,4311
+void JUnitTestOutput::writeTestSuiteSummery()writeTestSuiteSummery152,4423
+void JUnitTestOutput::writeProperties()writeProperties166,4964
+void JUnitTestOutput::writeTestCases()writeTestCases172,5080
+void JUnitTestOutput::writeFailure(JUnitTestCaseResultNode* node)writeFailure190,5593
+void JUnitTestOutput::writeFileEnding()writeFileEnding205,6152
+void JUnitTestOutput::writeTestGroupToFile()writeTestGroupToFile212,6324
+void JUnitTestOutput::verbose()verbose223,6562
+void JUnitTestOutput::print(const char*)print227,6603
+void JUnitTestOutput::print(long)print231,6653
+void JUnitTestOutput::print(const Failure& failure)print235,6696
+void JUnitTestOutput::printTestRun(int number, int total)printTestRun243,6902
+void JUnitTestOutput::flush()flush247,6969
+void JUnitTestOutput::openFileForWrite(const SimpleString& fileName)openFileForWrite251,7008
+void JUnitTestOutput::writeToFile(const SimpleString& buffer)writeToFile256,7156
+void JUnitTestOutput::closeFile()closeFile261,7289
+
+CppUTest\src\CppUTest\MemoryLeakAllocator.cpp,3182
+static char* checkedMalloc(size_t size)checkedMalloc32,1760
+MemoryLeakAllocator* MemoryLeakAllocator::currentNewAllocator = 0;currentNewAllocator39,1928
+MemoryLeakAllocator* MemoryLeakAllocator::currentNewArrayAllocator = 0;currentNewArrayAllocator40,1996
+MemoryLeakAllocator* MemoryLeakAllocator::currentMallocAllocator = 0;currentMallocAllocator41,2069
+int MemoryLeakAllocator::isOfEqualType(MemoryLeakAllocator* allocator)isOfEqualType43,2142
+void MemoryLeakAllocator::setCurrentNewAllocator(MemoryLeakAllocator* allocator)setCurrentNewAllocator48,2293
+MemoryLeakAllocator* MemoryLeakAllocator::getCurrentNewAllocator()getCurrentNewAllocator53,2418
+void MemoryLeakAllocator::setCurrentNewAllocatorToDefault()setCurrentNewAllocatorToDefault60,2594
+void MemoryLeakAllocator::setCurrentNewArrayAllocator(MemoryLeakAllocator* allocator)setCurrentNewArrayAllocator65,2729
+MemoryLeakAllocator* MemoryLeakAllocator::getCurrentNewArrayAllocator()getCurrentNewArrayAllocator70,2864
+void MemoryLeakAllocator::setCurrentNewArrayAllocatorToDefault()setCurrentNewArrayAllocatorToDefault77,3060
+void MemoryLeakAllocator::setCurrentMallocAllocator(MemoryLeakAllocator* allocator)setCurrentMallocAllocator82,3210
+MemoryLeakAllocator* MemoryLeakAllocator::getCurrentMallocAllocator()getCurrentMallocAllocator87,3341
+void MemoryLeakAllocator::setCurrentMallocAllocatorToDefault()setCurrentMallocAllocatorToDefault94,3529
+char* StandardMallocAllocator::alloc_memory(size_t size)alloc_memory100,3675
+void StandardMallocAllocator::free_memory(char* memory)free_memory105,3771
+const char* StandardMallocAllocator::name()name110,3868
+const char* StandardMallocAllocator::alloc_name()alloc_name115,3959
+const char* StandardMallocAllocator::free_name()free_name120,4037
+MemoryLeakAllocator* StandardMallocAllocator::defaultAllocator()defaultAllocator125,4112
+char* StandardNewAllocator::alloc_memory(size_t size)alloc_memory131,4251
+void StandardNewAllocator::free_memory(char* memory)free_memory136,4344
+const char* StandardNewAllocator::name()name141,4438
+const char* StandardNewAllocator::alloc_name()alloc_name146,4523
+const char* StandardNewAllocator::free_name()free_name151,4595
+MemoryLeakAllocator* StandardNewAllocator::defaultAllocator()defaultAllocator156,4669
+char* StandardNewArrayAllocator::alloc_memory(size_t size)alloc_memory162,4802
+void StandardNewArrayAllocator::free_memory(char* memory)free_memory167,4900
+const char* StandardNewArrayAllocator::name()name172,4999
+const char* StandardNewArrayAllocator::alloc_name()alloc_name177,5092
+const char* StandardNewArrayAllocator::free_name()free_name182,5172
+MemoryLeakAllocator* StandardNewArrayAllocator::defaultAllocator()defaultAllocator187,5254
+char* NullUnknownAllocator::alloc_memory(size_t size)alloc_memory192,5395
+void NullUnknownAllocator::free_memory(char* memory)free_memory197,5470
+const char* NullUnknownAllocator::name()name201,5532
+const char* NullUnknownAllocator::alloc_name()alloc_name206,5609
+const char* NullUnknownAllocator::free_name()free_name211,5685
+MemoryLeakAllocator* NullUnknownAllocator::defaultAllocator()defaultAllocator216,5760
+
+CppUTest\src\CppUTest\MemoryLeakDetector.cpp,4256
+#define UNKNOWN UNKNOWN32,1800
+SimpleStringBuffer::SimpleStringBuffer() :SimpleStringBuffer34,1842
+void SimpleStringBuffer::clear()clear40,1919
+void SimpleStringBuffer::add(const char* format, ...)add46,2005
+char* SimpleStringBuffer::toString()toString57,2334
+void MemoryLeakDetectorList::initNode(MemoryLeakDetectorNode* node,initNode64,2424
+bool MemoryLeakDetectorList::isInPeriod(MemoryLeakDetectorNode* node,isInPeriod78,2784
+void MemoryLeakDetectorList::clearAllAccounting(MemLeakPeriod period)clearAllAccounting86,3047
+void MemoryLeakDetectorList::addNewNode(MemoryLeakDetectorNode* node)addNewNode108,3436
+MemoryLeakDetectorNode* MemoryLeakDetectorList::removeNode(char* memory)removeNode114,3551
+MemoryLeakDetectorNode* MemoryLeakDetectorList::getLeakFrom(getLeakFrom135,3936
+MemoryLeakDetectorNode* MemoryLeakDetectorList::getFirstLeak(getFirstLeak143,4182
+MemoryLeakDetectorNode* MemoryLeakDetectorList::getNextLeak(getNextLeak149,4314
+int MemoryLeakDetectorList::getTotalLeaks(MemLeakPeriod period)getTotalLeaks155,4481
+bool MemoryLeakDetectorList::hasLeaks(MemLeakPeriod period)hasLeaks164,4722
+int MemoryLeakDetectorTable::hash(char* memory)hash173,4987
+void MemoryLeakDetectorTable::clearAllAccounting(MemLeakPeriod period)clearAllAccounting178,5085
+void MemoryLeakDetectorTable::addNewNode(MemoryLeakDetectorNode* node)addNewNode184,5244
+MemoryLeakDetectorNode* MemoryLeakDetectorTable::removeNode(char* memory)removeNode189,5370
+bool MemoryLeakDetectorTable::hasLeaks(MemLeakPeriod period)hasLeaks194,5502
+int MemoryLeakDetectorTable::getTotalLeaks(MemLeakPeriod period)getTotalLeaks201,5674
+MemoryLeakDetectorNode* MemoryLeakDetectorTable::getFirstLeak(getFirstLeak209,5882
+MemoryLeakDetectorNode* MemoryLeakDetectorTable::getNextLeak(getNextLeak219,6127
+MemoryLeakDetector::MemoryLeakDetector()MemoryLeakDetector235,6562
+void MemoryLeakDetector::init(MemoryLeakFailure* report)init239,6612
+void MemoryLeakDetector::clearAllAccounting(MemLeakPeriod period)clearAllAccounting248,6862
+void MemoryLeakDetector::startChecking()startChecking253,6979
+void MemoryLeakDetector::stopChecking()stopChecking259,7099
+void MemoryLeakDetector::enable()enable264,7192
+void MemoryLeakDetector::disable()disable269,7279
+void MemoryLeakDetector::disableAllocationTypeChecking()disableAllocationTypeChecking274,7368
+void MemoryLeakDetector::enableAllocationTypeChecking()enableAllocationTypeChecking279,7470
+void MemoryLeakDetector::reportFailure(const char* message,reportFailure284,7570
+int calculateIntAlignedSize(size_t size)calculateIntAlignedSize297,8100
+MemoryLeakDetectorNode* MemoryLeakDetector::getNodeFromMemoryPointer(getNodeFromMemoryPointer302,8204
+char* MemoryLeakDetector::allocateMemoryAndExtraInfo(allocateMemoryAndExtraInfo309,8441
+char* MemoryLeakDetector::reallocateMemoryAndExtraInfo(char* memory,reallocateMemoryAndExtraInfo317,8722
+void MemoryLeakDetector::addMemoryCorruptionInformation(char* memory,addMemoryCorruptionInformation324,8966
+void MemoryLeakDetector::checkForAllocMismatchOrCorruption(checkForAllocMismatchOrCorruption332,9135
+void MemoryLeakDetector::addMemoryLeakInfoAndCorruptionInfo(char* memory,addMemoryLeakInfoAndCorruptionInfo347,9810
+bool MemoryLeakDetector::removeMemoryLeakInfoAndCheckCorruption(char* memory,removeMemoryLeakInfoAndCheckCorruption359,10245
+char* MemoryLeakDetector::allocMemory(MemoryLeakAllocator* allocator,allocMemory372,10714
+char* MemoryLeakDetector::allocMemory(MemoryLeakAllocator* allocator,allocMemory378,10860
+void MemoryLeakDetector::deallocMemory(MemoryLeakAllocator* allocator,deallocMemory387,11140
+void MemoryLeakDetector::deallocMemory(MemoryLeakAllocator* allocator,deallocMemory396,11423
+char* MemoryLeakDetector::reallocMemory(MemoryLeakAllocator* allocator,reallocMemory402,11576
+void MemoryLeakDetector::ConstructMemoryLeakReport(MemLeakPeriod period)ConstructMemoryLeakReport414,11995
+const char* MemoryLeakDetector::report(MemLeakPeriod period)report429,12478
+void MemoryLeakDetector::markCheckingPeriodLeaksAsNonCheckingPeriod()markCheckingPeriodLeaksAsNonCheckingPeriod439,12708
+int MemoryLeakDetector::totalMemoryLeaks(MemLeakPeriod period)totalMemoryLeaks450,13059
+
+CppUTest\src\CppUTest\MemoryLeakWarningPlugin.cpp,2026
+class MemoryLeakWarningReporter: public MemoryLeakFailureMemoryLeakWarningReporter34,1849
+	virtual ~MemoryLeakWarningReporter()~MemoryLeakWarningReporter37,1920
+	virtual void fail(char* fail_string)fail41,1971
+static MemoryLeakWarningReporter* globalReporter = 0;globalReporter47,2046
+static MemoryLeakDetector* globalDetector = 0;globalDetector48,2101
+void destroyDetector()destroyDetector50,2151
+MemoryLeakDetector* MemoryLeakWarningPlugin::getGlobalDetector()getGlobalDetector59,2355
+MemoryLeakWarningPlugin* MemoryLeakWarningPlugin::firstPlugin = 0;firstPlugin81,3194
+MemoryLeakWarningPlugin* MemoryLeakWarningPlugin::getFirstPlugin()getFirstPlugin83,3264
+MemoryLeakDetector* MemoryLeakWarningPlugin::getMemoryLeakDetector()getMemoryLeakDetector88,3362
+void MemoryLeakWarningPlugin::ignoreAllLeaksInTest()ignoreAllLeaksInTest93,3466
+void MemoryLeakWarningPlugin::expectLeaksInTest(int n)expectLeaksInTest98,3556
+MemoryLeakWarningPlugin::MemoryLeakWarningPlugin(const SimpleString& name,MemoryLeakWarningPlugin103,3641
+MemoryLeakWarningPlugin::~MemoryLeakWarningPlugin()~MemoryLeakWarningPlugin115,4005
+void MemoryLeakWarningPlugin::preTestAction(Utest& test, TestResult& result)preTestAction120,4110
+void MemoryLeakWarningPlugin::postTestAction(Utest& test, TestResult& result)postTestAction126,4275
+const char* MemoryLeakWarningPlugin::FinalReport(int toBeDeletedLeaks)FinalReport141,4792
+#undef newnew150,5084
+void* operator new(size_t size)operator new152,5098
+void* operator new(size_t size, const char* file, int line)operator new158,5265
+void operator delete(void* mem, const char* file, int line)operator delete164,5480
+void operator delete(void* mem)operator delete170,5677
+void* operator new[](size_t size)operator new[]176,5846
+void* operator new [](size_t size, const char* file, int line)operator new []182,6020
+void operator delete[](void* mem, const char* file, int line)operator delete[]188,6243
+void operator delete[](void* mem)operator delete[]194,6447
+
+CppUTest\src\CppUTest\Nulls\NullJUnitTestOutput.cpp,1817
+JUnitTestOutput::JUnitTestOutput() :JUnitTestOutput39,1823
+JUnitTestOutput::~JUnitTestOutput()~JUnitTestOutput44,1880
+void JUnitTestOutput::resetTestGroupResult()resetTestGroupResult48,1925
+void JUnitTestOutput::printTestsStarted()printTestsStarted52,1979
+void JUnitTestOutput::printCurrentGroupStarted(const Utest& test)printCurrentGroupStarted56,2030
+void JUnitTestOutput::printCurrentTestEnded(const TestResult& result)printCurrentTestEnded60,2105
+void JUnitTestOutput::printTestsEnded(const TestResult& result)printTestsEnded64,2184
+void JUnitTestOutput::printCurrentGroupEnded(const TestResult& result)printCurrentGroupEnded68,2257
+void JUnitTestOutput::printCurrentTestStarted(const Utest& test)printCurrentTestStarted72,2337
+void JUnitTestOutput::writeXmlHeader()writeXmlHeader76,2411
+void JUnitTestOutput::writeTestSuiteSummery()writeTestSuiteSummery80,2459
+void JUnitTestOutput::writeProperties()writeProperties84,2514
+void JUnitTestOutput::writeTestCases()writeTestCases88,2563
+void JUnitTestOutput::writeFailure(JUnitTestCaseResultNode* node)writeFailure92,2611
+void JUnitTestOutput::writeFileEnding()writeFileEnding96,2686
+void JUnitTestOutput::writeTestGroupToFile()writeTestGroupToFile100,2735
+void JUnitTestOutput::verbose()verbose104,2789
+void JUnitTestOutput::print(const char*)print108,2830
+void JUnitTestOutput::print(long)print112,2880
+void JUnitTestOutput::print(const Failure& failure)print116,2923
+void JUnitTestOutput::printTestRun(int number, int total)printTestRun120,2984
+void JUnitTestOutput::flush()flush124,3051
+void JUnitTestOutput::openFileForWrite(const SimpleString& fileName)openFileForWrite128,3090
+void JUnitTestOutput::writeToFile(const SimpleString& buffer)writeToFile132,3168
+void JUnitTestOutput::closeFile()closeFile136,3239
+
+CppUTest\src\CppUTest\SimpleString.cpp,2754
+static char* allocString(int size)allocString32,1753
+static void deallocString(char* str)deallocString37,1822
+static char* getEmptryString()getEmptryString41,1882
+SimpleString::SimpleString(const char *otherBuffer)SimpleString47,1984
+SimpleString::SimpleString(const char *other, int repeatCount)SimpleString59,2251
+SimpleString::SimpleString(const SimpleString& other)SimpleString71,2577
+SimpleString& SimpleString::operator=(const SimpleString& other)operator =78,2747
+bool SimpleString::contains(const SimpleString& other) constcontains89,3001
+bool SimpleString::startsWith(const SimpleString& other) conststartsWith98,3360
+bool SimpleString::endsWith(const SimpleString& other) constendsWith105,3626
+int SimpleString::count(const SimpleString& substr) constcount116,4060
+void SimpleString::split(const SimpleString& split, SimpleStringCollection& col) constsplit127,4265
+void SimpleString::replace(char to, char with)replace150,4832
+void SimpleString::replace(const char* to, const char* with)replace158,4984
+const char *SimpleString::asCharString() constasCharString191,5715
+int SimpleString::size() constsize196,5788
+SimpleString::~SimpleString()~SimpleString201,5869
+bool operator==(const SimpleString& left, const SimpleString& right)operator ==206,5933
+bool operator!=(const SimpleString& left, const SimpleString& right)operator !=212,6096
+SimpleString SimpleString::operator+(const SimpleString& rhs)operator +217,6201
+SimpleString& SimpleString::operator+=(const SimpleString& rhs)operator +=224,6329
+SimpleString& SimpleString::operator+=(const char* rhs)operator +=229,6435
+SimpleString StringFrom(bool value)StringFrom240,6746
+SimpleString StringFrom(const char *value)StringFrom245,6864
+SimpleString StringFrom(int value)StringFrom250,6946
+SimpleString StringFrom(long value)StringFrom255,7030
+SimpleString StringFrom(void* value)StringFrom260,7116
+SimpleString HexStringFrom(long value)HexStringFrom265,7221
+SimpleString StringFrom(double value, int precision)StringFrom270,7310
+SimpleString StringFrom(char value)StringFrom276,7492
+SimpleString StringFrom(const SimpleString& value)StringFrom281,7577
+SimpleString StringFromFormat(const char* format, ...)StringFromFormat286,7667
+#define va_copy(va_copy299,7968
+SimpleString VStringFromFormat(const char* format, va_list args)VStringFromFormat302,8028
+SimpleStringCollection::SimpleStringCollection()SimpleStringCollection328,8663
+void SimpleStringCollection::allocate(int size)allocate334,8752
+SimpleStringCollection::~SimpleStringCollection()~SimpleStringCollection342,8906
+int SimpleStringCollection::size() constsize347,8990
+SimpleString& SimpleStringCollection::operator[](int index)operator []352,9056
+
+CppUTest\src\CppUTest\TestHarness_c.cpp,1558
+void CHECK_EQUAL_C_INT_LOCATION(int expected, int actual, const char* fileName,CHECK_EQUAL_C_INT_LOCATION43,2003
+void CHECK_EQUAL_C_REAL_LOCATION(double expected, double actual,CHECK_EQUAL_C_REAL_LOCATION49,2187
+void CHECK_EQUAL_C_CHAR_LOCATION(char expected, char actual,CHECK_EQUAL_C_CHAR_LOCATION55,2397
+void CHECK_EQUAL_C_STRING_LOCATION(const char* expected, const char* actual,CHECK_EQUAL_C_STRING_LOCATION61,2572
+void FAIL_TEXT_C_LOCATION(const char* text, const char* fileName,FAIL_TEXT_C_LOCATION67,2764
+void FAIL_C_LOCATION(const char* fileName, int lineNumber)FAIL_C_LOCATION73,2903
+void CHECK_C_LOCATION(int condition, const char* conditionString,CHECK_C_LOCATION78,3014
+void cpputest_malloc_set_out_of_memory()cpputest_malloc_set_out_of_memory84,3222
+void cpputest_malloc_set_not_out_of_memory()cpputest_malloc_set_not_out_of_memory89,3364
+void* cpputest_malloc(size_t size)cpputest_malloc94,3479
+void* cpputest_calloc(size_t num, size_t size)cpputest_calloc99,3580
+void* cpputest_realloc(void* ptr, size_t size)cpputest_realloc104,3698
+void cpputest_free(void* buffer)cpputest_free109,3817
+void* cpputest_malloc_location(size_t size, const char* file, int line)cpputest_malloc_location114,3909
+void* cpputest_calloc_location(size_t num, size_t size, const char* file,cpputest_calloc_location120,4131
+void* cpputest_realloc_location(void* memory, size_t size, const char* file,cpputest_realloc_location126,4286
+void cpputest_free_location(void* buffer, const char* file, int line)cpputest_free_location133,4544
+
+CppUTest\src\CppUTest\TestOutput.cpp,1402
+TestOutput::TestOutput() :TestOutput32,1751
+TestOutput::~TestOutput()~TestOutput37,1844
+void TestOutput::verbose()verbose41,1879
+void TestOutput::print(long n)print46,1934
+void TestOutput::printDouble(double d)printDouble51,2013
+void TestOutput::printHex(long n)printHex56,2103
+TestOutput& operator<<(TestOutput& p, const char* s)operator <<61,2188
+TestOutput& operator<<(TestOutput& p, long int i)operator <<67,2276
+void TestOutput::printCurrentTestStarted(const Utest& test)printCurrentTestStarted73,2361
+void TestOutput::printCurrentTestEnded(const TestResult& res)printCurrentTestEnded78,2493
+void TestOutput::printProgressIndicator()printProgressIndicator90,2714
+void TestOutput::setProgressIndicator(const char* indicator)setProgressIndicator96,2836
+void TestOutput::printTestsStarted()printTestsStarted101,2940
+void TestOutput::printCurrentGroupStarted(const Utest& test)printCurrentGroupStarted105,2986
+void TestOutput::printCurrentGroupEnded(const TestResult& res)printCurrentGroupEnded109,3056
+void TestOutput::flush()flush113,3128
+void TestOutput::printTestsEnded(const TestResult& result)printTestsEnded117,3162
+void TestOutput::printTestRun(int number, int total)printTestRun141,3735
+void TestOutput::print(const Failure& failure)print152,3912
+void ConsoleTestOutput::print(const char* s)print168,4277
+void ConsoleTestOutput::flush()flush178,4451
+
+CppUTest\src\CppUTest\TestPlugin.cpp,1906
+TestPlugin::TestPlugin(const SimpleString& name) :TestPlugin31,1702
+TestPlugin::TestPlugin(TestPlugin* next) :TestPlugin36,1827
+TestPlugin::~TestPlugin()~TestPlugin41,1908
+TestPlugin* TestPlugin::addPlugin(TestPlugin* plugin)addPlugin45,1943
+void TestPlugin::runAllPreTestAction(Utest& test, TestResult& result)runAllPreTestAction51,2039
+void TestPlugin::runAllPostTestAction(Utest& test, TestResult& result)runAllPostTestAction57,2207
+bool TestPlugin::parseAllArguments(int ac, char** av, int index)parseAllArguments63,2379
+bool TestPlugin::parseAllArguments(int ac, const char** av, int index)parseAllArguments68,2523
+const SimpleString& TestPlugin::getName()getName75,2730
+TestPlugin* TestPlugin::getPluginByName(const SimpleString& name)getPluginByName80,2797
+TestPlugin* TestPlugin::getNext()getNext87,2974
+TestPlugin* TestPlugin::removePluginByName(const SimpleString& name)removePluginByName91,3031
+void TestPlugin::disable()disable101,3246
+void TestPlugin::enable()enable106,3302
+bool TestPlugin::isEnabled()isEnabled111,3356
+struct cpputest_paircpputest_pair116,3413
+	void **orig;orig118,3438
+	void *orig_value;orig_value119,3453
+static int index;index124,3501
+static cpputest_pair setlist[SetPointerPlugin::MAX_SET];setlist125,3520
+SetPointerPlugin::SetPointerPlugin(const SimpleString& name_) :SetPointerPlugin127,3580
+SetPointerPlugin::~SetPointerPlugin()~SetPointerPlugin133,3686
+void CppUTestStore(void**function, void*value)CppUTestStore137,3733
+void SetPointerPlugin::postTestAction(Utest& test, TestResult& result)postTestAction147,3978
+NullTestPlugin::NullTestPlugin() :NullTestPlugin156,4189
+NullTestPlugin* NullTestPlugin::instance()instance161,4249
+void NullTestPlugin::runAllPreTestAction(Utest&, TestResult&)runAllPreTestAction167,4357
+void NullTestPlugin::runAllPostTestAction(Utest&, TestResult&)runAllPostTestAction171,4428
+
+CppUTest\src\CppUTest\TestRegistry.cpp,1621
+TestRegistry::TestRegistry() :TestRegistry31,1704
+TestRegistry::~TestRegistry()~TestRegistry37,1854
+void TestRegistry::cleanup()cleanup42,1906
+void TestRegistry::addTest(Utest *test)addTest50,2028
+void TestRegistry::runAllTests(TestResult& result)runAllTests55,2109
+bool TestRegistry::endOfGroup(Utest* test)endOfGroup83,2760
+int TestRegistry::countTests()countTests88,2890
+TestRegistry* TestRegistry::currentRegistry_ = 0;currentRegistry_93,2960
+TestRegistry* TestRegistry::getCurrentRegistry()getCurrentRegistry95,3013
+void TestRegistry::setCurrentRegistry(TestRegistry* registry)setCurrentRegistry101,3168
+void TestRegistry::unDoLastAddTest()unDoLastAddTest106,3270
+void TestRegistry::nameFilter(SimpleString f)nameFilter112,3346
+void TestRegistry::groupFilter(SimpleString f)groupFilter118,3460
+SimpleString TestRegistry::getGroupFilter()getGroupFilter124,3577
+SimpleString TestRegistry::getNameFilter()getNameFilter129,3654
+bool TestRegistry::testShouldRun(Utest* test, TestResult& result)testShouldRun134,3729
+void TestRegistry::resetPlugins()resetPlugins145,4047
+void TestRegistry::installPlugin(TestPlugin* plugin)installPlugin150,4135
+TestPlugin* TestRegistry::getFirstPlugin()getFirstPlugin155,4247
+TestPlugin* TestRegistry::getPluginByName(const SimpleString& name)getPluginByName160,4322
+void TestRegistry::removePluginByName(const SimpleString& name)removePluginByName165,4445
+Utest* TestRegistry::getFirstTest()getFirstTest173,4745
+Utest* TestRegistry::getLastTest()getLastTest178,4806
+Utest* TestRegistry::getTestWithNext(Utest* test)getTestWithNext186,4967
+
+CppUTest\src\CppUTest\TestResult.cpp,1346
+TestResult::TestResult(TestOutput& p) :TestResult34,1816
+void TestResult::setProgressIndicator(const char* indicator)setProgressIndicator43,2153
+TestResult::~TestResult()~TestResult48,2265
+void TestResult::currentGroupStarted(Utest* test)currentGroupStarted52,2300
+void TestResult::currentGroupEnded(Utest* test)currentGroupEnded58,2464
+void TestResult::currentTestStarted(Utest* test)currentTestStarted65,2661
+void TestResult::print(const char* text)print71,2822
+void TestResult::currentTestEnded(Utest* test)currentTestEnded76,2894
+void TestResult::addFailure(const Failure& failure)addFailure84,3089
+void TestResult::countTest()countTest90,3193
+void TestResult::countRun()countRun95,3246
+void TestResult::countCheck()countCheck100,3297
+void TestResult::countFilteredOut()countFilteredOut105,3352
+void TestResult::countIgnored()countIgnored110,3419
+void TestResult::testsStarted()testsStarted115,3478
+void TestResult::testsEnded()testsEnded121,3600
+long TestResult::getTotalExecutionTime() constgetTotalExecutionTime128,3774
+void TestResult::setTotalExecutionTime(long exTime)setTotalExecutionTime133,3859
+long TestResult::getCurrentTestTotalExecutionTime() constgetCurrentTestTotalExecutionTime138,3951
+long TestResult::getCurrentGroupTotalExecutionTime() constgetCurrentGroupTotalExecutionTime143,4058
+
+CppUTest\src\CppUTest\Utest.cpp,3195
+TestResult* Utest::testResult_ = 0;testResult_32,1722
+Utest* Utest::currentTest_ = 0;currentTest_33,1758
+Utest::Utest() :Utest35,1791
+Utest::Utest(const char* groupName, const char* testName, const char* fileName,Utest42,1943
+Utest::Utest(const char* groupName, const char* testName, const char* fileName,Utest49,2159
+Utest::~Utest()~Utest56,2379
+void Utest::runOneTestWithPlugins(TestPlugin* plugin, TestResult& result)runOneTestWithPlugins60,2400
+void Utest::runOneTest(TestPlugin* plugin, TestResult& result)runOneTest65,2531
+void Utest::run(TestResult& result)run72,2704
+void Utest::exitCurrentTest()exitCurrentTest92,3124
+Utest *Utest::getNext() constgetNext97,3202
+Utest* Utest::addTest(Utest *test)addTest102,3252
+int Utest::countTests()countTests108,3321
+bool Utest::isNull() constisNull113,3383
+SimpleString Utest::getMacroName() constgetMacroName118,3430
+const SimpleString Utest::getName() constgetName123,3492
+const SimpleString Utest::getGroup() constgetGroup128,3568
+SimpleString Utest::getFormattedName() constgetFormattedName133,3646
+const char* Utest::getProgressIndicator() constgetProgressIndicator145,3886
+void Utest::setFileName(const char* fileName)setFileName150,3952
+void Utest::setLineNumber(int lineNumber)setLineNumber155,4022
+void Utest::setGroupName(const char* groupName)setGroupName160,4096
+void Utest::setTestName(const char* testName)setTestName165,4170
+const SimpleString Utest::getFile() constgetFile170,4240
+int Utest::getLineNumber() constgetLineNumber175,4316
+void Utest::setup()setup180,4375
+void Utest::teardown()teardown184,4400
+bool Utest::shouldRun(const SimpleString& groupFilter,shouldRun188,4428
+bool Utest::assertTrue(bool condition, const char* conditionString,assertTrue198,4676
+bool Utest::assertCstrEqual(const char* expected, const char* actual,assertCstrEqual213,5042
+bool Utest::assertCstrContains(const char* expected, const char* actual,assertCstrContains239,5777
+void PadStringsToSameLength(SimpleString& aDecimal, SimpleString& eDecimal,PadStringsToSameLength265,6516
+bool Utest::assertLongsEqual(long expected, long actual, const char* fileName,assertLongsEqual277,6873
+bool Utest::assertPointersEqual(void* expected, void* actual,assertPointersEqual301,7579
+bool Utest::assertDoublesEqual(double expected, double actual,assertDoublesEqual314,7899
+void Utest::fail(const char *text, const char* fileName, int lineNumber)fail327,8271
+void Utest::print(const char *text, const char* fileName, int lineNumber)print333,8426
+void Utest::print(const SimpleString& text, const char* fileName,print344,8732
+TestResult* Utest::getTestResult()getTestResult350,8872
+Utest* Utest::getCurrent()getCurrent355,8933
+NullTest::NullTest() :NullTest363,9026
+NullTest::~NullTest()~NullTest368,9105
+NullTest& NullTest::instance()instance372,9132
+int NullTest::countTests()countTests378,9215
+Utest* NullTest::getNext() constgetNext383,9258
+bool NullTest::isNull() constisNull388,9317
+TestInstaller::TestInstaller(Utest* t, const char* groupName,TestInstaller395,9409
+TestInstaller::~TestInstaller()~TestInstaller405,9701
+void TestInstaller::unDo()unDo409,9738
+
+CppUTest\src\Platforms\Gcc\UtestPlatform.cpp,3225
+#undef mallocmalloc30,1687
+#undef freefree31,1702
+#undef calloccalloc32,1715
+#undef reallocrealloc33,1730
+static jmp_buf test_exit_jmp_buf[10];test_exit_jmp_buf46,1981
+static int jmp_buf_index = 0;jmp_buf_index47,2020
+bool Utest::executePlatformSpecificSetup()executePlatformSpecificSetup49,2053
+void Utest::executePlatformSpecificTestBody()executePlatformSpecificTestBody60,2270
+void Utest::executePlatformSpecificTeardown()executePlatformSpecificTeardown69,2455
+void Utest::executePlatformSpecificRunOneTest(TestPlugin* plugin, TestResult& result)executePlatformSpecificRunOneTest78,2640
+void Utest::executePlatformSpecificExitCurrentTest()executePlatformSpecificExitCurrentTest87,2886
+static long TimeInMillisImplementation()TimeInMillisImplementation95,3051
+static long (*timeInMillisFp) () = TimeInMillisImplementation;timeInMillisFp103,3228
+long GetPlatformSpecificTimeInMillis()GetPlatformSpecificTimeInMillis105,3294
+void SetPlatformSpecificTimeInMillisMethod(long (*platformSpecific) ())SetPlatformSpecificTimeInMillisMethod110,3369
+static const char* TimeStringImplementation()TimeStringImplementation117,3574
+static const char* (*timeStringFp) () = TimeStringImplementation;timeStringFp123,3676
+const char* GetPlatformSpecificTimeString()GetPlatformSpecificTimeString125,3745
+void SetPlatformSpecificTimeStringMethod(const char* (*platformMethod) ())SetPlatformSpecificTimeStringMethod130,3823
+int PlatformSpecificAtoI(const char*str)PlatformSpecificAtoI135,3991
+int PlatformSpecificStrLen(const char* str)PlatformSpecificStrLen140,4063
+char* PlatformSpecificStrCat(char* s1, const char* s2)PlatformSpecificStrCat145,4140
+char* PlatformSpecificStrCpy(char* s1, const char* s2)PlatformSpecificStrCpy150,4231
+char* PlatformSpecificStrNCpy(char* s1, const char* s2, unsigned int size)PlatformSpecificStrNCpy155,4322
+int PlatformSpecificStrCmp(const char* s1, const char* s2)PlatformSpecificStrCmp160,4440
+int PlatformSpecificStrNCmp(const char* s1, const char* s2, unsigned int size)PlatformSpecificStrNCmp165,4535
+char* PlatformSpecificStrStr(const char* s1, const char* s2)PlatformSpecificStrStr169,4655
+int PlatformSpecificVSNprintf(char *str, unsigned int size, const char* format, va_list args)PlatformSpecificVSNprintf174,4760
+PlatformSpecificFile PlatformSpecificFOpen(const char* filename, const char* flag)PlatformSpecificFOpen179,4911
+void PlatformSpecificFPuts(const char* str, PlatformSpecificFile file)PlatformSpecificFPuts184,5037
+void PlatformSpecificFClose(PlatformSpecificFile file)PlatformSpecificFClose189,5146
+void PlatformSpecificFlush()PlatformSpecificFlush194,5235
+int PlatformSpecificPutchar(int c)PlatformSpecificPutchar199,5292
+void* PlatformSpecificMalloc(unsigned int size)PlatformSpecificMalloc204,5358
+void* PlatformSpecificRealloc (void* memory, unsigned int size)PlatformSpecificRealloc209,5440
+void PlatformSpecificFree(void* memory)PlatformSpecificFree214,5547
+void* PlatformSpecificMemCpy(void* s1, const void* s2, unsigned int size)PlatformSpecificMemCpy219,5614
+int PlatformSpecificAtExit(void (*func) ())PlatformSpecificAtExit224,5730
+double PlatformSpecificFabs(double d)PlatformSpecificFabs229,5808
+
+CppUTest\src\Platforms\Iar\UtestPlatform.cpp,3225
+#undef mallocmalloc37,1810
+#undef calloccalloc38,1825
+#undef reallocrealloc39,1840
+#undef freefree40,1856
+static jmp_buf test_exit_jmp_buf[10];test_exit_jmp_buf44,1956
+static int jmp_buf_index = 0;jmp_buf_index45,1995
+bool Utest::executePlatformSpecificSetup()executePlatformSpecificSetup47,2028
+void Utest::executePlatformSpecificTestBody()executePlatformSpecificTestBody58,2245
+void Utest::executePlatformSpecificTeardown()executePlatformSpecificTeardown67,2430
+void Utest::executePlatformSpecificRunOneTest(TestPlugin* plugin, TestResult& result)executePlatformSpecificRunOneTest76,2615
+void Utest::executePlatformSpecificExitCurrentTest()executePlatformSpecificExitCurrentTest85,2861
+static long TimeInMillisImplementation()TimeInMillisImplementation93,3026
+static long (*timeInMillisFp) () = TimeInMillisImplementation;timeInMillisFp102,3136
+long GetPlatformSpecificTimeInMillis()GetPlatformSpecificTimeInMillis104,3202
+void SetPlatformSpecificTimeInMillisMethod(long (*platformSpecific) ())SetPlatformSpecificTimeInMillisMethod109,3277
+static const char* TimeStringImplementation()TimeStringImplementation116,3482
+static const char* (*timeStringFp) () = TimeStringImplementation;timeStringFp122,3584
+const char* GetPlatformSpecificTimeString()GetPlatformSpecificTimeString124,3653
+void SetPlatformSpecificTimeStringMethod(const char* (*platformMethod) ())SetPlatformSpecificTimeStringMethod129,3731
+int PlatformSpecificAtoI(const char*str)PlatformSpecificAtoI134,3899
+int PlatformSpecificStrLen(const char* str)PlatformSpecificStrLen139,3971
+char* PlatformSpecificStrCat(char* s1, const char* s2)PlatformSpecificStrCat144,4048
+char* PlatformSpecificStrCpy(char* s1, const char* s2)PlatformSpecificStrCpy149,4139
+char* PlatformSpecificStrNCpy(char* s1, const char* s2, unsigned int size)PlatformSpecificStrNCpy154,4230
+int PlatformSpecificStrCmp(const char* s1, const char* s2)PlatformSpecificStrCmp159,4348
+int PlatformSpecificStrNCmp(const char* s1, const char* s2, unsigned int size)PlatformSpecificStrNCmp164,4443
+char* PlatformSpecificStrStr(const char* s1, const char* s2)PlatformSpecificStrStr169,4565
+int PlatformSpecificVSNprintf(char *str, unsigned int size, const char* format, va_list args)PlatformSpecificVSNprintf174,4676
+PlatformSpecificFile PlatformSpecificFOpen(const char* filename, const char* flag)PlatformSpecificFOpen179,4827
+void PlatformSpecificFPuts(const char* str, PlatformSpecificFile file)PlatformSpecificFPuts184,4933
+void PlatformSpecificFClose(PlatformSpecificFile file)PlatformSpecificFClose188,5013
+void PlatformSpecificFlush()PlatformSpecificFlush192,5077
+int PlatformSpecificPutchar(int c)PlatformSpecificPutchar196,5115
+void* PlatformSpecificMalloc(unsigned int size)PlatformSpecificMalloc201,5181
+void* PlatformSpecificRealloc (void* memory, unsigned int size)PlatformSpecificRealloc206,5263
+void PlatformSpecificFree(void* memory)PlatformSpecificFree211,5370
+void* PlatformSpecificMemCpy(void* s1, const void* s2, unsigned int size)PlatformSpecificMemCpy216,5437
+int PlatformSpecificAtExit(void (*func) ())PlatformSpecificAtExit221,5553
+double PlatformSpecificFabs(double d)PlatformSpecificFabs226,5631
+
+CppUTest\src\Platforms\StarterKit\StarterMemoryLeakWarning.cpp,1888
+static int allocatedBlocks = 0;allocatedBlocks34,1775
+static int allocatedArrays = 0;allocatedArrays35,1808
+static int firstInitialBlocks = 0;firstInitialBlocks36,1841
+static int firstInitialArrays = 0;firstInitialArrays37,1877
+static bool reporterRegistered = false;reporterRegistered38,1913
+class MemoryLeakWarningDataMemoryLeakWarningData40,1956
+		int initialBlocksUsed;initialBlocksUsed45,2030
+		int initialArraysUsed;initialArraysUsed46,2056
+		int blockUsageCheckPoint;blockUsageCheckPoint48,2084
+		int arrayUsageCheckPoint;arrayUsageCheckPoint49,2113
+		int expectCount;expectCount50,2142
+		char message[100];message51,2162
+void MemoryLeakWarning::CreateData()CreateData54,2190
+void MemoryLeakWarning::DestroyData()DestroyData66,2500
+void reportMemoryBallance()reportMemoryBallance75,2611
+MemoryLeakWarning* MemoryLeakWarning::_latest = NULL;_latest103,3764
+MemoryLeakWarning::MemoryLeakWarning()MemoryLeakWarning105,3821
+MemoryLeakWarning::~MemoryLeakWarning()~MemoryLeakWarning111,3905
+MemoryLeakWarning* MemoryLeakWarning::GetLatest()GetLatest116,3971
+void MemoryLeakWarning::SetLatest(MemoryLeakWarning* latest)SetLatest121,4048
+void MemoryLeakWarning::Enable()Enable126,4138
+const char*  MemoryLeakWarning::FinalReport(int toBeDeletedLeaks)FinalReport139,4423
+void MemoryLeakWarning::CheckPointUsage()CheckPointUsage153,4935
+bool MemoryLeakWarning::UsageIsNotBalanced()UsageIsNotBalanced159,5086
+const char* MemoryLeakWarning::Message()Message184,6042
+void MemoryLeakWarning::ExpectLeaks(int n)ExpectLeaks189,6118
+void* operator new(size_t size)operator new196,6233
+void operator delete(void* mem)operator delete202,6320
+void* operator new[](size_t size)operator new[]208,6399
+void operator delete[](void* mem)operator delete[]214,6488
+void* operator new(size_t size, const char* file, int line)operator new220,6568
+
+CppUTest\src\Platforms\StarterKit\UtestPlatform.cpp,1277
+void Utest::executePlatformSpecificTestBody()executePlatformSpecificTestBody7,115
+static long TimeInMillisImplementation()TimeInMillisImplementation15,218
+static long (*timeInMillisFp) () = TimeInMillisImplementation;timeInMillisFp23,398
+long GetPlatformSpecificTimeInMillis()GetPlatformSpecificTimeInMillis25,464
+void SetPlatformSpecificTimeInMillisMethod(long (*platformSpecific) ())SetPlatformSpecificTimeInMillisMethod30,539
+static SimpleString TimeStringImplementation()TimeStringImplementation37,744
+static SimpleString (*timeStringFp) () = TimeStringImplementation;timeStringFp43,847
+SimpleString GetPlatformSpecificTimeString()GetPlatformSpecificTimeString45,917
+void SetPlatformSpecificTimeStringMethod(SimpleString (*platformMethod) ())SetPlatformSpecificTimeStringMethod50,996
+static jmp_buf test_exit_jmp_buf;test_exit_jmp_buf58,1263
+void TestRegistry::platformSpecificRunOneTest(Utest* test, TestResult& result)platformSpecificRunOneTest60,1300
+void PlatformSpecificExitCurrentTestImpl() PlatformSpecificExitCurrentTestImpl66,1465
+void FakePlatformSpecificExitCurrentTest() FakePlatformSpecificExitCurrentTest71,1554
+void (*PlatformSpecificExitCurrentTest)() = PlatformSpecificExitCurrentTestImpl;PlatformSpecificExitCurrentTest75,1607
+
+CppUTest\src\Platforms\Symbian\SymbianMemoryLeakWarning.cpp,1167
+MemoryLeakWarning* MemoryLeakWarning::_latest = NULL;_latest32,1672
+class MemoryLeakWarningData : public CBase {MemoryLeakWarningData35,1783
+	TInt iInitialAllocCells;iInitialAllocCells37,1836
+	TInt iExpectedLeaks;iExpectedLeaks38,1862
+	TInt iInitialThreadHandleCount;iInitialThreadHandleCount39,1884
+	TInt iInitialProcessHandleCount;iInitialProcessHandleCount40,1917
+MemoryLeakWarning::MemoryLeakWarning()MemoryLeakWarning43,1955
+MemoryLeakWarning::~MemoryLeakWarning()~MemoryLeakWarning49,2033
+void MemoryLeakWarning::Enable()Enable54,2094
+const char* MemoryLeakWarning::FinalReport(int toBeDeletedLeaks)FinalReport58,2132
+void MemoryLeakWarning::CheckPointUsage()CheckPointUsage77,2645
+bool MemoryLeakWarning::UsageIsNotBalanced()UsageIsNotBalanced83,2839
+const char* MemoryLeakWarning::Message()Message93,3140
+void MemoryLeakWarning::ExpectLeaks(int n)ExpectLeaks98,3198
+void MemoryLeakWarning::CreateData()CreateData104,3353
+void MemoryLeakWarning::DestroyData()DestroyData109,3441
+MemoryLeakWarning* MemoryLeakWarning::GetLatest()GetLatest115,3514
+void MemoryLeakWarning::SetLatest(MemoryLeakWarning* latest)SetLatest120,3586
+
+CppUTest\src\Platforms\Symbian\UtestPlatform.cpp,3049
+void Utest::executePlatformSpecificTestBody()executePlatformSpecificTestBody39,1898
+void Utest::executePlatformSpecificExitCurrentTest() {executePlatformSpecificExitCurrentTest48,2089
+bool Utest::executePlatformSpecificSetup() {executePlatformSpecificSetup52,2175
+void Utest::executePlatformSpecificRunOneTest(TestPlugin* plugin, TestResult& result) {executePlatformSpecificRunOneTest57,2252
+void Utest::executePlatformSpecificTeardown() {executePlatformSpecificTeardown61,2376
+static long TimeInMillisImplementation() {TimeInMillisImplementation65,2444
+static long (*timeInMillisFp) () = TimeInMillisImplementation;timeInMillisFp72,2622
+long GetPlatformSpecificTimeInMillis() {GetPlatformSpecificTimeInMillis74,2688
+void SetPlatformSpecificTimeInMillisMethod(long (*platformSpecific) ()) {SetPlatformSpecificTimeInMillisMethod78,2762
+static SimpleString TimeStringImplementation() {TimeStringImplementation84,2966
+static SimpleString (*timeStringFp) () = TimeStringImplementation;timeStringFp89,3068
+SimpleString GetPlatformSpecificTimeString() {GetPlatformSpecificTimeString91,3138
+void SetPlatformSpecificTimeStringMethod(SimpleString (*platformMethod) ()) {SetPlatformSpecificTimeStringMethod95,3216
+int PlatformSpecificVSNprintf(char* str, unsigned int size, const char* format, va_list args) {PlatformSpecificVSNprintf99,3384
+void PlatformSpecificFlush() {PlatformSpecificFlush103,3534
+int PlatformSpecificPutchar(int c) {PlatformSpecificPutchar107,3589
+char* PlatformSpecificStrCpy(char* s1, const char* s2) {PlatformSpecificStrCpy111,3653
+int PlatformSpecificStrLen(const char* s) {PlatformSpecificStrLen115,3741
+char* PlatformSpecificStrStr(const char* s1, const char* s2) {PlatformSpecificStrStr119,3814
+int PlatformSpecificStrCmp(const char* s1, const char* s2) {PlatformSpecificStrCmp123,3911
+char* PlatformSpecificStrNCpy(char* s1, const char* s2, unsigned int size) {PlatformSpecificStrNCpy127,4006
+int PlatformSpecificStrNCmp(const char* s1, const char* s2, unsigned int size) {PlatformSpecificStrNCmp131,4124
+char* PlatformSpecificStrCat(char* s1, const char* s2) {PlatformSpecificStrCat135,4246
+double PlatformSpecificFabs(double d) {PlatformSpecificFabs139,4337
+void* PlatformSpecificMalloc(unsigned int size) {PlatformSpecificMalloc143,4404
+void* PlatformSpecificRealloc (void* memory, unsigned int size) {PlatformSpecificRealloc147,4486
+void PlatformSpecificFree(void* memory) {PlatformSpecificFree151,4593
+void* PlatformSpecificMemCpy(void* s1, const void* s2, unsigned int size) {PlatformSpecificMemCpy155,4660
+int PlatformSpecificAtExit(void (*func) ()) {PlatformSpecificAtExit159,4776
+PlatformSpecificFile PlatformSpecificFOpen(const char* filename, const char* flag) {PlatformSpecificFOpen163,4854
+void PlatformSpecificFPuts(const char* str, PlatformSpecificFile file) {PlatformSpecificFPuts167,4980
+void PlatformSpecificFClose(PlatformSpecificFile file) {PlatformSpecificFClose171,5089
+int PlatformSpecificAtoI(const char*str) {PlatformSpecificAtoI175,5178
+
+CppUTest\src\Platforms\VisualCpp\UtestPlatform.cpp,3341
+#undef mallocmalloc3,56
+#undef freefree4,71
+#undef calloccalloc5,84
+#undef reallocrealloc6,99
+static long TimeInMillisImplementation()TimeInMillisImplementation72,1453
+static long (*timeInMillisFp) () = TimeInMillisImplementation;timeInMillisFp77,1535
+long GetPlatformSpecificTimeInMillis()GetPlatformSpecificTimeInMillis79,1601
+void SetPlatformSpecificTimeInMillisMethod(long (*platformSpecific) ())SetPlatformSpecificTimeInMillisMethod84,1676
+static const char* TimeStringImplementation()TimeStringImplementation91,1881
+static const char* (*timeStringFp) () = TimeStringImplementation;timeStringFp96,1972
+const char* GetPlatformSpecificTimeString()GetPlatformSpecificTimeString98,2041
+void SetPlatformSpecificTimeStringMethod(const char* (*platformMethod) ())SetPlatformSpecificTimeStringMethod103,2119
+int PlatformSpecificAtoI(const char*str)PlatformSpecificAtoI111,2314
+int PlatformSpecificStrLen(const char* str)PlatformSpecificStrLen116,2386
+char* PlatformSpecificStrCat(char* s1, const char* s2)PlatformSpecificStrCat121,2463
+char* PlatformSpecificStrCpy(char* s1, const char* s2)PlatformSpecificStrCpy126,2554
+char* PlatformSpecificStrNCpy(char* s1, const char* s2, unsigned int size)PlatformSpecificStrNCpy131,2645
+int PlatformSpecificStrCmp(const char* s1, const char* s2)PlatformSpecificStrCmp136,2763
+int PlatformSpecificStrNCmp(const char* s1, const char* s2, unsigned int size)PlatformSpecificStrNCmp141,2858
+char* PlatformSpecificStrStr(const char* s1, const char* s2)PlatformSpecificStrStr145,2978
+int PlatformSpecificVSNprintf(char *str, unsigned int size, const char* format, va_list args)PlatformSpecificVSNprintf150,3083
+PlatformSpecificFile PlatformSpecificFOpen(const char* filename, const char* flag)PlatformSpecificFOpen172,3526
+void PlatformSpecificFPuts(const char* str, PlatformSpecificFile file)PlatformSpecificFPuts177,3652
+void PlatformSpecificFClose(PlatformSpecificFile file)PlatformSpecificFClose182,3761
+void PlatformSpecificFlush()PlatformSpecificFlush187,3850
+int PlatformSpecificPutchar(int c)PlatformSpecificPutchar192,3907
+void* PlatformSpecificMalloc(unsigned int size)PlatformSpecificMalloc197,3973
+void* PlatformSpecificRealloc (void* memory, unsigned int size)PlatformSpecificRealloc202,4055
+void PlatformSpecificFree(void* memory)PlatformSpecificFree207,4162
+void* PlatformSpecificMemCpy(void* s1, const void* s2, unsigned int size)PlatformSpecificMemCpy212,4229
+int PlatformSpecificAtExit(void (*func) ())PlatformSpecificAtExit217,4345
+double PlatformSpecificFabs(double d)PlatformSpecificFabs222,4423
+int PlatformSpecificVSNprintf(char *str, unsigned int size, const char* format, void* args)PlatformSpecificVSNprintf258,4882
+static jmp_buf test_exit_jmp_buf[10];test_exit_jmp_buf268,5114
+static int jmp_buf_index = 0;jmp_buf_index269,5153
+bool Utest::executePlatformSpecificSetup()executePlatformSpecificSetup271,5186
+void Utest::executePlatformSpecificTestBody()executePlatformSpecificTestBody282,5403
+void Utest::executePlatformSpecificTeardown()executePlatformSpecificTeardown291,5588
+void Utest::executePlatformSpecificRunOneTest(TestPlugin* plugin, TestResult& result)executePlatformSpecificRunOneTest300,5773
+void Utest::executePlatformSpecificExitCurrentTest()executePlatformSpecificExitCurrentTest310,6021
+
+CppUTest\tests\AllTests.cpp,47
+int main(int ac, const char** av)main30,1678
+
+CppUTest\tests\AllTests.h,635
+IMPORT_TEST_GROUP( Utest);Utest29,1687
+IMPORT_TEST_GROUP( Failure);Failure30,1715
+IMPORT_TEST_GROUP( TestOutput);TestOutput31,1745
+IMPORT_TEST_GROUP( SimpleString);SimpleString32,1778
+IMPORT_TEST_GROUP( TestInstaller);TestInstaller33,1813
+IMPORT_TEST_GROUP( NullTest);NullTest34,1849
+IMPORT_TEST_GROUP( MemoryLeakWarningTest);MemoryLeakWarningTest35,1880
+IMPORT_TEST_GROUP( TestHarness_c);TestHarness_c36,1924
+IMPORT_TEST_GROUP( CommandLineTestRunner);CommandLineTestRunner37,1960
+IMPORT_TEST_GROUP( JUnitOutputTest);JUnitOutputTest38,2004
+IMPORT_TEST_GROUP( MemoryLeakDetectorTest);MemoryLeakDetectorTest39,2042
+
+CppUTest\tests\AllTests.mak,2992
+CFG=AllTests - Win32 DebugCFG3,94
+NULL=NULL23,882
+NULL=nulNULL25,897
+OUTDIR=.\ReleaseOUTDIR30,965
+INTDIR=.\ReleaseINTDIR31,983
+OutDir=.\ReleaseOutDir33,1024
+CPP=cl.exeCPP76,2261
+CPP_PROJ=/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"$(INTDIR)\AllTests.pch" /YX /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /FD /c CPP_PROJ77,2273
+RSC=rc.exeRSC109,2811
+BSC32=bscmake.exeBSC32110,2823
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\AllTests.bsc" BSC32_FLAGS111,2842
+BSC32_SBRS= \BSC32_SBRS112,2891
+LINK32=link.exeLINK32114,2909
+LINK32_FLAGS=kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:no /pdb:"$(OUTDIR)\AllTests.pdb" /machine:I386 /out:"$(OUTDIR)\AllTests.exe" LINK32_FLAGS115,2926
+LINK32_OBJS= \LINK32_OBJS116,3340
+OUTDIR=.\DebugOUTDIR145,4265
+INTDIR=.\DebugINTDIR146,4281
+OutDir=.\DebugOutDir148,4320
+CPP=cl.exeCPP214,6555
+CPP_PROJ=/nologo /MDd /W3 /GX /ZI /Od /I "..\include" /I "..\include\Platforms\VisualCpp" /D "_CONSOLE" /D "WIN32" /D "_DEBUG" /D "_MBCS" /FR"$(INTDIR)\\" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /FD /GZ /c CPP_PROJ215,6567
+RSC=rc.exeRSC247,7151
+BSC32=bscmake.exeBSC32248,7163
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\AllTests.bsc" BSC32_FLAGS249,7182
+BSC32_SBRS= \BSC32_SBRS250,7231
+LINK32=link.exeLINK32276,8060
+LINK32_FLAGS=..\lib\CppUTest.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib winmm.lib /nologo /subsystem:console /incremental:yes /pdb:"$(OUTDIR)\AllTests.pdb" /debug /machine:I386 /out:"$(OUTDIR)\AllTests.exe" /pdbtype:sept LINK32_FLAGS277,8077
+LINK32_OBJS= \LINK32_OBJS278,8543
+SOURCE=.\AllTests.cppSOURCE318,9675
+SOURCE=.\CommandLineArgumentsTest.cppSOURCE334,9944
+SOURCE=.\CommandLineTestRunnerTest.cppSOURCE350,10277
+SOURCE=.\FailureTest.cppSOURCE366,10614
+SOURCE=.\JUnitOutputTest.cppSOURCE382,10895
+SOURCE=.\MemoryLeakDetectorTest.cppSOURCE398,11192
+SOURCE=.\MemoryLeakWarningTest.cppSOURCE414,11517
+SOURCE=.\NullTestTest.cppSOURCE430,11838
+SOURCE=.\PluginTest.cppSOURCE446,12123
+SOURCE=.\SetPluginTest.cppSOURCE462,12400
+SOURCE=.\Extensions\SimpleStringExtensionsTest.cppSOURCE478,12689
+SOURCE=.\SimpleStringTest.cppSOURCE496,13103
+SOURCE=.\TestHarness_cTest.cppSOURCE512,13404
+SOURCE=.\TestInstallerTest.cppSOURCE528,13709
+SOURCE=.\Extensions\TestOrderedTest.cppSOURCE544,14014
+SOURCE=.\TestOutputTest.cppSOURCE562,14384
+SOURCE=.\TestRegistryTest.cppSOURCE578,14677
+SOURCE=.\TestResultTest.cppSOURCE594,14978
+SOURCE=.\UtestTest.cppSOURCE610,15271
+
+CppUTest\tests\CommandLineArgumentsTest.cpp,1390
+class OptionsPlugin: public TestPluginOptionsPlugin32,1717
+	OptionsPlugin(const SimpleString& name) :OptionsPlugin35,1766
+	~OptionsPlugin()~OptionsPlugin40,1837
+	bool parseArguments(int ac, const char** av, int index)parseArguments44,1864
+TEST_GROUP(CommandLineArguments)TEST_GROUP51,1949
+TEST(CommandLineArguments, Create)TEST72,2281
+TEST(CommandLineArguments, verboseSetMultipleParameters)TEST76,2321
+TEST(CommandLineArguments, repeatSet)TEST83,2491
+TEST(CommandLineArguments, repeatSetDifferentParameter)TEST91,2675
+TEST(CommandLineArguments, repeatSetDefaultsToTwo)TEST99,2881
+TEST(CommandLineArguments, setGroupFilter)TEST107,3077
+TEST(CommandLineArguments, setGroupFilterSameParameter)TEST115,3296
+TEST(CommandLineArguments, setNameFilter)TEST123,3524
+TEST(CommandLineArguments, setNameFilterSameParameter)TEST131,3739
+TEST(CommandLineArguments, setNormalOutput)TEST139,3963
+TEST(CommandLineArguments, setEclsipeOutput)TEST147,4150
+TEST(CommandLineArguments, setNormalOutputDifferentParameter)TEST155,4339
+TEST(CommandLineArguments, setJUnitOutputDifferentParameter)TEST163,4548
+TEST(CommandLineArguments, setOutputToGarbage)TEST171,4753
+TEST(CommandLineArguments, weirdParamatersPrintsUsageAndReturnsFalse)TEST178,4916
+TEST(CommandLineArguments, pluginKnowsOption)TEST187,5208
+TEST(CommandLineArguments, checkDefaultArguments)TEST196,5498
+
+CppUTest\tests\CommandLineTestRunnerTest.cpp,127
+TEST_GROUP(CommandLineTestRunner)TEST_GROUP34,1825
+	IGNORE_TEST(CommandLineTestRunner, HmmmmWhatToWrite)IGNORE_TEST44,1925
+
+CppUTest\tests\Extensions\AllTests.h,136
+IMPORT_TEST_GROUP( SimpleStringExtensions);SimpleStringExtensions29,1687
+IMPORT_TEST_GROUP( TestOrderedTest);TestOrderedTest30,1732
+
+CppUTest\tests\Extensions\SimpleStringExtensionsTest.cpp,111
+TEST_GROUP(SimpleStringExtensions)TEST_GROUP31,1725
+TEST(SimpleStringExtensions, fromStdString)TEST37,1794
+
+CppUTest\tests\Extensions\SimpleStringFromStdintTest.cpp,583
+TEST_GROUP(SimpleStringFromStdint)TEST_GROUP33,1782
+TEST(SimpleStringFromStdint, Uint64_t)TEST40,1893
+TEST(SimpleStringFromStdint, Int64_t)TEST54,2264
+TEST(SimpleStringFromStdint, Uint32_t)TEST69,2716
+TEST(SimpleStringFromStdint, Uint16_t)TEST77,2882
+TEST(SimpleStringFromStdint, Uint8_t)TEST85,3035
+IGNORE_TEST(SimpleStringFromStdint, CHECK_EQUAL_Uint64_t)IGNORE_TEST93,3180
+TEST(SimpleStringFromStdint, CHECK_EQUAL_Uint32_t)TEST99,3315
+TEST(SimpleStringFromStdint, CHECK_EQUAL_Uint16_t)TEST105,3423
+TEST(SimpleStringFromStdint, CHECK_EQUAL_Uint8_t)TEST111,3527
+
+CppUTest\tests\Extensions\TestOrderedTest.cpp,904
+TEST_GROUP(TestOrderedTest)TEST_GROUP34,1826
+TEST(TestOrderedTest, TestInstallerSetsFields)TEST80,2803
+TEST(TestOrderedTest, InstallOneText)TEST91,3235
+TEST(TestOrderedTest, OrderedTestsAreLast)TEST97,3359
+TEST(TestOrderedTest, TwoTestsAddedInReverseOrder)TEST105,3560
+TEST(TestOrderedTest, TwoTestsAddedInOrder)TEST113,3777
+TEST(TestOrderedTest, MultipleOrderedTests)TEST121,3987
+TEST(TestOrderedTest, MultipleOrderedTests2)TEST136,4504
+TEST_GROUP_BASE(TestOrderedTestMacros, OrderedTest)TEST_GROUP_BASE147,4808
+static int testNumber = 0;testNumber150,4868
+TEST(TestOrderedTestMacros, NormalTest)TEST152,4898
+TEST_ORDERED(TestOrderedTestMacros, Test2, 2)TEST_ORDERED158,4989
+TEST_ORDERED(TestOrderedTestMacros, Test1, 1)TEST_ORDERED164,5086
+TEST_ORDERED(TestOrderedTestMacros, Test4, 4)TEST_ORDERED170,5183
+TEST_ORDERED(TestOrderedTestMacros, Test3, 3)TEST_ORDERED176,5280
+
+CppUTest\tests\FailureTest.cpp,249
+const int failLineNumber = 2;failLineNumber33,1716
+const char* failFileName = "fail.cpp";failFileName34,1747
+TEST_GROUP(Failure)TEST_GROUP37,1792
+TEST(Failure, CreateFailure)TEST53,2015
+TEST(Failure, CreatePassingEqualsFailure)TEST60,2219
+
+CppUTest\tests\JUnitOutputTest.cpp,800
+static long millisTime;millisTime33,1790
+static const char* theTime = "1978-10-03T00:00:00";theTime35,1817
+static long MockGetPlatformSpecificTimeInMillis()MockGetPlatformSpecificTimeInMillis37,1872
+static const char* MockGetPlatformSpecificTimeString()MockGetPlatformSpecificTimeString42,1952
+TEST_GROUP(JUnitOutputTest)TEST_GROUP47,2034
+TEST(JUnitOutputTest, oneTestInOneGroupAllPass)TEST310,8847
+TEST(JUnitOutputTest, fiveTestsInOneGroupAllPass)TEST318,9081
+TEST(JUnitOutputTest, multipleTestsInTwoGroupAllPass)TEST324,9207
+TEST(JUnitOutputTest, oneTestInOneGroupFailed)TEST332,9441
+TEST(JUnitOutputTest, fiveTestsInOneGroupAndThreeFail)TEST339,9641
+TEST(JUnitOutputTest, fourGroupsAndSomePassAndSomeFail)TEST349,9987
+TEST(JUnitOutputTest, messageWithNewLine)TEST362,10430
+
+CppUTest\tests\MemoryLeakAllocatorTest.cpp,743
+TEST_GROUP(MemoryLeakAllocatorTest)TEST_GROUP32,1760
+TEST(MemoryLeakAllocatorTest, SetCurrentNewAllocator)TEST41,1898
+TEST(MemoryLeakAllocatorTest, SetCurrentNewArrayAllocator)TEST50,2300
+TEST(MemoryLeakAllocatorTest, SetCurrentMallocAllocator)TEST59,2737
+TEST(MemoryLeakAllocatorTest, MallocAllocation)TEST69,3162
+TEST(MemoryLeakAllocatorTest, MallocNames)TEST75,3318
+TEST(MemoryLeakAllocatorTest, NewAllocation)TEST83,3576
+TEST(MemoryLeakAllocatorTest, NewNames)TEST89,3726
+TEST(MemoryLeakAllocatorTest, NewArrayAllocation)TEST97,3974
+TEST(MemoryLeakAllocatorTest, NewArrayNames)TEST103,4134
+TEST(MemoryLeakAllocatorTest, NullUnknownAllocation)TEST111,4401
+TEST(MemoryLeakAllocatorTest, NullUnknownNames)TEST117,4559
+
+CppUTest\tests\MemoryLeakDetectorTest.cpp,2039
+class MemoryLeakFailureForTest: public MemoryLeakFailureMemoryLeakFailureForTest33,1802
+	virtual ~MemoryLeakFailureForTest()~MemoryLeakFailureForTest36,1872
+	virtual void fail(char* fail_string)fail40,1922
+	SimpleString *message;message45,1998
+TEST_GROUP(MemoryLeakDetectorTest)TEST_GROUP48,2029
+TEST(MemoryLeakDetectorTest, OneLeak)TEST79,2856
+TEST(MemoryLeakDetectorTest, OneLeakOutsideCheckingPeriod)TEST91,3238
+TEST(MemoryLeakDetectorTest, NoLeaksWhatsoever)TEST103,3636
+TEST(MemoryLeakDetectorTest, TwoLeaksUsingOperatorNew)TEST110,3866
+TEST(MemoryLeakDetectorTest, OneAllocButNoLeak)TEST123,4340
+TEST(MemoryLeakDetectorTest, TwoAllocOneFreeOneLeak)TEST131,4600
+TEST(MemoryLeakDetectorTest, TwoAllocOneFreeOneLeakReverseOrder)TEST144,5092
+TEST(MemoryLeakDetectorTest, DeleteNonAlocatedMemory)TEST157,5596
+TEST(MemoryLeakDetectorTest, IgnoreMemoryAllocatedOutsideCheckingPeriod)TEST168,6043
+TEST(MemoryLeakDetectorTest, IgnoreMemoryAllocatedOutsideCheckingPeriodComplicatedCase)TEST177,6392
+TEST(MemoryLeakDetectorTest, OneLeakUsingOperatorNewWithFileLine)TEST205,7560
+TEST(MemoryLeakDetectorTest, OneAllocAndFreeUsingArrayNew)TEST215,7904
+TEST(MemoryLeakDetectorTest, OneAllocAndFree)TEST228,8480
+TEST(MemoryLeakDetectorTest, OneRealloc)TEST241,9056
+TEST(MemoryLeakDetectorTest, AllocAndFreeWithDifferenceInstancesOfTheSameAllocatorType)TEST257,9605
+TEST(MemoryLeakDetectorTest, AllocOneTypeFreeAnotherType)TEST266,9981
+TEST(MemoryLeakDetectorTest, AllocOneTypeFreeAnotherTypeWithCheckingDisabled)TEST276,10483
+TEST(MemoryLeakDetectorTest, MarkCheckingPeriodLeaksAsNonCheckingPeriod)TEST286,10884
+TEST(MemoryLeakDetectorTest, memoryCorruption)TEST300,11512
+TEST(MemoryLeakDetectorTest, safelyDeleteNULL)TEST312,12028
+TEST(MemoryLeakDetectorTest, periodDisabled)TEST318,12183
+TEST(MemoryLeakDetectorTest, periodEnabled)TEST329,12648
+TEST(MemoryLeakDetectorTest, periodChecking)TEST340,13111
+TEST(MemoryLeakDetectorTest, allocateWithANullAllocatorCausesNoProblems)TEST350,13553
+
+CppUTest\tests\MemoryLeakWarningTest.cpp,829
+static char* leak1;leak136,1877
+static long* leak2;leak237,1897
+class DummyReporter: public MemoryLeakFailureDummyReporter39,1918
+	virtual ~DummyReporter()~DummyReporter42,1974
+	virtual void fail(char* fail_string)fail46,2009
+static MemoryLeakDetector* detector;detector52,2060
+static MemoryLeakWarningPlugin* memPlugin;memPlugin53,2097
+static DummyReporter dummy;dummy54,2140
+static MemoryLeakAllocator* allocator;allocator55,2168
+TEST_GROUP(MemoryLeakWarningTest)TEST_GROUP57,2208
+void _testTwoLeaks()_testTwoLeaks84,2791
+TEST(MemoryLeakWarningTest, TwoLeaks)TEST91,2921
+void _testIgnore2()_testIgnore299,3136
+TEST(MemoryLeakWarningTest, Ignore2)TEST106,3296
+static void _failAndLeakMemory()_failAndLeakMemory113,3449
+TEST(MemoryLeakWarningTest, FailingTestDoesNotReportMemoryLeaks)TEST119,3545
+
+CppUTest\tests\NullTestTest.cpp,175
+TEST_GROUP(NullTest)TEST_GROUP30,1668
+TEST(NullTest, Create)TEST43,1812
+TEST(NullTest, InstanceAlwaysTheSame)TEST47,1844
+TEST(NullTest, NullTestsDontCount)TEST53,1983
+
+CppUTest\tests\PluginTest.cpp,1051
+#define GENERIC_PLUGIN GENERIC_PLUGIN33,1780
+#define GENERIC_PLUGIN2 GENERIC_PLUGIN234,1821
+static int sequenceNumber;sequenceNumber36,1865
+class DummyPlugin: public TestPluginDummyPlugin38,1895
+	DummyPlugin(const SimpleString& name) :DummyPlugin41,1945
+	virtual ~DummyPlugin()~DummyPlugin46,2048
+	virtual void preTestAction(Utest&, TestResult&)preTestAction51,2087
+	virtual void postTestAction(Utest&, TestResult&)postTestAction57,2206
+	int preAction;preAction64,2330
+	int preActionSequence;preActionSequence65,2347
+	int postAction;postAction66,2372
+	int postActionSequence;postActionSequence67,2390
+TEST_GROUP(PluginTest)TEST_GROUP70,2422
+#define GENERIC_PLUGIN GENERIC_PLUGIN94,2954
+#define GENERIC_PLUGIN2 GENERIC_PLUGIN295,2995
+TEST(PluginTest, PluginHasName)TEST97,3039
+TEST(PluginTest, InstallPlugin)TEST102,3135
+TEST(PluginTest, InstallMultiplePlugins)TEST108,3303
+TEST(PluginTest, ActionsAllRun)TEST116,3601
+TEST(PluginTest, Sequence)TEST124,3785
+TEST(PluginTest, DisablesPluginsDontRun)TEST134,4095
+
+CppUTest\tests\RunAllTests.sh,0
+
+CppUTest\tests\SetPluginTest.cpp,1091
+void orig_func1()orig_func16,141
+void stub_func1()stub_func110,169
+void orig_func2()orig_func214,197
+void stub_func2()stub_func218,225
+void (*fp1)();fp123,255
+void (*fp2)();fp224,271
+TEST_GROUP(SetPointerPluginTest)TEST_GROUP26,289
+class FunctionPointerUtest: public UtestFunctionPointerUtest52,840
+	void setup()setup55,894
+	void testBody()testBody61,1013
+TEST(SetPointerPluginTest, installTwoFunctionPointer)TEST68,1103
+class MaxFunctionPointerUtest: public UtestMaxFunctionPointerUtest83,1449
+	int numOfFpSets;numOfFpSets86,1506
+	MaxFunctionPointerUtest(int num) :MaxFunctionPointerUtest87,1525
+	void setup()setup93,1596
+IGNORE_TEST(SetPointerPluginTest, installTooMuchFunctionPointer)IGNORE_TEST100,1699
+double orig_double = 3.0;orig_double112,1998
+double* orig_double_ptr = &orig_double;orig_double_ptr113,2025
+double stub_double = 4.0;stub_double114,2066
+class SetDoublePointerUtest: public UtestSetDoublePointerUtest116,2095
+	void setup()setup119,2150
+	void testBody()testBody123,2219
+TEST(SetPointerPluginTest, doublePointer)TEST129,2294
+
+CppUTest\tests\SimpleStringTest.cpp,1733
+TEST_GROUP(SimpleString)TEST_GROUP32,1753
+	TEST(SimpleString, CreateSequence)TEST37,1790
+	TEST(SimpleString, CreateSequenceOfZero)TEST45,1949
+	TEST(SimpleString, Copy)TEST53,2104
+	TEST(SimpleString, Assignment)TEST61,2220
+	TEST(SimpleString, Equality)TEST71,2363
+	TEST(SimpleString, InEquality)TEST79,2484
+	TEST(SimpleString, asCharString)TEST87,2609
+	TEST(SimpleString, Size)TEST94,2730
+	TEST(SimpleString, Addition)TEST101,2829
+	TEST(SimpleString, Concatenation)TEST112,3033
+	TEST(SimpleString, Contains)TEST129,3344
+	TEST(SimpleString, startsWith)TEST148,3795
+	TEST(SimpleString, split)TEST158,4037
+	TEST(SimpleString, splitNoTokenOnTheEnd)TEST175,4635
+	TEST(SimpleString, count)TEST187,5005
+	TEST(SimpleString, countTogether)TEST193,5115
+	TEST(SimpleString, endsWith)TEST199,5230
+	TEST(SimpleString, replaceCharWithChar)TEST215,5630
+	TEST(SimpleString, replaceStringWithString)TEST222,5794
+	TEST(SimpleString, ContainsNull)TEST229,5996
+	TEST(SimpleString, Characters)TEST235,6099
+	TEST(SimpleString, Doubles)TEST242,6234
+	TEST(SimpleString, HexStrings)TEST250,6427
+	TEST(SimpleString, StringFromFormat)TEST256,6558
+	TEST(SimpleString, StringFromFormatLarge)TEST262,6740
+	static int WrappedUpVSNPrintf(char* buf, int n, const char* format, ...)WrappedUpVSNPrintf271,7021
+	TEST(SimpleString, PlatformSpecificSprintf_fits)TEST281,7272
+	TEST(SimpleString, PlatformSpecificSprintf_doesNotFit)TEST290,7477
+	TEST(SimpleString, NullParameters2)TEST299,7699
+	TEST(SimpleString, CollectionMultipleAllocateNoLeaksMemory)TEST305,7810
+	TEST(SimpleString, CollectionReadOutOfBoundsReturnsEmptyString)TEST313,7980
+	TEST(SimpleString, CollectionWritingToEmptyString)TEST320,8151
+
+CppUTest\tests\TestHarness_cTest.cpp,932
+#define _WCHART_WCHART30,1646
+TEST_GROUP(TestHarness_c)TEST_GROUP40,1903
+void _failIntMethod()_failIntMethod53,2087
+TEST(TestHarness_c, checkInt)TEST58,2145
+void _failRealMethod()_failRealMethod67,2388
+TEST(TestHarness_c, checkReal)TEST72,2457
+void _failCharMethod()_failCharMethod81,2726
+TEST(TestHarness_c, checkChar)TEST86,2790
+void _failStringMethod()_failStringMethod95,3040
+TEST(TestHarness_c, checkString)TEST100,3116
+void _failTextMethod()_failTextMethod109,3388
+TEST(TestHarness_c, checkFailText)TEST114,3443
+void _failMethod()_failMethod122,3642
+TEST(TestHarness_c, checkFail)TEST127,3682
+void _CheckMethod()_CheckMethod135,3879
+TEST(TestHarness_c, checkCheck)TEST140,3926
+TEST(TestHarness_c, cpputest_malloc_out_of_memory)TEST148,4098
+TEST(TestHarness_c, cpputest_calloc)TEST159,4356
+TEST(TestHarness_c, cpputest_realloc_larger)TEST166,4483
+TEST(TestHarness_c, macros)TEST183,4833
+
+CppUTest\tests\TestInstallerTest.cpp,129
+static NullTest nullTest;nullTest35,1855
+TEST_GROUP(TestInstaller)TEST_GROUP37,1884
+TEST(TestInstaller, Create)TEST56,2305
+
+CppUTest\tests\TestOutputTest.cpp,913
+static long millisTime;millisTime33,1753
+static long MockGetPlatformSpecificTimeInMillis()MockGetPlatformSpecificTimeInMillis35,1778
+TEST_GROUP(TestOutput)TEST_GROUP40,1853
+TEST(TestOutput, PrintConstCharStar)TEST69,2477
+TEST(TestOutput, PrintLong)TEST76,2638
+TEST(TestOutput, PrintDouble)TEST82,2751
+TEST(TestOutput, StreamOperators)TEST88,2875
+TEST(TestOutput, PrintTestEnded)TEST94,3000
+TEST(TestOutput, PrintTestALot)TEST100,3134
+TEST(TestOutput, SetProgressIndicator)TEST108,3364
+TEST(TestOutput, PrintTestVerboseStarted)TEST120,3699
+TEST(TestOutput, PrintTestVerboseEnded)TEST127,3875
+TEST(TestOutput, PrintTestRun)TEST136,4100
+TEST(TestOutput, PrintTestRunOnlyOne)TEST142,4236
+TEST(TestOutput, PrintFailure)TEST148,4362
+TEST(TestOutput, PrintTestStarts)TEST154,4536
+TEST(TestOutput, printTestsEnded)TEST160,4659
+TEST(TestOutput, printTestsEndedWithFailures)TEST173,5014
+
+CppUTest\tests\TestRegistryTest.cpp,1794
+void stub()stub34,1752
+const int testLineNumber = 1;testLineNumber37,1771
+class MockTest: public UtestMockTest40,1807
+	MockTest(const char* group = "Group") :MockTest43,1849
+	void testBody()testBody47,1963
+	bool hasRun_;hasRun_52,2012
+class MockTestResult: public TestResultMockTestResult55,2034
+	int countTestsStarted;countTestsStarted59,2089
+	int countTestsEnded;countTestsEnded60,2114
+	int countCurrentTestStarted;countCurrentTestStarted61,2137
+	int countCurrentTestEnded;countCurrentTestEnded62,2168
+	int countCurrentGroupStarted;countCurrentGroupStarted63,2197
+	int countCurrentGroupEnded;countCurrentGroupEnded64,2229
+	MockTestResult(TestOutput& p) :MockTestResult66,2261
+	virtual ~MockTestResult()~MockTestResult72,2341
+	void resetCount()resetCount77,2383
+	virtual void testsStarted()testsStarted87,2589
+	virtual void testsEnded()testsEnded91,2651
+	virtual void currentTestStarted(Utest* test)currentTestStarted95,2709
+	virtual void currentTestEnded(Utest* test)currentTestEnded99,2794
+	virtual void currentGroupStarted(Utest* test)currentGroupStarted103,2875
+	virtual void currentGroupEnded(Utest* test)currentGroupEnded107,2962
+TEST_GROUP(TestRegistry)TEST_GROUP114,3053
+TEST(TestRegistry, registryMyRegistryAndReset)TEST147,3769
+TEST(TestRegistry, emptyRegistryIsEmpty)TEST152,3882
+TEST(TestRegistry, addOneTestIsNotEmpty)TEST157,3972
+TEST(TestRegistry, addOneTwoTests)TEST163,4092
+TEST(TestRegistry, runTwoTests)TEST170,4236
+TEST(TestRegistry, runTwoTestsCheckResultFunctionsCalled)TEST181,4475
+TEST(TestRegistry, runThreeTestsandTwoGroupsCheckResultFunctionsCalled)TEST194,4952
+TEST(TestRegistry, unDoTest)TEST206,5377
+TEST(TestRegistry, unDoButNoTest)TEST214,5558
+TEST(TestRegistry, reallyUndoLastTest)TEST221,5714
+
+CppUTest\tests\TestResultTest.cpp,209
+static long MockGetPlatformSpecificTimeInMillis()MockGetPlatformSpecificTimeInMillis32,1751
+TEST_GROUP(TestResult)TEST_GROUP37,1823
+TEST(TestResult, TestEndedWillPrintResultsAndExecutionTime)TEST59,2252
+
+CppUTest\tests\UtestTest.cpp,2670
+static bool afterCheck;afterCheck33,1780
+TEST_GROUP(Utest)TEST_GROUP35,1807
+static void _passMethod()_passMethod58,2201
+static void _passPrint()_passPrint64,2272
+static void _passPrintF()_passPrintF69,2334
+static void _failMethod()_failMethod74,2430
+static void _failMethodFAIL_TEST()_failMethodFAIL_TEST80,2513
+static void _failMethodCHECK()_failMethodCHECK86,2610
+static void _failMethodCHECK_EQUAL()_failMethodCHECK_EQUAL92,2687
+static void _failMethodSTRCMP_EQUAL()_failMethodSTRCMP_EQUAL98,2775
+static void _failMethodSTRCMP_CONTAINS()_failMethodSTRCMP_CONTAINS104,2869
+static void _failMethodLONGS_EQUAL()_failMethodLONGS_EQUAL110,2977
+static void _failMethodBYTES_EQUAL()_failMethodBYTES_EQUAL115,3066
+static void _failMethodPOINTERS_EQUAL()_failMethodPOINTERS_EQUAL121,3158
+static void _failMethodDOUBLES_EQUAL()_failMethodDOUBLES_EQUAL127,3276
+TEST(Utest, FailurePrintsSomething)TEST133,3379
+TEST(Utest, FailureWithFailTest)TEST140,3549
+TEST(Utest, FailurePrintHexOutputForLongInts)TEST145,3632
+TEST(Utest, FailurePrintHexOutputForPointers)TEST152,3840
+TEST(Utest, FailureWithDOUBLES_EQUAL)TEST159,4047
+TEST(Utest, FailureWithCHECK)TEST164,4139
+TEST(Utest, FailureWithCHECK_EQUAL)TEST169,4215
+TEST(Utest, FailureWithSTRCMP_EQUAL)TEST174,4303
+TEST(Utest, FailureWithSTRCMP_CONTAINS)TEST179,4393
+TEST(Utest, FailureWithBYTES_EQUAL)TEST184,4489
+TEST(Utest, SuccessPrintsNothing)TEST189,4577
+TEST(Utest, PrintPrintsWhateverPrintPrints)TEST198,4804
+TEST(Utest, PrintPrintsPrintf)TEST207,5059
+TEST(Utest, allMacros)TEST215,5265
+static int functionThatReturnsAValue()functionThatReturnsAValue226,5478
+TEST(Utest, allMacrosFromFunctionThatReturnsAValue)TEST238,5713
+TEST(Utest, AssertsActLikeStatements)TEST243,5805
+IGNORE_TEST(Utest, IgnoreTestSupportsAllMacros)IGNORE_TEST285,6392
+IGNORE_TEST(Utest, IgnoreTestAccessingFixture)IGNORE_TEST295,6577
+TEST(Utest, MacrosUsedInSetup)TEST300,6656
+TEST(Utest, MacrosUsedInTearDown)TEST309,6873
+static int teardownCalled = 0;teardownCalled318,7096
+static void _teardownMethod()_teardownMethod320,7130
+TEST(Utest, TeardownCalledAfterTestFailure)TEST325,7189
+static int stopAfterFailure = 0;stopAfterFailure335,7460
+static void _stopAfterFailureMethod()_stopAfterFailureMethod336,7494
+TEST(Utest, TestStopsAfterTestFailure)TEST342,7579
+TEST(Utest, TestStopsAfterSetupFailure)TEST352,7842
+TEST_BASE(MyOwnTest){TEST_BASE363,8159
+TEST_GROUP_BASE(UtestMyOwn, MyOwnTest)TEST_GROUP_BASE379,8349
+TEST(UtestMyOwn, test)TEST383,8398
+class NullParameterTest: public UtestNullParameterTest388,8447
+TEST(UtestMyOwn, NullParameters)TEST392,8495
+
+tdd3.py,631
+import unittestunittest2,24
+class TestPoint:TestPoint4,41
+    def __init__(self,input):__init__5,58
+    def __iter__(self):__iter__10,194
+    def _next3(self):_next313,240
+    def next(self):next25,499
+    def isTimemarker(self):isTimemarker29,610
+    def setPeriod(self, period):setPeriod32,688
+class Test(unittest.TestCase):Test36,753
+    def assertIter(self,it_method,l):assertIter37,784
+    def testDiff(self):testDiff44,971
+    def testDiff2(self):testDiff253,1182
+    def testTimemaker(self):testTimemaker61,1412
+    def testNextPoint(self):testNextPoint78,2042
+    def testx(self):testx85,2263
+
+test.py,552
+import unittestunittest2,25
+class TestPoint:TestPoint4,44
+    def __init__(self,input):__init__5,62
+    def _next(self):_next11,213
+    def next(self):next21,486
+    def isTimemaker(self):isTimemaker25,599
+    def setPeriod(self, period):setPeriod28,679
+class Test(unittest.TestCase):Test31,746
+    def assertIter(self,it_method,l):assertIter32,778
+    def testDiff(self):testDiff39,972
+    def testDiff2(self):testDiff248,1191
+    def testTimemaker(self):testTimemaker56,1428
+    def testNextPoint(self):testNextPoint73,2068
+
+testpoint.py,624
+from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandlerHTTPServer5,51
+from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandlerBaseHTTPRequestHandler5,51
+import os,glob, time, random, pdbos6,114
+import os,glob, time, random, pdbglob6,114
+import os,glob, time, random, pdbtime6,114
+import os,glob, time, random, pdbrandom6,114
+import os,glob, time, random, pdbpdb6,114
+import serial, structserial7,149
+import serial, structstruct7,149
+class RequestHandler(BaseHTTPRequestHandler):RequestHandler9,174
+    def do_GET(self):do_GET10,221
+httpd = HTTPServer(('',8085),RequestHandler)httpd78,2285
+
+testpoint2.py,609
+import timetime5,94
+import serial, structserial7,132
+import serial, structstruct7,132
+import randomrandom8,155
+s=serial.Serial("Com1")s10,172
+    width = 40width15,233
+    height = 55height16,249
+    box_width=10box_width17,266
+    box_height=10box_height18,284
+    box_margin=4box_margin19,303
+    lastst=1023lastst20,321
+                readbytes=struct.unpack('1B', s.read(1))readbytes27,511
+                v = readbytes[0]v28,569
+                lastst=vlastst42,1142
+                box_x= 10+x*box_widthbox_x45,1231
+                box_y= 450- y* box_heightbox_y46,1270
+
+testpoint3.py,611
+import timetime5,94
+import serial, structserial7,132
+import serial, structstruct7,132
+import randomrandom8,155
+s=serial.Serial("Com1")s10,172
+    width = 40width15,233
+    height = 55height16,249
+    box_width=10box_width17,266
+    box_height=10box_height18,284
+    box_margin=4box_margin19,303
+    lastst=1023lastst20,321
+                readbytes=struct.unpack('10B', s.read(10))readbytes27,511
+                v = readbytes[0]v28,571
+                lastst=vlastst43,1177
+                box_x= 10+x*box_widthbox_x46,1266
+                box_y= 450- y* box_heightbox_y47,1305
+
+test_testpoint.py,0
+
+watch.c,231
+#define sleep(sleep12,228
+#define EX_USAGE EX_USAGE13,262
+#define EX_SOFTWARE EX_SOFTWARE14,283
+#define MAXFILES MAXFILES19,347
+usage(argv)usage21,370
+static int qstat(path, buf)qstat31,688
+main(argc, argv)main44,926
