@@ -875,7 +875,7 @@ TEST_GROUP(KeydownEvent)TEST_GROUP33,534
 TEST(KeydownEvent, test_keydown_event_count)TEST48,711
 TEST(KeydownEvent, test_keydown_event)TEST67,1125
 TEST(KeydownEvent, test_key_on)TEST82,1445
-TEST(KeydownEvent, test_key_off)TEST93,1648
+TEST(KeydownEvent, test_key_off)TEST99,1756
 
 CppUTest\CppUTest.mak,2239
 CFG=CppUTest - Win32 DebugCFG3,94

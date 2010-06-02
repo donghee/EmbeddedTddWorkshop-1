@@ -1,42 +1,58 @@
-Python 2.6.5 (r265:79096, Mar 19 2010, 21:48:26) [MSC v.1500 32 bit (Intel)] on win32
-Type "help", "copyright", "credits" or "license" for more information.
->>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856nVU.py...
-..
-----------------------------------------------------------------------
-Ran 2 tests in 0.000s
+# ctrl -j new line and indent
+# ctrl-c ctrl-j
+# longlines-mode
 
-OK
->>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-38560fa.py...
-..
-----------------------------------------------------------------------
-Ran 2 tests in 0.000s
-
-OK
->>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856Bqg.py...
-..
-----------------------------------------------------------------------
-Ran 2 tests in 0.000s
-
-OK
->>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856O0m.py...
-..
-----------------------------------------------------------------------
-Ran 2 tests in 0.000s
-
-OK
->>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856b-s.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.000s OK >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856oIz.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.000s  OK >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856aSC.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.000s  OK >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856ncI.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.000s  OK >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-38560mO.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.000s  OK >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856BxU.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.000s  OK >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856O7a.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.000s  OK >>> 
+import unittest
 
 
-OK
->>> >>> >>> 
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'OK' is not defined
->>> >>> 
->>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856bFh.py...
-..
-----------------------------------------------------------------------
-Ran 2 tests in 0.000s
+class Serial:
+    def __init__(self, values):
+        self.values= values
+        self._index=0
+    def read(self,num):
+        v=self.values[self._index:self._index+num]
+        self._index+=num
+        return v
 
-OK
->>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856oPn.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.000s OK >>> >>> >>> >>> >>> >>> >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-38561Zt.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.000s OK >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856Ckz.py... Traceback (most recent call last):   File "<stdin>", line 1, in <module>   File "c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856Ckz.py", line 1     Python 2.6.5 (r265:79096, Mar 19 2010, 21:48:26) [MSC v.1500 32 bit (Intel)] on win32              ^ SyntaxError: invalid syntax >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-38560tC.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.000s OK >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856B4I.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.000s OK >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856OCP.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.000s OK >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856bMV.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.000s OK >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856oWb.py...Traceback (most recent call last):   File "<stdin>", line 1, in <module>   File "c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856oWb.py", line 1     Python 2.6.5 (r265:79096, Mar 19 2010, 21:48:26) [MSC v.1500 32 bit (Intel)] on win32              ^ SyntaxError: invalid syntax >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-38561gh.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.000s OK >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856Crn.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.000s OK >>> >>> >>> >>> >>> >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856P1t.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.000s OK >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856c_z.py... Traceback (most recent call last):   File "<stdin>", line 1, in <module>   File "c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856c_z.py", line 1     Python 2.6.5 (r265:79096, Mar 19 2010, 21:48:26) [MSC v.1500 32 bit (Intel)] on win32              ^ SyntaxError: invalid syntax >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856OJD.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.016s OK >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856bTJ.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.000s  OK >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856odP.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.000s  OK >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-38561nV.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.000s  OK >>> ## working on region in file c:/DOCUME~1/donghee/LOCALS~1/Temp/python-3856Cyb.py... .. ---------------------------------------------------------------------- Ran 2 tests in 0.000s  OK >>> 
+class TestPoint:
+    def __init__(self, serial, pace):
+        self.serial= serial
+        self.pace = pace
+        self.bind=0
+        self._total_index=05
+
+    def next1(self):
+        self.buffer=self.serial.read(self.pace)
+        v=self.buffer[0]
+        self._total_index=0
+        return self._next(v)
+    
+
+    def next2(self):
+        self.bind=0
+        self.buffer=self.serial.read(self.pace)
+        self._total_index+=self.pace
+        v=self.buffer[self.bind]
+        return self._next(v)
+
+    def _next(self,v):
+        isMarker=(self.bind%5)==0
+        return (v,isMarker)
+    
+class Test(unittest.TestCase):
+    def test1(self):
+        self.assertEquals(1,1)
+
+    def test_same(self):
+                     #!0 1 2 3 4!5 6 7
+        serial=Serial([1,1,1,1,1,1,1,1])
+        tp=TestPoint(serial,pace=5)
+        self.assertEquals((1,True),tp.next1())
+
+        self.assertEquals((1,True),tp.next2())
+        self.assertEquals(5, tp._total_index)
+        
+        
+
+if __name__=='__main__':
+    unittest.main()

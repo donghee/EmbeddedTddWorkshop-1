@@ -1,4 +1,4 @@
-cscope 15 C:\work\workspace\EmbeddedTddWorkshop"               0000299929
+cscope 15 C:\work\workspace\EmbeddedTddWorkshop"               0000300040
 	@C:\work\workspace\EmbeddedTddWorkshop\ArduinoCore\HardwareSerial.cpp
 
 22 
@@ -11351,7 +11351,7 @@ KeydownEvít
 
 87 
 ou_s
-[]="_-----";
+[]="__----";
 
 89 
 	`£t_un˚πaö_cou¡
@@ -11365,11 +11365,31 @@ ou_s
 ou_s
 );
 
-91 
+92 
+ö_s
+[]="__----";
+
+93 
+ou_s
+[]="__----";
+
+95 
+	`£t_un˚πaö_cou¡
+(3);
+
+96 
+	`as£π_key°©e
+(
+ö_s
+,
+ou_s
+);
+
+97 
 	}
 }
 
-93 
+99 
 	$TEST
 (
 KeydownEvít
@@ -11377,7 +11397,7 @@ KeydownEvít
 ã°_key_off
 )
 
-97 
+103 
 öput
 [] = {
 OFF
@@ -11385,7 +11405,7 @@ OFF
 ON
 ,ON,OFF,OFF};
 
-98 
+104 
 ouçut
 [] = {
 OFF
@@ -11393,31 +11413,31 @@ OFF
 ON
 ,ON,ON,ON};
 
-100 
+106 
 key_°©e
 ;
 
-102 
+108 
 	`£t_un˚πaö_cou¡
 (3);
 
-104 
+110 
 	`£t_key_°©e1
 (
 öput
 [1]);
 
-105 
+111 
 	`¥o˚ss_key_ch©ãrög
 ();
 
-106 
+112 
 key_°©e
  = 
 	`ªad_key_°©e
 ();
 
-107 
+113 
 	`LONGS_EQUAL
 (
 ouçut
@@ -11425,23 +11445,23 @@ ouçut
 key_°©e
 );
 
-109 
+115 
 	`£t_key_°©e1
 (
 öput
 [2]);
 
-110 
+116 
 	`¥o˚ss_key_ch©ãrög
 ();
 
-111 
+117 
 key_°©e
  = 
 	`ªad_key_°©e
 ();
 
-112 
+118 
 	`LONGS_EQUAL
 (
 ouçut
@@ -11449,23 +11469,23 @@ ouçut
 key_°©e
 );
 
-114 
+120 
 	`£t_key_°©e1
 (
 öput
 [3]);
 
-115 
+121 
 	`¥o˚ss_key_ch©ãrög
 ();
 
-116 
+122 
 key_°©e
  = 
 	`ªad_key_°©e
 ();
 
-117 
+123 
 	`LONGS_EQUAL
 (
 ouçut
@@ -11473,7 +11493,7 @@ ouçut
 key_°©e
 );
 
-124 
+130 
 	}
 }
 

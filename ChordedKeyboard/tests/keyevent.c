@@ -4,12 +4,15 @@ int keydown_event_count=0;
 int keydown_event_counts[]={0,0,0,0,0};
 int keydown_event=0;
 
+int key_state=0;
+
 int _p_key_state =0;
 int _key_state=0;
 int _key_states[]={0,0,0,0,0};
 
 int _channel=0;
 int _uncertain_count=0;
+int uncertain_flag= 0;
 
 void keydown_event_callback() {
 	keydown_event_counts[_channel]++;
@@ -44,31 +47,47 @@ void set_key_state(int state) {
 }
 
 void set_key_state1(int state) {
-	_p_key_state = _key_states;
+
 	_key_state = state;
 }
 
 int read_key_state(){
-	return _key_state;
+	return key_state;
 }
+
+void reset_key_state() {
+	_p_key_state = OFF;
+	uncertain_flag = 0;
+}
+
 
 void set_uncertain_count(int count) {
 	_uncertain_count = count;
-
+	reset_key_state();
 }
 
+
 void process_key_chattering() {
-	// _key_state == OFF {_key_state = OFF}
-	/* if (_p_key_state == ON && _key_state == OFF) { */
-	/* 	if (_uncertain_count == 3) { */
-	/* 		_key_state = OFF; */
-	/* 	}else { */
-	/* 		_key_state = ON; */
-	/* 		_uncertain_count++; */
-	/* 	} */
-	if ( _key_state == OFF ) {
-		_key_state = OFF;
-	} else if (_key_state == ON) {
-		_key_state = ON;
+	if (_key_state||_p_key_state) {
+		if((!_key_state) && _p_key_state){
+			_uncertain_count--;
+		}
+    	_p_key_state = _key_state;
+		key_state = ON;
+
+		return;
 	}
+
+
+	key_state=(_uncertain_count<3);
+
+	if (key_state) {
+		if (_uncertain_count  == 1) {
+			key_state = OFF;
+			_uncertain_count =3;
+		}
+		_uncertain_count--;
+
+	}
+	_p_key_state = _key_state;
 }

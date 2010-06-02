@@ -27,29 +27,13 @@ try:
                 readbytes=struct.unpack('10B', s.read(10))
                 v = readbytes[0]
                 print "%02x"%v,
-#                v=random.randrange(0,1024)
-                #if v > 300 :
-                #    box_colour = Colour.red
-                #else:
-                #    box_colour = Colour.blue
-#                c=v/1023.0
-#                box_colour=Colour(c,c,c)
                 if v==1: box_colour=Colour.red
                 elif v==0: box_colour=Colour.blue
                 else: box_colour=Colour.green
-                # if v<1000:
-                #     if lastst>=1000: print;print "-"*10
-                #     print "%03d"%v,
                 lastst=v
-                # if v>=1000:
-                #     continue
                 box_x= 10+x*box_width
                 box_y= 450- y* box_height
                 box((box_x,box_y),box_x+box_width-box_margin,box_y+box_height-box_margin, colour=box_colour, filled=1)
-                # move(box_x,box_y)
-                # text(str(v), serifs=1, size=10)                
-        
-#        time.sleep(3)
         clear_screen()
 
     time.sleep(4)
@@ -59,6 +43,3 @@ if 1:
     end_graphics()
     s.close()
     print 'Done'
-
-
-

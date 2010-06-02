@@ -1,9 +1,82 @@
 tests/test_keyevent.o tests/test_keyevent.d: tests/test_keyevent.cpp \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/iostream \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/i686-pc-mingw32/bits/c++config.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/i686-pc-mingw32/bits/os_defines.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/i686-pc-mingw32/bits/cpu_defines.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/ostream \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/ios \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/iosfwd \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/stringfwd.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/postypes.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/cwchar \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/cstddef \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/include/stddef.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/wchar.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/_mingw.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/include/stdarg.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/wctype.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/sys/types.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/stdint.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/exception \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/char_traits.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/stl_algobase.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/functexcept.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/exception_defines.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/cpp_type_traits.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/ext/type_traits.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/ext/numeric_traits.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/stl_pair.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/move.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/concept_check.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/stl_iterator_base_types.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/stl_iterator_base_funcs.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/stl_iterator.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/debug/debug.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/localefwd.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/i686-pc-mingw32/bits/c++locale.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/clocale \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/locale.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/cctype \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/ctype.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/ios_base.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/ext/atomicity.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/i686-pc-mingw32/bits/gthr.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/i686-pc-mingw32/bits/gthr-default.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/errno.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/i686-pc-mingw32/bits/atomic_word.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/locale_classes.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/string \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/allocator.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/i686-pc-mingw32/bits/c++allocator.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/ext/new_allocator.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/new \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/ostream_insert.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/cxxabi-forced.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/stl_function.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/backward/binders.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/basic_string.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/initializer_list \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/basic_string.tcc \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/locale_classes.tcc \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/streambuf \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/streambuf.tcc \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/basic_ios.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/locale_facets.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/cwctype \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/i686-pc-mingw32/bits/ctype_base.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/streambuf_iterator.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/i686-pc-mingw32/bits/ctype_inline.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/locale_facets.tcc \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/basic_ios.tcc \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/ostream.tcc \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/istream \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/istream.tcc \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/sstream \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/c++/4.5.0/bits/sstream.tcc \
  ../CppUTest/include/CppUTest/CommandLineTestRunner.h \
  ../CppUTest/include/CppUTest/TestHarness.h \
  ../CppUTest/include/CppUTest/Utest.h \
  ../CppUTest/include/CppUTest/SimpleString.h \
- c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/include/stdarg.h \
  ../CppUTest/include/CppUTest/UtestMacros.h \
  ../CppUTest/include/CppUTest/TestResult.h \
  ../CppUTest/include/CppUTest/Failure.h \
@@ -11,10 +84,7 @@ tests/test_keyevent.o tests/test_keyevent.d: tests/test_keyevent.cpp \
  ../CppUTest/include/CppUTest/MemoryLeakWarningPlugin.h \
  ../CppUTest/include/CppUTest/TestHarness_c.h \
  c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/stdlib.h \
- c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/_mingw.h \
- c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/include/stddef.h \
  ../CppUTest/include/CppUTest/TestOutput.h \
  ../CppUTest/include/CppUTest/CommandLineArguments.h \
  c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/stdio.h \
- c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/sys/types.h \
  tests/keyevent.h
