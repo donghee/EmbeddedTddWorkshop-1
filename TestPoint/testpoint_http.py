@@ -9,8 +9,8 @@ import serial, struct
 class RequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         print "GET"
-        s=serial.Serial("Com1")
-        s.open()
+        s=serial.Serial("Com3")
+        #s.open()
         fpath = os.path.join(os.getcwd(),self.path[1:])
         response = ""
         self.send_response(200)
@@ -37,6 +37,8 @@ lastrow.appendChild(td);
 function addRow(id,html) {
 
 var table = document.getElementById(id);
+var row =  document.createElement("TR");
+table.appendChild(row); 
 table.lastChild.innerHTML=html;
 }
 </script></head>
@@ -50,10 +52,9 @@ table.lastChild.innerHTML=html;
         trInnerHtml ="<tr>"
         for i in xrange(10000):
             #v=random.randrange(0,1024)
-            readbytes=struct.unpack('2B', s.read(2))
-            v = readbytes[0] + (readbytes[1] <<8)
-            
-            if v > 300 :
+            readbytes=struct.unpack('1B', s.read(1))
+            v = readbytes[0]
+            if v > 0 :
                 color = "red"
             else:
                 color = "blue"
@@ -71,6 +72,7 @@ scrollTo(0,99999999999);
                 cpos=0
                 trInnerHtml = "<tr>"
             self.wfile.flush()
+	    time.sleep(0.005)
         self.wfile.write("</body></html>")
         s.close()
 

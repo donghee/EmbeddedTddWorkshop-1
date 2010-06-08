@@ -18,4 +18,5 @@ int read_key_state();
 
 void set_uncertain_count(int count);
 void process_key_chattering();
+void process_key_chattering1();
 
