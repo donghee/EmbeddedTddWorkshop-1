@@ -42,7 +42,6 @@ void assert_keystate_location(char * in, char * out,const char* file, int line)
 }
 
 
-
 TEST_GROUP(KeydownEvent)
 {
 	void setup()
@@ -84,5 +83,18 @@ TEST(KeydownEvent, test_key_on_off2)
 
 	set_uncertain_count(3);
 	ASSERT_KEYSTATE(in_s1,ou_s1);
+}
 
+TEST(KeydownEvent, test_key_press_release)
+{
+	char in_s[]="_--";
+	int event;
+	int key;
+	set_uncertain_count(3);
+
+	key_step(CHAR2VAL('_'));
+	LONGS_EQUAL(NOEVT, get_event());
+
+	// nop
+	
 }

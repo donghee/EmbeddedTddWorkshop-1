@@ -9,9 +9,8 @@ import serial, struct
 import random
 from tdd3 import *
 
-#s=serial.Serial("Com3")
+s=serial.Serial("Com5")
 #s.open()
-math.
 begin_graphics()
 try:
     width = 50
@@ -27,8 +26,8 @@ try:
         while y<height:
             while x < width:
                 timemarker = 10
-#                readbytes=struct.unpack(str(timemarker)+'B', s.read(timemarker))
-                readbytes=[1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0]
+                readbytes=struct.unpack(str(timemarker)+'B', s.read(timemarker))
+#                readbytes=[1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0]
                 output = TestPoint(readbytes)
                 output.setPeriod(timemarker)
                 for v,isMarker in output:

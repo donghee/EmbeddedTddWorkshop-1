@@ -21,8 +21,9 @@ all: Blinky.elf secondary-outputs
 Blinky.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C++ Linker'
-	avr-g++ -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU=7372800L -I"../../ArduinoCore" ../main.cpp -o main.o
-	#avr-gcc -Os -Wl,--gc-sections -o Blinky.elf  $(OBJS)  $(USER_OBJS) $(LIBS) -lm -Wl,-Map,Blinky.map -L"..\..\ArduinoCore\Debug" -mmcu=atmega168
+	avr-gcc -c -g -Os -w  -mmcu=atmega168 -DF_CPU=7372800L -I"../ChordedKeyboard/tests" ../../ChordedKeyboard/tests/keyevent.c -o keyevent.o
+	avr-g++ -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU=7372800L -I"../../ArduinoCore" -I" ../../ChordedKeyboard/tests" ../main.cpp -o main.o
+		#avr-gcc -Os -Wl,--gc-sections -o Blinky.elf  $(OBJS)  $(USER_OBJS) $(LIBS) -lm -Wl,-Map,Blinky.map -L"..\..\ArduinoCore\Debug" -mmcu=atmega168
 	avr-gcc -Os -Wl,--gc-sections -mmcu=atmega168 -o Blinky.elf main.o ../../ArduinoCore/Debug/libArduinoCore.a -L"../../ArduinoCore" -lm
 	@echo 'Finished building target: $@'
 	@echo ' '
@@ -47,7 +48,7 @@ sizedummy: Blinky.elf
 
 avrdudedummy: Blinky.elf
 	@echo 'Invoking: AVRDude'
-	C:\work\WinAVR-20100110\bin\avrdude -pm168 -carduino -PCOM1 -b19200 -F -Uflash:w:Blinky.hex:a
+	C:\work\WinAVR-20100110\bin\avrdude -pm168 -carduino -PCOM5 -b19200 -F -Uflash:w:Blinky.hex:a
 	@echo 'Finished building: $@'
 	@echo ' '
 
