@@ -87,14 +87,33 @@ TEST(KeydownEvent, test_key_on_off2)
 
 TEST(KeydownEvent, test_key_press_release)
 {
-	char in_s[]="_--";
-	int event;
-	int key;
+	//char in_s[]="_--___";
+	// int event;
+	// int key;
 	set_uncertain_count(3);
 
 	key_step(CHAR2VAL('_'));
 	LONGS_EQUAL(NOEVT, get_event());
 
-	// nop
-	
+	key_step(CHAR2VAL('-'));
+	LONGS_EQUAL(PRESSED, get_event());
+
+	key_step(CHAR2VAL('-'));
+	LONGS_EQUAL(PRESSED, get_event());
+
+	key_step(CHAR2VAL('_'));
+	LONGS_EQUAL(PRESSED, get_event());
+
+	key_step(CHAR2VAL('_'));
+	LONGS_EQUAL(PRESSED, get_event());
+
+	key_step(CHAR2VAL('_'));
+	LONGS_EQUAL(RELEASED, get_event());
+
+	key_step(CHAR2VAL('_'));
+	LONGS_EQUAL(NOEVT, get_event());
+
+	key_step(CHAR2VAL('-'));
+	LONGS_EQUAL(PRESSED, get_event());
+
 }

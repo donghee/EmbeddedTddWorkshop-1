@@ -18,3 +18,6 @@ int read_keydown_event();
 void set_uncertain_count(int count);
 void process_key_chattering();
 void process_key_chattering1();
+
+void key_step(int state);
+int get_event();

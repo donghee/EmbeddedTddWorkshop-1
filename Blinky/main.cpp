@@ -1,7 +1,17 @@
 #include <WProgram.h>
 #include <math.h>
 
+extern "C" {
+#include "../../ChordedKeyboard/tests/keyevent.h"
+}
+
 int ledPin =  13;    // LED connected to digital pin 13
+
+boolean A;
+int event;
+byte firstA;
+byte secondA;
+int a;
 
 // The setup() method runs once, when the sketch starts
 void setup()   {
@@ -9,25 +19,23 @@ void setup()   {
   pinMode(5, INPUT);
   pinMode(ledPin, OUTPUT);
   Serial.begin(9600);
+  set_uncertain_count(3);
 }
-
-// the loop() method runs over and over again,
-// as long as the Arduino has power
-
-boolean A;
-byte firstA;
-byte secondA;
 
 int main(void) {
 
-  /* Must call init for arduino to work properly */
   init();
   setup();
-
   for (;;) {
 	  digitalWrite(ledPin, HIGH);   // set the LED on
-	  A = digitalRead(5);
-	  //	  A = 19.5 * log10((0.9*A) + 1);
-	  Serial.print(A, BYTE);
+	  A = digitalRead(4);
+	  if (A == LOW) {
+		  key_step(ON);
+	  }
+	  else {
+		  key_step(OFF);
+	  }
+	  event = get_event();
+	  Serial.print(event, DEC);
   } // end for
 } // end main

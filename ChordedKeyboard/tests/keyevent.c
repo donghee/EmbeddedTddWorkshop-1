@@ -5,10 +5,15 @@ int _key_state=0;
 int _uncertain_count;
 
 int _state=0;
-int _pstate=0;
+
+int _event=NOEVT;
 
 int keydown_event=0;
 
+void init_states() {
+  key_state=0;
+   _state=0;
+}
 void keydown_event_callback() {
   keydown_event=PRESSED;
 }
@@ -22,13 +27,6 @@ void (*keydown_event_cb)(void) = keydown_event_callback;
 
 void set_key_state(int state) {
   _key_state = state;
-  /* if (_key_state==0 && state==1) { */
-  /* 	keydown_event_cb(); */
-  /* } */
-  /* if (_key_state==1 && state==0) { */
-  /* 	keydown_event_release_callback(); */
-  /* } */
-
 }
 
 int read_key_state(){
@@ -37,9 +35,10 @@ int read_key_state(){
 
 void set_uncertain_count(int count) {
 	_uncertain_count = count;
+	init_states();
 }
 
-int next_state(inp, k, n) {
+int next_state(int inp, int k, int n) {
   if (!inp && k)
 	return (k+1) % (n+1);
   else
@@ -47,19 +46,24 @@ int next_state(inp, k, n) {
 }
 
 void process_key_chattering() {
-  _pstate = _state;
   _state = next_state(_key_state, _state, _uncertain_count);
   key_state =  0 < _state;
 }
 
-int read_keydown_event() {
-  if (_state == 1 &&  _pstate == 0) {
-	keydown_event=PRESSED;
-  } else if (_state == 0 && _pstate == 3) {
-	keydown_event=RELEASED;
- 	/* keydown_event_release_callback();  */
-  } else if (_pstate == 0) {
-	keydown_event = NOP;
+void key_step(int k) {
+  set_key_state(k); 
+  process_key_chattering(); 
+}
+
+int get_event() {
+  if (key_state) {
+	_event = PRESSED;
+  } else {
+	if (_event == PRESSED) {
+	  _event = RELEASED;
+	  return _event;
+	}
+	_event = NOEVT;
   }
-  return keydown_event;
+  return _event;
 }
