@@ -1,66 +1,83 @@
 #http://www.jiggerjuice.net/electronics/projects/sample-makefile
 
+#.SUFFIXES : .c .o 
+
+# MCU name
+MCU = atmega168
+
+
+TARGET = ChordedKeyboard
+
+DIR_SRC = ..
+DIR_ARDUINO = ../../ArduinoCore
+DIR_KEYEVENT = ../../ChordedKeyboard/tests
+
+OBJS = keyevent.o 
+CPP_OBJS = main.o testpoint.o
+#SRC = keyevent.c main.cpp
+
+CFLAGS =  -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU=7372800L -I$(DIR_ARDUINO) -I$(DIR_KEYEVENT)
+CPPFLAGS =  -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU=7372800L -I$(DIR_ARDUINO) -I$(DIR_KEYEVENT) -I$(DIR_SRC)
+
 RM := rm -rf
 
-# Add inputs and outputs from these tool invocations to the build variables 
-LSS += \
-Blinky.lss \
+# All Target
+all: clean
+all: OBJS += main.o 
+all: elf secondary-outputs
 
-FLASH_IMAGE += \
-Blinky.hex \
+# testpoint Target
+testpoint: clean
+testpoint: TARGET = Testpoint
+testpoint: OBJS = testpoint.o 
+testpoint: elf secondary-outputs
 
-SIZEDUMMY += \
-sizedummy \
+$(OBJS): %.o: $(DIR_KEYEVENT)/%.c
+	@echo ' '
+	avr-gcc $(CFLAGS) $< -o $@
 
-AVRDUDEDUMMY += \
-avrdudedummy \
+$(CPP_OBJS): %.o: $(DIR_SRC)/%.cpp
+	@echo ' '
+	avr-g++ $(CPPFLAGS) $< -o $@
 
-
-# All Target
-all: Blinky.elf secondary-outputs
-
-# Tool invocations
-Blinky.elf: $(OBJS) $(USER_OBJS)
-	@echo 'Building target: $@'
+elf: $(OBJS) $(CPP_OBJS) 
+	@echo 'Building target: $(TARGET)'
 	@echo 'Invoking: AVR C++ Linker'
-	avr-gcc -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU=7372800L -I"../../ArduinoCore" -I"../../ChordedKeyboard/tests" ../../ChordedKeyboard/tests/keyevent.c -o keyevent.o
-	avr-g++ -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU=7372800L -I"../../ArduinoCore" -I"../../ChordedKeyboard/tests" -I"../" ../main.cpp -o main.o
-#	avr-g++ -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU=7372800L -I"../../ArduinoCore" -I"../../ChordedKeyboard/tests" -I"../" ../testpoint.cpp -o main.o
-	avr-gcc -Os -Wl,--gc-sections -mmcu=atmega168 -o Blinky.elf main.o keyevent.o ../../ArduinoCore/Debug/libArduinoCore.a -L"../../ArduinoCore" -lm
-#	avr-gcc -Os -Wl,--gc-sections -mmcu=atmega168 -o Blinky.elf main.o ../../ArduinoCore/Debug/libArduinoCore.a -L"../../ArduinoCore" -lm
-	@echo 'Finished building target: $@'
+	avr-gcc -Os -Wl,--gc-sections -mmcu=atmega168 -o $(TARGET).elf $(OBJS) $(DIR_ARDUINO)/Debug/libArduinoCore.a -L"../../ArduinoCore" -lm
+	@echo 'Finished building target: $(TARGET)'
 	@echo ' '
 
-Blinky.lss: Blinky.elf
+lss: 
 	@echo 'Invoking: AVR Create Extended Listing'
-	-avr-objdump -h -S Blinky.elf  >"Blinky.lss"
-	@echo 'Finished building: $@'
+	-avr-objdump -h -S $(TARGET).elf > $(TARGET).lss
+	@echo 'Finished building: $(TARGET)'
 	@echo ' '
 
-Blinky.hex: Blinky.elf
+hex: 
 	@echo 'Create Flash image (ihex format)'
-	-avr-objcopy -R .eeprom -O ihex Blinky.elf  "Blinky.hex"
+	-avr-objcopy -R .eeprom -O ihex $(TARGET).elf $(TARGET).hex
 	@echo 'Finished building: $@'
 	@echo ' '
 
-sizedummy: Blinky.elf
+sizedummy:
 	@echo 'Invoking: Print Size'
-	-avr-size --format=avr --mcu=atmega168 Blinky.elf
+	-avr-size --format=avr --mcu=atmega168 $(TARGET).elf
 	@echo 'Finished building: $@'
 	@echo ' '
 
-avrdudedummy: Blinky.elf
+avrdudedummy: 
 	@echo 'Invoking: AVRDude'
-	C:\work\WinAVR-20100110\bin\avrdude -pm168 -carduino -PCOM1 -b19200 -F -Uflash:w:Blinky.hex:a
+	C:\work\WinAVR-20100110\bin\avrdude -pm168 -carduino -PCOM1 -b19200 -F -Uflash:w:$(TARGET).hex:a
 	@echo 'Finished building: $@'
 	@echo ' '
 
-# Other Targets
+
 clean:
-	-$(RM) $(OBJS)$(C_DEPS)$(ELFS)$(FLASH_IMAGE)$(LSS)$(S_DEPS)$(CXX_DEPS)$(S_UPPER_DEPS)$(C++_DEPS)$(ASM_DEPS)$(CC_DEPS)$(AVRDUDEDUMMY)$(CPP_DEPS)$(C_UPPER_DEPS)$(SIZEDUMMY) Blinky.elf *.o
+	-$(RM) $(OBJS)$(C_DEPS)$(ELFS) *.lss *.hex $(S_DEPS)$(CXX_DEPS)$(S_UPPER_DEPS)$(C++_DEPS)$(ASM_DEPS)$(CC_DEPS)$(CPP_DEPS)$(C_UPPER_DEPS) *.elf *.o
 	-@echo ' '
 
-secondary-outputs: $(LSS) $(FLASH_IMAGE) $(SIZEDUMMY) $(AVRDUDEDUMMY)
+secondary-outputs: lss hex sizedummy avrdudedummy
 
-.PHONY: all clean dependents
+.PHONY: all clean dependents testpoint
+
 .SECONDARY:
