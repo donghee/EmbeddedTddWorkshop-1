@@ -23,10 +23,11 @@ all: Blinky.elf secondary-outputs
 Blinky.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C++ Linker'
-#	avr-gcc -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU=7372800L -I"../../ArduinoCore" -I"../ChordedKeyboard/tests" ../../ChordedKeyboard/tests/keyevent.c -o keyevent.o
 	avr-gcc -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU=7372800L -I"../../ArduinoCore" -I"../../ChordedKeyboard/tests" ../../ChordedKeyboard/tests/keyevent.c -o keyevent.o
 	avr-g++ -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU=7372800L -I"../../ArduinoCore" -I"../../ChordedKeyboard/tests" -I"../" ../main.cpp -o main.o
+#	avr-g++ -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU=7372800L -I"../../ArduinoCore" -I"../../ChordedKeyboard/tests" -I"../" ../testpoint.cpp -o main.o
 	avr-gcc -Os -Wl,--gc-sections -mmcu=atmega168 -o Blinky.elf main.o keyevent.o ../../ArduinoCore/Debug/libArduinoCore.a -L"../../ArduinoCore" -lm
+#	avr-gcc -Os -Wl,--gc-sections -mmcu=atmega168 -o Blinky.elf main.o ../../ArduinoCore/Debug/libArduinoCore.a -L"../../ArduinoCore" -lm
 	@echo 'Finished building target: $@'
 	@echo ' '
 

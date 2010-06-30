@@ -2,6 +2,7 @@
 
 int key_state=0;
 int _key_state=0;
+int p_key_state=0;
 int _uncertain_count;
 
 int _state=0;
@@ -47,6 +48,7 @@ int next_state(int inp, int k, int n) {
 
 void process_key_chattering() {
   _state = next_state(_key_state, _state, _uncertain_count);
+  p_key_state=key_state;
   key_state =  0 < _state;
 }
 
@@ -56,6 +58,16 @@ void key_step(int k) {
 }
 
 int get_event() {
+
+  if  (!p_key_state && key_state)
+	_event=PRESSED;
+  else if (p_key_state && !key_state)
+	_event=RELEASED;
+  else
+	_event=NOEVT;
+  return _event;
+
+  /*
   if (key_state) {
 	_event = PRESSED;
   } else {
@@ -66,4 +78,5 @@ int get_event() {
 	_event = NOEVT;
   }
   return _event;
+  */
 }

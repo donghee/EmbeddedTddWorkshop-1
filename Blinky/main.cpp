@@ -19,7 +19,7 @@ void setup()   {
   pinMode(5, INPUT);
   pinMode(ledPin, OUTPUT);
   Serial.begin(9600);
-  set_uncertain_count(3);
+  set_uncertain_count(100);
 }
 
 int main(void) {
@@ -28,7 +28,7 @@ int main(void) {
   setup();
   for (;;) {
 	  digitalWrite(ledPin, HIGH);   // set the LED on
-	  A = digitalRead(4);
+	  A = digitalRead(5);
 	  if (A == LOW) {
 		  key_step(ON);
 	  }
@@ -36,6 +36,6 @@ int main(void) {
 		  key_step(OFF);
 	  }
 	  event = get_event();
-	  Serial.print(event, DEC);
+	  if (event != NOEVT) Serial.print(event, DEC);
   } // end for
 } // end main

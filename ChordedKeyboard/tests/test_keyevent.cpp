@@ -11,6 +11,8 @@ extern "C"
 }
 
 #define CHAR2VAL(x) ((x)=='-'?ON:OFF)
+#define CHAR2EVT(x) ((x)=='^'?PRESSED:((x)=='v'?RELEASED:NOEVT) )
+
 #define ASSERT_KEYSTATE(in,out)			\
 	assert_keystate_location((in),(out), __FILE__,__LINE__)
 
@@ -87,33 +89,15 @@ TEST(KeydownEvent, test_key_on_off2)
 
 TEST(KeydownEvent, test_key_press_release)
 {
-	//char in_s[]="_--___";
-	// int event;
-	// int key;
+    char in_s[]="_--_____-__-___";
+	char ev_s[]=" ^   v  ^     ^"; // ^: PRESSED,  v: RELEASED, ' ': NOEVT
+	int i=0;
 	set_uncertain_count(3);
 
-	key_step(CHAR2VAL('_'));
-	LONGS_EQUAL(NOEVT, get_event());
-
-	key_step(CHAR2VAL('-'));
-	LONGS_EQUAL(PRESSED, get_event());
-
-	key_step(CHAR2VAL('-'));
-	LONGS_EQUAL(PRESSED, get_event());
-
-	key_step(CHAR2VAL('_'));
-	LONGS_EQUAL(PRESSED, get_event());
-
-	key_step(CHAR2VAL('_'));
-	LONGS_EQUAL(PRESSED, get_event());
-
-	key_step(CHAR2VAL('_'));
-	LONGS_EQUAL(RELEASED, get_event());
-
-	key_step(CHAR2VAL('_'));
-	LONGS_EQUAL(NOEVT, get_event());
-
-	key_step(CHAR2VAL('-'));
-	LONGS_EQUAL(PRESSED, get_event());
+	while (*(in_s+i)) {
+	  key_step(CHAR2VAL(*(in_s+i)));
+	  LONGS_EQUAL(CHAR2EVT(*(ev_s+i)), get_event());
+	  i++;
+	}
 
 }

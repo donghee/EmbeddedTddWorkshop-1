@@ -9,7 +9,7 @@ import serial, struct
 import random
 from tdd3 import *
 
-s=serial.Serial("Com5")
+s=serial.Serial("Com1")
 #s.open()
 begin_graphics()
 try:
