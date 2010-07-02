@@ -1,12 +1,30 @@
 import serial
-
+filename = 'i.log'
 s=serial.Serial("Com1")
+f=open(filename,'w')
+event = None
+value = None
+i=0
 try:
-	while True:
-	    print "%s" % s.read()
-	    print "=========== %d" % i
-	    i = i + 1
+    while True:
+	event = s.read()
+	if event == 0: 
+	    event = 'NOEVT' 
+	elif event == 1: 
+	    event = 'PRESSED' 
+	else: 
+	    event = 'RELEASED'
+	value = s.read()
+	f.write("%s, %value\n" % (event, value) )
+	f.write("========== %d \n" % i)
+	print "%s, %value\n" % (event, value)
+	print "=========== %d" % i
+
+        i = i + 1
+	f.flush()
+        
 except:
 	pass
 finally:
+	f.close()
 	s.close()
