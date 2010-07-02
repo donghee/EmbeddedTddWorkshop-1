@@ -1,0 +1,12 @@
+import serial
+
+s=serial.Serial("Com1")
+try:
+	while True:
+	    print "%s" % s.read()
+	    print "=========== %d" % i
+	    i = i + 1
+except:
+	pass
+finally:
+	s.close()
