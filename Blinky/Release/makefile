@@ -1,27 +1,32 @@
-#http://www.jiggerjuice.net/electronics/projects/sample-makefile
-
-#.SUFFIXES : .c .o 
-
-# MCU name
+# MCU 
 MCU = atmega168
-
+F_CPU = 7372800L
 
 TARGET = ChordedKeyboard
 
+# AVRDUDE
+PORT=COM1
+BAUD=19200
+PROTOCOL=stk500v1
+#PART=$(MCU)
+PART=m168
+AVRDUDE=C:\work\WinAVR-20100110\bin\avrdude
+
+# Directory 
 DIR_SRC = ..
 DIR_ARDUINO = ../../ArduinoCore
 DIR_KEYEVENT = ../../ChordedKeyboard/tests
 
+# Objects
 OBJS = keyevent.o 
-CPP_OBJS = main.o testpoint.o
-#SRC = keyevent.c main.cpp
+CPP_OBJS = main.o testpoint.o testpoint_inner.o
 
-CFLAGS =  -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU=7372800L -I$(DIR_ARDUINO) -I$(DIR_KEYEVENT)
-CPPFLAGS =  -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU=7372800L -I$(DIR_ARDUINO) -I$(DIR_KEYEVENT) -I$(DIR_SRC)
+CFLAGS =  -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU=$(F_CPU) -I$(DIR_ARDUINO) -I$(DIR_KEYEVENT)
+CPPFLAGS =  -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU==$(F_CPU) -I$(DIR_ARDUINO) -I$(DIR_KEYEVENT) -I$(DIR_SRC)
 
 RM := rm -rf
 
-# All Target
+# All Target
 all: clean
 all: OBJS += main.o 
 all: elf secondary-outputs
@@ -32,8 +37,14 @@ testpoint: TARGET = Testpoint
 testpoint: OBJS = testpoint.o 
 testpoint: elf secondary-outputs
 
+testpoint_inner: TARGET = Testpoint
+testpoint_inner: OBJS = testpoint_inner.o keyevent.o
+testpoint_inner: 
+	avr-g++ -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=atmega168 -DF_CPU==7372800L -I../../ArduinoCore -I../../ChordedKeyboard/tests -I.. ../testpoint_inner.cpp -o testpoint_inner.o
+testpoint_inner: elf secondary-outputs
+
 $(OBJS): %.o: $(DIR_KEYEVENT)/%.c
-	@echo ' '
+	@echo 'Compile '
 	avr-gcc $(CFLAGS) $< -o $@
 
 $(CPP_OBJS): %.o: $(DIR_SRC)/%.cpp
@@ -49,32 +60,31 @@ elf: $(OBJS) $(CPP_OBJS)
 
 lss: 
 	@echo 'Invoking: AVR Create Extended Listing'
-	-avr-objdump -h -S $(TARGET).elf > $(TARGET).lss
+	avr-objdump -h -S $(TARGET).elf > $(TARGET).lss
 	@echo 'Finished building: $(TARGET)'
 	@echo ' '
 
 hex: 
 	@echo 'Create Flash image (ihex format)'
-	-avr-objcopy -R .eeprom -O ihex $(TARGET).elf $(TARGET).hex
+	avr-objcopy -R .eeprom -O ihex $(TARGET).elf $(TARGET).hex
 	@echo 'Finished building: $@'
 	@echo ' '
 
 sizedummy:
 	@echo 'Invoking: Print Size'
-	-avr-size --format=avr --mcu=atmega168 $(TARGET).elf
+	avr-size --format=avr --mcu=atmega168 $(TARGET).elf
 	@echo 'Finished building: $@'
 	@echo ' '
 
 avrdudedummy: 
 	@echo 'Invoking: AVRDude'
-	C:\work\WinAVR-20100110\bin\avrdude -pm168 -carduino -PCOM1 -b19200 -F -Uflash:w:$(TARGET).hex:a
+	$(AVRDUDE) -p$(PART) -carduino -P$(PORT) -b$(BAUD) -F -Uflash:w:$(TARGET).hex:a
 	@echo 'Finished building: $@'
 	@echo ' '
 
-
 clean:
-	-$(RM) $(OBJS)$(C_DEPS)$(ELFS) *.lss *.hex $(S_DEPS)$(CXX_DEPS)$(S_UPPER_DEPS)$(C++_DEPS)$(ASM_DEPS)$(CC_DEPS)$(CPP_DEPS)$(C_UPPER_DEPS) *.elf *.o
-	-@echo ' '
+	$(RM) $(OBJS)$(C_DEPS)$(ELFS) *.lss *.hex $(S_DEPS)$(CXX_DEPS)$(S_UPPER_DEPS)$(C++_DEPS)$(ASM_DEPS)$(CC_DEPS)$(CPP_DEPS)$(C_UPPER_DEPS) *.elf *.o
+	@echo ' '
 
 secondary-outputs: lss hex sizedummy avrdudedummy
 

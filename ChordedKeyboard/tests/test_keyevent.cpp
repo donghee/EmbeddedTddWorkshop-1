@@ -54,6 +54,7 @@ TEST_GROUP(KeydownEvent)
 	}
 };
 
+
 TEST(KeydownEvent, test_key_on)
 {
 	char in_s[]="__----";
@@ -90,7 +91,7 @@ TEST(KeydownEvent, test_key_on_off2)
 TEST(KeydownEvent, test_key_press_release)
 {
     char in_s[]="_--_____-__-___";
-	char ev_s[]=" ^   v  ^     ^"; // ^: PRESSED,  v: RELEASED, ' ': NOEVT
+	char ev_s[]=" ^   v  ^     v"; // ^: PRESSED,  v: RELEASED, ' ': NOEVT
 	int i=0;
 	set_uncertain_count(3);
 
@@ -99,5 +100,4 @@ TEST(KeydownEvent, test_key_press_release)
 	  LONGS_EQUAL(CHAR2EVT(*(ev_s+i)), get_event());
 	  i++;
 	}
-
 }
