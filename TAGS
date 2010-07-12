@@ -806,13 +806,112 @@ ArduinoCore\WProgram.h,61
 #define WProgram_hWProgram_h2,19
 #define word(word18,262
 
-Blinky\main.cpp,202
+Blinky\bounce.cpp,464
+int ledPin =  13;    // LED connected to digital pin 13ledPin5,46
+int aPin = 3;aPin7,105
+int bPin = 5;bPin8,120
+int cPin = 6;cPin9,135
+int dPin = 7;dPin10,150
+int ePin = 8;ePin11,165
+boolean A,B,C,D,E;A13,182
+boolean A,B,C,D,E;B13,182
+boolean A,B,C,D,E;C13,182
+boolean A,B,C,D,E;D13,182
+boolean A,B,C,D,E;E13,182
+void setup()   {setup16,261
+void bUpdate() {bUpdate29,513
+boolean bRead(int pin) {bRead33,542
+int main(void) {main39,643
+
+Blinky\Bounce.h,396
+#define Bounce_hBounce_h28,1076
+class BounceBounce32,1117
+  unsigned long  previous_millis, interval_millis, rebounce_millis;previous_millis57,1895
+  unsigned long  previous_millis, interval_millis, rebounce_millis;interval_millis57,1895
+  unsigned long  previous_millis, interval_millis, rebounce_millis;rebounce_millis57,1895
+  uint8_t state;state58,1963
+  uint8_t pin;pin59,1980
+
+Blinky\bounce1.cpp,394
+int ledPin =  13;    // LED connected to digital pin 13ledPin5,46
+int aPin = 3;aPin7,105
+int bPin = 5;bPin8,120
+int cPin = 6;cPin9,135
+int dPin = 7;dPin10,150
+int ePin = 8;ePin11,165
+boolean A,B,C,D,E;A13,182
+boolean A,B,C,D,E;B13,182
+boolean A,B,C,D,E;C13,182
+boolean A,B,C,D,E;D13,182
+boolean A,B,C,D,E;E13,182
+void setup()   {setup18,265
+int main(void) {main30,517
+
+Blinky\main.cpp,244
+int ledPin =  13;    // LED connected to digital pin 13ledPin8,114
+boolean A;A10,173
+int event;event11,185
+byte firstA;firstA12,197
+byte secondA;secondA13,211
+int a;a14,226
+void setup()   {setup17,293
+int main(void) {main25,465
+
+Blinky\Release\keyevent.c,865
+int key_state=0;key_state3,25
+int _key_state=0;_key_state4,43
+int p_key_state=0;p_key_state5,62
+int _uncertain_count;_uncertain_count6,82
+int _state=0;_state8,107
+int _event=NOEVT;_event10,124
+int keydown_event=0;keydown_event12,145
+void init_states() {init_states14,169
+void keydown_event_callback() {keydown_event_callback18,224
+void keydown_event_release_callback() {keydown_event_release_callback22,288
+void (*keydown_event_cb)(void) = keydown_event_callback;keydown_event_cb27,419
+void set_key_state(int state) {set_key_state29,479
+int read_key_state(){read_key_state33,540
+void set_uncertain_count(int count) {set_uncertain_count37,588
+int next_state(int inp, int k, int n) {next_state42,677
+void process_key_chattering() {process_key_chattering49,787
+void key_step(int k) {key_step55,941
+int get_event() {get_event60,1022
+
+Blinky\Release\main.cpp,244
+int ledPin =  13;    // LED connected to digital pin 13ledPin8,114
+boolean A;A10,173
+int event;event11,185
+byte firstA;firstA12,197
+byte secondA;secondA13,211
+int a;a14,226
+void setup()   {setup17,293
+int main(void) {main25,465
+
+Blinky\Release\testpoint.cpp,145
 int ledPin =  13;    // LED connected to digital pin 13ledPin4,44
-void setup()   {setup7,160
-boolean A;A17,390
-byte firstA;firstA18,402
-byte secondA;secondA19,416
-int main(void) {main21,433
+boolean A;A6,103
+void setup()   {setup9,174
+int main(void) {main16,317
+
+Blinky\testpoint.cpp,145
+int ledPin =  13;    // LED connected to digital pin 13ledPin4,44
+boolean A;A6,103
+void setup()   {setup9,174
+int main(void) {main16,317
+
+Blinky\testpoint_inner.cpp,392
+#define BUF_SIZE BUF_SIZE8,114
+int ledPin =  13;    // LED connected to digital pin 13ledPin10,138
+boolean A;A12,197
+int event;event13,209
+int event_calls;event_calls14,221
+byte firstA;firstA16,241
+byte secondA;secondA17,255
+int i=0;i18,270
+char buffer[BUF_SIZE];buffer21,284
+void setup()   {setup24,367
+void printBuffer(){printBuffer33,590
+int main(void) {main40,715
 
 build_ctags.bat,0
 
@@ -843,39 +942,51 @@ int main(int ac, char** av)main4,49
 ChordedKeyboard\tests\AllTests.h,50
 IMPORT_TEST_GROUP(KeydownEvent);KeydownEvent1,0
 
-ChordedKeyboard\tests\keyevent.c,919
-int keydown_event_count=0;keydown_event_count3,25
-int keydown_event_counts[]={0,0,0,0,0};keydown_event_counts4,53
-int keydown_event=0;keydown_event5,94
-int _p_key_state =0;_p_key_state7,118
-int _key_state=0;_key_state8,140
-int _key_states[]={0,0,0,0,0};_key_states9,159
-int _channel=0;_channel11,193
-int _uncertain_count=0;_uncertain_count12,210
-void keydown_event_callback() {keydown_event_callback14,237
-void keydown_event_release_callback() {keydown_event_release_callback20,392
-void (*keydown_event_cb)(void) = keydown_event_callback;keydown_event_cb25,522
-void set_key(int channel, int state) {set_key27,582
-void set_key_state(int state) {set_key_state32,671
-void set_key_state1(int state) {set_key_state146,920
-int read_key_state(){read_key_state51,1011
-void set_uncertain_count(int count) {set_uncertain_count55,1060
-void process_key_chattering() {process_key_chattering60,1134
+ChordedKeyboard\tests\keyevent.c,1034
+int key_state=0;key_state3,25
+int _key_state=0;_key_state4,43
+int p_key_state=0;p_key_state5,62
+int _uncertain_count;_uncertain_count7,84
+int debounce_period;debounce_period9,109
+int _state=0;_state11,133
+int _event=NOEVT;_event13,150
+int keydown_event=0;keydown_event15,171
+void init_states() {init_states17,195
+void keydown_event_callback() {keydown_event_callback21,250
+void keydown_event_release_callback() {keydown_event_release_callback25,314
+void (*keydown_event_cb)(void) = keydown_event_callback;keydown_event_cb30,445
+void set_key_state(int state) {set_key_state32,505
+int read_key_state(){read_key_state36,566
+void set_uncertain_count(int count) {set_uncertain_count40,614
+int next_state(int inp, int k, int n) {next_state45,703
+void process_key_chattering() {process_key_chattering52,813
+void key_step(int k) {key_step58,967
+int get_event() {get_event63,1048
+void set_debounce_period(int delay) {set_debounce_period87,1407
+void timebased_debouncing() {timebased_debouncing91,1479
 
-ChordedKeyboard\tests\keyevent.h,103
+ChordedKeyboard\tests\keyevent.h,129
 #define ON ON1,0
 #define OFF OFF2,14
-#define PRESSED PRESSED4,31
-#define RELEASED RELEASED5,50
+#define NOEVT NOEVT4,31
+#define PRESSED PRESSED5,48
+#define RELEASED RELEASED6,67
 
-ChordedKeyboard\tests\test_keyevent.cpp,343
-#define CHAR2VAL(CHAR2VAL9,110
-void assert_keystate(char * in, char * out)assert_keystate16,232
-TEST_GROUP(KeydownEvent)TEST_GROUP33,534
-TEST(KeydownEvent, test_keydown_event_count)TEST48,711
-TEST(KeydownEvent, test_keydown_event)TEST67,1125
-TEST(KeydownEvent, test_key_on)TEST82,1445
-TEST(KeydownEvent, test_key_off)TEST99,1756
+ChordedKeyboard\tests\test_keyevent.cpp,790
+#define CHAR2VAL(CHAR2VAL14,174
+#define CHAR2EVT(CHAR2EVT15,213
+#define ASSERT_KEYSTATE(ASSERT_KEYSTATE17,282
+#define ASSERT_KEYSTATE_t(ASSERT_KEYSTATE_t20,379
+void assert_keystate_t_location(char * in, char * out,const char* file, int line) {assert_keystate_t_location23,483
+void assert_keystate_location(char * in, char * out,const char* file, int line)assert_keystate_location30,637
+TEST_GROUP(KeydownEvent)TEST_GROUP52,1096
+TEST_GROUP(TimeBasedDebouncing)TEST_GROUP62,1180
+TEST(KeydownEvent, test_key_on)TEST73,1273
+TEST(KeydownEvent, test_key_on_off1)TEST82,1420
+TEST(KeydownEvent, test_key_on_off2)TEST91,1572
+TEST(KeydownEvent, test_key_press_release)TEST106,1840
+TEST(TimeBasedDebouncing, test1)TEST120,2161
+TEST(TimeBasedDebouncing, test1){TEST130,2361
 
 CppUTest\CppUTest.mak,2239
 CFG=CppUTest - Win32 DebugCFG3,94
@@ -2752,24 +2863,41 @@ TEST(UtestMyOwn, test)TEST383,8398
 class NullParameterTest: public UtestNullParameterTest388,8447
 TEST(UtestMyOwn, NullParameters)TEST392,8495
 
-tdd3.py,631
-import unittestunittest2,24
-class TestPoint:TestPoint4,41
-    def __init__(self,input):__init__5,58
-    def __iter__(self):__iter__10,194
-    def _next3(self):_next313,240
-    def next(self):next25,499
-    def isTimemarker(self):isTimemarker29,610
-    def setPeriod(self, period):setPeriod32,688
-class Test(unittest.TestCase):Test36,753
-    def assertIter(self,it_method,l):assertIter37,784
-    def testDiff(self):testDiff44,971
-    def testDiff2(self):testDiff253,1182
-    def testTimemaker(self):testTimemaker61,1412
-    def testNextPoint(self):testNextPoint78,2042
-    def testx(self):testx85,2263
+TestPoint\read_keystep.py,475
+import serial,sysserial1,0
+import serial,syssys1,0
+filename = 'i.log'filename2,19
+s=serial.Serial("Com1", 1200)s3,39
+f=open(filename,'w')f4,70
+event = Noneevent5,92
+value = Nonevalue6,106
+i=0i7,120
+def linereader(s):linereader9,127
+lr=linereader(s)lr17,277
+        event = s.read()event24,426
+        e = int(event)e25,452
+            event = 'NOEVT'event27,496
+            event = 'PRESSED'event29,547
+            event = 'RELEASED'event31,600
 
-test.py,552
+TestPoint\tdd3.py,632
+import unittestunittest2,25
+class TestPoint:TestPoint4,44
+    def __init__(self,input):__init__5,62
+    def __iter__(self):__iter__10,203
+    def _next3(self):_next313,252
+    def next(self):next25,523
+    def isTimemarker(self):isTimemarker29,638
+    def setPeriod(self, period):setPeriod32,719
+class Test(unittest.TestCase):Test36,788
+    def assertIter(self,it_method,l):assertIter37,820
+    def testDiff(self):testDiff44,1014
+    def testDiff2(self):testDiff253,1234
+    def testTimemaker(self):testTimemaker61,1472
+    def testNextPoint(self):testNextPoint78,2119
+    def testx(self):testx85,2347
+
+TestPoint\test.py,552
 import unittestunittest2,25
 class TestPoint:TestPoint4,44
     def __init__(self,input):__init__5,62
@@ -2784,21 +2912,27 @@ class Test(unittest.TestCase):Test31,746
     def testTimemaker(self):testTimemaker56,1428
     def testNextPoint(self):testNextPoint73,2068
 
-testpoint.py,624
-from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandlerHTTPServer5,51
-from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandlerBaseHTTPRequestHandler5,51
-import os,glob, time, random, pdbos6,114
-import os,glob, time, random, pdbglob6,114
-import os,glob, time, random, pdbtime6,114
-import os,glob, time, random, pdbrandom6,114
-import os,glob, time, random, pdbpdb6,114
-import serial, structserial7,149
-import serial, structstruct7,149
-class RequestHandler(BaseHTTPRequestHandler):RequestHandler9,174
-    def do_GET(self):do_GET10,221
-httpd = HTTPServer(('',8085),RequestHandler)httpd78,2285
+TestPoint\testpoint.py,800
+import timetime6,97
+import serial, structserial8,135
+import serial, structstruct8,135
+import randomrandom9,158
+s=serial.Serial("Com1")s12,195
+    width = 50width16,255
+    height = 40height17,271
+    box_width=10box_width18,288
+    box_height=10box_height19,306
+    box_margin=4box_margin20,325
+    lastst=1023lastst21,343
+                timemarker = 10timemarker28,534
+                readbytes=struct.unpack(str(timemarker)+'B', s.read(timemarker))readbytes29,567
+                output = TestPoint(readbytes)output31,713
+                        box_colour = [Colour.grey,Colour.yellow][v]box_colour38,1041
+                    lastst=vlastst39,1110
+                    box_x= 10+x*box_widthbox_x41,1162
+                    box_y= 450- y* box_heightbox_y42,1205
 
-testpoint2.py,609
+TestPoint\testpoint2.py,609
 import timetime5,94
 import serial, structserial7,132
 import serial, structstruct7,132
@@ -2816,7 +2950,7 @@ s=serial.Serial("Com1")s10,172
                 box_x= 10+x*box_widthbox_x45,1231
                 box_y= 450- y* box_heightbox_y46,1270
 
-testpoint3.py,611
+TestPoint\testpoint3.py,608
 import timetime5,94
 import serial, structserial7,132
 import serial, structstruct7,132
@@ -2830,11 +2964,77 @@ s=serial.Serial("Com1")s10,172
     lastst=1023lastst20,321
                 readbytes=struct.unpack('10B', s.read(10))readbytes27,511
                 v = readbytes[0]v28,571
-                lastst=vlastst43,1177
-                box_x= 10+x*box_widthbox_x46,1266
-                box_y= 450- y* box_heightbox_y47,1305
+                lastst=vlastst33,784
+                box_x= 10+x*box_widthbox_x34,810
+                box_y= 450- y* box_heightbox_y35,849
 
-test_testpoint.py,0
+TestPoint\testpoint_http.py,624
+from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandlerHTTPServer5,47
+from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandlerBaseHTTPRequestHandler5,47
+import os,glob, time, random, pdbos6,109
+import os,glob, time, random, pdbglob6,109
+import os,glob, time, random, pdbtime6,109
+import os,glob, time, random, pdbrandom6,109
+import os,glob, time, random, pdbpdb6,109
+import serial, structserial7,143
+import serial, structstruct7,143
+class RequestHandler(BaseHTTPRequestHandler):RequestHandler9,166
+    def do_GET(self):do_GET10,212
+httpd = HTTPServer(('',8085),RequestHandler)httpd80,2028
+
+TestPoint\testpoint_http2.py,658
+from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandlerHTTPServer5,51
+from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandlerBaseHTTPRequestHandler5,51
+import os,glob, time, random, pdbos6,114
+import os,glob, time, random, pdbglob6,114
+import os,glob, time, random, pdbtime6,114
+import os,glob, time, random, pdbrandom6,114
+import os,glob, time, random, pdbpdb6,114
+import serial, structserial7,149
+import serial, structstruct7,149
+class RequestHandler(BaseHTTPRequestHandler):RequestHandler9,174
+    def do_GET(self):do_GET10,221
+	s=serial.Serial("Com3")s11,244
+httpd = HTTPServer(('',7676),RequestHandler)httpd72,2202
+
+TestPoint\testpoint_june.py,992
+import timetime6,96
+import serial, structserial8,134
+import serial, structstruct8,134
+import randomrandom9,157
+s=serial.Serial("Com1")s12,194
+    width = 50width16,254
+    height = 30height17,270
+    box_width=10box_width18,287
+    box_height=10box_height19,305
+    box_margin=2box_margin20,324
+    ymargin=10ymargin21,342
+    lastst=1023lastst22,358
+    timemarker = 10timemarker23,375
+                readbytes=struct.unpack(str(timemarker)+'B', s.read(timemarker))readbytes33,634
+                output = TestPoint(readbytes)output34,716
+                    box_x= 10+x*box_widthbox_x38,840
+                    box_y= 450- y* (box_height+ymargin)box_y39,883
+                    x1=box_xx140,940
+                    x2=box_x+box_width-box_marginx241,970
+                    y1=box_yy142,1021
+                    y2=box_y+box_height-box_marginy243,1051
+                        mid=(x1 + x2)/2mid51,1315
+                    lastst=vlastst54,1414
+
+TestPoint\test_testpoint.py,451
+import unittestunittest5,68
+class Serial:Serial8,89
+    def __init__(self, values):__init__9,104
+    def read(self,num):read12,189
+class TestPoint:TestPoint17,312
+    def __init__(self, serial, pace):__init__18,330
+    def next1(self):next124,477
+    def next2(self):next231,641
+    def _next(self,v):_next38,837
+class Test(unittest.TestCase):Test42,931
+    def test1(self):test143,963
+    def test_same(self):test_same46,1019
 
 watch.c,231
 #define sleep(sleep12,228

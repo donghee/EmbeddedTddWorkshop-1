@@ -10,18 +10,36 @@ extern "C"
 #include "keyevent.h"
 }
 
+
 #define CHAR2VAL(x) ((x)=='-'?ON:OFF)
 #define CHAR2EVT(x) ((x)=='^'?PRESSED:((x)=='v'?RELEASED:NOEVT) )
 
 #define ASSERT_KEYSTATE(in,out)			\
 	assert_keystate_location((in),(out), __FILE__,__LINE__)
 
+#define ASSERT_KEYSTATE_t(in,out)			\
+    assert_keystate_t_location((in),(out), __FILE__,__LINE__)
 
-/*
-execute unit tests
-cd ../ && ../watch.exe *.cpp - 'mingw32-make.exe'
-cd ../ && make'
-*/
+void testhelp1(char in,char out,
+               int exp_ctime,
+               int exp_last_debounce_time)
+{
+    int actual;
+    delay();
+    LONGS_EQUAL(exp_ctime, ctime);
+    set_key(CHAR2VAL(in));
+    process_debouncing();
+    actual = read_key();
+    LONGS_EQUAL(CHAR2VAL(out),actual);
+    LONGS_EQUAL(exp_last_debounce_time,last_debounce_time);
+}
+
+void assert_keystate_t_location(char * in, char * out,const char* file, int line) {
+  // int key_state = 0;
+  // int i=0;
+  // std::ostringstream ss;  
+
+}
 
 void assert_keystate_location(char * in, char * out,const char* file, int line)
 {
@@ -32,6 +50,7 @@ void assert_keystate_location(char * in, char * out,const char* file, int line)
 		{
 			set_key_state(CHAR2VAL(*in));
 			process_key_chattering();
+
 			key_state = read_key_state();
 			
 			if (CHAR2VAL(*out)!=key_state)
@@ -86,7 +105,7 @@ TEST(KeydownEvent, test_key_on_off2)
 
 	set_uncertain_count(3);
 	ASSERT_KEYSTATE(in_s1,ou_s1);
-}
+};
 
 TEST(KeydownEvent, test_key_press_release)
 {
@@ -100,4 +119,97 @@ TEST(KeydownEvent, test_key_press_release)
 	  LONGS_EQUAL(CHAR2EVT(*(ev_s+i)), get_event());
 	  i++;
 	}
+}
+
+// TEST_GROUP(TimeBasedDebouncing)
+// {
+// 	void setup()
+// 	{
+// 	}
+// 	void teardown()
+// 	{
+// 	}
+// };
+
+// TEST(TimeBasedDebouncing, test1)
+// {
+//     // char in_s[]="_-_--------"; //each one is 5 ms
+// 	// char ou_s[]="__________-";
+
+// 	// set_debounce_period(30); //milli sec
+// 	//	ASSERT_KEYSTATE_t(in_s,ou_s);
+// }
+
+
+TEST(KeydownEvent, test2){
+    char in, out, actual;
+
+    char inputBuffer[]    = "_-----";
+    char expectedBuffer[] = "_____-";
+
+    set_sampling_rate(5);
+    set_debounce_period(15);
+
+    testhelp1('_','_',5,0);
+    // in = '_';
+    // delay();
+    // LONGS_EQUAL(5, ctime);
+    // set_key(CHAR2VAL(in));
+    // process_debouncing();
+    // out = '_';
+    // actual = read_key();
+    // LONGS_EQUAL(CHAR2VAL(out),actual);
+    // LONGS_EQUAL(0,last_debounce_time); //initial
+
+    testhelp1('-','_',10,10);
+    // in = '-';
+    // delay();
+    // LONGS_EQUAL(10,ctime);
+    // set_key(CHAR2VAL(in));
+    // process_debouncing();
+    // out = '_';
+    // actual = read_key();
+    // LONGS_EQUAL(CHAR2VAL(out),actual);
+    // LONGS_EQUAL(10,last_debounce_time);
+
+    in = '-';
+    delay();
+    LONGS_EQUAL(15,ctime);
+    set_key(CHAR2VAL(in));
+    process_debouncing();
+    out = '_';
+    actual = read_key();
+    LONGS_EQUAL(CHAR2VAL(out),actual);
+    LONGS_EQUAL(10,last_debounce_time);
+
+    in = '-';
+    delay();
+    LONGS_EQUAL(20,ctime);
+    set_key(CHAR2VAL(in));
+    process_debouncing();
+    out = '_';
+    actual = read_key();
+    LONGS_EQUAL(CHAR2VAL(out),actual);
+    LONGS_EQUAL(10,last_debounce_time);
+
+    in = '-';
+    delay();
+    LONGS_EQUAL(25,ctime);
+    set_key(CHAR2VAL(in));
+    process_debouncing();
+    out = '_';
+    actual = read_key();
+    LONGS_EQUAL(CHAR2VAL(out),actual);
+    LONGS_EQUAL(10,last_debounce_time);
+
+
+    in = '-';
+    delay();
+    set_key(CHAR2VAL(in));
+    LONGS_EQUAL(30,ctime);
+    process_debouncing();
+    out = '-';
+    actual = read_key();
+    LONGS_EQUAL(CHAR2VAL(out),actual);
+    LONGS_EQUAL(10,last_debounce_time);
 }

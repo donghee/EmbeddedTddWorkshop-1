@@ -19,7 +19,7 @@ DIR_KEYEVENT = ../../ChordedKeyboard/tests
 
 # Objects
 OBJS = keyevent.o 
-CPP_OBJS = main.o testpoint.o testpoint_inner.o
+CPP_OBJS = main.o testpoint.o testpoint_inner.o bounce.o bounce1.o
 
 CFLAGS =  -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU=$(F_CPU) -I$(DIR_ARDUINO) -I$(DIR_KEYEVENT)
 CPPFLAGS =  -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU==$(F_CPU) -I$(DIR_ARDUINO) -I$(DIR_KEYEVENT) -I$(DIR_SRC)
@@ -30,6 +30,13 @@ RM := rm -rf
 all: clean
 all: OBJS += main.o 
 all: elf secondary-outputs
+
+# 1
+# bounce
+bounce: clean
+bounce: TARGET = Bounce
+bounce: OBJS = bounce1.o 
+bounce: elf secondary-outputs
 
 # testpoint Target
 testpoint: clean

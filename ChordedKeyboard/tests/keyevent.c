@@ -3,6 +3,7 @@
 int key_state=0;
 int _key_state=0;
 int p_key_state=0;
+
 int _uncertain_count;
 
 int _state=0;
@@ -11,10 +12,16 @@ int _event=NOEVT;
 
 int keydown_event=0;
 
+int sample_rate;
+int ctime;
+int debounce_period;
+int last_debounce_time=0;
+
 void init_states() {
   key_state=0;
    _state=0;
 }
+
 void keydown_event_callback() {
   keydown_event=PRESSED;
 }
@@ -79,4 +86,46 @@ int get_event() {
   }
   return _event;
   */
+}
+
+void set_debounce_period(int delay) {
+    debounce_period = delay;
+}
+
+
+void set_sampling_rate(int millis) {
+    sample_rate = millis;
+}
+
+void reset_last_debounce_time() {
+    last_debounce_time = ctime;
+}
+
+void process_debouncing() {
+	if (_key_state != p_key_state) {
+        reset_last_debounce_time();
+    }
+
+    if ((ctime - last_debounce_time) > debounce_period) {
+        key_state = _key_state;
+        //        reset_last_debounce_time();
+    }
+            
+    p_key_state = _key_state;
+}
+
+void delay() {
+    ctime = ctime + sample_rate;
+}
+
+int read_key() {
+    return key_state;
+}
+
+void set_key(int state) {
+    _key_state = state;
+}
+
+void init_ctime() {
+    ctime = 0;
 }
