@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -7,6 +8,7 @@
 extern "C"
 {
 #include <stdio.h>
+#include <string.h>
 #include "keyevent.h"
 }
 
@@ -20,7 +22,7 @@ extern "C"
 #define ASSERT_KEYSTATE_t(in,out)			\
     assert_keystate_t_location((in),(out), __FILE__,__LINE__)
 
-void testhelp1(char in,char out,
+void assert_debouncing_buffer(char in,char out,
                int exp_ctime,
                int exp_last_debounce_time)
 {
@@ -142,74 +144,25 @@ TEST(KeydownEvent, test_key_press_release)
 
 
 TEST(KeydownEvent, test2){
-    char in, out, actual;
-
     char inputBuffer[]    = "_-----";
     char expectedBuffer[] = "_____-";
 
-    set_sampling_rate(5);
+    int s_rate = 5, exp_time=5, exp_last_deb_time=0;
+    int i=0;
+
+    set_sampling_rate(s_rate);
     set_debounce_period(15);
+    
+    assert_debouncing_buffer(inputBuffer[i],expectedBuffer[i],
+                             exp_time,
+                             exp_last_deb_time);
 
-    testhelp1('_','_',5,0);
-    // in = '_';
-    // delay();
-    // LONGS_EQUAL(5, ctime);
-    // set_key(CHAR2VAL(in));
-    // process_debouncing();
-    // out = '_';
-    // actual = read_key();
-    // LONGS_EQUAL(CHAR2VAL(out),actual);
-    // LONGS_EQUAL(0,last_debounce_time); //initial
+    exp_last_deb_time=10;i++;
 
-    testhelp1('-','_',10,10);
-    // in = '-';
-    // delay();
-    // LONGS_EQUAL(10,ctime);
-    // set_key(CHAR2VAL(in));
-    // process_debouncing();
-    // out = '_';
-    // actual = read_key();
-    // LONGS_EQUAL(CHAR2VAL(out),actual);
-    // LONGS_EQUAL(10,last_debounce_time);
-
-    in = '-';
-    delay();
-    LONGS_EQUAL(15,ctime);
-    set_key(CHAR2VAL(in));
-    process_debouncing();
-    out = '_';
-    actual = read_key();
-    LONGS_EQUAL(CHAR2VAL(out),actual);
-    LONGS_EQUAL(10,last_debounce_time);
-
-    in = '-';
-    delay();
-    LONGS_EQUAL(20,ctime);
-    set_key(CHAR2VAL(in));
-    process_debouncing();
-    out = '_';
-    actual = read_key();
-    LONGS_EQUAL(CHAR2VAL(out),actual);
-    LONGS_EQUAL(10,last_debounce_time);
-
-    in = '-';
-    delay();
-    LONGS_EQUAL(25,ctime);
-    set_key(CHAR2VAL(in));
-    process_debouncing();
-    out = '_';
-    actual = read_key();
-    LONGS_EQUAL(CHAR2VAL(out),actual);
-    LONGS_EQUAL(10,last_debounce_time);
-
-
-    in = '-';
-    delay();
-    set_key(CHAR2VAL(in));
-    LONGS_EQUAL(30,ctime);
-    process_debouncing();
-    out = '-';
-    actual = read_key();
-    LONGS_EQUAL(CHAR2VAL(out),actual);
-    LONGS_EQUAL(10,last_debounce_time);
+    for(; i < strlen(inputBuffer); i++) {
+        exp_time+=s_rate;
+        assert_debouncing_buffer(inputBuffer[i],expectedBuffer[i],
+                                 exp_time,
+                                 exp_last_deb_time);
+    }
 }

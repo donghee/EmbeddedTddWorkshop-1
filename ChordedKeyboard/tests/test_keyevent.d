@@ -87,4 +87,5 @@ tests/test_keyevent.o tests/test_keyevent.d: tests/test_keyevent.cpp \
  ../CppUTest/include/CppUTest/TestOutput.h \
  ../CppUTest/include/CppUTest/CommandLineArguments.h \
  c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/stdio.h \
+ c:\work\mingw\bin\../lib/gcc/i686-pc-mingw32/4.5.0/../../../../include/string.h \
  tests/keyevent.h

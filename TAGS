@@ -942,28 +942,37 @@ int main(int ac, char** av)main4,49
 ChordedKeyboard\tests\AllTests.h,50
 IMPORT_TEST_GROUP(KeydownEvent);KeydownEvent1,0
 
-ChordedKeyboard\tests\keyevent.c,1034
+ChordedKeyboard\tests\keyevent.c,1423
 int key_state=0;key_state3,25
 int _key_state=0;_key_state4,43
 int p_key_state=0;p_key_state5,62
 int _uncertain_count;_uncertain_count7,84
-int debounce_period;debounce_period9,109
-int _state=0;_state11,133
-int _event=NOEVT;_event13,150
-int keydown_event=0;keydown_event15,171
-void init_states() {init_states17,195
-void keydown_event_callback() {keydown_event_callback21,250
-void keydown_event_release_callback() {keydown_event_release_callback25,314
-void (*keydown_event_cb)(void) = keydown_event_callback;keydown_event_cb30,445
-void set_key_state(int state) {set_key_state32,505
-int read_key_state(){read_key_state36,566
-void set_uncertain_count(int count) {set_uncertain_count40,614
-int next_state(int inp, int k, int n) {next_state45,703
-void process_key_chattering() {process_key_chattering52,813
-void key_step(int k) {key_step58,967
-int get_event() {get_event63,1048
-void set_debounce_period(int delay) {set_debounce_period87,1407
-void timebased_debouncing() {timebased_debouncing91,1479
+int _state=0;_state9,109
+int _event=NOEVT;_event11,126
+int keydown_event=0;keydown_event13,147
+int sample_rate;sample_rate15,171
+int ctime;ctime16,189
+int debounce_period;debounce_period17,201
+int last_debounce_time=0;last_debounce_time18,223
+void init_states() {init_states20,252
+void keydown_event_callback() {keydown_event_callback25,309
+void keydown_event_release_callback() {keydown_event_release_callback29,373
+void (*keydown_event_cb)(void) = keydown_event_callback;keydown_event_cb34,504
+void set_key_state(int state) {set_key_state36,564
+int read_key_state(){read_key_state40,625
+void set_uncertain_count(int count) {set_uncertain_count44,673
+int next_state(int inp, int k, int n) {next_state49,762
+void process_key_chattering() {process_key_chattering56,872
+void key_step(int k) {key_step62,1026
+int get_event() {get_event67,1107
+void set_debounce_period(int delay) {set_debounce_period91,1466
+void set_sampling_rate(int millis) {set_sampling_rate96,1542
+void reset_last_debounce_time() {reset_last_debounce_time100,1612
+void process_debouncing() {process_debouncing104,1685
+void delay() {delay117,1991
+int read_key() {read_key121,2046
+void set_key(int state) {set_key125,2092
+void init_ctime() {init_ctime129,2149
 
 ChordedKeyboard\tests\keyevent.h,129
 #define ON ON1,0
@@ -972,21 +981,20 @@ ChordedKeyboard\tests\keyevent.h,129
 #define PRESSED PRESSED5,48
 #define RELEASED RELEASED6,67
 
-ChordedKeyboard\tests\test_keyevent.cpp,790
-#define CHAR2VAL(CHAR2VAL14,174
-#define CHAR2EVT(CHAR2EVT15,213
-#define ASSERT_KEYSTATE(ASSERT_KEYSTATE17,282
-#define ASSERT_KEYSTATE_t(ASSERT_KEYSTATE_t20,379
-void assert_keystate_t_location(char * in, char * out,const char* file, int line) {assert_keystate_t_location23,483
-void assert_keystate_location(char * in, char * out,const char* file, int line)assert_keystate_location30,637
-TEST_GROUP(KeydownEvent)TEST_GROUP52,1096
-TEST_GROUP(TimeBasedDebouncing)TEST_GROUP62,1180
-TEST(KeydownEvent, test_key_on)TEST73,1273
-TEST(KeydownEvent, test_key_on_off1)TEST82,1420
-TEST(KeydownEvent, test_key_on_off2)TEST91,1572
-TEST(KeydownEvent, test_key_press_release)TEST106,1840
-TEST(TimeBasedDebouncing, test1)TEST120,2161
-TEST(TimeBasedDebouncing, test1){TEST130,2361
+ChordedKeyboard\tests\test_keyevent.cpp,766
+#define CHAR2VAL(CHAR2VAL16,197
+#define CHAR2EVT(CHAR2EVT17,236
+#define ASSERT_KEYSTATE(ASSERT_KEYSTATE19,305
+#define ASSERT_KEYSTATE_t(ASSERT_KEYSTATE_t22,402
+void assert_debouncing_buffer(char in,char out,assert_debouncing_buffer25,506
+void assert_keystate_t_location(char * in, char * out,const char* file, int line) {assert_keystate_t_location39,887
+void assert_keystate_location(char * in, char * out,const char* file, int line)assert_keystate_location46,1050
+TEST_GROUP(KeydownEvent)TEST_GROUP68,1509
+TEST(KeydownEvent, test_key_on)TEST79,1595
+TEST(KeydownEvent, test_key_on_off1)TEST88,1742
+TEST(KeydownEvent, test_key_on_off2)TEST97,1894
+TEST(KeydownEvent, test_key_press_release)TEST112,2163
+TEST(KeydownEvent, test2){TEST146,2832
 
 CppUTest\CppUTest.mak,2239
 CFG=CppUTest - Win32 DebugCFG3,94

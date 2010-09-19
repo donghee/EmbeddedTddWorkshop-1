@@ -1,4 +1,4 @@
-cscope 15 C:\work\workspace\EmbeddedTddWorkshop"               0000306793
+cscope 15 C:\work\workspace\EmbeddedTddWorkshop"               0000307988
 	@C:\work\workspace\EmbeddedTddWorkshop\ArduinoCore\HardwareSerial.cpp
 
 22 
@@ -12246,122 +12246,134 @@ KeydownEv’t
 ;
 
 9 
-	gdebounû_³riod
-;
-
-11 
 	g_¡©e
 =0;
 
-13 
+11 
 	g_ev’t
 =
 NOEVT
 ;
 
-15 
+13 
 	gkeydown_ev’t
 =0;
 
-17 
+15 
+	g§m¶e_¿‹
+;
+
+16 
+	gùime
+;
+
+17 
+	gdebounû_³riod
+;
+
+18 
+	gÏ¡_debounû_time
+=0;
+
+20 
 	$š™_¡©es
 () {
 
-18 
+21 
 key_¡©e
 =0;
 
-19 
+22 
 _¡©e
 =0;
-
-20 
-	}
-}
-
-21 
-	$keydown_ev’t_ÿÎback
-() {
-
-22 
-keydown_ev’t
-=
-PRESSED
-;
 
 23 
 	}
 }
 
 25 
-	$keydown_ev’t_»Ëa£_ÿÎback
+	$keydown_ev’t_ÿÎback
 () {
 
 26 
 keydown_ev’t
 =
-RELEASED
+PRESSED
 ;
 
 27 
 	}
 }
 
-30 (*
+29 
+	$keydown_ev’t_»Ëa£_ÿÎback
+() {
+
+30 
+keydown_ev’t
+=
+RELEASED
+;
+
+31 
+	}
+}
+
+34 (*
 keydown_ev’t_cb
 )(èğ
 keydown_ev’t_ÿÎback
 ;
 
-32 
+36 
 	$£t_key_¡©e
 (
 ¡©e
 ) {
 
-33 
+37 
 _key_¡©e
  = 
 ¡©e
-;
-
-34 
-	}
-}
-
-36 
-	$»ad_key_¡©e
-(){
-
-37  
-key_¡©e
 ;
 
 38 
 	}
 }
 
-40 
+40 
+	$»ad_key_¡©e
+(){
+
+41  
+key_¡©e
+;
+
+42 
+	}
+}
+
+44 
 	$£t_unû¹aš_couÁ
 (
 couÁ
 ) {
 
-41 
+45 
 _unû¹aš_couÁ
  = 
 couÁ
 ;
 
-42 
+46 
 	`š™_¡©es
 ();
 
-43 
+47 
 	}
 }
 
-45 
+49 
 	$Ãxt_¡©e
 (
 šp
@@ -12371,31 +12383,31 @@ k
 n
 ) {
 
-46 ià(!
+50 ià(!
 šp
  && 
 k
 )
 
-47  (
+51  (
 k
 +1è% (
 n
 +1);
 
-49  
+53  
 šp
 ;
 
-50 
+54 
 	}
 }
 
-52 
+56 
 	$´oûss_key_ch©‹ršg
 () {
 
-53 
+57 
 _¡©e
  = 
 	`Ãxt_¡©e
@@ -12405,94 +12417,78 @@ _key_¡©e
 _unû¹aš_couÁ
 );
 
-54 
+58 
 p_key_¡©e
 =
 key_¡©e
 ;
 
-55 
+59 
 key_¡©e
  = 0 < 
 _¡©e
 ;
 
-56 
+60 
 	}
 }
 
-58 
+62 
 	$key_¡•
 (
 k
 ) {
 
-59 
+63 
 	`£t_key_¡©e
 (
 k
 );
 
-60 
+64 
 	`´oûss_key_ch©‹ršg
 ();
 
-61 
+65 
 	}
 }
 
-63 
+67 
 	$g‘_ev’t
 () {
 
-65 ià(!
+69 ià(!
 p_key_¡©e
  && 
 key_¡©e
 )
 
-66 
+70 
 _ev’t
 =
 PRESSED
 ;
 
-67 ià(
+71 ià(
 p_key_¡©e
  && !
 key_¡©e
 )
 
-68 
+72 
 _ev’t
 =
 RELEASED
 ;
 
-70 
+74 
 _ev’t
 =
 NOEVT
 ;
 
-71  
+75  
 _ev’t
-;
-
-85 
-	}
-}
-
-87 
-	$£t_debounû_³riod
-(
-d–ay
-) {
-
-88 
-debounû_³riod
- = 
-d–ay
 ;
 
 89 
@@ -12500,10 +12496,140 @@ d–ay
 }
 
 91 
-	$timeba£d_debouncšg
-() {
+	$£t_debounû_³riod
+(
+d–ay
+) {
 
 92 
+debounû_³riod
+ = 
+d–ay
+;
+
+93 
+	}
+}
+
+96 
+	$£t_§m¶šg_¿‹
+(
+mlis
+) {
+
+97 
+§m¶e_¿‹
+ = 
+mlis
+;
+
+98 
+	}
+}
+
+100 
+	$»£t_Ï¡_debounû_time
+() {
+
+101 
+Ï¡_debounû_time
+ = 
+ùime
+;
+
+102 
+	}
+}
+
+104 
+	$´oûss_debouncšg
+() {
+
+105 ià(
+_key_¡©e
+ !ğ
+p_key_¡©e
+) {
+
+106 
+	`»£t_Ï¡_debounû_time
+();
+
+109 ià((
+ùime
+ - 
+Ï¡_debounû_time
+è> 
+debounû_³riod
+) {
+
+110 
+key_¡©e
+ = 
+_key_¡©e
+;
+
+114 
+p_key_¡©e
+ = 
+_key_¡©e
+;
+
+115 
+	}
+}
+
+117 
+	$d–ay
+() {
+
+118 
+ùime
+ = ctim+ 
+§m¶e_¿‹
+;
+
+119 
+	}
+}
+
+121 
+	$»ad_key
+() {
+
+122  
+key_¡©e
+;
+
+123 
+	}
+}
+
+125 
+	$£t_key
+(
+¡©e
+) {
+
+126 
+_key_¡©e
+ = 
+¡©e
+;
+
+127 
+	}
+}
+
+129 
+	$š™_ùime
+() {
+
+130 
+ùime
+ = 0;
+
+131 
 	}
 }
 
@@ -12547,91 +12673,123 @@ keydown_ev’t_cb
 keydown_ev’t
 ;
 
-11 
+11 
+ùime
+;
+
+12 
+Ï¡_debounû_time
+;
+
+13 
+debounû_³riod
+;
+
+15 
 	`£t_key_¡©e
 (
 ¡©e
 );
 
-12 
-	`£t_key
-(
-chªÃl
-, 
-¡©e
-);
-
-13 
+17 
 	`£t_key_¡©e1
 (
 ¡©e
 );
 
-15 
+19 
 	`»ad_key_¡©e
 ();
 
-16 
+20 
 	`»ad_keydown_ev’t
 ();
 
-18 
+22 
 	`£t_unû¹aš_couÁ
 (
 couÁ
 );
 
-19 
+23 
 	`´oûss_key_ch©‹ršg
 ();
 
-20 
+24 
 	`´oûss_key_ch©‹ršg1
 ();
 
-22 
+26 
 	`key_¡•
 (
 ¡©e
 );
 
-23 
+27 
 	`g‘_ev’t
 ();
 
-25 
+29 
 	`£t_debounû_³riod
 (
 d–ay
 );
 
+30 
+	`£t_§m¶šg_¿‹
+(
+mlis
+);
+
+31 
+	`£t_key
+(
+¡©e
+);
+
+32 
+	`´oûss_debouncšg
+();
+
+33 
+	`d–ay
+();
+
+34 
+	`»ad_key
+();
+
 	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\test_keyevent.cpp
 
-1 
+2 
 	~<io¡»am
 >
 
-2 
+3 
 	~<¡ršg
 >
 
-3 
+4 
 	~<s¡»am
 >
 
-5 
+6 
 	~"CµUTe¡/CommªdLšeTe¡RuÂ”.h
 "
 
-9 
+10 
 	~<¡dio.h
 >
 
-10 
+11 
+	~<¡ršg.h
+>
+
+12 
 	~"keyev’t.h
 "
 
-14 
+16 
 	#CHAR2VAL
 (
 x
@@ -12643,7 +12801,7 @@ OFF
 
 	)
 
-15 
+17 
 	#CHAR2EVT
 (
 x
@@ -12657,7 +12815,7 @@ NOEVT
 
 	)
 
-17 
+19 
 	#ASSERT_KEYSTATE
 (
 š
@@ -12665,7 +12823,7 @@ NOEVT
 out
 ) \
 
-18 
+20 
 	`as£¹_key¡©e_loÿtiÚ
 ((
 š
@@ -12679,7 +12837,7 @@ __LINE__
 
 	)
 
-20 
+22 
 	#ASSERT_KEYSTATE_t
 (
 š
@@ -12687,7 +12845,7 @@ __LINE__
 out
 ) \
 
-21 
+23 
 	`as£¹_key¡©e_t_loÿtiÚ
 ((
 š
@@ -12701,7 +12859,79 @@ __LINE__
 
 	)
 
-23 
+25 
+	$as£¹_debouncšg_bufãr
+(
+š
+,
+out
+,
+
+26 
+exp_ùime
+,
+
+27 
+exp_Ï¡_debounû_time
+)
+
+29 
+aùu®
+;
+
+30 
+	`d–ay
+();
+
+31 
+	`LONGS_EQUAL
+(
+exp_ùime
+, 
+ùime
+);
+
+32 
+	`£t_key
+(
+	`CHAR2VAL
+(
+š
+));
+
+33 
+	`´oûss_debouncšg
+();
+
+34 
+aùu®
+ = 
+	`»ad_key
+();
+
+35 
+	`LONGS_EQUAL
+(
+	`CHAR2VAL
+(
+out
+),
+aùu®
+);
+
+36 
+	`LONGS_EQUAL
+(
+exp_Ï¡_debounû_time
+,
+Ï¡_debounû_time
+);
+
+37 
+	}
+}
+
+39 
 	$as£¹_key¡©e_t_loÿtiÚ
 (* 
 š
@@ -12713,27 +12943,11 @@ fe
 lše
 ) {
 
-24 
-key_¡©e
- = 0;
-
-25 
-i
-=0;
-
-26 
-¡d
-::
-o¡ršg¡»am
- 
-ss
-;
-
-28 
+44 
 	}
 }
 
-30 
+46 
 	$as£¹_key¡©e_loÿtiÚ
 (* 
 š
@@ -12745,15 +12959,15 @@ fe
 lše
 )
 
-32 
+48 
 key_¡©e
  = 0;
 
-33 
+49 
 i
 =0;
 
-34 
+50 
 ¡d
 ::
 o¡ršg¡»am
@@ -12761,11 +12975,11 @@ o¡ršg¡»am
 ss
 ;
 
-35 (*
+51 (*
 š
 ))
 
-37 
+53 
 	`£t_key_¡©e
 (
 	`CHAR2VAL
@@ -12773,17 +12987,17 @@ ss
 š
 ));
 
-38 
+54 
 	`´oûss_key_ch©‹ršg
 ();
 
-40 
+56 
 key_¡©e
  = 
 	`»ad_key_¡©e
 ();
 
-42 ià(
+58 ià(
 	`CHAR2VAL
 (*
 out
@@ -12791,7 +13005,7 @@ out
 key_¡©e
 )
 
-44 
+60 
 ss
 <<(*
 out
@@ -12801,7 +13015,7 @@ out
 i
 ;
 
-45 
+61 
 	`FAIL_LOCATION
 (
 ss
@@ -12815,7 +13029,7 @@ fe
 lše
 );
 
-47 
+63 
 š
 ++;
 out
@@ -12823,47 +13037,29 @@ out
 i
 ++;
 
-49 
+65 
 	}
 }
 
-52 
+68 
 	$TEST_GROUP
 (
 KeydownEv’t
 )
 
-54 
+70 
 	`£tup
 ()
 
-57 
+73 
 	`‹¬down
 ()
 
-60 
+76 
 	}
 };
 
-62 
-	$TEST_GROUP
-(
-TimeBa£dDebouncšg
-)
-
-64 
-	`£tup
-()
-
-67 
-	`‹¬down
-()
-
-70 
-	}
-};
-
-73 
+79 
 	$TEST
 (
 KeydownEv’t
@@ -12871,19 +13067,19 @@ KeydownEv’t
 ‹¡_key_Ú
 )
 
-75 
+81 
 š_s
 []="__----";
 
-76 
+82 
 ou_s
 []="__----";
 
-78 
+84 
 	`£t_unû¹aš_couÁ
 (3);
 
-79 
+85 
 	`ASSERT_KEYSTATE
 (
 š_s
@@ -12891,11 +13087,11 @@ ou_s
 ou_s
 );
 
-80 
+86 
 	}
 }
 
-82 
+88 
 	$TEST
 (
 KeydownEv’t
@@ -12903,19 +13099,19 @@ KeydownEv’t
 ‹¡_key_Ú_off1
 )
 
-84 
+90 
 š_s
 []="__--__";
 
-85 
+91 
 ou_s
 []="__----";
 
-87 
+93 
 	`£t_unû¹aš_couÁ
 (3);
 
-88 
+94 
 	`ASSERT_KEYSTATE
 (
 š_s
@@ -12923,11 +13119,11 @@ ou_s
 ou_s
 );
 
-89 
+95 
 	}
 }
 
-91 
+97 
 	$TEST
 (
 KeydownEv’t
@@ -12935,32 +13131,12 @@ KeydownEv’t
 ‹¡_key_Ú_off2
 )
 
-93 
-š_s
-[]="__--___";
-
-94 
-ou_s
-[]="__----_";
-
-96 
-	`£t_unû¹aš_couÁ
-(3);
-
-97 
-	`ASSERT_KEYSTATE
-(
-š_s
-,
-ou_s
-);
-
 99 
-š_s1
+š_s
 []="__--___";
 
 100 
-ou_s1
+ou_s
 []="__----_";
 
 102 
@@ -12970,16 +13146,36 @@ ou_s1
 103 
 	`ASSERT_KEYSTATE
 (
+š_s
+,
+ou_s
+);
+
+105 
+š_s1
+[]="__--___";
+
+106 
+ou_s1
+[]="__----_";
+
+108 
+	`£t_unû¹aš_couÁ
+(3);
+
+109 
+	`ASSERT_KEYSTATE
+(
 š_s1
 ,
 ou_s1
 );
 
-104 
+110 
 	}
-}
+};
 
-106 
+112 
 	$TEST
 (
 KeydownEv’t
@@ -12987,29 +13183,29 @@ KeydownEv’t
 ‹¡_key_´ess_»Ëa£
 )
 
-108 
+114 
 š_s
 []="_--_____-__-___";
 
-109 
+115 
 ev_s
 []=" ^ v ^ v";
 
-110 
+116 
 i
 =0;
 
-111 
+117 
 	`£t_unû¹aš_couÁ
 (3);
 
-113 *(
+119 *(
 š_s
 +
 i
 )) {
 
-114 
+120 
 	`key_¡•
 (
 	`CHAR2VAL
@@ -13019,7 +13215,7 @@ i
 i
 )));
 
-115 
+121 
 	`LONGS_EQUAL
 (
 	`CHAR2EVT
@@ -13031,79 +13227,109 @@ i
 	`g‘_ev’t
 ());
 
-116 
+122 
 i
 ++;
 
-118 
+124 
 	}
 }
 
-120 
+146 
 	$TEST
 (
-TimeBa£dDebouncšg
+KeydownEv’t
 , 
-‹¡1
-)
-
-122 
-š_s
-[]="_-_--------";
-
-123 
-ou_s
-[]="__________-";
-
-125 
-	`£t_debounû_³riod
-(30);
-
-127 
-	}
-}
-
-130 
-	$TEST
-(
-TimeBa£dDebouncšg
-, 
-‹¡1
+‹¡2
 ){
 
-131 
-š
- = "_";
+147 
+šputBufãr
+[] = "_-----";
 
-132 
-out
- ="_";
+148 
+ex³ùedBufãr
+[] = "_____-";
 
-134 
-	`£t_§m•lšg_¿‹
-(5);
+150 
+s_¿‹
+ = 5, 
+exp_time
+=5, 
+exp_Ï¡_deb_time
+=0;
 
-135 
-š
- = "_";
+151 
+i
+=0;
 
-136 
-	`´oûss_debouncšg
-();
+153 
+	`£t_§m¶šg_¿‹
+(
+s_¿‹
+);
 
-137 
-out
- = "_";
-
-138 
-	`»ad_key_¡©e
-();
-
-141 
+154 
 	`£t_debounû_³riod
-(30);
+(15);
 
-143 
+156 
+	`as£¹_debouncšg_bufãr
+(
+šputBufãr
+[
+i
+],
+ex³ùedBufãr
+[i],
+
+157 
+exp_time
+,
+
+158 
+exp_Ï¡_deb_time
+);
+
+160 
+exp_Ï¡_deb_time
+=10;
+i
+++;
+
+162 ; 
+i
+ < 
+	`¡¾’
+(
+šputBufãr
+); i++) {
+
+163 
+exp_time
++=
+s_¿‹
+;
+
+164 
+	`as£¹_debouncšg_bufãr
+(
+šputBufãr
+[
+i
+],
+ex³ùedBufãr
+[i],
+
+165 
+exp_time
+,
+
+166 
+exp_Ï¡_deb_time
+);
+
+168 
 	}
 }
 
