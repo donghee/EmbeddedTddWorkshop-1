@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -27,7 +26,7 @@ void assert_debouncing_buffer(char in,char out,
                int exp_last_debounce_time)
 {
     int actual;
-    delay();
+    my_delay();
     LONGS_EQUAL(exp_ctime, ctime);
     set_key(CHAR2VAL(in));
     process_debouncing();
@@ -166,3 +165,4 @@ TEST(KeydownEvent, test2){
                                  exp_last_deb_time);
     }
 }
+

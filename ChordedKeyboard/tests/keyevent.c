@@ -62,6 +62,8 @@ void process_key_chattering() {
 void key_step(int k) {
   set_key_state(k); 
   process_key_chattering(); 
+   //process_debouncing();
+
 }
 
 int get_event() {
@@ -73,19 +75,6 @@ int get_event() {
   else
 	_event=NOEVT;
   return _event;
-
-  /*
-  if (key_state) {
-	_event = PRESSED;
-  } else {
-	if (_event == PRESSED) {
-	  _event = RELEASED;
-	  return _event;
-	}
-	_event = NOEVT;
-  }
-  return _event;
-  */
 }
 
 void set_debounce_period(int delay) {
@@ -98,7 +87,7 @@ void set_sampling_rate(int millis) {
 }
 
 void reset_last_debounce_time() {
-    last_debounce_time = ctime;
+    last_debounce_time = my_millis();
 }
 
 void process_debouncing() {
@@ -106,7 +95,7 @@ void process_debouncing() {
         reset_last_debounce_time();
     }
 
-    if ((ctime - last_debounce_time) > debounce_period) {
+    if ((my_millis() - last_debounce_time) > debounce_period) {
         key_state = _key_state;
         //        reset_last_debounce_time();
     }
@@ -114,8 +103,12 @@ void process_debouncing() {
     p_key_state = _key_state;
 }
 
-void delay() {
+void my_delay() {
     ctime = ctime + sample_rate;
+}
+
+int my_millis() {
+    return ctime;
 }
 
 int read_key() {

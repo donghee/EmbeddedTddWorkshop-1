@@ -30,5 +30,5 @@ void set_debounce_period(int delay);
 void set_sampling_rate(int millis);
 void set_key(int state);
 void process_debouncing();
-void delay();
+void my_delay();
 int read_key();
