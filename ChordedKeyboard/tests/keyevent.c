@@ -1,4 +1,5 @@
 #include "keyevent.h"
+#include "time.h"
 
 int key_state=0;
 int _key_state=0;
@@ -13,9 +14,9 @@ int _event=NOEVT;
 int keydown_event=0;
 
 int sample_rate;
-int ctime;
+
 int debounce_period;
-int last_debounce_time=0;
+unsigned long last_debounce_time=0;
 
 void init_states() {
   key_state=0;
@@ -30,7 +31,6 @@ void keydown_event_release_callback() {
   keydown_event=RELEASED;
 }
 
-//keydown_event_cb=(void *(void))keydown_event_callback;
 void (*keydown_event_cb)(void) = keydown_event_callback;
 
 void set_key_state(int state) {
@@ -61,8 +61,8 @@ void process_key_chattering() {
 
 void key_step(int k) {
   set_key_state(k); 
-  process_key_chattering(); 
-   //process_debouncing();
+  //  process_key_chattering(); 
+  process_debouncing();
 
 }
 
@@ -103,13 +103,6 @@ void process_debouncing() {
     p_key_state = _key_state;
 }
 
-void my_delay() {
-    ctime = ctime + sample_rate;
-}
-
-int my_millis() {
-    return ctime;
-}
 
 int read_key() {
     return key_state;
@@ -119,6 +112,3 @@ void set_key(int state) {
     _key_state = state;
 }
 
-void init_ctime() {
-    ctime = 0;
-}

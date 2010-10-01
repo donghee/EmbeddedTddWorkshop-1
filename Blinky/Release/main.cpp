@@ -19,7 +19,11 @@ void setup()   {
   pinMode(5, INPUT);
   pinMode(ledPin, OUTPUT);
   Serial.begin(9600);
-  set_uncertain_count(100);
+  //set_uncertain_count(100);
+
+  //set_sampling_rate(s_rate);
+  set_debounce_period(15);
+
 }
 
 int main(void) {
@@ -31,6 +35,7 @@ int main(void) {
 	  A = digitalRead(5);
 	  if (A == LOW) {
 		  key_step(ON);
+		  digitalWrite(ledPin, LOW);
 	  }
 	  else {
 		  key_step(OFF);

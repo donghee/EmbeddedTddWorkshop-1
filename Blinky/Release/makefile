@@ -18,7 +18,7 @@ DIR_ARDUINO = ../../ArduinoCore
 DIR_KEYEVENT = ../../ChordedKeyboard/tests
 
 # Objects
-OBJS = keyevent.o 
+OBJS = keyevent.o time.o
 CPP_OBJS = main.o testpoint.o testpoint_inner.o bounce.o bounce1.o
 
 CFLAGS =  -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU=$(F_CPU) -I$(DIR_ARDUINO) -I$(DIR_KEYEVENT)

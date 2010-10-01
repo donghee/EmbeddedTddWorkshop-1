@@ -8,8 +8,8 @@
 extern void (*keydown_event_cb)(void);
 extern int keydown_event;
 
-extern int ctime;
-extern int last_debounce_time;
+//extern int ctime;
+extern unsigned long last_debounce_time;
 extern int debounce_period;
 
 void set_key_state(int state);
@@ -30,5 +30,4 @@ void set_debounce_period(int delay);
 void set_sampling_rate(int millis);
 void set_key(int state);
 void process_debouncing();
-void my_delay();
 int read_key();
