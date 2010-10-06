@@ -1,0 +1,25 @@
+export CPP_U_TEST ../CppUTest
+
+all: compile
+
+
+compile:
+	$(MAKE) -C ApplicationLib all
+	$(MAKE) -C Hardware all
+	$(MAKE) -C lib all
+	$(MAKE) -C AllTests all test
+ 
+test: all
+	$(MAKE) -s -C AllTests test
+ 
+clean:
+	$(MAKE) -C ApplicationLib clean
+	$(MAKE) -C Hardware clean
+	$(MAKE) -C AllTests clean
+	rm -f lib/*.a
+	rm -f test/*.*
+
+depend:
+	$(MAKE) -C ApplicationLib depend
+	$(MAKE) -C Hardware depend
+	$(MAKE) -C AllTests depend
