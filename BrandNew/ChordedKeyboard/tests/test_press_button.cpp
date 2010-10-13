@@ -1,29 +1,28 @@
 #include "CppUTest/TestHarness.h"
 #include "CppUTestExt/MockSupport.h"
 
+extern "C" {
+	#include "CppUTestExt/MockSupport_c.h"
+}
+
 TEST_GROUP(PressButton)
 {
 };
 
-
-void productionCode()
+void _button_pressed()
 {
-    mock().actualCall("productionCode");
+    mock().actualCall("led_on");
 }
 
-TEST(PressButton, SimpleScenario)
+
+TEST(PressButton, test_press_and_led_on)
 {
-    mock().expectOneCall("productionCode");
-    productionCode();
+    mock().expectOneCall("led_on");
+ 	//when button is pressed
+    _button_pressed();
+    // 	expect_call_led_on();
     mock().checkExpectations();
 }
-
-// TEST(PressButton, test_press_and_led_on) {
-// 	//when button is pressed
-// 	_button_pressed();
-// 	//check light is on
-// 	expect_call_led_on();
-// }
 
 // TEST(PressButton, test_press_and_led_on) {
 // 	//when started

@@ -4,7 +4,7 @@ SILENCE = @
 #---- Outputs ----#
 COMPONENT_NAME = PressButton
 TARGET_LIB = \
-	lib/lib$(COMPONENT_NAME).a
+	lib/lib$(COMPONENT_NAME).a 
 
 TEST_TARGET = \
 	$(COMPONENT_NAME)_tests
@@ -13,6 +13,7 @@ TEST_TARGET = \
 PROJECT_HOME_DIR = .
 CPPUTEST_HOME = ../CppUTest
 
+CPPUTEST_USE_EXTENSIONS = Y
 CPP_PLATFORM = Gcc
 
 ##

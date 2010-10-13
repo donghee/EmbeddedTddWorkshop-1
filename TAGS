@@ -893,7 +893,12 @@ void setup()   {setup24,367
 void printBuffer(){printBuffer33,590
 int main(void) {main40,715
 
-BrandNew\CppUTest-v2.2d\build\MakefileWorker.mk,3609
+BrandNew\ChordedKeyboard\tests\test_press_button.cpp,129
+TEST_GROUP(PressButton)TEST_GROUP4,72
+void productionCode()productionCode9,103
+TEST(PressButton, SimpleScenario)TEST14,171
+
+BrandNew\CppUTest\build\MakefileWorker.mk,3609
     COMPONENT_NAME = name_this_in_the_makefileCOMPONENT_NAME54,2176
 	CPPUTEST_ENABLE_DEBUG = YCPPUTEST_ENABLE_DEBUG59,2281
 	CPPUTEST_USE_MEM_LEAK_DETECTION = YCPPUTEST_USE_MEM_LEAK_DETECTION64,2411
@@ -944,9 +949,9 @@ CPPFLAGS = $(CPPUTEST_CPPFLAGS) $(CPPUTEST_ADDITIONAL_CPPFLAGS)CPPFLAGS222,715
 CXXFLAGS = $(CPPUTEST_CXXFLAGS) $(CPPUTEST_ADDITIONAL_CXXFLAGS)CXXFLAGS223,7216
 LDFLAGS = $(CPPUTEST_LDFLAGS) $(CPPUTEST_ADDITIONAL_LDFLAGS)LDFLAGS224,7280
 
-BrandNew\CppUTest-v2.2d\cleanAll.sh,0
+BrandNew\CppUTest\cleanAll.sh,0
 
-BrandNew\CppUTest-v2.2d\CppUTest.mak,2043
+BrandNew\CppUTest\CppUTest.mak,2043
 CFG=CppUTest - Win32 DebugCFG3,94
 NULL=NULL23,872
 NULL=nulNULL25,887
@@ -987,22 +992,22 @@ SOURCE=.\src\CppUTest\TestResult.cppSOURCE268,7054
 SOURCE=.\src\CppUTest\Utest.cppSOURCE274,7181
 SOURCE=.\src\Platforms\VisualCpp\UtestPlatform.cppSOURCE280,7298
 
-BrandNew\CppUTest-v2.2d\examples\AllTests\AllTests.cpp,265
+BrandNew\CppUTest\examples\AllTests\AllTests.cpp,265
 class MyDummyComparator : public MockNamedValueComparatorMyDummyComparator33,1792
 	virtual bool isEqual(void* object1, void* object2)isEqual36,1863
 	virtual SimpleString valueToString(void* object)valueToString41,1956
 int main(int ac, char** av)main47,2051
 
-BrandNew\CppUTest-v2.2d\examples\AllTests\RunAllTests.sh,0
+BrandNew\CppUTest\examples\AllTests\RunAllTests.sh,0
 
-BrandNew\CppUTest-v2.2d\examples\ApplicationLib\AllTests.h,281
+BrandNew\CppUTest\examples\ApplicationLib\AllTests.h,281
 IMPORT_TEST_GROUP( Printer);Printer28,1604
 IMPORT_TEST_GROUP( CircularBuffer);CircularBuffer29,1633
 IMPORT_TEST_GROUP( HelloWorld);HelloWorld30,1669
 IMPORT_TEST_GROUP( EventDispatcher);EventDispatcher31,1701
 IMPORT_TEST_GROUP( MockDocumentation);MockDocumentation32,1738
 
-BrandNew\CppUTest-v2.2d\examples\ApplicationLib\CircularBuffer.cpp,449
+BrandNew\CppUTest\examples\ApplicationLib\CircularBuffer.cpp,449
 CircularBuffer::CircularBuffer(int _capacity) :CircularBuffer31,1684
 CircularBuffer::~CircularBuffer()~CircularBuffer37,1846
 bool CircularBuffer::IsEmpty()IsEmpty42,1908
@@ -1013,7 +1018,7 @@ int CircularBuffer::Capacity()Capacity74,2397
 int CircularBuffer::Next(int i)Next79,2456
 void CircularBuffer::Print(Printer* p)Print85,2539
 
-BrandNew\CppUTest-v2.2d\examples\ApplicationLib\CircularBuffer.h,297
+BrandNew\CppUTest\examples\ApplicationLib\CircularBuffer.h,297
 #define D_CircularBuffer_HD_CircularBuffer_H29,1659
 class CircularBufferCircularBuffer40,1946
 	int index;index56,2203
@@ -1024,7 +1029,7 @@ class CircularBufferCircularBuffer40,1946
 	bool empty;empty64,2293
 	bool full;full65,2307
 
-BrandNew\CppUTest-v2.2d\examples\ApplicationLib\CircularBufferTest.cpp,1049
+BrandNew\CppUTest\examples\ApplicationLib\CircularBufferTest.cpp,1049
 TEST_GROUP(CircularBuffer)TEST_GROUP32,1723
 TEST(CircularBuffer, EmptyAfterCreation)TEST56,2084
 TEST(CircularBuffer, NotEmpty)TEST61,2162
@@ -1046,12 +1051,12 @@ TEST(CircularBuffer, PrintWrappedAndFullOverwriteOldest)TEST219,5182
 TEST(CircularBuffer, PrintBoundary)TEST233,5492
 TEST(CircularBuffer, FillEmptyThenPrint)TEST249,5867
 
-BrandNew\CppUTest-v2.2d\examples\ApplicationLib\EventDispatcher.cpp,262
+BrandNew\CppUTest\examples\ApplicationLib\EventDispatcher.cpp,262
 EventDispatcher::EventDispatcher()EventDispatcher30,1634
 void EventDispatcher::registerObserver(EventType type, EventObserver* observer)registerObserver34,1674
 void EventDispatcher::dispatchEvent(const Event& event, int timeoutSeconds)dispatchEvent42,1969
 
-BrandNew\CppUTest-v2.2d\examples\ApplicationLib\EventDispatcher.h,401
+BrandNew\CppUTest\examples\ApplicationLib\EventDispatcher.h,401
 #define EVENTDISPATCHER__HEVENTDISPATCHER__H29,1631
 enum EventTypeEventType34,1697
 	IMPORTANT_EVENT,IMPORTANT_EVENT36,1714
@@ -1062,7 +1067,7 @@ class EventObserverEventObserver46,1801
 class EventDispatcherEventDispatcher53,1965
 	list<pair<EventType, EventObserver*> > observerList_;observerList_55,1989
 
-BrandNew\CppUTest-v2.2d\examples\ApplicationLib\EventDispatcherTest.cpp,857
+BrandNew\CppUTest\examples\ApplicationLib\EventDispatcherTest.cpp,857
 class ObserverMock : public EventObserverObserverMock32,1705
 	virtual void notify(const Event& event, int timeOutInSeconds)notify35,1757
 	virtual void notifyRegistration(EventObserver* newObserver)notifyRegistration39,1978
@@ -1075,21 +1080,21 @@ TEST(EventDispatcher, EventWithRegistrationForEventResultsIntoCallback)TEST85,
 TEST(EventDispatcher, DifferentEventWithRegistrationDoesNotResultIntoCallback)TEST94,3245
 TEST(EventDispatcher, RegisterTwoObserversResultIntoTwoCallsAndARegistrationNotification)TEST101,3463
 
-BrandNew\CppUTest-v2.2d\examples\ApplicationLib\ExamplesNewOverrides.h,0
+BrandNew\CppUTest\examples\ApplicationLib\ExamplesNewOverrides.h,0
 
-BrandNew\CppUTest-v2.2d\examples\ApplicationLib\hello.c,118
+BrandNew\CppUTest\examples\ApplicationLib\hello.c,118
 void printHelloWorld()printHelloWorld31,1673
 int (*PrintFormated)(const char*, ...) = printf;PrintFormated36,1740
 
-BrandNew\CppUTest-v2.2d\examples\ApplicationLib\hello.h,34
+BrandNew\CppUTest\examples\ApplicationLib\hello.h,34
 #define HELLO_H_HELLO_H_29,1649
 
-BrandNew\CppUTest-v2.2d\examples\ApplicationLib\HelloTest.cpp,125
+BrandNew\CppUTest\examples\ApplicationLib\HelloTest.cpp,125
 static SimpleString* buffer;buffer37,1749
 TEST_GROUP(HelloWorld)TEST_GROUP39,1781
 TEST(HelloWorld, PrintOk)TEST59,2141
 
-BrandNew\CppUTest-v2.2d\examples\ApplicationLib\MockDocumentationTest.cpp,1753
+BrandNew\CppUTest\examples\ApplicationLib\MockDocumentationTest.cpp,1753
 TEST_GROUP(FirstTestGroup)TEST_GROUP36,1733
 TEST(FirstTestGroup, FirsTest)TEST40,1766
 TEST(FirstTestGroup, SecondTest)TEST45,1823
@@ -1121,7 +1126,7 @@ TEST(FooTestGroup, MoreFoo)TEST223,5699
 TEST_GROUP(BarTestGroup)TEST_GROUP228,5750
 TEST(BarTestGroup, Bar)TEST236,5815
 
-BrandNew\CppUTest-v2.2d\examples\ApplicationLib\MockPrinter.h,385
+BrandNew\CppUTest\examples\ApplicationLib\MockPrinter.h,385
 #define D_MockPrinter_HD_MockPrinter_H29,1628
 class MockPrinter: public PrinterMockPrinter43,2004
 	explicit MockPrinter()MockPrinter46,2048
@@ -1131,7 +1136,7 @@ class MockPrinter: public PrinterMockPrinter43,2004
 	std::string getOutput() constgetOutput65,2330
 	std::string savedOutput;savedOutput72,2400
 
-BrandNew\CppUTest-v2.2d\examples\ApplicationLib\Printer.cpp,294
+BrandNew\CppUTest\examples\ApplicationLib\Printer.cpp,294
 Printer::Printer()Printer33,1714
 Printer::~Printer()~Printer37,1738
 void Printer::Print(const char* s)Print41,1763
@@ -1139,17 +1144,17 @@ void Printer::Print(long n)Print47,1852
 Printer& operator<<(Printer& p, const char* s)operator <<52,1923
 Printer& operator<<(Printer& p, long int i)operator <<58,1999
 
-BrandNew\CppUTest-v2.2d\examples\ApplicationLib\Printer.h,70
+BrandNew\CppUTest\examples\ApplicationLib\Printer.h,70
 #define D_Printer_HD_Printer_H29,1624
 class PrinterPrinter37,1847
 
-BrandNew\CppUTest-v2.2d\examples\ApplicationLib\PrinterTest.cpp,168
+BrandNew\CppUTest\examples\ApplicationLib\PrinterTest.cpp,168
 TEST_GROUP(Printer)TEST_GROUP32,1685
 TEST(Printer, PrintConstCharStar)TEST47,1868
 TEST(Printer, PrintLong)TEST54,2017
 TEST(Printer, StreamOperators)TEST60,2118
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\CommandLineArguments.h,507
+BrandNew\CppUTest\include\CppUTest\CommandLineArguments.h,507
 #define D_CommandLineArguments_HD_CommandLineArguments_H2,33
 class CommandLineArgumentsCommandLineArguments14,351
 	enum OutputTypeOutputType31,741
@@ -1163,7 +1168,7 @@ class CommandLineArgumentsCommandLineArguments14,351
 	SimpleString nameFilter_;nameFilter_41,884
 	OutputType outputType_;outputType_42,911
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\CommandLineTestRunner.h,530
+BrandNew\CppUTest\include\CppUTest\CommandLineTestRunner.h,530
 #define D_CommandLineTestRunner_HD_CommandLineTestRunner_H29,1638
 #define DEF_PLUGIN_MEM_LEAK DEF_PLUGIN_MEM_LEAK43,2007
 #define DEF_PLUGIN_SET_POINTER DEF_PLUGIN_SET_POINTER44,2054
@@ -1175,12 +1180,12 @@ class CommandLineTestRunnerCommandLineTestRunner46,2105
 	JUnitTestOutput* jUnitOutput_;jUnitOutput_63,2446
 	CommandLineArguments* arguments_;arguments_64,2478
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\JUnitTestOutput.h,164
+BrandNew\CppUTest\include\CppUTest\JUnitTestOutput.h,164
 #define D_JUnitTestOutput_hD_JUnitTestOutput_h29,1632
 class JUnitTestOutput: public TestOutputJUnitTestOutput37,1773
 	JUnitTestOutputImpl* impl_;impl_60,2428
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\MemoryLeakAllocator.h,774
+BrandNew\CppUTest\include\CppUTest\MemoryLeakAllocator.h,774
 #define D_MemoryLeakAllocator_hD_MemoryLeakAllocator_h2,32
 class MemoryLeakAllocatorMemoryLeakAllocator6,89
 	virtual ~MemoryLeakAllocator()~MemoryLeakAllocator17,435
@@ -1192,7 +1197,7 @@ class StandardNewAllocator: public MemoryLeakAllocatorStandardNewAllocator58,1
 class StandardNewArrayAllocator: public MemoryLeakAllocatorStandardNewArrayAllocator71,2056
 class NullUnknownAllocator: public MemoryLeakAllocatorNullUnknownAllocator84,2394
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\MemoryLeakDetector.h,2745
+BrandNew\CppUTest\include\CppUTest\MemoryLeakDetector.h,2745
 #define D_MemoryLeakDetector_hD_MemoryLeakDetector_h2,31
 #define MEM_LEAK_NONE MEM_LEAK_NONE4,63
 #define MEM_LEAK_HEADER MEM_LEAK_HEADER5,118
@@ -1243,7 +1248,7 @@ class MemoryLeakDetectorMemoryLeakDetector137,3747
 	MemoryLeakDetectorTable memoryTable_;memoryTable_177,4892
 	bool doAllocationTypeChecking_;doAllocationTypeChecking_178,4931
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\MemoryLeakDetectorMallocMacros.h,353
+BrandNew\CppUTest\include\CppUTest\MemoryLeakDetectorMallocMacros.h,353
 #define CPPUTEST_USE_MEM_LEAK_DETECTION CPPUTEST_USE_MEM_LEAK_DETECTION20,804
 #define CPPUTEST_USE_MEM_LEAK_DETECTION CPPUTEST_USE_MEM_LEAK_DETECTION22,852
 #define malloc(malloc51,1825
@@ -1252,7 +1257,7 @@ BrandNew\CppUTest-v2.2d\include\CppUTest\MemoryLeakDetectorMallocMacros.h,353
 #define free(free54,2037
 #define CPPUTEST_USE_MALLOC_MACROS CPPUTEST_USE_MALLOC_MACROS56,2100
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\MemoryLeakDetectorNewMacros.h,386
+BrandNew\CppUTest\include\CppUTest\MemoryLeakDetectorNewMacros.h,386
 #define CPPUTEST_USE_MEM_LEAK_DETECTION CPPUTEST_USE_MEM_LEAK_DETECTION32,1347
 #define CPPUTEST_USE_MEM_LEAK_DETECTION CPPUTEST_USE_MEM_LEAK_DETECTION34,1395
 #define CPPUTEST_USE_STD_CPP_LIB CPPUTEST_USE_STD_CPP_LIB42,1559
@@ -1260,7 +1265,7 @@ BrandNew\CppUTest-v2.2d\include\CppUTest\MemoryLeakDetectorNewMacros.h,386
 #define new new69,2350
 #define CPPUTEST_USE_NEW_MACROS CPPUTEST_USE_NEW_MACROS80,2530
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\MemoryLeakWarningPlugin.h,564
+BrandNew\CppUTest\include\CppUTest\MemoryLeakWarningPlugin.h,564
 #define D_MemoryLeakWarningPlugin_hD_MemoryLeakWarningPlugin_h29,1640
 #define IGNORE_ALL_LEAKS_IN_TEST(IGNORE_ALL_LEAKS_IN_TEST42,2033
 #define EXPECT_N_LEAKS(EXPECT_N_LEAKS43,2135
@@ -1272,11 +1277,11 @@ class MemoryLeakWarningPlugin: public TestPluginMemoryLeakWarningPlugin78,2870
 	int failureCount_;failureCount_101,3553
 	static MemoryLeakWarningPlugin* firstPlugin_;firstPlugin_103,3574
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\PlatformSpecificFunctions.h,139
+BrandNew\CppUTest\include\CppUTest\PlatformSpecificFunctions.h,139
 #define PLATFORMSPECIFICFUNCTIONS_H_PLATFORMSPECIFICFUNCTIONS_H_29,1641
 typedef void* PlatformSpecificFile;PlatformSpecificFile71,3221
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\SimpleString.h,395
+BrandNew\CppUTest\include\CppUTest\SimpleString.h,395
 #define D_SimpleString_hD_SimpleString_h39,2011
 class SimpleStringSimpleString47,2136
 	char *buffer_;buffer_92,3681
@@ -1287,7 +1292,7 @@ class SimpleStringCollectionSimpleStringCollection99,3781
 	size_t size_;size_113,4029
 #undef newnew134,4731
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\TestFailure.h,976
+BrandNew\CppUTest\include\CppUTest\TestFailure.h,976
 #define D_TestFailure_HD_TestFailure_H39,1944
 class TestFailureTestFailure46,2028
 	SimpleString testName_;testName_72,2843
@@ -1306,7 +1311,7 @@ class LongsEqualFailure : public TestFailureLongsEqualFailure121,4164
 class StringEqualFailure : public TestFailureStringEqualFailure127,4322
 class StringEqualNoCaseFailure : public TestFailureStringEqualNoCaseFailure133,4496
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\TestHarness.h,417
+BrandNew\CppUTest\include\CppUTest\TestHarness.h,417
 #define D_TestHarness_hD_TestHarness_h29,1628
 #define CPPUTEST_USE_MEM_LEAK_DETECTION CPPUTEST_USE_MEM_LEAK_DETECTION39,1998
 #define CPPUTEST_USE_MEM_LEAK_DETECTION CPPUTEST_USE_MEM_LEAK_DETECTION41,2046
@@ -1314,7 +1319,7 @@ BrandNew\CppUTest-v2.2d\include\CppUTest\TestHarness.h,417
 #define CPPUTEST_USE_STD_CPP_LIB CPPUTEST_USE_STD_CPP_LIB49,2214
 #define MEMORY_LEAK_HASH_TABLE_SIZE MEMORY_LEAK_HASH_TABLE_SIZE57,2470
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\TestHarness_c.h,449
+BrandNew\CppUTest\include\CppUTest\TestHarness_c.h,449
 #define D_TestHarness_c_hD_TestHarness_c_h39,1938
 #define CHECK_EQUAL_C_INT(CHECK_EQUAL_C_INT41,1965
 #define CHECK_EQUAL_C_REAL(CHECK_EQUAL_C_REAL44,2075
@@ -1326,7 +1331,7 @@ BrandNew\CppUTest-v2.2d\include\CppUTest\TestHarness_c.h,449
 # define PUNUSED(PUNUSED101,4295
 # define PUNUSED(PUNUSED103,4358
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\TestOutput.h,771
+BrandNew\CppUTest\include\CppUTest\TestOutput.h,771
 #define D_TestOutput_hD_TestOutput_h29,1627
 class TestOutputTestOutput46,2099
 	int dotCount_;dotCount_82,3264
@@ -1343,7 +1348,7 @@ class StringBufferTestOutput: public TestOutputStringBufferTestOutput127,4189
 	const SimpleString& getOutput()getOutput149,4421
 	SimpleString output;output155,4487
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\TestPlugin.h,692
+BrandNew\CppUTest\include\CppUTest\TestPlugin.h,692
 #define D_TestPlugin_hD_TestPlugin_h37,1887
 class TestPluginTestPlugin42,1943
 	virtual void preTestAction(Utest&, TestResult&)preTestAction49,2035
@@ -1358,7 +1363,7 @@ class SetPointerPlugin: public TestPluginSetPointerPlugin97,3252
 class NullTestPlugin: public TestPluginNullTestPlugin115,3685
 	virtual ~NullTestPlugin()~NullTestPlugin120,3755
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\TestRegistry.h,333
+BrandNew\CppUTest\include\CppUTest\TestRegistry.h,333
 #define D_TestRegistry_hD_TestRegistry_h37,1874
 class TestRegistryTestRegistry45,1977
 	Utest * tests_;tests_79,2907
@@ -1367,7 +1372,7 @@ class TestRegistryTestRegistry45,1977
 	TestPlugin* firstPlugin_;firstPlugin_82,2981
 	static TestRegistry* currentRegistry_;currentRegistry_83,3008
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\TestResult.h,1062
+BrandNew\CppUTest\include\CppUTest\TestResult.h,1062
 #define D_TestResult_hD_TestResult_h39,1958
 class TestResultTestResult45,2033
 	int getTestCount() constgetTestCount67,2644
@@ -1390,7 +1395,7 @@ class TestResultTestResult45,2033
 	long currentGroupTimeStarted_;currentGroupTimeStarted_110,3429
 	long currentGroupTotalExecutionTime_;currentGroupTotalExecutionTime_111,3461
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\TestTestingFixture.h,859
+BrandNew\CppUTest\include\CppUTest\TestTestingFixture.h,859
 #define D_TestTestingFixture_HD_TestTestingFixture_H29,1635
 class TestTestingFixtureTestTestingFixture31,1667
 	TestTestingFixture()TestTestingFixture35,1703
@@ -1407,7 +1412,7 @@ class TestTestingFixtureTestTestingFixture31,1667
 	StringBufferTestOutput* output_;output_102,3065
 	TestResult * result_;result_103,3099
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\Utest.h,869
+BrandNew\CppUTest\include\CppUTest\Utest.h,869
 #define D_UTest_hD_UTest_h32,1722
 class UtestUtest51,2003
     const char *group_;group_113,4829
@@ -1429,7 +1434,7 @@ class ExecFunctionTest: public UtestExecFunctionTest155,5568
 	virtual void teardown()teardown174,5955
 class TestInstallerTestInstaller182,6056
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\UtestMacros.h,1800
+BrandNew\CppUTest\include\CppUTest\UtestMacros.h,1800
 #define D_UTestMacros_hD_UTestMacros_h29,1628
 #define TEST_GROUP_BASE(TEST_GROUP_BASE40,1907
 #define TEST_BASE(TEST_BASE44,2062
@@ -1468,7 +1473,7 @@ BrandNew\CppUTest-v2.2d\include\CppUTest\UtestMacros.h,1800
 #define UT_CRASH(UT_CRASH181,7455
 #define RUN_ALL_TESTS(RUN_ALL_TESTS182,7559
 
-BrandNew\CppUTest-v2.2d\include\CppUTest\VirtualCall.h,256
+BrandNew\CppUTest\include\CppUTest\VirtualCall.h,256
 #define D_VirtualCall_HD_VirtualCall_H2,24
 #define send(send4,49
 #define send1(send17,105
@@ -1478,21 +1483,21 @@ BrandNew\CppUTest-v2.2d\include\CppUTest\VirtualCall.h,256
 #define vBind(vBind19,461
 #define castToDestroyer(castToDestroyer22,532
 
-BrandNew\CppUTest-v2.2d\include\CppUTestExt\CodeMemoryReportFormatter.h,427
+BrandNew\CppUTest\include\CppUTestExt\CodeMemoryReportFormatter.h,427
 #define D_CodeMemoryReportFormatter_hD_CodeMemoryReportFormatter_h29,1642
 class CodeMemoryReportFormatter : public MemoryReportFormatterCodeMemoryReportFormatter34,1764
 	CodeReportingAllocationNode* codeReportingList_;codeReportingList_37,1838
 	MemoryLeakAllocator* internalAllocator_;internalAllocator_38,1888
 	virtual void report_testgroup_end(TestResult* /*result*/, Utest& /*test*/){};report_testgroup_end45,2121
 
-BrandNew\CppUTest-v2.2d\include\CppUTestExt\MemoryReportAllocator.h,309
+BrandNew\CppUTest\include\CppUTestExt\MemoryReportAllocator.h,309
 #define D_MemoryReportAllocator_hD_MemoryReportAllocator_h29,1638
 class MemoryReportAllocator : public MemoryLeakAllocatorMemoryReportAllocator35,1746
 	TestResult* result_;result_38,1816
 	MemoryLeakAllocator* realAllocator_;realAllocator_39,1838
 	MemoryReportFormatter* formatter_;formatter_40,1876
 
-BrandNew\CppUTest-v2.2d\include\CppUTestExt\MemoryReporterPlugin.h,446
+BrandNew\CppUTest\include\CppUTestExt\MemoryReporterPlugin.h,446
 #define D_MemoryReporterPlugin_hD_MemoryReporterPlugin_h29,1637
 class MemoryReporterPlugin : public TestPluginMemoryReporterPlugin36,1782
 	MemoryReportFormatter* formatter_;formatter_38,1831
@@ -1501,14 +1506,14 @@ class MemoryReporterPlugin : public TestPluginMemoryReporterPlugin36,1782
 	MemoryReportAllocator newArrayAllocator;newArrayAllocator42,1945
 	SimpleString currentTestGroup_;currentTestGroup_44,1988
 
-BrandNew\CppUTest-v2.2d\include\CppUTestExt\MemoryReportFormatter.h,402
+BrandNew\CppUTest\include\CppUTestExt\MemoryReportFormatter.h,402
 #define D_MemoryReportFormatter_hD_MemoryReportFormatter_h29,1638
 class MemoryReportFormatterMemoryReportFormatter34,1705
 	virtual ~MemoryReportFormatter(){}~MemoryReportFormatter37,1743
 class NormalMemoryReportFormatter : public MemoryReportFormatterNormalMemoryReportFormatter49,2338
 	virtual void report_testgroup_end(TestResult* /*result*/, Utest& /*test*/){};report_testgroup_end56,2566
 
-BrandNew\CppUTest-v2.2d\include\CppUTestExt\MockActualFunctionCall.h,572
+BrandNew\CppUTest\include\CppUTestExt\MockActualFunctionCall.h,572
 #define D_MockActualFunctionCall_hD_MockActualFunctionCall_h29,1639
 class MockActualFunctionCall : public MockFunctionCallMockActualFunctionCall38,1838
 	enum ActualCallState {ActualCallState72,3285
@@ -1520,7 +1525,7 @@ class MockActualFunctionCall : public MockFunctionCallMockActualFunctionCall38
 	MockExpectedFunctionsList unfulfilledExpectations_;unfulfilledExpectations_86,3629
 	const MockExpectedFunctionsList& allExpectations_;allExpectations_87,3682
 
-BrandNew\CppUTest-v2.2d\include\CppUTestExt\MockExpectedFunctionCall.h,665
+BrandNew\CppUTest\include\CppUTestExt\MockExpectedFunctionCall.h,665
 #define D_MockExpectedFunctionCall_hD_MockExpectedFunctionCall_h29,1641
 class MockExpectedFunctionCall : public MockFunctionCallMockExpectedFunctionCall36,1828
 	class MockExpectedFunctionParameter : public MockNamedValueMockExpectedFunctionParameter85,3777
@@ -1533,7 +1538,7 @@ class MockExpectedFunctionCall : public MockFunctionCallMockExpectedFunctionCal
 	void* objectPtr_;objectPtr_103,4214
 	bool wasPassedToObject_;wasPassedToObject_104,4233
 
-BrandNew\CppUTest-v2.2d\include\CppUTestExt\MockExpectedFunctionsList.h,499
+BrandNew\CppUTest\include\CppUTestExt\MockExpectedFunctionsList.h,499
 #define D_MockExpectedFunctionsList_hD_MockExpectedFunctionsList_h29,1642
 class MockExpectedFunctionsListMockExpectedFunctionsList34,1736
 	class MockExpectedFunctionsListNodeMockExpectedFunctionsListNode83,4089
@@ -1542,7 +1547,7 @@ class MockExpectedFunctionsListMockExpectedFunctionsList34,1736
 		MockExpectedFunctionsListNode(MockExpectedFunctionCall* expectedCall)MockExpectedFunctionsListNode89,4222
 	MockExpectedFunctionsListNode* head_;head_93,4357
 
-BrandNew\CppUTest-v2.2d\include\CppUTestExt\MockFailure.h,2151
+BrandNew\CppUTest\include\CppUTestExt\MockFailure.h,2151
 #define D_MockFailure_hD_MockFailure_h30,1629
 class MockFailureReporterMockFailureReporter39,1794
 	bool crashOnFailure_;crashOnFailure_42,1833
@@ -1568,7 +1573,7 @@ class MockUnexpectedObjectFailure : public MockFailureMockUnexpectedObjectFailu
 class MockExpectedObjectDidntHappenFailure : public MockFailureMockExpectedObjectDidntHappenFailure112,4182
 	virtual ~MockExpectedObjectDidntHappenFailure(){}~MockExpectedObjectDidntHappenFailure116,4389
 
-BrandNew\CppUTest-v2.2d\include\CppUTestExt\MockFunctionCall.h,2067
+BrandNew\CppUTest\include\CppUTestExt\MockFunctionCall.h,2067
 #define D_MockFunctionCall_hD_MockFunctionCall_h29,1633
 class MockFunctionCallMockFunctionCall40,1873
 	virtual void ignoreOtherParameters() {};ignoreOtherParameters52,2479
@@ -1594,7 +1599,7 @@ class MockIgnoredCall : public MockFunctionCallMockIgnoredCall104,4344
 class MockFunctionCallTrace : public MockFunctionCallMockFunctionCallTrace126,5487
 	SimpleString traceBuffer_;traceBuffer_154,6617
 
-BrandNew\CppUTest-v2.2d\include\CppUTestExt\MockNamedValue.h,1837
+BrandNew\CppUTest\include\CppUTestExt\MockNamedValue.h,1837
 #define D_MockNamedValue_hD_MockNamedValue_h29,1631
 class MockNamedValueComparatorMockNamedValueComparator35,1818
 	MockNamedValueComparator() {};MockNamedValueComparator38,1859
@@ -1626,7 +1631,7 @@ class MockNamedValueListMockNamedValueList127,4334
 class MockNamedValueComparatorRepositoryMockNamedValueComparatorRepository149,4766
 	MockNamedValueComparatorRepositoryNode* head_;head_151,4809
 
-BrandNew\CppUTest-v2.2d\include\CppUTestExt\MockSupport.h,693
+BrandNew\CppUTest\include\CppUTestExt\MockSupport.h,693
 #define D_MockSupport_hD_MockSupport_h29,1628
 class MockSupportMockSupport42,1998
     MockFailureReporter *reporter_;reporter_94,3863
@@ -1640,12 +1645,12 @@ class MockSupportMockSupport42,1998
     MockNamedValueList data_;data_102,4192
     bool tracing_;tracing_104,4223
 
-BrandNew\CppUTest-v2.2d\include\CppUTestExt\MockSupportPlugin.h,199
+BrandNew\CppUTest\include\CppUTestExt\MockSupportPlugin.h,199
 #define D_MockSupportPlugin_hD_MockSupportPlugin_h29,1634
 class MockSupportPlugin : public TestPluginMockSupportPlugin34,1739
 	MockNamedValueComparatorRepository repository_;repository_45,2101
 
-BrandNew\CppUTest-v2.2d\include\CppUTestExt\MockSupport_c.h,3148
+BrandNew\CppUTest\include\CppUTestExt\MockSupport_c.h,3148
 #define D_MockSupport_c_hD_MockSupport_c_h29,1630
 	MOCKVALUETYPE_INTEGER,MOCKVALUETYPE_INTEGER32,1672
 	MOCKVALUETYPE_DOUBLE,MOCKVALUETYPE_DOUBLE33,1696
@@ -1693,7 +1698,7 @@ struct SMockSupport_cSMockSupport_c73,2952
 	void (*installComparator) (const char* typeName, MockTypeEqualFunction_c isEqual, MockTypeValueToStringFunction_c valueToString);installComparator91,3543
 	void (*removeAllComparators)();removeAllComparators92,3674
 
-BrandNew\CppUTest-v2.2d\include\CppUTestExt\OrderedTest.h,357
+BrandNew\CppUTest\include\CppUTestExt\OrderedTest.h,357
 #define D_OrderedTest_hD_OrderedTest_h29,1656
 class OrderedTest : public UtestOrderedTest31,1683
    static OrderedTest* _orderedTestsHead;_orderedTestsHead49,2145
@@ -1702,18 +1707,18 @@ class OrderedTest : public UtestOrderedTest31,1683
 class OrderedTestInstallerOrderedTestInstaller56,2249
 #define TEST_ORDERED(TEST_ORDERED68,2619
 
-BrandNew\CppUTest-v2.2d\include\Platforms\Gcc\Platform.h,50
+BrandNew\CppUTest\include\Platforms\Gcc\Platform.h,50
 #define D_Gcc_Platform_HD_Gcc_Platform_H29,1657
 
-BrandNew\CppUTest-v2.2d\include\Platforms\StarterKit\Platform.h,50
+BrandNew\CppUTest\include\Platforms\StarterKit\Platform.h,50
 #define D_Gcc_Platform_HD_Gcc_Platform_H29,1657
 
-BrandNew\CppUTest-v2.2d\include\Platforms\Symbian\Platform.h,37
+BrandNew\CppUTest\include\Platforms\Symbian\Platform.h,37
 #define PLATFORM_H_PLATFORM_H_3,21
 
-BrandNew\CppUTest-v2.2d\include\Platforms\VisualCpp\Platform.h,0
+BrandNew\CppUTest\include\Platforms\VisualCpp\Platform.h,0
 
-BrandNew\CppUTest-v2.2d\include\Platforms\VisualCpp\stdint.h,4059
+BrandNew\CppUTest\include\Platforms\VisualCpp\stdint.h,4059
 #define _STDINT_H_STDINT_H21,640
 #define __need_wint_t__need_wint_t22,658
 #define __need_wchar_t__need_wchar_t23,680
@@ -1806,17 +1811,17 @@ typedef unsigned  int  uint_fast32_t;uint_fast32_t55,1682
 #define INTMAX_C(INTMAX_C201,5723
 #define UINTMAX_C(UINTMAX_C202,5759
 
-BrandNew\CppUTest-v2.2d\makeAll.sh,0
+BrandNew\CppUTest\makeAll.sh,0
 
-BrandNew\CppUTest-v2.2d\makeAndRun.bat,16
+BrandNew\CppUTest\makeAndRun.bat,16
 :endend17,532
 
-BrandNew\CppUTest-v2.2d\scripts\checkForCppUTestEnvVariable.sh,65
+BrandNew\CppUTest\scripts\checkForCppUTestEnvVariable.sh,65
 checkForCppUTestEnvVariable() {checkForCppUTestEnvVariable2,12
 
-BrandNew\CppUTest-v2.2d\scripts\convertToUnity\cpp_u_test_to_unity.rb,0
+BrandNew\CppUTest\scripts\convertToUnity\cpp_u_test_to_unity.rb,0
 
-BrandNew\CppUTest-v2.2d\scripts\convertToUnity\cpp_u_test_to_unity_utils.rb,1329
+BrandNew\CppUTest\scripts\convertToUnity\cpp_u_test_to_unity_utils.rb,1329
 module CppUTestToUnityUtilsCppUTestToUnityUtils1,0
   def convert_test_filename_to_unity_filename(testpath)convert_test_filename_to_unity_filename3,31
   def convert_test_filename_to_unity_testrunner_filename(testpath)convert_test_filename_to_unity_testrunner_filename7,149
@@ -1838,60 +1843,60 @@ def  remove_extern_c(lines)remove_extern_c114,2744
   def generate_group_runner_plainUnity(group, lines)generate_group_runner_plainUnity171,4061
   def write_lines_to_file(file, lines)write_lines_to_file195,4764
 
-BrandNew\CppUTest-v2.2d\scripts\convertToUnity\cpp_u_test_to_unity_utils_tests.rb,28
+BrandNew\CppUTest\scripts\convertToUnity\cpp_u_test_to_unity_utils_tests.rb,28
 def show(lines)show54,804
 
-BrandNew\CppUTest-v2.2d\scripts\convertToUnity\create_group_runner.rb,0
+BrandNew\CppUTest\scripts\convertToUnity\create_group_runner.rb,0
 
-BrandNew\CppUTest-v2.2d\scripts\convertToUnity\create_unity_test_runner.rb,0
+BrandNew\CppUTest\scripts\convertToUnity\create_unity_test_runner.rb,0
 
-BrandNew\CppUTest-v2.2d\scripts\CppUnitTemplates\ClassName.cpp,78
+BrandNew\CppUTest\scripts\CppUnitTemplates\ClassName.cpp,78
 ClassName::ClassName()ClassName3,26
 ClassName::~ClassName()~ClassName7,58
 
-BrandNew\CppUTest-v2.2d\scripts\CppUnitTemplates\ClassName.h,74
+BrandNew\CppUTest\scripts\CppUnitTemplates\ClassName.h,74
 #define D_ClassName_HD_ClassName_H2,23
 class ClassNameClassName10,258
 
-BrandNew\CppUTest-v2.2d\scripts\CppUnitTemplates\ClassNameC.c,104
+BrandNew\CppUTest\scripts\CppUnitTemplates\ClassNameC.c,104
 void ClassName_Create(void)ClassName_Create8,98
 void ClassName_Destroy(void)ClassName_Destroy12,135
 
-BrandNew\CppUTest-v2.2d\scripts\CppUnitTemplates\ClassNameC.h,41
+BrandNew\CppUTest\scripts\CppUnitTemplates\ClassNameC.h,41
 #define D_ClassName_HD_ClassName_H2,23
 
-BrandNew\CppUTest-v2.2d\scripts\CppUnitTemplates\ClassNameCMultipleInstance.c,250
+BrandNew\CppUTest\scripts\CppUnitTemplates\ClassNameCMultipleInstance.c,250
 typedef struct _ClassName_ClassName6,94
     int placeHolderForHiddenStructElements;placeHolderForHiddenStructElements8,124
 ClassName* ClassName_Create(void)ClassName_Create11,175
 void ClassName_Destroy(ClassName* self)ClassName_Destroy18,330
 
-BrandNew\CppUTest-v2.2d\scripts\CppUnitTemplates\ClassNameCMultipleInstance.h,95
+BrandNew\CppUTest\scripts\CppUnitTemplates\ClassNameCMultipleInstance.h,95
 #define D_ClassName_HD_ClassName_H2,23
 typedef struct _ClassName Classname;Classname10,258
 
-BrandNew\CppUTest-v2.2d\scripts\CppUnitTemplates\ClassNameCMultipleInstanceTest.cpp,238
+BrandNew\CppUTest\scripts\CppUnitTemplates\ClassNameCMultipleInstanceTest.cpp,238
 static int fakeRan = 0;fakeRan3,37
     void virtualFunction_renameThis_fake(ClassName*)virtualFunction_renameThis_fake8,103
 TEST_GROUP(ClassName)TEST_GROUP14,198
 TEST(ClassName, Fake)TEST31,513
 TEST(ClassName, Create)TEST37,631
 
-BrandNew\CppUTest-v2.2d\scripts\CppUnitTemplates\ClassNameCPolymorphic.c,250
+BrandNew\CppUTest\scripts\CppUnitTemplates\ClassNameCPolymorphic.c,250
 typedef struct _ClassName_ClassName6,94
     int placeHolderForHiddenStructElements;placeHolderForHiddenStructElements8,124
 ClassName* ClassName_Create(void)ClassName_Create11,175
 void ClassName_Destroy(ClassName* self)ClassName_Destroy18,330
 
-BrandNew\CppUTest-v2.2d\scripts\CppUnitTemplates\ClassNameCPolymorphic.h,103
+BrandNew\CppUTest\scripts\CppUnitTemplates\ClassNameCPolymorphic.h,103
 #define D_ClassName_HD_ClassName_H2,23
 typedef struct _ClassName ClassnamePiml;ClassnamePiml10,258
 
-BrandNew\CppUTest-v2.2d\scripts\CppUnitTemplates\ClassNameCTest.cpp,74
+BrandNew\CppUTest\scripts\CppUnitTemplates\ClassNameCTest.cpp,74
 TEST_GROUP(ClassName)TEST_GROUP8,81
 TEST(ClassName, Create)TEST21,242
 
-BrandNew\CppUTest-v2.2d\scripts\CppUnitTemplates\ClassNameTest.cpp,284
+BrandNew\CppUTest\scripts\CppUnitTemplates\ClassNameTest.cpp,284
 class ClassNameTest: public CPPUNIT_NS::TestFixtureClassNameTest5,114
   ClassName* aClassName;aClassName11,274
   void setUp()setUp15,313
@@ -1899,11 +1904,11 @@ class ClassNameTest: public CPPUNIT_NS::TestFixtureClassNameTest5,114
   void testCreate()testCreate25,431
 CPPUNIT_TEST_SUITE_REGISTRATION(ClassNameTest);ClassNameTest31,501
 
-BrandNew\CppUTest-v2.2d\scripts\CppUnitTemplates\InterfaceCTest.cpp,74
+BrandNew\CppUTest\scripts\CppUnitTemplates\InterfaceCTest.cpp,74
 TEST_GROUP(ClassName)TEST_GROUP8,85
 TEST(ClassName, Create)TEST21,242
 
-BrandNew\CppUTest-v2.2d\scripts\CppUnitTemplates\InterfaceTest.cpp,363
+BrandNew\CppUTest\scripts\CppUnitTemplates\InterfaceTest.cpp,363
 class MockClassNameTest: public CPPUNIT_NS::TestFixtureMockClassNameTest6,142
     ClassName* aClassName;aClassName12,310
     MockClassName* mockClassName;mockClassName13,338
@@ -1912,77 +1917,77 @@ class MockClassNameTest: public CPPUNIT_NS::TestFixtureMockClassNameTest6,142
     void testCreate()testCreate28,568
 CPPUNIT_TEST_SUITE_REGISTRATION(MockClassNameTest);MockClassNameTest34,648
 
-BrandNew\CppUTest-v2.2d\scripts\CppUnitTemplates\MockClassName.h,210
+BrandNew\CppUTest\scripts\CppUnitTemplates\MockClassName.h,210
 #define D_MockClassName_HD_MockClassName_H2,27
 class MockClassName : public ClassNameMockClassName14,353
     explicit MockClassName()MockClassName17,409
     virtual ~MockClassName()~MockClassName19,447
 
-BrandNew\CppUTest-v2.2d\scripts\CppUnitTemplates\MockClassNameC.c,104
+BrandNew\CppUTest\scripts\CppUnitTemplates\MockClassNameC.c,104
 void ClassName_Create(void)ClassName_Create8,98
 void ClassName_Destroy(void)ClassName_Destroy12,135
 
-BrandNew\CppUTest-v2.2d\scripts\CppUnitTemplates\MockClassNameC.h,49
+BrandNew\CppUTest\scripts\CppUnitTemplates\MockClassNameC.h,49
 #define D_FakeClassName_HD_FakeClassName_H2,27
 
-BrandNew\CppUTest-v2.2d\scripts\CppUnitTemplates\ProjectTemplate\include\util\ProjectBuildTime.h,144
+BrandNew\CppUTest\scripts\CppUnitTemplates\ProjectTemplate\include\util\ProjectBuildTime.h,144
 #define D_ProjectBuildTime_HD_ProjectBuildTime_H2,29
 class ProjectBuildTimeProjectBuildTime11,330
     const char* dateTime;dateTime21,488
 
-BrandNew\CppUTest-v2.2d\scripts\CppUnitTemplates\ProjectTemplate\src\util\ProjectBuildTime.cpp,184
+BrandNew\CppUTest\scripts\CppUnitTemplates\ProjectTemplate\src\util\ProjectBuildTime.cpp,184
 ProjectBuildTime::ProjectBuildTime()ProjectBuildTime3,31
 ProjectBuildTime::~ProjectBuildTime()~ProjectBuildTime8,107
 const char* ProjectBuildTime::GetDateTime()GetDateTime12,150
 
-BrandNew\CppUTest-v2.2d\scripts\CppUnitTemplates\ProjectTemplate\tests\AllTests.cpp,38
+BrandNew\CppUTest\scripts\CppUnitTemplates\ProjectTemplate\tests\AllTests.cpp,38
 int main(int ac, char** av)main4,49
 
-BrandNew\CppUTest-v2.2d\scripts\CppUnitTemplates\ProjectTemplate\tests\util\ProjectBuildTimeTest.cpp,88
+BrandNew\CppUTest\scripts\CppUnitTemplates\ProjectTemplate\tests\util\ProjectBuildTimeTest.cpp,88
 TEST_GROUP(ProjectBuildTime)TEST_GROUP4,65
 TEST(ProjectBuildTime, Create)TEST18,264
 
-BrandNew\CppUTest-v2.2d\scripts\filterGcov.sh,267
+BrandNew\CppUTest\scripts\filterGcov.sh,267
 flattenGcovOutput() {flattenGcovOutput11,187
 getRidOfCruft() {getRidOfCruft21,316
 getFileNameRootFromErrorFile() {getFileNameRootFromErrorFile31,519
 writeEachNoTestCoverageFile() {writeEachNoTestCoverageFile35,608
 createHtmlOutput() {createHtmlOutput42,695
 
-BrandNew\CppUTest-v2.2d\scripts\GenerateSrcFiles.sh,148
+BrandNew\CppUTest\scripts\GenerateSrcFiles.sh,148
 checkForCppUTestToolsEnvVariable() {checkForCppUTestToolsEnvVariable9,247
 generateFileIfNotAlreadyThere() {generateFileIfNotAlreadyThere77,2113
 
-BrandNew\CppUTest-v2.2d\scripts\InstallScripts.sh,0
+BrandNew\CppUTest\scripts\InstallScripts.sh,0
 
-BrandNew\CppUTest-v2.2d\scripts\NewCBaseModule.sh,0
+BrandNew\CppUTest\scripts\NewCBaseModule.sh,0
 
-BrandNew\CppUTest-v2.2d\scripts\NewCFunction.sh,0
+BrandNew\CppUTest\scripts\NewCFunction.sh,0
 
-BrandNew\CppUTest-v2.2d\scripts\NewCInterface.sh,0
+BrandNew\CppUTest\scripts\NewCInterface.sh,0
 
-BrandNew\CppUTest-v2.2d\scripts\NewCIoDriver.sh,0
+BrandNew\CppUTest\scripts\NewCIoDriver.sh,0
 
-BrandNew\CppUTest-v2.2d\scripts\NewClass.sh,0
+BrandNew\CppUTest\scripts\NewClass.sh,0
 
-BrandNew\CppUTest-v2.2d\scripts\NewCmiModule.sh,0
+BrandNew\CppUTest\scripts\NewCmiModule.sh,0
 
-BrandNew\CppUTest-v2.2d\scripts\NewCModule.sh,0
+BrandNew\CppUTest\scripts\NewCModule.sh,0
 
-BrandNew\CppUTest-v2.2d\scripts\NewHelp.sh,0
+BrandNew\CppUTest\scripts\NewHelp.sh,0
 
-BrandNew\CppUTest-v2.2d\scripts\NewInterface.sh,0
+BrandNew\CppUTest\scripts\NewInterface.sh,0
 
-BrandNew\CppUTest-v2.2d\scripts\NewLibrary.sh,0
+BrandNew\CppUTest\scripts\NewLibrary.sh,0
 
-BrandNew\CppUTest-v2.2d\scripts\NewPackageDirs.sh,0
+BrandNew\CppUTest\scripts\NewPackageDirs.sh,0
 
-BrandNew\CppUTest-v2.2d\scripts\NewProject.sh,47
+BrandNew\CppUTest\scripts\NewProject.sh,47
 changeProjectName() {changeProjectName21,415
 
-BrandNew\CppUTest-v2.2d\scripts\reformat.sh,0
+BrandNew\CppUTest\scripts\reformat.sh,0
 
-BrandNew\CppUTest-v2.2d\scripts\ReleaseCppUTest.sh,305
+BrandNew\CppUTest\scripts\ReleaseCppUTest.sh,305
 exitIfFileExists() {exitIfFileExists16,289
 generateMakeScript() {generateMakeScript24,397
 generateVersionFile() {generateVersionFile40,902
@@ -1991,115 +1996,115 @@ cleanUp() {cleanUp56,1260
 generateCppUTestRelease() {generateCppUTestRelease60,1302
 openAndMakeRelease()openAndMakeRelease69,1581
 
-BrandNew\CppUTest-v2.2d\scripts\squeeze.sh,0
+BrandNew\CppUTest\scripts\squeeze.sh,0
 
-BrandNew\CppUTest-v2.2d\scripts\templates\ClassName.cpp,78
+BrandNew\CppUTest\scripts\templates\ClassName.cpp,78
 ClassName::ClassName()ClassName3,26
 ClassName::~ClassName()~ClassName7,58
 
-BrandNew\CppUTest-v2.2d\scripts\templates\ClassName.h,74
+BrandNew\CppUTest\scripts\templates\ClassName.h,74
 #define D_ClassName_HD_ClassName_H2,23
 class ClassNameClassName10,258
 
-BrandNew\CppUTest-v2.2d\scripts\templates\ClassNameC.c,104
+BrandNew\CppUTest\scripts\templates\ClassNameC.c,104
 void ClassName_Create(void)ClassName_Create8,98
 void ClassName_Destroy(void)ClassName_Destroy12,135
 
-BrandNew\CppUTest-v2.2d\scripts\templates\ClassNameC.h,41
+BrandNew\CppUTest\scripts\templates\ClassNameC.h,41
 #define D_ClassName_HD_ClassName_H2,23
 
-BrandNew\CppUTest-v2.2d\scripts\templates\ClassNameCIoDriver.c,103
+BrandNew\CppUTest\scripts\templates\ClassNameCIoDriver.c,103
 void ClassName_Create(void)ClassName_Create6,66
 void ClassName_Destroy(void)ClassName_Destroy10,99
 
-BrandNew\CppUTest-v2.2d\scripts\templates\ClassNameCIoDriver.h,41
+BrandNew\CppUTest\scripts\templates\ClassNameCIoDriver.h,41
 #define D_ClassName_HD_ClassName_H2,22
 
-BrandNew\CppUTest-v2.2d\scripts\templates\ClassNameCIoDriverTest.cpp,75
+BrandNew\CppUTest\scripts\templates\ClassNameCIoDriverTest.cpp,75
 TEST_GROUP(ClassName)TEST_GROUP9,163
 TEST(ClassName, Create)TEST24,349
 
-BrandNew\CppUTest-v2.2d\scripts\templates\ClassNameCMultipleInstance.c,240
+BrandNew\CppUTest\scripts\templates\ClassNameCMultipleInstance.c,240
 struct ClassNameClassName6,94
     int placeHolderForHiddenStructElements;placeHolderForHiddenStructElements8,115
 ClassName* ClassName_Create(void)ClassName_Create11,166
 void ClassName_Destroy(ClassName* self)ClassName_Destroy18,321
 
-BrandNew\CppUTest-v2.2d\scripts\templates\ClassNameCMultipleInstance.h,94
+BrandNew\CppUTest\scripts\templates\ClassNameCMultipleInstance.h,94
 #define D_ClassName_HD_ClassName_H2,23
 typedef struct ClassName ClassName;ClassName10,258
 
-BrandNew\CppUTest-v2.2d\scripts\templates\ClassNameCMultipleInstanceTest.cpp,75
+BrandNew\CppUTest\scripts\templates\ClassNameCMultipleInstanceTest.cpp,75
 TEST_GROUP(ClassName)TEST_GROUP9,143
 TEST(ClassName, Create)TEST24,353
 
-BrandNew\CppUTest-v2.2d\scripts\templates\ClassNameCPolymorphic.c,248
+BrandNew\CppUTest\scripts\templates\ClassNameCPolymorphic.c,248
 typedef struct ClassNameClassName6,94
     int placeHolderForHiddenStructElements;placeHolderForHiddenStructElements8,123
 ClassName* ClassName_Create(void)ClassName_Create11,174
 void ClassName_Destroy(ClassName* self)ClassName_Destroy18,329
 
-BrandNew\CppUTest-v2.2d\scripts\templates\ClassNameCPolymorphic.h,102
+BrandNew\CppUTest\scripts\templates\ClassNameCPolymorphic.h,102
 #define D_ClassName_HD_ClassName_H2,23
 typedef struct ClassName ClassNamePiml;ClassNamePiml10,258
 
-BrandNew\CppUTest-v2.2d\scripts\templates\ClassNameCTest.cpp,75
+BrandNew\CppUTest\scripts\templates\ClassNameCTest.cpp,75
 TEST_GROUP(ClassName)TEST_GROUP9,143
 TEST(ClassName, Create)TEST22,300
 
-BrandNew\CppUTest-v2.2d\scripts\templates\ClassNameTest.cpp,75
+BrandNew\CppUTest\scripts\templates\ClassNameTest.cpp,75
 TEST_GROUP(ClassName)TEST_GROUP6,125
 TEST(ClassName, Create)TEST20,299
 
-BrandNew\CppUTest-v2.2d\scripts\templates\FunctionNameC.c,32
+BrandNew\CppUTest\scripts\templates\FunctionNameC.c,32
 void ClassName()ClassName4,28
 
-BrandNew\CppUTest-v2.2d\scripts\templates\FunctionNameC.h,41
+BrandNew\CppUTest\scripts\templates\FunctionNameC.h,41
 #define D_ClassName_HD_ClassName_H2,23
 
-BrandNew\CppUTest-v2.2d\scripts\templates\FunctionNameCTest.cpp,75
+BrandNew\CppUTest\scripts\templates\FunctionNameCTest.cpp,75
 TEST_GROUP(ClassName)TEST_GROUP9,143
 TEST(ClassName, Create)TEST20,244
 
-BrandNew\CppUTest-v2.2d\scripts\templates\InterfaceCTest.cpp,75
+BrandNew\CppUTest\scripts\templates\InterfaceCTest.cpp,75
 TEST_GROUP(ClassName)TEST_GROUP9,147
 TEST(ClassName, Create)TEST22,304
 
-BrandNew\CppUTest-v2.2d\scripts\templates\InterfaceTest.cpp,75
+BrandNew\CppUTest\scripts\templates\InterfaceTest.cpp,75
 TEST_GROUP(ClassName)TEST_GROUP7,153
 TEST(ClassName, Create)TEST23,400
 
-BrandNew\CppUTest-v2.2d\scripts\templates\MockClassName.h,210
+BrandNew\CppUTest\scripts\templates\MockClassName.h,210
 #define D_MockClassName_HD_MockClassName_H2,27
 class MockClassName : public ClassNameMockClassName14,353
     explicit MockClassName()MockClassName17,409
     virtual ~MockClassName()~MockClassName19,447
 
-BrandNew\CppUTest-v2.2d\scripts\templates\MockClassNameC.c,104
+BrandNew\CppUTest\scripts\templates\MockClassNameC.c,104
 void ClassName_Create(void)ClassName_Create8,98
 void ClassName_Destroy(void)ClassName_Destroy12,135
 
-BrandNew\CppUTest-v2.2d\scripts\templates\MockClassNameC.h,49
+BrandNew\CppUTest\scripts\templates\MockClassNameC.h,49
 #define D_FakeClassName_HD_FakeClassName_H2,27
 
-BrandNew\CppUTest-v2.2d\scripts\templates\ProjectTemplate\include\util\ProjectBuildTime.h,144
+BrandNew\CppUTest\scripts\templates\ProjectTemplate\include\util\ProjectBuildTime.h,144
 #define D_ProjectBuildTime_HD_ProjectBuildTime_H2,29
 class ProjectBuildTimeProjectBuildTime11,330
     const char* dateTime;dateTime21,488
 
-BrandNew\CppUTest-v2.2d\scripts\templates\ProjectTemplate\src\util\ProjectBuildTime.cpp,184
+BrandNew\CppUTest\scripts\templates\ProjectTemplate\src\util\ProjectBuildTime.cpp,184
 ProjectBuildTime::ProjectBuildTime()ProjectBuildTime3,31
 ProjectBuildTime::~ProjectBuildTime()~ProjectBuildTime8,107
 const char* ProjectBuildTime::GetDateTime()GetDateTime12,150
 
-BrandNew\CppUTest-v2.2d\scripts\templates\ProjectTemplate\tests\AllTests.cpp,38
+BrandNew\CppUTest\scripts\templates\ProjectTemplate\tests\AllTests.cpp,38
 int main(int ac, char** av)main4,49
 
-BrandNew\CppUTest-v2.2d\scripts\templates\ProjectTemplate\tests\util\ProjectBuildTimeTest.cpp,88
+BrandNew\CppUTest\scripts\templates\ProjectTemplate\tests\util\ProjectBuildTimeTest.cpp,88
 TEST_GROUP(ProjectBuildTime)TEST_GROUP4,65
 TEST(ProjectBuildTime, Create)TEST18,264
 
-BrandNew\CppUTest-v2.2d\src\CppUTest\CommandLineArguments.cpp,1251
+BrandNew\CppUTest\src\CppUTest\CommandLineArguments.cpp,1251
 CommandLineArguments::CommandLineArguments(int ac, const char** av) :CommandLineArguments32,1761
 CommandLineArguments::~CommandLineArguments()~CommandLineArguments37,1952
 bool CommandLineArguments::parse(TestPlugin* plugin)parse41,2007
@@ -2116,7 +2121,7 @@ bool CommandLineArguments::SetOutputType(int ac, const char** av, int& i)SetOut
 bool CommandLineArguments::isEclipseOutput() constisEclipseOutput136,4444
 bool CommandLineArguments::isJUnitOutput() constisJUnitOutput141,4544
 
-BrandNew\CppUTest-v2.2d\src\CppUTest\CommandLineTestRunner.cpp,933
+BrandNew\CppUTest\src\CppUTest\CommandLineTestRunner.cpp,933
 CommandLineTestRunner::CommandLineTestRunner(int ac, const char** av, TestOutput* output) :CommandLineTestRunner34,1822
 CommandLineTestRunner::~CommandLineTestRunner()~CommandLineTestRunner40,2025
 int CommandLineTestRunner::RunAllTests(int ac, char** av)RunAllTests46,2126
@@ -2130,7 +2135,7 @@ int CommandLineTestRunner::getRepeatCount()getRepeatCount128,4086
 SimpleString CommandLineTestRunner::getGroupFilter()getGroupFilter133,4178
 SimpleString CommandLineTestRunner::getNameFilter()getNameFilter138,4279
 
-BrandNew\CppUTest-v2.2d\src\CppUTest\JUnitTestOutput.cpp,2766
+BrandNew\CppUTest\src\CppUTest\JUnitTestOutput.cpp,2766
 struct JUnitTestCaseResultNodeJUnitTestCaseResultNode34,1825
 	JUnitTestCaseResultNode() :JUnitTestCaseResultNode36,1860
 	SimpleString name_;name_41,1941
@@ -2176,7 +2181,7 @@ void JUnitTestOutput::openFileForWrite(const SimpleString& fileName)openFileFor
 void JUnitTestOutput::writeToFile(const SimpleString& buffer)writeToFile256,7195
 void JUnitTestOutput::closeFile()closeFile261,7328
 
-BrandNew\CppUTest-v2.2d\src\CppUTest\MemoryLeakAllocator.cpp,3720
+BrandNew\CppUTest\src\CppUTest\MemoryLeakAllocator.cpp,3720
 static char* checkedMalloc(size_t size)checkedMalloc32,1760
 MemoryLeakAllocator* MemoryLeakAllocator::currentNewAllocator = 0;currentNewAllocator40,1931
 MemoryLeakAllocator* MemoryLeakAllocator::currentNewArrayAllocator = 0;currentNewArrayAllocator41,1999
@@ -2220,7 +2225,7 @@ const char* NullUnknownAllocator::alloc_name()alloc_name223,6160
 const char* NullUnknownAllocator::free_name()free_name228,6236
 MemoryLeakAllocator* NullUnknownAllocator::defaultAllocator()defaultAllocator233,6311
 
-BrandNew\CppUTest-v2.2d\src\CppUTest\MemoryLeakDetector.cpp,5650
+BrandNew\CppUTest\src\CppUTest\MemoryLeakDetector.cpp,5650
 #define UNKNOWN UNKNOWN32,1800
 SimpleStringBuffer::SimpleStringBuffer() :SimpleStringBuffer34,1842
 void SimpleStringBuffer::clear()clear39,1959
@@ -2277,7 +2282,7 @@ const char* MemoryLeakDetector::report(MemLeakPeriod period)report447,14869
 void MemoryLeakDetector::markCheckingPeriodLeaksAsNonCheckingPeriod()markCheckingPeriodLeaksAsNonCheckingPeriod457,15102
 int MemoryLeakDetector::totalMemoryLeaks(MemLeakPeriod period)totalMemoryLeaks466,15447
 
-BrandNew\CppUTest-v2.2d\src\CppUTest\MemoryLeakWarningPlugin.cpp,2324
+BrandNew\CppUTest\src\CppUTest\MemoryLeakWarningPlugin.cpp,2324
 class MemoryLeakWarningReporter: public MemoryLeakFailureMemoryLeakWarningReporter34,1849
 	virtual ~MemoryLeakWarningReporter()~MemoryLeakWarningReporter37,1920
 	virtual void fail(char* fail_string)fail41,1971
@@ -2309,7 +2314,7 @@ void* operator new[](size_t size) UT_THROW(std::bad_alloc)UT_THROW175,6115
 void* operator new [](size_t size, const char* file, int line) UT_THROW(std::bad_alloc)UT_THROW182,6374
 void operator delete[](void* mem) UT_THROW_EMPTY()UT_THROW_EMPTY189,6682
 
-BrandNew\CppUTest-v2.2d\src\CppUTest\Nulls\NullJUnitTestOutput.cpp,1821
+BrandNew\CppUTest\src\CppUTest\Nulls\NullJUnitTestOutput.cpp,1821
 JUnitTestOutput::JUnitTestOutput() :JUnitTestOutput39,1823
 JUnitTestOutput::~JUnitTestOutput()~JUnitTestOutput44,1880
 void JUnitTestOutput::resetTestGroupResult()resetTestGroupResult48,1925
@@ -2336,7 +2341,7 @@ void JUnitTestOutput::openFileForWrite(const SimpleString& fileName)openFileFor
 void JUnitTestOutput::writeToFile(const SimpleString& buffer)writeToFile132,3172
 void JUnitTestOutput::closeFile()closeFile136,3243
 
-BrandNew\CppUTest-v2.2d\src\CppUTest\SimpleString.cpp,4045
+BrandNew\CppUTest\src\CppUTest\SimpleString.cpp,4045
 MemoryLeakAllocator* SimpleString::stringAllocator_ = NULL;stringAllocator_34,1798
 MemoryLeakAllocator* SimpleString::getStringAllocator()getStringAllocator36,1861
 void SimpleString::setStringAllocator(MemoryLeakAllocator* allocator)setStringAllocator43,2042
@@ -2392,7 +2397,7 @@ SimpleStringCollection::~SimpleStringCollection()~SimpleStringCollection454,11
 size_t SimpleStringCollection::size() constsize459,11898
 SimpleString& SimpleStringCollection::operator[](size_t index)operator []464,11967
 
-BrandNew\CppUTest-v2.2d\src\CppUTest\TestFailure.cpp,3400
+BrandNew\CppUTest\src\CppUTest\TestFailure.cpp,3400
 SimpleString removeAllPrintableCharactersFrom(const SimpleString& str)removeAllPrintableCharactersFrom34,1807
 SimpleString addMarkerToString(const SimpleString& str, int markerPos)addMarkerToString49,2188
 TestFailure::TestFailure(Utest* test, const char* fileName, int lineNumber, const SimpleString& theMessage) :TestFailure63,2486
@@ -2422,7 +2427,7 @@ LongsEqualFailure::LongsEqualFailure(Utest* test, const char* fileName, int line
 StringEqualFailure::StringEqualFailure(Utest* test, const char* fileName, int lineNumber, const char* expected, const char* actual) : TestFailure(test, fileName, lineNumber)StringEqualFailure230,8623
 StringEqualNoCaseFailure::StringEqualNoCaseFailure(Utest* test, const char* fileName, int lineNumber, const char* expected, const char* actual) : TestFailure(test, fileName, lineNumber)StringEqualNoCaseFailure239,9018
 
-BrandNew\CppUTest-v2.2d\src\CppUTest\TestHarness_c.cpp,1779
+BrandNew\CppUTest\src\CppUTest\TestHarness_c.cpp,1779
 void CHECK_EQUAL_C_INT_LOCATION(int expected, int actual, const char* fileName, int lineNumber)CHECK_EQUAL_C_INT_LOCATION44,2052
 void CHECK_EQUAL_C_REAL_LOCATION(double expected, double actual, double threshold, const char* fileName, int lineNumber)CHECK_EQUAL_C_REAL_LOCATION49,2233
 void CHECK_EQUAL_C_CHAR_LOCATION(char expected, char actual, const char* fileName, int lineNumber)CHECK_EQUAL_C_CHAR_LOCATION54,2440
@@ -2441,7 +2446,7 @@ void* cpputest_calloc_location(size_t num, size_t size, const char* file, int li
 void* cpputest_realloc_location(void* memory, size_t size, const char* file, int line)cpputest_realloc_location121,4372
 void cpputest_free_location(void* buffer, const char* file, int line)cpputest_free_location126,4622
 
-BrandNew\CppUTest-v2.2d\src\CppUTest\TestOutput.cpp,1939
+BrandNew\CppUTest\src\CppUTest\TestOutput.cpp,1939
 TestOutput::TestOutput() :TestOutput32,1751
 TestOutput::~TestOutput()~TestOutput37,1845
 void TestOutput::verbose()verbose41,1880
@@ -2469,7 +2474,7 @@ void TestOutput::printEclipseErrorInFileOnLine(SimpleString file, int lineNumber
 void ConsoleTestOutput::print(const char* s)print199,5193
 void ConsoleTestOutput::flush()flush209,5367
 
-BrandNew\CppUTest-v2.2d\src\CppUTest\TestPlugin.cpp,1937
+BrandNew\CppUTest\src\CppUTest\TestPlugin.cpp,1937
 TestPlugin::TestPlugin(const SimpleString& name) :TestPlugin31,1702
 TestPlugin::TestPlugin(TestPlugin* next) :TestPlugin36,1827
 TestPlugin::~TestPlugin()~TestPlugin41,1908
@@ -2499,7 +2504,7 @@ NullTestPlugin* NullTestPlugin::instance()instance161,4351
 void NullTestPlugin::runAllPreTestAction(Utest&, TestResult&)runAllPreTestAction167,4459
 void NullTestPlugin::runAllPostTestAction(Utest&, TestResult&)runAllPostTestAction171,4530
 
-BrandNew\CppUTest-v2.2d\src\CppUTest\TestRegistry.cpp,1621
+BrandNew\CppUTest\src\CppUTest\TestRegistry.cpp,1621
 TestRegistry::TestRegistry() :TestRegistry31,1704
 TestRegistry::~TestRegistry()~TestRegistry36,1851
 void TestRegistry::cleanup()cleanup41,1903
@@ -2525,7 +2530,7 @@ Utest* TestRegistry::getFirstTest()getFirstTest171,4744
 Utest* TestRegistry::getLastTest()getLastTest176,4806
 Utest* TestRegistry::getTestWithNext(Utest* test)getTestWithNext184,4968
 
-BrandNew\CppUTest-v2.2d\src\CppUTest\TestResult.cpp,1357
+BrandNew\CppUTest\src\CppUTest\TestResult.cpp,1357
 TestResult::TestResult(TestOutput& p) :TestResult34,1820
 void TestResult::setProgressIndicator(const char* indicator)setProgressIndicator40,2158
 TestResult::~TestResult()~TestResult45,2271
@@ -2547,7 +2552,7 @@ void TestResult::setTotalExecutionTime(long exTime)setTotalExecutionTime128,38
 long TestResult::getCurrentTestTotalExecutionTime() constgetCurrentTestTotalExecutionTime133,3986
 long TestResult::getCurrentGroupTotalExecutionTime() constgetCurrentGroupTotalExecutionTime138,4094
 
-BrandNew\CppUTest-v2.2d\src\CppUTest\Utest.cpp,4692
+BrandNew\CppUTest\src\CppUTest\Utest.cpp,4692
 bool doubles_equal(double d1, double d2, double threshold)doubles_equal33,1755
 class OutsideTestRunnerUTest: public UtestOutsideTestRunnerUTest44,2241
 	static OutsideTestRunnerUTest& instance()instance47,2294
@@ -2613,7 +2618,7 @@ TestInstaller::TestInstaller(Utest* t, const char* groupName, const char* testNa
 TestInstaller::~TestInstaller()~TestInstaller406,10687
 void TestInstaller::unDo()unDo410,10724
 
-BrandNew\CppUTest-v2.2d\src\CppUTestExt\CodeMemoryReportFormatter.cpp,2547
+BrandNew\CppUTest\src\CppUTestExt\CodeMemoryReportFormatter.cpp,2547
 #define MAX_VARIABLE_NAME_LINE_PART MAX_VARIABLE_NAME_LINE_PART34,1786
 #define MAX_VARIABLE_NAME_FILE_PART MAX_VARIABLE_NAME_FILE_PART35,1825
 #define MAX_VARIABLE_NAME_SEPERATOR_PART MAX_VARIABLE_NAME_SEPERATOR_PART36,1864
@@ -2639,7 +2644,7 @@ void CodeMemoryReportFormatter::report_testgroup_start(TestResult* result, Utest
 void CodeMemoryReportFormatter::report_alloc_memory(TestResult* result, MemoryLeakAllocator* allocator, size_t size, char* memory, const char* file, int line)report_alloc_memory156,6169
 void CodeMemoryReportFormatter::report_free_memory(TestResult* result, MemoryLeakAllocator* allocator, char* memory, const char* file, int line)report_free_memory163,6609
 
-BrandNew\CppUTest-v2.2d\src\CppUTestExt\MemoryReportAllocator.cpp,1079
+BrandNew\CppUTest\src\CppUTestExt\MemoryReportAllocator.cpp,1079
 MemoryReportAllocator::MemoryReportAllocator() : result_(NULL), realAllocator_(NULL), formatter_(NULL)MemoryReportAllocator32,1733
 MemoryReportAllocator::~MemoryReportAllocator()~MemoryReportAllocator36,1841
 const char* MemoryReportAllocator::name()name40,1894
@@ -2653,7 +2658,7 @@ void MemoryReportAllocator::setFormatter(MemoryReportFormatter* formatter)setFo
 char* MemoryReportAllocator::alloc_memory(size_t size, const char* file, int line)alloc_memory80,2675
 void MemoryReportAllocator::free_memory(char* memory, const char* file, int line)free_memory88,2947
 
-BrandNew\CppUTest-v2.2d\src\CppUTestExt\MemoryReporterPlugin.cpp,1029
+BrandNew\CppUTest\src\CppUTestExt\MemoryReporterPlugin.cpp,1029
 MemoryReporterPlugin::MemoryReporterPlugin()MemoryReporterPlugin33,1783
 MemoryReporterPlugin::~MemoryReporterPlugin()~MemoryReporterPlugin38,1889
 bool MemoryReporterPlugin::parseArguments(int /* ac */, const char** av, int index)parseArguments44,2016
@@ -2665,7 +2670,7 @@ void MemoryReporterPlugin::initializeAllocator(MemoryReportAllocator* allocator,
 void MemoryReporterPlugin::preTestAction(Utest& test, TestResult& result)preTestAction105,4014
 void MemoryReporterPlugin::postTestAction(Utest& test, TestResult& result)postTestAction123,4496
 
-BrandNew\CppUTest-v2.2d\src\CppUTestExt\MemoryReportFormatter.cpp,894
+BrandNew\CppUTest\src\CppUTestExt\MemoryReportFormatter.cpp,894
 NormalMemoryReportFormatter::NormalMemoryReportFormatter()NormalMemoryReportFormatter32,1733
 NormalMemoryReportFormatter::~NormalMemoryReportFormatter()~NormalMemoryReportFormatter36,1797
 void NormalMemoryReportFormatter::report_test_start(TestResult* result, Utest& test)report_test_start40,1862
@@ -2674,7 +2679,7 @@ void NormalMemoryReportFormatter::report_alloc_memory(TestResult* result, Memory
 void NormalMemoryReportFormatter::report_free_memory(TestResult* result, MemoryLeakAllocator* allocator, char* memory, const char* file, int line)report_free_memory55,2629
 void NormalMemoryReportFormatter::report_testgroup_start(TestResult* result, Utest& test)report_testgroup_start60,2928
 
-BrandNew\CppUTest-v2.2d\src\CppUTestExt\MockActualFunctionCall.cpp,2531
+BrandNew\CppUTest\src\CppUTestExt\MockActualFunctionCall.cpp,2531
 MockActualFunctionCall::MockActualFunctionCall(MockFailureReporter* reporter, const MockExpectedFunctionsList& allExpectations)MockActualFunctionCall34,1825
 MockActualFunctionCall::~MockActualFunctionCall()~MockActualFunctionCall40,2109
 void MockActualFunctionCall::setMockFailureReporter(MockFailureReporter* reporter)setMockFailureReporter44,2164
@@ -2702,7 +2707,7 @@ MockNamedValue MockActualFunctionCall::returnValue()returnValue230,7473
 bool MockActualFunctionCall::hasReturnValue()hasReturnValue240,7797
 MockFunctionCall& MockActualFunctionCall::onObject(void* objectPtr)onObject245,7893
 
-BrandNew\CppUTest-v2.2d\src\CppUTestExt\MockExpectedFunctionCall.cpp,3871
+BrandNew\CppUTest\src\CppUTestExt\MockExpectedFunctionCall.cpp,3871
 SimpleString StringFrom(const MockNamedValue& parameter)StringFrom31,1689
 MockExpectedFunctionCall::MockExpectedFunctionCall()MockExpectedFunctionCall36,1781
 MockExpectedFunctionCall::~MockExpectedFunctionCall()~MockExpectedFunctionCall42,2026
@@ -2743,7 +2748,7 @@ MockFunctionCall& MockExpectedFunctionCall::onObject(void* objectPtr)onObject2
 bool MockExpectedFunctionCall::hasReturnValue()hasReturnValue288,8578
 MockNamedValue MockExpectedFunctionCall::returnValue()returnValue293,8675
 
-BrandNew\CppUTest-v2.2d\src\CppUTestExt\MockExpectedFunctionsList.cpp,4209
+BrandNew\CppUTest\src\CppUTestExt\MockExpectedFunctionsList.cpp,4209
 MockExpectedFunctionsList::MockExpectedFunctionsList() : head_(NULL)MockExpectedFunctionsList32,1740
 MockExpectedFunctionsList::~MockExpectedFunctionsList()~MockExpectedFunctionsList36,1814
 int MockExpectedFunctionsList::size() constsize45,1981
@@ -2781,7 +2786,7 @@ bool MockExpectedFunctionsList::hasDuplicateReturnValueFor(const SimpleString& f
 bool MockExpectedFunctionsList::hasUnfulfilledExpectationsBecauseOfMissingParameters() consthasUnfulfilledExpectationsBecauseOfMissingParameters330,9833
 MockNamedValue MockExpectedFunctionsList::returnValueForFunction(const SimpleString& functionName) constreturnValueForFunction338,10079
 
-BrandNew\CppUTest-v2.2d\src\CppUTestExt\MockFailure.cpp,2410
+BrandNew\CppUTest\src\CppUTestExt\MockFailure.cpp,2410
 void MockFailureReporter::failTest(const MockFailure& failure)failTest33,1777
 Utest* MockFailureReporter::getTestToFail()getTestToFail42,1975
 MockFailure::MockFailure(Utest* test) : TestFailure(test, "Test failed with MockFailure without an error! Something went seriously wrong.")MockFailure47,2053
@@ -2796,7 +2801,7 @@ MockCannotSetDifferentReturnValuesForSameFunctionFailure::MockCannotSetDifferent
 MockUnexpectedObjectFailure::MockUnexpectedObjectFailure(Utest* test, const SimpleString& functionName, void* actual, const MockExpectedFunctionsList& expectations) : MockFailure(test)MockUnexpectedObjectFailure162,6764
 MockExpectedObjectDidntHappenFailure::MockExpectedObjectDidntHappenFailure(Utest* test, const SimpleString& functionName, const MockExpectedFunctionsList& expectations) : MockFailure(test)MockExpectedObjectDidntHappenFailure169,7207
 
-BrandNew\CppUTest-v2.2d\src\CppUTestExt\MockFunctionCall.cpp,4449
+BrandNew\CppUTest\src\CppUTestExt\MockFunctionCall.cpp,4449
 MockFunctionCall::MockFunctionCall() : comparatorRepository_(NULL)MockFunctionCall32,1721
 MockFunctionCall::~MockFunctionCall()~MockFunctionCall36,1793
 void MockFunctionCall::setComparatorRepository(MockNamedValueComparatorRepository* repository)setComparatorRepository40,1836
@@ -2845,7 +2850,7 @@ void MockFunctionCallTrace::clear()clear291,8072
 const char* MockFunctionCallTrace::getTraceOutput()getTraceOutput296,8133
 MockFunctionCallTrace& MockFunctionCallTrace::instance()instance301,8227
 
-BrandNew\CppUTest-v2.2d\src\CppUTestExt\MockNamedValue.cpp,3382
+BrandNew\CppUTest\src\CppUTestExt\MockNamedValue.cpp,3382
 MockNamedValue::MockNamedValue(const SimpleString& name) : name_(name), type_("int"), comparator_(NULL)MockNamedValue33,1728
 MockNamedValue::~MockNamedValue()~MockNamedValue38,1860
 void MockNamedValue::setValue(int value)setValue42,1899
@@ -2888,7 +2893,7 @@ void MockNamedValueComparatorRepository::installComparator(const SimpleString& n
 MockNamedValueComparator* MockNamedValueComparatorRepository::getComparatorForType(const SimpleString& name)getComparatorForType265,6694
 void MockNamedValueComparatorRepository::installComparators(const MockNamedValueComparatorRepository& repository)installComparators272,6946
 
-BrandNew\CppUTest-v2.2d\src\CppUTestExt\MockSupport.cpp,3148
+BrandNew\CppUTest\src\CppUTestExt\MockSupport.cpp,3148
 #define MOCK_SUPPORT_SCOPE_PREFIX MOCK_SUPPORT_SCOPE_PREFIX34,1811
 static MockSupport global_mock;global_mock36,1880
 MockSupport& mock(const SimpleString& mockName)mock38,1913
@@ -2931,7 +2936,7 @@ double MockSupport::doubleReturnValue()doubleReturnValue348,10337
 void* MockSupport::pointerReturnValue()pointerReturnValue353,10422
 bool MockSupport::hasReturnValue()hasReturnValue358,10508
 
-BrandNew\CppUTest-v2.2d\src\CppUTestExt\MockSupportPlugin.cpp,842
+BrandNew\CppUTest\src\CppUTestExt\MockSupportPlugin.cpp,842
 class MockSupportPluginReporter : public MockFailureReporterMockSupportPluginReporter32,1719
 	Utest& test_;test_34,1782
 	TestResult& result_;result_35,1797
@@ -2944,7 +2949,7 @@ void MockSupportPlugin::preTestAction(Utest&, TestResult&)preTestAction63,2230
 void MockSupportPlugin::postTestAction(Utest& test, TestResult& result)postTestAction68,2335
 void MockSupportPlugin::installComparator(const SimpleString& name, MockNamedValueComparator& comparator)installComparator78,2622
 
-BrandNew\CppUTest-v2.2d\src\CppUTestExt\MockSupport_c.cpp,3162
+BrandNew\CppUTest\src\CppUTestExt\MockSupport_c.cpp,3162
 static MockSupport* currentMockSupport = NULL;currentMockSupport34,1717
 static MockFunctionCall* currentCall = NULL;currentCall35,1764
 class MockCFunctionComparatorNode : public MockNamedValueComparatorMockCFunctionComparatorNode37,1810
@@ -2985,7 +2990,7 @@ void clear_c()clear_c270,8355
 MockSupport_c* mock_c()mock_c275,8405
 MockSupport_c* mock_scope_c(const char* scope)mock_scope_c281,8488
 
-BrandNew\CppUTest-v2.2d\src\CppUTestExt\OrderedTest.cpp,1118
+BrandNew\CppUTest\src\CppUTestExt\OrderedTest.cpp,1118
 OrderedTest* OrderedTest::_orderedTestsHead = 0;_orderedTestsHead32,1742
 OrderedTest::OrderedTest() :OrderedTest34,1794
 OrderedTest::~OrderedTest()~OrderedTest39,1854
@@ -3002,7 +3007,7 @@ void OrderedTestInstaller::addOrderedTestInOrder(OrderedTest* test)addOrderedTe
 void OrderedTestInstaller::addOrderedTestInOrderNotAtHeadPosition(addOrderedTestInOrderNotAtHeadPosition113,3561
 OrderedTestInstaller::~OrderedTestInstaller()~OrderedTestInstaller130,4079
 
-BrandNew\CppUTest-v2.2d\src\Platforms\Gcc\UtestPlatform.cpp,3351
+BrandNew\CppUTest\src\Platforms\Gcc\UtestPlatform.cpp,3351
 #undef mallocmalloc30,1687
 #undef freefree31,1702
 #undef calloccalloc32,1715
@@ -3045,7 +3050,7 @@ void* PlatformSpecificMemset(void* mem, int c, size_t size)PlatformSpecificMems
 double PlatformSpecificFabs(double d)PlatformSpecificFabs237,5916
 int PlatformSpecificIsNan(double d)PlatformSpecificIsNan242,5983
 
-BrandNew\CppUTest-v2.2d\src\Platforms\Iar\UtestPlatform.cpp,3351
+BrandNew\CppUTest\src\Platforms\Iar\UtestPlatform.cpp,3351
 #undef mallocmalloc37,1810
 #undef calloccalloc38,1825
 #undef reallocrealloc39,1840
@@ -3088,7 +3093,7 @@ void* PlatformSpecificMemset(void* mem, int c, size_t size)PlatformSpecificMems
 double PlatformSpecificFabs(double d)PlatformSpecificFabs231,5693
 int PlatformSpecificIsNan(double d)PlatformSpecificIsNan236,5760
 
-BrandNew\CppUTest-v2.2d\src\Platforms\StarterKit\StarterMemoryLeakWarning.cpp,1888
+BrandNew\CppUTest\src\Platforms\StarterKit\StarterMemoryLeakWarning.cpp,1888
 static int allocatedBlocks = 0;allocatedBlocks34,1775
 static int allocatedArrays = 0;allocatedArrays35,1808
 static int firstInitialBlocks = 0;firstInitialBlocks36,1841
@@ -3121,7 +3126,7 @@ void* operator new[](size_t size)operator new[]208,6404
 void operator delete[](void* mem)operator delete[]214,6493
 void* operator new(size_t size, const char* file, int line)operator new220,6573
 
-BrandNew\CppUTest-v2.2d\src\Platforms\StarterKit\UtestPlatform.cpp,1277
+BrandNew\CppUTest\src\Platforms\StarterKit\UtestPlatform.cpp,1277
 void Utest::executePlatformSpecificTestBody()executePlatformSpecificTestBody7,115
 static long TimeInMillisImplementation()TimeInMillisImplementation15,218
 static long (*timeInMillisFp) () = TimeInMillisImplementation;timeInMillisFp23,398
@@ -3137,7 +3142,7 @@ void PlatformSpecificExitCurrentTestImpl() PlatformSpecificExitCurrentTestImpl
 void FakePlatformSpecificExitCurrentTest() FakePlatformSpecificExitCurrentTest71,1554
 void (*PlatformSpecificExitCurrentTest)() = PlatformSpecificExitCurrentTestImpl;PlatformSpecificExitCurrentTest75,1607
 
-BrandNew\CppUTest-v2.2d\src\Platforms\Symbian\SymbianMemoryLeakWarning.cpp,1167
+BrandNew\CppUTest\src\Platforms\Symbian\SymbianMemoryLeakWarning.cpp,1167
 MemoryLeakWarning* MemoryLeakWarning::_latest = NULL;_latest32,1672
 class MemoryLeakWarningData : public CBase {MemoryLeakWarningData35,1783
 	TInt iInitialAllocCells;iInitialAllocCells37,1836
@@ -3157,7 +3162,7 @@ void MemoryLeakWarning::DestroyData()DestroyData109,3441
 MemoryLeakWarning* MemoryLeakWarning::GetLatest()GetLatest115,3514
 void MemoryLeakWarning::SetLatest(MemoryLeakWarning* latest)SetLatest120,3586
 
-BrandNew\CppUTest-v2.2d\src\Platforms\Symbian\UtestPlatform.cpp,3106
+BrandNew\CppUTest\src\Platforms\Symbian\UtestPlatform.cpp,3106
 void Utest::executePlatformSpecificTestBody()executePlatformSpecificTestBody39,1898
 void Utest::executePlatformSpecificExitCurrentTest() {executePlatformSpecificExitCurrentTest48,2089
 bool Utest::executePlatformSpecificSetup() {executePlatformSpecificSetup52,2175
@@ -3193,7 +3198,7 @@ void PlatformSpecificFPuts(const char* str, PlatformSpecificFile file) {Platfor
 void PlatformSpecificFClose(PlatformSpecificFile file) {PlatformSpecificFClose177,5151
 int PlatformSpecificAtoI(const char*str) {PlatformSpecificAtoI181,5240
 
-BrandNew\CppUTest-v2.2d\src\Platforms\VisualCpp\UtestPlatform.cpp,3467
+BrandNew\CppUTest\src\Platforms\VisualCpp\UtestPlatform.cpp,3467
 #undef mallocmalloc3,56
 #undef freefree4,71
 #undef calloccalloc5,84
@@ -3237,16 +3242,16 @@ void Utest::executePlatformSpecificTeardown()executePlatformSpecificTeardown30
 void Utest::executePlatformSpecificRunOneTest(TestPlugin* plugin, TestResult& result)executePlatformSpecificRunOneTest309,5922
 void Utest::executePlatformSpecificExitCurrentTest()executePlatformSpecificExitCurrentTest319,6170
 
-BrandNew\CppUTest-v2.2d\tests\AllocationInCFile.c,208
+BrandNew\CppUTest\tests\AllocationInCFile.c,208
 char* mallocAllocation()mallocAllocation7,160
 void freeAllocation(void* memory)freeAllocation12,212
 #undef freefree17,266
 void freeAllocationWithoutMacro(void* memory)freeAllocationWithoutMacro19,279
 
-BrandNew\CppUTest-v2.2d\tests\AllocationInCFile.h,53
+BrandNew\CppUTest\tests\AllocationInCFile.h,53
 #define ALLOCATIONINCFILE_HALLOCATIONINCFILE_H2,28
 
-BrandNew\CppUTest-v2.2d\tests\AllocationInCppFile.cpp,282
+BrandNew\CppUTest\tests\AllocationInCppFile.cpp,282
 #undef newnew4,148
 char* newAllocation()newAllocation7,210
 char* newArrayAllocation()newArrayAllocation12,255
@@ -3254,13 +3259,13 @@ char* newArrayAllocation()newArrayAllocation12,255
 char* newAllocationWithoutMacro()newAllocationWithoutMacro19,322
 char* newArrayAllocationWithoutMacro()newArrayAllocationWithoutMacro24,379
 
-BrandNew\CppUTest-v2.2d\tests\AllocationInCppFile.h,57
+BrandNew\CppUTest\tests\AllocationInCppFile.h,57
 #define ALLOCATIONINCPPFILE_HALLOCATIONINCPPFILE_H2,30
 
-BrandNew\CppUTest-v2.2d\tests\AllTests.cpp,47
+BrandNew\CppUTest\tests\AllTests.cpp,47
 int main(int ac, const char** av)main30,1678
 
-BrandNew\CppUTest-v2.2d\tests\AllTests.h,635
+BrandNew\CppUTest\tests\AllTests.h,635
 IMPORT_TEST_GROUP( Utest);Utest29,1687
 IMPORT_TEST_GROUP( Failure);Failure30,1715
 IMPORT_TEST_GROUP( TestOutput);TestOutput31,1745
@@ -3273,7 +3278,7 @@ IMPORT_TEST_GROUP( CommandLineTestRunner);CommandLineTestRunner37,1960
 IMPORT_TEST_GROUP( JUnitOutputTest);JUnitOutputTest38,2004
 IMPORT_TEST_GROUP( MemoryLeakDetectorTest);MemoryLeakDetectorTest39,2042
 
-BrandNew\CppUTest-v2.2d\tests\AllTests.mak,3089
+BrandNew\CppUTest\tests\AllTests.mak,3089
 CFG=AllTests - Win32 DebugCFG3,94
 NULL=NULL23,882
 NULL=nulNULL25,897
@@ -3322,7 +3327,7 @@ SOURCE=.\TestRegistryTest.cppSOURCE609,16022
 SOURCE=.\TestResultTest.cppSOURCE625,16323
 SOURCE=.\UtestTest.cppSOURCE641,16616
 
-BrandNew\CppUTest-v2.2d\tests\CommandLineArgumentsTest.cpp,1402
+BrandNew\CppUTest\tests\CommandLineArgumentsTest.cpp,1402
 class OptionsPlugin: public TestPluginOptionsPlugin32,1717
 	OptionsPlugin(const SimpleString& name) :OptionsPlugin35,1766
 	~OptionsPlugin()~OptionsPlugin39,1834
@@ -3346,17 +3351,17 @@ TEST(CommandLineArguments, weirdParamatersPrintsUsageAndReturnsFalse)TEST176,4
 TEST(CommandLineArguments, pluginKnowsOption)TEST185,5225
 TEST(CommandLineArguments, checkDefaultArguments)TEST194,5515
 
-BrandNew\CppUTest-v2.2d\tests\CommandLineTestRunnerTest.cpp,126
+BrandNew\CppUTest\tests\CommandLineTestRunnerTest.cpp,126
 TEST_GROUP(CommandLineTestRunner)TEST_GROUP34,1825
 IGNORE_TEST(CommandLineTestRunner, HmmmmWhatToWrite)IGNORE_TEST44,1918
 
-BrandNew\CppUTest-v2.2d\tests\CppUTestExt\AllTests.cpp,47
+BrandNew\CppUTest\tests\CppUTestExt\AllTests.cpp,47
 int main(int ac, const char** av)main33,1805
 
-BrandNew\CppUTest-v2.2d\tests\CppUTestExt\AllTests.h,61
+BrandNew\CppUTest\tests\CppUTestExt\AllTests.h,61
 IMPORT_TEST_GROUP( TestOrderedTest);TestOrderedTest29,1687
 
-BrandNew\CppUTest-v2.2d\tests\CppUTestExt\TestCodeMemoryReportFormatter.cpp,1520
+BrandNew\CppUTest\tests\CppUTestExt\TestCodeMemoryReportFormatter.cpp,1520
 #define TESTOUPUT_EQUAL(TESTOUPUT_EQUAL33,1770
 #define TESTOUPUT_CONTAINS(TESTOUPUT_CONTAINS34,1882
 TEST_GROUP(CodeMemoryReportFormatter)TEST_GROUP36,2001
@@ -3377,11 +3382,11 @@ TEST(CodeMemoryReportFormatter, testStartGeneratesTESTcode)TEST164,6527
 TEST(CodeMemoryReportFormatter, testEndGeneratesTESTcode)TEST171,6783
 TEST(CodeMemoryReportFormatter, TestGroupGeneratesTestGroupCode)TEST178,6971
 
-BrandNew\CppUTest-v2.2d\tests\CppUTestExt\TestMemoryReportAllocator.cpp,135
+BrandNew\CppUTest\tests\CppUTestExt\TestMemoryReportAllocator.cpp,135
 TEST_GROUP(MemoryReportAllocator)TEST_GROUP33,1766
 TEST(MemoryReportAllocator, FunctionsAreForwardedForMallocAllocator)TEST37,1806
 
-BrandNew\CppUTest-v2.2d\tests\CppUTestExt\TestMemoryReporterPlugin.cpp,2973
+BrandNew\CppUTest\tests\CppUTestExt\TestMemoryReporterPlugin.cpp,2973
 static MemoryLeakAllocator* previousNewAllocator;previousNewAllocator35,1842
 class TemporaryDefaultNewAllocatorTemporaryDefaultNewAllocator37,1893
 	MemoryLeakAllocator* newAllocator;newAllocator39,1930
@@ -3417,7 +3422,7 @@ TEST(MemoryReporterPlugin, endOfaTestGroupWillReportSo)TEST258,11037
 TEST(MemoryReporterPlugin, preActionReplacesAllocators)TEST276,11849
 TEST(MemoryReporterPlugin, postActionRestoresAllocators)TEST285,12147
 
-BrandNew\CppUTest-v2.2d\tests\CppUTestExt\TestMemoryReportFormatter.cpp,487
+BrandNew\CppUTest\tests\CppUTestExt\TestMemoryReportFormatter.cpp,487
 #define TESTOUPUT_EQUAL(TESTOUPUT_EQUAL33,1766
 #define TESTOUPUT_CONTAINS(TESTOUPUT_CONTAINS34,1878
 TEST_GROUP(NormalMemoryReportFormatter)TEST_GROUP36,1997
@@ -3427,13 +3432,13 @@ TEST(NormalMemoryReportFormatter, testStarts)TEST69,2891
 TEST(NormalMemoryReportFormatter, testEnds)TEST76,3088
 TEST(NormalMemoryReportFormatter, testGroupStarts)TEST83,3284
 
-BrandNew\CppUTest-v2.2d\tests\CppUTestExt\TestMockActualFunctionCall.cpp,271
+BrandNew\CppUTest\tests\CppUTestExt\TestMockActualFunctionCall.cpp,271
 TEST_GROUP(MockActualFunctionCall)TEST_GROUP35,1854
 TEST(MockActualFunctionCall, unExpectedCall)TEST56,2248
 TEST(MockActualFunctionCall, unExpectedParameterName)TEST65,2532
 TEST(MockActualFunctionCall, multipleSameFunctionsExpectingAndHappenGradually)TEST81,2998
 
-BrandNew\CppUTest-v2.2d\tests\CppUTestExt\TestMockExpectedFunctionCall.cpp,3089
+BrandNew\CppUTest\tests\CppUTestExt\TestMockExpectedFunctionCall.cpp,3089
 class TypeForTestingExpectedFunctionCallTypeForTestingExpectedFunctionCall33,1755
 	TypeForTestingExpectedFunctionCall(int val) : value(val) {};TypeForTestingExpectedFunctionCall36,1806
 	int value;value37,1868
@@ -3473,7 +3478,7 @@ TEST(MockExpectedFunctionCall, toStringForIgnoredParameters)TEST296,10360
 TEST(MockExpectedFunctionCall, toStringForMultipleParameters)TEST303,10569
 TEST(MockExpectedFunctionCall, toStringForParameterAndIgnored)TEST311,10843
 
-BrandNew\CppUTest-v2.2d\tests\CppUTestExt\TestMockExpectedFunctionsList.cpp,1477
+BrandNew\CppUTest\tests\CppUTestExt\TestMockExpectedFunctionsList.cpp,1477
 TEST_GROUP(MockExpectedFunctionsList)TEST_GROUP34,1806
 TEST(MockExpectedFunctionsList, emptyList)TEST63,2448
 TEST(MockExpectedFunctionsList, addingCalls)TEST70,2618
@@ -3493,7 +3498,7 @@ TEST(MockExpectedFunctionsList, amountOfExpectationsForHasNone)TEST205,6648
 TEST(MockExpectedFunctionsList, callToString)TEST212,6828
 TEST(MockExpectedFunctionsList, toStringOnEmptyList)TEST228,7324
 
-BrandNew\CppUTest-v2.2d\tests\CppUTestExt\TestMockFailure.cpp,832
+BrandNew\CppUTest\tests\CppUTestExt\TestMockFailure.cpp,832
 TEST_GROUP(MockFailureTest)TEST_GROUP34,1806
 TEST(MockFailureTest, noErrorFailureSomethingGoneWrong)TEST66,2427
 TEST(MockFailureTest, unexpectedCallHappened)TEST72,2650
@@ -3505,9 +3510,9 @@ TEST(MockFailureTest, MockExpectedParameterDidntHappenFailure)TEST151,5583
 TEST(MockFailureTest, MockNoWayToCompareCustomTypeFailure)TEST171,6472
 TEST(MockFailureTest, MockCannotSetDifferentReturnValuesForSameFunctionFailure)TEST177,6741
 TEST(MockFailureTest, MockUnexpectedObjectFailure)TEST185,7183
-TEST(MockFailureTest, MockExpectedObjectDidntHappenFailure)TEST203,7939
+TEST(MockFailureTest, MockExpectedObjectDidntHappenFailure)TEST203,7924
 
-BrandNew\CppUTest-v2.2d\tests\CppUTestExt\TestMockFailure.h,874
+BrandNew\CppUTest\tests\CppUTestExt\TestMockFailure.h,874
 #define D_TestMockFailure_hD_TestMockFailure_h30,1633
 #define CHECK_EXPECTED_MOCK_FAILURE(CHECK_EXPECTED_MOCK_FAILURE32,1662
 #define CHECK_NO_MOCK_FAILURE(CHECK_NO_MOCK_FAILURE33,1789
@@ -3520,7 +3525,7 @@ inline SimpleString mockFailureString()mockFailureString56,2311
 inline void CHECK_EXPECTED_MOCK_FAILURE_LOCATION(const MockFailure& expectedFailure, const char* file, int line)CHECK_EXPECTED_MOCK_FAILURE_LOCATION61,2426
 inline void CHECK_NO_MOCK_FAILURE_LOCATION(const char* file, int line)CHECK_NO_MOCK_FAILURE_LOCATION77,3047
 
-BrandNew\CppUTest-v2.2d\tests\CppUTestExt\TestMockPlugin.cpp,574
+BrandNew\CppUTest\tests\CppUTestExt\TestMockPlugin.cpp,574
 TEST_GROUP(MockPlugin)TEST_GROUP33,1780
 TEST(MockPlugin, checkExpectationsAndClearAtEnd)TEST70,2574
 TEST(MockPlugin, checkExpectationsWorksAlsoWithHierachicalObjects)TEST84,3001
@@ -3530,7 +3535,7 @@ class DummyComparator : public MockNamedValueComparatorDummyComparator97,3467
 TEST(MockPlugin, installComparatorRecordsTheComparatorButNotInstallsItYet)TEST111,3677
 TEST(MockPlugin, preTestActionWillEnableMultipleComparatorsToTheGlobalMockSupportSpace)TEST122,4097
 
-BrandNew\CppUTest-v2.2d\tests\CppUTestExt\TestMockSupport.cpp,5308
+BrandNew\CppUTest\tests\CppUTestExt\TestMockSupport.cpp,5308
 TEST_GROUP(MockSupportTest)TEST_GROUP34,1792
 TEST(MockSupportTest, clear)TEST63,2475
 TEST(MockSupportTest, checkExpectationsDoesntFail)TEST70,2595
@@ -3608,7 +3613,7 @@ TEST(MockSupportTest, expectMultipleCallsWithParameters)TEST742,23604
 TEST(MockSupportTest, expectMultipleMultipleCallsWithParameters)TEST751,24068
 TEST(MockSupportTest, tracing)TEST763,24819
 
-BrandNew\CppUTest-v2.2d\tests\CppUTestExt\TestMockSupport_c.cpp,984
+BrandNew\CppUTest\tests\CppUTestExt\TestMockSupport_c.cpp,984
 TEST_GROUP(MockSupport_c)TEST_GROUP34,1731
 TEST(MockSupport_c, expectAndActualOneCall)TEST38,1763
 TEST(MockSupport_c, expectAndActualParameters)TEST45,1907
@@ -3627,15 +3632,15 @@ TEST(MockSupport_c, MockSupportSetPointerData)TEST126,4639
 TEST(MockSupport_c, MockSupportSetDataObject)TEST132,4817
 TEST(MockSupport_c, WorksInCFile)TEST138,4994
 
-BrandNew\CppUTest-v2.2d\tests\CppUTestExt\TestMockSupport_cCFile.c,225
+BrandNew\CppUTest\tests\CppUTestExt\TestMockSupport_cCFile.c,225
 static int typeNameIsEqual(void* object1, void* object2)typeNameIsEqual30,1644
 static char* typeNameValueToString(void* object)typeNameValueToString36,1735
 void all_mock_support_c_calls()all_mock_support_c_calls41,1813
 
-BrandNew\CppUTest-v2.2d\tests\CppUTestExt\TestMockSupport_cCFile.h,72
+BrandNew\CppUTest\tests\CppUTestExt\TestMockSupport_cCFile.h,72
 #define __TestMockSupportc_CFile__h__TestMockSupportc_CFile__h29,1640
 
-BrandNew\CppUTest-v2.2d\tests\CppUTestExt\TestOrderedTest.cpp,904
+BrandNew\CppUTest\tests\CppUTestExt\TestOrderedTest.cpp,904
 TEST_GROUP(TestOrderedTest)TEST_GROUP34,1818
 TEST(TestOrderedTest, TestInstallerSetsFields)TEST82,2837
 TEST(TestOrderedTest, InstallOneText)TEST92,3265
@@ -3652,15 +3657,15 @@ TEST_ORDERED(TestOrderedTestMacros, Test1, 1)TEST_ORDERED166,5118
 TEST_ORDERED(TestOrderedTestMacros, Test4, 4)TEST_ORDERED172,5215
 TEST_ORDERED(TestOrderedTestMacros, Test3, 3)TEST_ORDERED178,5312
 
-BrandNew\CppUTest-v2.2d\tests\Extensions\AllTests.h,136
+BrandNew\CppUTest\tests\Extensions\AllTests.h,136
 IMPORT_TEST_GROUP( SimpleStringExtensions);SimpleStringExtensions29,1687
 IMPORT_TEST_GROUP( TestOrderedTest);TestOrderedTest30,1732
 
-BrandNew\CppUTest-v2.2d\tests\Extensions\SimpleStringExtensionsTest.cpp,111
+BrandNew\CppUTest\tests\Extensions\SimpleStringExtensionsTest.cpp,111
 TEST_GROUP(SimpleStringExtensions)TEST_GROUP31,1725
 TEST(SimpleStringExtensions, fromStdString)TEST37,1794
 
-BrandNew\CppUTest-v2.2d\tests\Extensions\SimpleStringFromStdintTest.cpp,583
+BrandNew\CppUTest\tests\Extensions\SimpleStringFromStdintTest.cpp,583
 TEST_GROUP(SimpleStringFromStdint)TEST_GROUP33,1782
 TEST(SimpleStringFromStdint, Uint64_t)TEST40,1893
 TEST(SimpleStringFromStdint, Int64_t)TEST54,2264
@@ -3672,7 +3677,7 @@ TEST(SimpleStringFromStdint, CHECK_EQUAL_Uint32_t)TEST99,3315
 TEST(SimpleStringFromStdint, CHECK_EQUAL_Uint16_t)TEST105,3423
 TEST(SimpleStringFromStdint, CHECK_EQUAL_Uint8_t)TEST111,3527
 
-BrandNew\CppUTest-v2.2d\tests\Extensions\TestOrderedTest.cpp,904
+BrandNew\CppUTest\tests\Extensions\TestOrderedTest.cpp,904
 TEST_GROUP(TestOrderedTest)TEST_GROUP34,1826
 TEST(TestOrderedTest, TestInstallerSetsFields)TEST81,2808
 TEST(TestOrderedTest, InstallOneText)TEST92,3240
@@ -3689,7 +3694,7 @@ TEST_ORDERED(TestOrderedTestMacros, Test1, 1)TEST_ORDERED165,5091
 TEST_ORDERED(TestOrderedTestMacros, Test4, 4)TEST_ORDERED171,5188
 TEST_ORDERED(TestOrderedTestMacros, Test3, 3)TEST_ORDERED177,5285
 
-BrandNew\CppUTest-v2.2d\tests\JUnitOutputTest.cpp,801
+BrandNew\CppUTest\tests\JUnitOutputTest.cpp,801
 static long millisTime;millisTime33,1790
 static const char* theTime = "1978-10-03T00:00:00";theTime35,1817
 static long MockGetPlatformSpecificTimeInMillis()MockGetPlatformSpecificTimeInMillis37,1872
@@ -3703,7 +3708,7 @@ TEST(JUnitOutputTest, fiveTestsInOneGroupAndThreeFail)TEST338,9910
 TEST(JUnitOutputTest, fourGroupsAndSomePassAndSomeFail)TEST348,10256
 TEST(JUnitOutputTest, messageWithNewLine)TEST361,10699
 
-BrandNew\CppUTest-v2.2d\tests\MemoryLeakAllocatorTest.cpp,743
+BrandNew\CppUTest\tests\MemoryLeakAllocatorTest.cpp,743
 TEST_GROUP(MemoryLeakAllocatorTest)TEST_GROUP32,1760
 TEST(MemoryLeakAllocatorTest, SetCurrentNewAllocator)TEST42,1904
 TEST(MemoryLeakAllocatorTest, SetCurrentNewArrayAllocator)TEST51,2306
@@ -3717,7 +3722,7 @@ TEST(MemoryLeakAllocatorTest, NewArrayNames)TEST103,4204
 TEST(MemoryLeakAllocatorTest, NullUnknownAllocation)TEST111,4471
 TEST(MemoryLeakAllocatorTest, NullUnknownNames)TEST117,4651
 
-BrandNew\CppUTest-v2.2d\tests\MemoryLeakDetectorTest.cpp,3908
+BrandNew\CppUTest\tests\MemoryLeakDetectorTest.cpp,3908
 class MemoryLeakFailureForTest: public MemoryLeakFailureMemoryLeakFailureForTest33,1802
 	virtual ~MemoryLeakFailureForTest()~MemoryLeakFailureForTest36,1872
 	virtual void fail(char* fail_string)fail40,1922
@@ -3775,7 +3780,7 @@ TEST(SimpleStringBuffer, resetWriteLimit)TEST506,18451
 TEST_GROUP(ReallocBugReported) { };TEST_GROUP519,18819
 TEST(ReallocBugReported, ThisSituationShouldntCrash)TEST521,18858
 
-BrandNew\CppUTest-v2.2d\tests\MemoryLeakOperatorOverloadsTest.cpp,2176
+BrandNew\CppUTest\tests\MemoryLeakOperatorOverloadsTest.cpp,2176
 TEST_GROUP(MemoryLeakOverridesToBeUsedInProductionCode)TEST_GROUP14,307
 TEST(MemoryLeakOverridesToBeUsedInProductionCode, UseNativeMallocByTemporarlySwitchingOffMalloc)TEST24,494
 	#undef mallocmalloc28,701
@@ -3804,7 +3809,7 @@ TEST(OutOfMemoryTestsForOperatorNew, FailingNewArrayOperatorThrowsAnExceptionWhe
 TEST(OutOfMemoryTestsForOperatorNew, FailingNewOperatorReturnsNullWithoutOverride)TEST208,5090
 TEST(OutOfMemoryTestsForOperatorNew, FailingNewArrayOperatorReturnsNullWithoutOverride)TEST213,5211
 
-BrandNew\CppUTest-v2.2d\tests\MemoryLeakWarningTest.cpp,833
+BrandNew\CppUTest\tests\MemoryLeakWarningTest.cpp,833
 static char* leak1;leak136,1877
 static long* leak2;leak237,1897
 class DummyReporter: public MemoryLeakFailureDummyReporter39,1918
@@ -3822,13 +3827,13 @@ TEST(MemoryLeakWarningTest, Ignore2)TEST106,3318
 static void _failAndLeakMemory()_failAndLeakMemory113,3471
 TEST(MemoryLeakWarningTest, FailingTestDoesNotReportMemoryLeaks)TEST119,3567
 
-BrandNew\CppUTest-v2.2d\tests\NullTestTest.cpp,175
+BrandNew\CppUTest\tests\NullTestTest.cpp,175
 TEST_GROUP(NullTest)TEST_GROUP30,1668
 TEST(NullTest, Create)TEST45,1824
 TEST(NullTest, InstanceAlwaysTheSame)TEST49,1856
 TEST(NullTest, NullTestsDontCount)TEST55,1995
 
-BrandNew\CppUTest-v2.2d\tests\PluginTest.cpp,1555
+BrandNew\CppUTest\tests\PluginTest.cpp,1555
 #define GENERIC_PLUGIN GENERIC_PLUGIN33,1780
 #define GENERIC_PLUGIN2 GENERIC_PLUGIN234,1821
 #define GENERIC_PLUGIN3 GENERIC_PLUGIN335,1863
@@ -3857,9 +3862,9 @@ TEST(PluginTest, DisablesPluginsDontRun)TEST155,4638
 TEST(PluginTest, ParseArgumentsForUnknownArgumentsFails)TEST168,4992
 TEST(PluginTest, ParseArgumentsContinuesAndSucceedsWhenAPluginCanParse)TEST175,5241
 
-BrandNew\CppUTest-v2.2d\tests\RunAllTests.sh,0
+BrandNew\CppUTest\tests\RunAllTests.sh,0
 
-BrandNew\CppUTest-v2.2d\tests\SetPluginTest.cpp,1091
+BrandNew\CppUTest\tests\SetPluginTest.cpp,1091
 void orig_func1()orig_func16,141
 void stub_func1()stub_func110,168
 void orig_func2()orig_func214,195
@@ -3884,7 +3889,7 @@ class SetDoublePointerUtest: public UtestSetDoublePointerUtest115,2132
 	void testBody()testBody122,2256
 TEST(SetPointerPluginTest, doublePointer)TEST128,2331
 
-BrandNew\CppUTest-v2.2d\tests\SimpleStringTest.cpp,3624
+BrandNew\CppUTest\tests\SimpleStringTest.cpp,3624
 TEST_GROUP(SimpleString)TEST_GROUP34,1817
 TEST(SimpleString, defaultAllocatorIsNewArrayAllocator)TEST38,1852
 class MyOwnStringAllocator : public StandardMallocAllocatorMyOwnStringAllocator43,2023
@@ -3950,7 +3955,7 @@ TEST(SimpleString, Uint32_t)TEST515,12575
 TEST(SimpleString, Uint16_t)TEST523,12731
 TEST(SimpleString, Uint8_t)TEST531,12874
 
-BrandNew\CppUTest-v2.2d\tests\TestFailureTest.cpp,1511
+BrandNew\CppUTest\tests\TestFailureTest.cpp,1511
 const int failLineNumber = 2;failLineNumber33,1716
 const char* failFileName = "fail.cpp";failFileName34,1747
 static double zero = 0.0;zero37,1792
@@ -3979,7 +3984,7 @@ TEST(TestFailure, DoublesEqualExpectedIsNaN)TEST201,7177
 TEST(TestFailure, DoublesEqualActualIsNaN)TEST209,7471
 TEST(TestFailure, DoublesEqualThresholdIsNaN)TEST217,7763
 
-BrandNew\CppUTest-v2.2d\tests\TestHarness_cTest.cpp,991
+BrandNew\CppUTest\tests\TestHarness_cTest.cpp,991
 #define _WCHART_WCHART30,1646
 TEST_GROUP(TestHarness_c)TEST_GROUP41,1924
 void _failIntMethod()_failIntMethod54,2098
@@ -4002,15 +4007,15 @@ TEST(TestHarness_c, cpputest_realloc_larger)TEST169,4556
 TEST(TestHarness_c, macros)TEST186,4907
 TEST(TestHarness_c, callocInitializedToZero)TEST195,5065
 
-BrandNew\CppUTest-v2.2d\tests\TestHarness_cTestCFile.c,98
+BrandNew\CppUTest\tests\TestHarness_cTestCFile.c,98
 void functionWithUnusedParameter(void* PUNUSED(unlessParamater))functionWithUnusedParameter4,38
 
-BrandNew\CppUTest-v2.2d\tests\TestInstallerTest.cpp,129
+BrandNew\CppUTest\tests\TestInstallerTest.cpp,129
 static NullTest nullTest;nullTest35,1855
 TEST_GROUP(TestInstaller)TEST_GROUP37,1884
 TEST(TestInstaller, Create)TEST56,2317
 
-BrandNew\CppUTest-v2.2d\tests\TestOutputTest.cpp,1057
+BrandNew\CppUTest\tests\TestOutputTest.cpp,1057
 static long millisTime;millisTime33,1753
 static long MockGetPlatformSpecificTimeInMillis()MockGetPlatformSpecificTimeInMillis35,1778
 TEST_GROUP(TestOutput)TEST_GROUP40,1853
@@ -4032,7 +4037,7 @@ TEST(TestOutput, PrintTestStarts)TEST178,5203
 TEST(TestOutput, printTestsEnded)TEST184,5326
 TEST(TestOutput, printTestsEndedWithFailures)TEST197,5681
 
-BrandNew\CppUTest-v2.2d\tests\TestRegistryTest.cpp,1810
+BrandNew\CppUTest\tests\TestRegistryTest.cpp,1810
 void stub()stub34,1752
 const int testLineNumber = 1;testLineNumber37,1771
 class MockTest: public UtestMockTest40,1807
@@ -4067,12 +4072,12 @@ TEST(TestRegistry, unDoTest)TEST206,5364
 TEST(TestRegistry, unDoButNoTest)TEST214,5545
 TEST(TestRegistry, reallyUndoLastTest)TEST221,5701
 
-BrandNew\CppUTest-v2.2d\tests\TestResultTest.cpp,209
+BrandNew\CppUTest\tests\TestResultTest.cpp,209
 static long MockGetPlatformSpecificTimeInMillis()MockGetPlatformSpecificTimeInMillis32,1751
 TEST_GROUP(TestResult)TEST_GROUP37,1823
 TEST(TestResult, TestEndedWillPrintResultsAndExecutionTime)TEST59,2235
 
-BrandNew\CppUTest-v2.2d\tests\UtestTest.cpp,2743
+BrandNew\CppUTest\tests\UtestTest.cpp,2743
 static bool afterCheck;afterCheck33,1780
 TEST_GROUP(Utest)TEST_GROUP35,1807
 static void _passMethod()_passMethod67,2451
@@ -4122,16 +4127,6 @@ TEST_GROUP_BASE(UtestMyOwn, MyOwnTest)TEST_GROUP_BASE405,9178
 TEST(UtestMyOwn, test)TEST409,9227
 class NullParameterTest: public UtestNullParameterTest414,9276
 TEST(UtestMyOwn, NullParameters)TEST418,9324
-
-BrandNew\tests\test_led_blink.cpp,297
-#define HIGH HIGH3,47
-#define LOW LOW4,65
-#define INPUT INPUT6,85
-#define OUTPUT OUTPUT7,104
-TEST_GROUP(LedBlink) {TEST_GROUP9,126
-TEST(LedBlink, test_press_and_led_on) {TEST18,220
-TEST(LedBlink, test_press_and_led_on) {TEST25,360
-TEST(LedBlink, test_press_and_led_on) {TEST33,523
 
 build_ctags.bat,0
 
