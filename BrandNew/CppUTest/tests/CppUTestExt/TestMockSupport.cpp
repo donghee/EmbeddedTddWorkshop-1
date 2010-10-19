@@ -27,10 +27,30 @@
 
 #include "CppUTest/TestHarness.h"
 #include "CppUTestExt/MockSupport.h"
-#include "CppUTestExt/MockExpectedFunctionCall.h"
-#include "CppUTestExt/MockFailure.h"
-#include "TestMockFailure.h"
+//#include "CppUTestExt/MockExpectedFunctionCall.h"
+//#include "CppUTestExt/MockFailure.h"
+//#include "TestMockFailure.h"
+//
 
+
+TEST_GROUP(MockDocumentation)
+{
+};
+
+void productionCode()
+{
+    mock().actualCall("productionCode");
+}
+
+TEST(MockDocumentation, SimpleScenario)
+{
+    mock().expectOneCall("productionCode");
+    productionCode();
+    mock().checkExpectations();
+    //CHECK_NO_MOCK_FAILURE();
+}
+
+/*
 TEST_GROUP(MockSupportTest)
 {
 	MockExpectedFunctionsList *expectationsList;
@@ -771,3 +791,4 @@ TEST(MockSupportTest, tracing)
 	STRCMP_CONTAINS("boo", mock().getTraceOutput());
 	STRCMP_CONTAINS("foo", mock().getTraceOutput());
 }
+*/

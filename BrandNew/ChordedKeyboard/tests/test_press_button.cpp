@@ -1,12 +1,19 @@
 #include "CppUTest/TestHarness.h"
 #include "CppUTestExt/MockSupport.h"
 
-extern "C" {
-	#include "CppUTestExt/MockSupport_c.h"
-}
+//MockSupport mock;
 
+//extern "C" {
+//	#include "CppUTestExt/MockSupport_c.h"
+//}
+//
 TEST_GROUP(PressButton)
 {
+    void setup() {
+    }
+    void teardown() {
+        mock().clear();
+    }
 };
 
 void _button_pressed()

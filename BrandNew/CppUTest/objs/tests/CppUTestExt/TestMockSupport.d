@@ -15,8 +15,7 @@ objs/tests/CppUTestExt/TestMockSupport.o: \
  include/CppUTest/TestFailure.h include/CppUTestExt/MockFunctionCall.h \
  include/CppUTestExt/MockNamedValue.h \
  include/CppUTestExt/MockExpectedFunctionCall.h \
- include/CppUTestExt/MockExpectedFunctionsList.h \
- tests/CppUTestExt/TestMockFailure.h
+ include/CppUTestExt/MockExpectedFunctionsList.h
 
 include/CppUTest/MemoryLeakDetectorNewMacros.h:
 
@@ -59,5 +58,3 @@ include/CppUTestExt/MockNamedValue.h:
 include/CppUTestExt/MockExpectedFunctionCall.h:
 
 include/CppUTestExt/MockExpectedFunctionsList.h:
-
-tests/CppUTestExt/TestMockFailure.h:

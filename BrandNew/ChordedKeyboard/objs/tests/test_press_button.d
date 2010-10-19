@@ -74,5 +74,4 @@ objs/tests/test_press_button.o objs/tests/test_press_button.d: \
  ../CppUTest/include/CppUTestExt/MockFunctionCall.h \
  ../CppUTest/include/CppUTestExt/MockNamedValue.h \
  ../CppUTest/include/CppUTestExt/MockExpectedFunctionCall.h \
- ../CppUTest/include/CppUTestExt/MockExpectedFunctionsList.h \
- ../CppUTest/include/CppUTestExt/MockSupport_c.h
+ ../CppUTest/include/CppUTestExt/MockExpectedFunctionsList.h
