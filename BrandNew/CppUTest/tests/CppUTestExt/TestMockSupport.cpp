@@ -27,30 +27,10 @@
 
 #include "CppUTest/TestHarness.h"
 #include "CppUTestExt/MockSupport.h"
-//#include "CppUTestExt/MockExpectedFunctionCall.h"
-//#include "CppUTestExt/MockFailure.h"
-//#include "TestMockFailure.h"
-//
+#include "CppUTestExt/MockExpectedFunctionCall.h"
+#include "CppUTestExt/MockFailure.h"
+#include "TestMockFailure.h"
 
-
-TEST_GROUP(MockDocumentation)
-{
-};
-
-void productionCode()
-{
-    mock().actualCall("productionCode");
-}
-
-TEST(MockDocumentation, SimpleScenario)
-{
-    mock().expectOneCall("productionCode");
-    productionCode();
-    mock().checkExpectations();
-    //CHECK_NO_MOCK_FAILURE();
-}
-
-/*
 TEST_GROUP(MockSupportTest)
 {
 	MockExpectedFunctionsList *expectationsList;
@@ -685,10 +665,35 @@ TEST(MockSupportTest, IntegerReturnValueSetsDifferentValues)
 	mock().expectOneCall("foo").andReturnValue(1);
 	mock().expectOneCall("foo").andReturnValue(2);
 
-	mock().actualCall("foo").returnValue();
+	LONGS_EQUAL(1, mock().actualCall("foo").returnValue().getIntValue());
+	LONGS_EQUAL(1, mock().returnValue().getIntValue());
+	LONGS_EQUAL(2, mock().actualCall("foo").returnValue().getIntValue());
+	LONGS_EQUAL(2, mock().returnValue().getIntValue());
 
-	MockCannotSetDifferentReturnValuesForSameFunctionFailure expectedFailure(mockFailureTest(), "foo");
-	CHECK_EXPECTED_MOCK_FAILURE(expectedFailure);
+}
+
+TEST(MockSupportTest, IntegerReturnValueSetsDifferentValuesWhileParametersAreIgnored)
+{
+	mock().expectOneCall("foo").withParameter("p1", 1).ignoreOtherParameters().andReturnValue(1);
+	mock().expectOneCall("foo").withParameter("p1", 1).ignoreOtherParameters().andReturnValue(2);
+
+	LONGS_EQUAL(1, mock().actualCall("foo").withParameter("p1", 1).returnValue().getIntValue());
+	LONGS_EQUAL(1, mock().returnValue().getIntValue());
+	LONGS_EQUAL(2, mock().actualCall("foo").withParameter("p1", 1).returnValue().getIntValue());
+	LONGS_EQUAL(2, mock().returnValue().getIntValue());
+}
+
+TEST(MockSupportTest, MatchingReturnValueOnWhileSignature)
+{
+	mock().expectOneCall("foo").withParameter("p1", 1).andReturnValue(1);
+	mock().expectOneCall("foo").withParameter("p1", 2).andReturnValue(2);
+	mock().expectOneCall("foo").withParameter("p1", 3).andReturnValue(3);
+	mock().expectOneCall("foo").ignoreOtherParameters().andReturnValue(4);
+
+	LONGS_EQUAL(3, mock().actualCall("foo").withParameter("p1", 3).returnValue().getIntValue());
+	LONGS_EQUAL(4, mock().actualCall("foo").withParameter("p1", 4).returnValue().getIntValue());
+	LONGS_EQUAL(1, mock().actualCall("foo").withParameter("p1", 1).returnValue().getIntValue());
+	LONGS_EQUAL(2, mock().actualCall("foo").withParameter("p1", 2).returnValue().getIntValue());
 }
 
 TEST(MockSupportTest, StringReturnValue)
@@ -791,4 +796,3 @@ TEST(MockSupportTest, tracing)
 	STRCMP_CONTAINS("boo", mock().getTraceOutput());
 	STRCMP_CONTAINS("foo", mock().getTraceOutput());
 }
-*/
