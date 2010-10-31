@@ -2,54 +2,68 @@
 #SILENCE = @
 
 #---- Outputs ----#
-COMPONENT_NAME = Keyevent
+COMPONENT_NAME = PressButton
 TARGET_LIB = \
-    lib/lib$(COMPONENT_NAME).a
+	lib/lib$(COMPONENT_NAME).a 
 
 TEST_TARGET = \
-    $(COMPONENT_NAME)_tests
+	$(COMPONENT_NAME)_tests
 
 #--- Inputs ----#
 PROJECT_HOME_DIR = .
-ifeq "$(CPPUTEST_HOME)" "" 
-    CPPUTEST_HOME = ../CppUTest
+CPPUTEST_HOME = ../CppUTest
+
+CPPUTEST_USE_EXTENSIONS = Y
+CPP_PLATFORM = Gcc
+
+##
+#WARNINGFLAGS += -pedantic-errors -Wconversion -Wshadow  -Wextra
+WARNINGFLAGS += -Wall -Werror -Wswitch-default -Wswitch-enum 
+MEMLEAK_DETECTOR_NEW_MACROS += -include $(CPPUTEST_HOME)/include/CppUTest/MemoryLeakDetectorNewMacros.h
+MEMLEAK_DETECTOR_MALLOC_MACROS += -include $(CPPUTEST_HOME)/include/CppUTest/MemoryLeakDetectorMallocMacros.h
+
+ifeq ($(CPPUTEST_USE_MEM_LEAK_DETECTION), N)
+CPPUTEST_CPPFLAGS += -DCPPUTEST_MEM_LEAK_DETECTION_DISABLED
 endif
 
-#CFLAGS are set to override malloc and free to get memory leak detection in C programs
-CFLAGS = -Dmalloc=cpputest_malloc -Dfree=cpputest_free
-CPPFLAGS = -Wall
+ifeq ($(ENABLE_DEBUG), Y)
+CPPUTEST_CPPFLAGS += -g
+endif
+
+ifeq ($(CPPUTEST_USE_STD_CPP_LIB), N)
+CPPUTEST_CPPFLAGS += -DCPPUTEST_STD_CPP_LIB_DISABLED
+CPPUTEST_CXXFLAGS += -nostdinc++
+endif
+
+CPPUTEST_CPPFLAGS += $(WARNINGFLAGS)
+CPPUTEST_CXXFLAGS += $(MEMLEAK_DETECTOR_NEW_MACROS)
+CPPUTEST_CFLAGS += $(MEMLEAK_DETECTOR_MALLOC_MACROS)
+##
 #GCOVFLAGS = -fprofile-arcs -ftest-coverage
 
-#includes for all compiles
-#a list of -I's are created from these directories
-
-INCLUDE_DIRS =\
-  .\
-  include\
-  include/*\
-  $(CPPUTEST_HOME)/include/
-
 #SRC_DIRS is a list of source directories that make up the target library
+#If test files are in these directories, their IMPORT_TEST_GROUPs need
+#to be included in main to force them to be linked in.  By convention
+#put them into an AllTests.h file in each directory
 SRC_DIRS = \
-    src\
-    src/*
+	src \
 
 #TEST_SRC_DIRS is a list of directories including 
-# - A test main (AllTests.cpp by convention)
+# - A test main (AllTests.cpp by conventin)
 # - OBJ files in these directories are included in the TEST_TARGET
+# - Consequently - AllTests.h containing the IMPORT_TEST_GROUPS is not needed
+# - 
 TEST_SRC_DIRS = \
-    tests \
-    tests/*
+	tests \
 
-# - OBJ files in these directories are included in the TEST_TARGET
-MOCKS_SRC_DIRS = \
-    mocks
+#includes for all compiles	
+INCLUDE_DIRS =\
+  $(CPPUTEST_HOME)/include/\
+  include/\
+  mocks
 
 #Flags to pass to ld
 LDFLAGS +=
 LD_LIBRARIES += -lstdc++
 
 include $(CPPUTEST_HOME)/build/ComponentMakefile
-
-set_test:
-	set
