@@ -7,3 +7,11 @@
 *.sym
 cu
 *~
+*.exe
+*.a
+*.so
+*.lib
+*.swp
+
+# Ignore the SVN directories
+\B.svn\b

@@ -19,28 +19,24 @@ TEST_GROUP(PressButton)
 
     }
     void teardown() {
-        mock().clear();
     }
 };
 
 TEST(PressButton, test_start) {
     mock().expectOneCall("loop_step").andReturnValue(1);
 	start();
-    mock().checkExpectations();
 }
 
 TEST(PressButton, test_multiful_loop_step) {    
     mock().expectOneCall("loop_step").andReturnValue(0);
     mock().expectOneCall("loop_step").andReturnValue(1); 
     start();
-    mock().checkExpectations();
 
     int _nloop=5;
     int shd_stop=1;
     mock().expectNCalls(_nloop-1, "loop_step").andReturnValue(!shd_stop);
     mock().expectOneCall("loop_step").andReturnValue(shd_stop);
 	start();
-    mock().checkExpectations();
 }
 
 
@@ -76,20 +72,16 @@ TEST(LoopStepProcess, test_press_and_led_on)
     mock().expectOneCall("led_on");
  	//when button is pressed
     _button_pressed();
-    // 	expect_call_led_on();
-    mock().checkExpectations();
 }
 
 TEST(LoopStepProcess, test_loop_step_process) {
     mock().expectOneCall("is_pressed").andReturnValue(1);
-    mock().expectOneCall("led_on");
+    mock().expectOneCall("led_on"); 
 	loop_step();
-    mock().checkExpectations();
 }
 
 TEST(LoopStepProcess, test_loop_step_process2) {
     mock().expectOneCall("is_pressed").andReturnValue(0);
     mock().expectOneCall("led_off");
     loop_step();
-    mock().checkExpectations();
 }
