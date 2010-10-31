@@ -29,7 +29,7 @@ TEST(PressButton, test_start) {
 
 TEST(PressButton, test_multiful_loop_step) {    
     mock().expectOneCall("loop_step").andReturnValue(0);
-    mock().expectOneCall("loop_step").andReturnValue(1); 
+    mock().expectOneCall("loop_step").andReturnValue(1);
     start();
 
     int _nloop=5;
@@ -63,7 +63,6 @@ TEST_GROUP(LoopStepProcess)
     }
 
     void teardown() {
-        mock().clear();
     }
 };
 

@@ -12,6 +12,7 @@ cu
 *.so
 *.lib
 *.swp
+*.d
 
 # Ignore the SVN directories
 \B.svn\b
