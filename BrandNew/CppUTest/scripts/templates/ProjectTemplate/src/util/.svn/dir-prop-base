@@ -1,0 +1,35 @@
+K 10
+svn:ignore
+V 212
+*.d
+Debug
+*.exe
+*.obj
+*.o
+*.a
+*.ncb
+*.opt
+*.plg
+*.idb
+*.pdb
+*.lib
+.settings
+doxygen
+*.gcov
+*.gcno
+*.gcda
+cpputest_*.xml
+junit_run_output
+gcov_report.txt.html
+CppUTest_tests
+CppUTest_Bas_tests
+Releases
+objs
+gcov
+
+
+K 13
+svn:mergeinfo
+V 0
+
+END

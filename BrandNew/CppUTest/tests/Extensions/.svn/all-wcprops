@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/cpputest/!svn/ver/551/trunk/tests/Extensions
+END
+AllTests.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/cpputest/!svn/ver/403/trunk/tests/Extensions/AllTests.h
+END
+SimpleStringExtensionsTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/cpputest/!svn/ver/403/trunk/tests/Extensions/SimpleStringExtensionsTest.cpp
+END
+TestOrderedTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/cpputest/!svn/ver/449/trunk/tests/Extensions/TestOrderedTest.cpp
+END
+SimpleStringFromStdintTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/cpputest/!svn/ver/403/trunk/tests/Extensions/SimpleStringFromStdintTest.cpp
+END
