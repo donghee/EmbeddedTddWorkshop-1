@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 60
-/svnroot/cpputest/!svn/ver/551/trunk/examples/ApplicationLib
+/svnroot/cpputest/!svn/ver/591/trunk/examples/ApplicationLib
 END
 CircularBufferTest.cpp
 K 25
@@ -79,7 +79,7 @@ MockDocumentationTest.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 86
-/svnroot/cpputest/!svn/ver/551/trunk/examples/ApplicationLib/MockDocumentationTest.cpp
+/svnroot/cpputest/!svn/ver/591/trunk/examples/ApplicationLib/MockDocumentationTest.cpp
 END
 Printer.h
 K 25

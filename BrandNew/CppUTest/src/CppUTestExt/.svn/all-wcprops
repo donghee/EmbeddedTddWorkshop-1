@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 52
-/svnroot/cpputest/!svn/ver/587/trunk/src/CppUTestExt
+/svnroot/cpputest/!svn/ver/591/trunk/src/CppUTestExt
 END
 MockExpectedFunctionsList.cpp
 K 25
@@ -61,7 +61,7 @@ MockSupport_c.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 70
-/svnroot/cpputest/!svn/ver/543/trunk/src/CppUTestExt/MockSupport_c.cpp
+/svnroot/cpputest/!svn/ver/591/trunk/src/CppUTestExt/MockSupport_c.cpp
 END
 MemoryReporterPlugin.cpp
 K 25

@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 54
-/svnroot/cpputest/!svn/ver/587/trunk/tests/CppUTestExt
+/svnroot/cpputest/!svn/ver/591/trunk/tests/CppUTestExt
 END
 TestMockSupport_cCFile.h
 K 25
@@ -85,7 +85,7 @@ TestMockSupport_c.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 76
-/svnroot/cpputest/!svn/ver/585/trunk/tests/CppUTestExt/TestMockSupport_c.cpp
+/svnroot/cpputest/!svn/ver/591/trunk/tests/CppUTestExt/TestMockSupport_c.cpp
 END
 TestMemoryReportFormatter.cpp
 K 25
@@ -97,7 +97,7 @@ TestMockSupport_cCFile.c
 K 25
 svn:wc:ra_dav:version-url
 V 79
-/svnroot/cpputest/!svn/ver/542/trunk/tests/CppUTestExt/TestMockSupport_cCFile.c
+/svnroot/cpputest/!svn/ver/591/trunk/tests/CppUTestExt/TestMockSupport_cCFile.c
 END
 AllTests.cpp
 K 25
