@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svnroot/cpputest/!svn/ver/583/trunk/scripts
+END
+ReleaseCppUTest.sh
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/cpputest/!svn/ver/583/trunk/scripts/ReleaseCppUTest.sh
+END
+NewInterface.sh
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/cpputest/!svn/ver/237/trunk/scripts/NewInterface.sh
+END
+NewCInterface.sh
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/cpputest/!svn/ver/286/trunk/scripts/NewCInterface.sh
+END
+NewLibrary.sh
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/cpputest/!svn/ver/183/trunk/scripts/NewLibrary.sh
+END
+InstallScripts.sh
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/cpputest/!svn/ver/388/trunk/scripts/InstallScripts.sh
+END
+NewClass.sh
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/cpputest/!svn/ver/551/trunk/scripts/NewClass.sh
+END
+reformat.sh
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/cpputest/!svn/ver/235/trunk/scripts/reformat.sh
+END
+svnignore.txt
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/cpputest/!svn/ver/285/trunk/scripts/svnignore.txt
+END
+NewProject.sh
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/cpputest/!svn/ver/395/trunk/scripts/NewProject.sh
+END
+squeeze.sh
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/cpputest/!svn/ver/108/trunk/scripts/squeeze.sh
+END
+zipExclude.txt
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/cpputest/!svn/ver/429/trunk/scripts/zipExclude.txt
+END
+GenerateSrcFiles.sh
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/cpputest/!svn/ver/299/trunk/scripts/GenerateSrcFiles.sh
+END
+NewPackageDirs.sh
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/cpputest/!svn/ver/286/trunk/scripts/NewPackageDirs.sh
+END
+NewCmiModule.sh
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/cpputest/!svn/ver/237/trunk/scripts/NewCmiModule.sh
+END
+checkForCppUTestEnvVariable.sh
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/cpputest/!svn/ver/108/trunk/scripts/checkForCppUTestEnvVariable.sh
+END
+NewCBaseModule.sh
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/cpputest/!svn/ver/419/trunk/scripts/NewCBaseModule.sh
+END
+NewCIoDriver.sh
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/cpputest/!svn/ver/388/trunk/scripts/NewCIoDriver.sh
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/cpputest/!svn/ver/237/trunk/scripts/README.txt
+END
+NewHelp.sh
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/cpputest/!svn/ver/375/trunk/scripts/NewHelp.sh
+END
+NewCModule.sh
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/cpputest/!svn/ver/237/trunk/scripts/NewCModule.sh
+END
+NewCFunction.sh
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/cpputest/!svn/ver/374/trunk/scripts/NewCFunction.sh
+END
+filterGcov.sh
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/cpputest/!svn/ver/551/trunk/scripts/filterGcov.sh
+END
