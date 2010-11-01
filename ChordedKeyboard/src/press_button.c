@@ -4,22 +4,18 @@
 
 int imp_is_pressed()
 {
-    //    printf("IMP: is pressed");
-    return digitalRead(5);
-    //    return 0;
+    return !digitalRead(5);
     //TODO: check real pin
 }
 
 void imp_led_on()
 {
-    // printf("IMP: turn led on");
     digitalWrite(13, HIGH);    
     //TODO: put real pin setting code
 }
 
 void imp_led_off()
 {
-    //    printf("IMP: turn led off");
     digitalWrite(13, LOW);        
     //TODO: put real pin setting code
 }
