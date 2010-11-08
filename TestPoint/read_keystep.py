@@ -1,6 +1,6 @@
 import serial,sys
 filename = 'i.log'
-s=serial.Serial("Com1", 1200)
+s=serial.Serial("Com1", 9600)
 f=open(filename,'w')
 event = None
 value = None

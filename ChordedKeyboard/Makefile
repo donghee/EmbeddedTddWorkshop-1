@@ -50,7 +50,6 @@ CPPUTEST_CFLAGS += $(MEMLEAK_DETECTOR_MALLOC_MACROS)
 #to be included in main to force them to be linked in.  By convention
 #put them into an AllTests.h file in each directory
 SRC_DIRS = \
-    src/util \
 	src \
 
 #TEST_SRC_DIRS is a list of directories including 
@@ -65,7 +64,6 @@ TEST_SRC_DIRS = \
 INCLUDE_DIRS =\
   $(CPPUTEST_HOME)/include/\
   include/\
-  include/util/\
   mocks/\
 #  $(ARDUINO_HOME)/\
 

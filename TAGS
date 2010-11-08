@@ -895,28 +895,37 @@ int main(void) {main40,715
 
 build_ctags.bat,0
 
+ChordedKeyboard\include\debounce.h,72
+#define BUTTON_ON BUTTON_ON5,141
+#define BUTTON_OFF BUTTON_OFF6,162
+
 ChordedKeyboard\include\press_button.h,0
 
-ChordedKeyboard\include\util\WProgram.h,46
-#define HIGH HIGH4,64
-#define LOW LOW5,81
+ChordedKeyboard\src\debounce.c,215
+int debounce_time;debounce_time4,52
+void set_debounce_time(int millisecs) {set_debounce_time6,74
+int process_debouncing(int button_state) {process_debouncing10,152
+void (*_delay)(long unsigned);_delay19,341
 
-ChordedKeyboard\src\press_button.c,469
-int imp_is_pressed()imp_is_pressed5,74
-void imp_led_on()imp_led_on13,219
-void imp_led_off()imp_led_off20,354
-void button_pressed() button_pressed27,497
-void button_unpressed()button_unpressed32,544
-int imp_loop_step()imp_loop_step37,593
-void start()start47,753
-void (*led_on)()=imp_led_on;led_on56,860
-void (*led_off)()=imp_led_off;led_off57,890
-int (*loop_step)()=imp_loop_step;loop_step58,922
-int (*is_pressed)()=imp_is_pressed;is_pressed59,957
+ChordedKeyboard\src\press_button.c,312
+void button_pressed() button_pressed4,51
+void button_unpressed()button_unpressed9,98
+int imp_loop_step()imp_loop_step14,147
+void start()start24,307
+int (*loop_step)()=imp_loop_step;loop_step33,414
+void (*led_on)();led_on35,451
+void (*led_off)();led_off36,470
+int (*is_pressed)();is_pressed37,490
 
-ChordedKeyboard\src\util\WProgram.c,96
-void digitalWrite(int pin, int val)digitalWrite3,23
-int digitalRead(int pin)digitalRead8,76
+ChordedKeyboard\src\util\imp.c,371
+int imp_is_pressed()imp_is_pressed3,25
+void imp_led_on()imp_led_on9,112
+void imp_led_off()imp_led_off15,211
+void imp_delay(long unsigned millisecs) {imp_delay21,306
+void (*_delay)(long unsigned)=imp_delay;_delay25,377
+void (*led_on)()=imp_led_on;led_on26,419
+void (*led_off)()=imp_led_off;led_off27,449
+int (*is_pressed)()=imp_is_pressed;is_pressed28,481
 
 ChordedKeyboard\tests\AllTests.cpp,39
 int main(int ac, char** av)main7,163
@@ -926,9 +935,12 @@ IMPORT_TEST_GROUP(LoopStepProcess);LoopStepProcess1,0
 IMPORT_TEST_GROUP(PressButton);PressButton2,37
 IMPORT_TEST_GROUP(Debouncing);Debouncing3,70
 
-ChordedKeyboard\tests\test_debouncing.cpp,87
-TEST_GROUP(Debouncing)TEST_GROUP23,455
-TEST(Debouncing, test_debouncing)TEST33,557
+ChordedKeyboard\tests\test_debouncing.cpp,229
+TEST_GROUP(Debouncing)TEST_GROUP29,787
+TEST(Debouncing, test_button_on)TEST54,1397
+TEST(Debouncing, test_button_on1)TEST66,1807
+TEST(Debouncing, test_button_off)TEST77,2217
+TEST(Debouncing, test_button_off1)TEST87,2398
 
 ChordedKeyboard\tests\test_press_button.cpp,428
 TEST_GROUP(LoopStepProcess)TEST_GROUP10,115
@@ -4282,11 +4294,11 @@ TEST(UtestMyOwn, test)TEST407,9212
 class NullParameterTest: public UtestNullParameterTest412,9261
 TEST(UtestMyOwn, NullParameters)TEST416,9309
 
-src\main.cpp,125
-int ledPin =  13;ledPin8,117
-int buttonPin = 5;buttonPin9,136
-void setup()   {setup11,158
-int main(void) {main16,239
+src\main.cpp,126
+int ledPin =  13;ledPin9,167
+int buttonPin = 5;buttonPin10,186
+void setup()   {setup12,208
+int main(void) {main17,289
 
 TestPoint\read_keystep.py,475
 import serial,sysserial1,0

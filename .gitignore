@@ -17,3 +17,9 @@ cu
 
 # Ignore the SVN directories
 \B.svn\b
+
+# TAGS
+TAGS
+cscope*
+build*
+*objs

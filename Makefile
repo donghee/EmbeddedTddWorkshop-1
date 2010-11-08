@@ -18,7 +18,8 @@ CUT_INCLUDE = ChordedKeyboard/include
 CUT_SRC = ChordedKeyboard/src
 
 # Objects
-OBJS = press_button.o
+OBJS = press_button.o debounce.o 
+IMP_OBJS = imp.o
 CPP_OBJS = main.o 
 
 CFLAGS =  -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU=$(F_CPU) -I$(DIR_ARDUINO) -I$(CUT_INCLUDE)
@@ -28,11 +29,15 @@ RM := rm -rf
 
 # All Target
 all: clean
-all: OBJS += main.o 
+all: OBJS += $(IMP_OBJS)
+all: OBJS += $(CPP_OBJS)
 all: elf secondary-outputs
 
+$(OBJS): %.o: $(CUT_SRC)/%.c 
+	@echo 'Compile '
+	avr-gcc $(CFLAGS) $< -o $@
 
-$(OBJS): %.o: $(CUT_SRC)/%.c
+$(IMP_OBJS): %.o: $(CUT_SRC)/util/%.c 
 	@echo 'Compile '
 	avr-gcc $(CFLAGS) $< -o $@
 
@@ -40,10 +45,10 @@ $(CPP_OBJS): %.o: $(DIR_SRC)/%.cpp
 	@echo ' '
 	avr-g++ $(CPPFLAGS) $< -o $@
 
-elf: $(OBJS) $(CPP_OBJS) 
+elf: $(OBJS) $(IMP_OBJS) $(CPP_OBJS) 
 	@echo 'Building target: $(TARGET)'
 	@echo 'Invoking: AVR C++ Linker'
-	avr-gcc -Os -Wl,--gc-sections -mmcu=atmega168 -o $(TARGET).elf $(OBJS) $(DIR_ARDUINO)/Debug/libArduinoCore.a -L"../../ArduinoCore" -lm
+	avr-gcc -Os -Wl,--gc-sections -mmcu=atmega168 -o $(TARGET).elf	$(OBJS) $(DIR_ARDUINO)/Debug/libArduinoCore.a -L"../../ArduinoCore" -lm
 	@echo 'Finished building target: $(TARGET)'
 	@echo ' '
 
