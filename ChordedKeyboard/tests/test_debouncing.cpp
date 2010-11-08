@@ -24,7 +24,8 @@ TODO:
 extern "C"
 {
 #include "press_button.h"
-#include "debounce.h"                   
+#include "debounce.h"
+#include "event.h"
 }
 
 TEST_GROUP(Debouncing)
@@ -38,7 +39,9 @@ TEST_GROUP(Debouncing)
     
     static void mock_delay(long unsigned millisecs) {
         mock().actualCall("delay").withParameter("millisecs",(int) millisecs);
-    }    
+    }
+
+    
     int db_time;
     int button_state;
     void setup() {
@@ -50,29 +53,44 @@ TEST_GROUP(Debouncing)
     void teardown() {
         
     }
+
+    static void mock_expectCall_is_pressed_delay_is_pressed(int button1,
+                                                        int db_time,
+                                                        int button2 )
+    {
+        mock().expectOneCall("is_pressed").andReturnValue(button1);
+        mock().expectOneCall("delay").withParameter("millisecs",db_time);
+        mock().expectOneCall("is_pressed").andReturnValue(button2);
+    }
+    
 };
 
 TEST(Debouncing, test_button_on)
 {
-
     button_state = BUTTON_OFF;
     set_debounce_time(db_time);
-    mock().expectOneCall("is_pressed").andReturnValue(BUTTON_ON);
-    mock().expectOneCall("delay").withParameter("millisecs",db_time);
-    mock().expectOneCall("is_pressed").andReturnValue(BUTTON_ON);
+
+    mock_expectCall_is_pressed_delay_is_pressed(BUTTON_ON,db_time, BUTTON_ON);
+    // mock().expectOneCall("is_pressed").andReturnValue(BUTTON_ON);
+    // mock().expectOneCall("delay").withParameter("millisecs",db_time);
+    // mock().expectOneCall("is_pressed").andReturnValue(BUTTON_ON);
+
     button_state=process_debouncing(button_state);
-    LONGS_EQUAL(button_state , BUTTON_ON);
+    LONGS_EQUAL(BUTTON_ON,button_state);
 }
 
 TEST(Debouncing, test_button_on1)
 {
     button_state = BUTTON_OFF;
     set_debounce_time(db_time);
-    mock().expectOneCall("is_pressed").andReturnValue(BUTTON_ON);
-    mock().expectOneCall("delay").withParameter("millisecs",db_time);
-    mock().expectOneCall("is_pressed").andReturnValue(BUTTON_OFF);
+
+    mock_expectCall_is_pressed_delay_is_pressed(BUTTON_ON,db_time, BUTTON_OFF);
+    // mock().expectOneCall("is_pressed").andReturnValue(BUTTON_ON);
+    // mock().expectOneCall("delay").withParameter("millisecs",db_time);
+    // mock().expectOneCall("is_pressed").andReturnValue(BUTTON_OFF);
+
     button_state=process_debouncing(button_state);
-    LONGS_EQUAL(button_state, BUTTON_OFF);
+    LONGS_EQUAL(BUTTON_OFF, button_state);
 }
 
 TEST(Debouncing, test_button_off)
@@ -93,3 +111,18 @@ TEST(Debouncing, test_button_off1)
     // button is on
     // check expect
 }
+
+
+TEST(Debouncing, test_button_event)
+{
+    set_debounce_time(db_time);
+    int button_event = 0; //NOEVT = 0
+    mock_expectCall_is_pressed_delay_is_pressed(BUTTON_ON, db_time, BUTTON_ON);
+    button_event = get_event();
+    LONGS_EQUAL(PRESSED, button_event);
+
+    mock_expectCall_is_pressed_delay_is_pressed(BUTTON_OFF, db_time, BUTTON_OFF);
+    button_event = get_event();
+    LONGS_EQUAL(RELEASE, button_event);
+}
+

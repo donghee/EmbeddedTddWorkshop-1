@@ -67,7 +67,6 @@ void key_step(int k) {
 }
 
 int get_event() {
-
   if  (!p_key_state && key_state)
 	_event=PRESSED;
   else if (p_key_state && !key_state)

@@ -10,10 +10,8 @@
 
 extern "C"
 {
-#include "press_button.h"
 #include "debounce.h"
 #include "event.h"
-    //#include "press_button.h"
 }
 
 TEST_GROUP(ButtonEvent)
@@ -31,15 +29,15 @@ TEST_GROUP(ButtonEvent)
     }
 };
 
-TEST(ButtonEvent, test_press_event)
-{
-    // set p_button_state == BUTTON_OFF
-    int p_button_state = BUTTON_OFF;
-    int button_event = 0; //NOEVT = 0
-    // process debounce and return BUTTON_ON state
-    mock().expectOneCall("process_debouncing").withParameter("button_state",p_button_state).andReturnValue(BUTTON_ON);
-    // get_event(p_button_state, button_state) return PRESSED event
-    button_event = get_event();
-    LONGS_EQUAL(button_event, PRESSED);    
-    // assert event == PRESSED
-}
+// TEST(ButtonEvent, test_press_event)
+// {
+//     // set p_button_state == BUTTON_OFF
+//     int p_button_state = BUTTON_OFF;
+//     int button_event = 0; //NOEVT = 0
+//     // process debounce and return BUTTON_ON state
+//     mock().expectOneCall("process_debouncing").withParameter("button_state",p_button_state).andReturnValue(BUTTON_ON);
+//     // get_event(p_button_state, button_state) return PRESSED event
+//     button_event = get_event();
+//     LONGS_EQUAL(button_event, PRESSED);    
+//     // assert event == PRESSED
+// }
