@@ -1,4 +1,4 @@
-TODO: 
+﻿TODO: 
  X mock plugin 쓰도록 refactoring
  X 디렉토리 정리
  X _button_pressed에서 앞에 _ 빼기
@@ -10,8 +10,8 @@ TODO:
  X bouncing 처리 test 만들기/구현
  X led_on/ led_off 따로 분리하기
   X link-time substitute 제거하기 (레이어 추가) (util/imp.c)
- X 실제 통합테스트 
-  X testpoint로 bouncing처리 확인하기 <2010-11-08 월 10:41>
- * get_event 테스트 케이스 만들기 
+ X 실제 통합테스트
+  X testpoint로 bouncing처리 확인하기
+ X get_event 테스트 케이스 만들기
+  * NOEVT 테스트 케이스 
  * 두개 버튼 테스트 만들기
-

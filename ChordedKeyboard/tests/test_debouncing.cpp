@@ -13,8 +13,13 @@ TODO:
   X link-time substitute 제거하기 (레이어 추가) (util/imp.c)
  X 실제 통합테스트
   X testpoint로 bouncing처리 확인하기
- * get_event 테스트 케이스 만들기 
+ X get_event 테스트 케이스 만들기
+  * NOEVT 테스트 케이스
  * 두개 버튼 테스트 만들기
+ * 준비물 챙기기 (폼보드, 알루미늄테이프, 니퍼, 가위, 전선)
+ * mock expect button sequence ? scenario
+ * 개발환경 공유
+ 
 */
 
 
@@ -54,9 +59,7 @@ TEST_GROUP(Debouncing)
         
     }
 
-    static void mock_expectCall_is_pressed_delay_is_pressed(int button1,
-                                                        int db_time,
-                                                        int button2 )
+    static void mock_expect_button_sequence(int button1, int db_time, int button2 )
     {
         mock().expectOneCall("is_pressed").andReturnValue(button1);
         mock().expectOneCall("delay").withParameter("millisecs",db_time);
@@ -70,10 +73,7 @@ TEST(Debouncing, test_button_on)
     button_state = BUTTON_OFF;
     set_debounce_time(db_time);
 
-    mock_expectCall_is_pressed_delay_is_pressed(BUTTON_ON,db_time, BUTTON_ON);
-    // mock().expectOneCall("is_pressed").andReturnValue(BUTTON_ON);
-    // mock().expectOneCall("delay").withParameter("millisecs",db_time);
-    // mock().expectOneCall("is_pressed").andReturnValue(BUTTON_ON);
+    mock_expect_button_sequence(BUTTON_ON,db_time, BUTTON_ON);
 
     button_state=process_debouncing(button_state);
     LONGS_EQUAL(BUTTON_ON,button_state);
@@ -84,45 +84,32 @@ TEST(Debouncing, test_button_on1)
     button_state = BUTTON_OFF;
     set_debounce_time(db_time);
 
-    mock_expectCall_is_pressed_delay_is_pressed(BUTTON_ON,db_time, BUTTON_OFF);
-    // mock().expectOneCall("is_pressed").andReturnValue(BUTTON_ON);
-    // mock().expectOneCall("delay").withParameter("millisecs",db_time);
-    // mock().expectOneCall("is_pressed").andReturnValue(BUTTON_OFF);
+    mock_expect_button_sequence(BUTTON_ON,db_time, BUTTON_OFF);
 
     button_state=process_debouncing(button_state);
     LONGS_EQUAL(BUTTON_OFF, button_state);
 }
 
-TEST(Debouncing, test_button_off)
-{
-    // set debounce time
-    // invoke button off event signal
-    // before debounce time
-    // button is on
-    // check expect
-}
-
-
-TEST(Debouncing, test_button_off1)
-{
-    // set debounce time
-    // invoke button off event signal
-    // after debounce time
-    // button is on
-    // check expect
-}
-
-
 TEST(Debouncing, test_button_event)
 {
     set_debounce_time(db_time);
-    int button_event = 0; //NOEVT = 0
-    mock_expectCall_is_pressed_delay_is_pressed(BUTTON_ON, db_time, BUTTON_ON);
+    int button_event = 0; 
+    mock_expect_button_sequence(BUTTON_ON, db_time, BUTTON_ON);
     button_event = get_event();
     LONGS_EQUAL(PRESSED, button_event);
 
-    mock_expectCall_is_pressed_delay_is_pressed(BUTTON_OFF, db_time, BUTTON_OFF);
+    // p_button_state = ON
+    mock_expect_button_sequence(BUTTON_OFF, db_time, BUTTON_OFF);
     button_event = get_event();
     LONGS_EQUAL(RELEASE, button_event);
-}
 
+    // p_button_state = OFF
+    mock_expect_button_sequence(BUTTON_OFF, db_time, BUTTON_OFF);
+    button_event = get_event();
+    LONGS_EQUAL(NOEVT, button_event);
+
+    // TODO: make NOEVT test case
+    // mock_expectCall_is_pressed_delay_is_pressed(BUTTON_ON, db_time, BUTTON_OFF);
+    // button_event = get_event();
+    // LONGS_EQUAL(NOEVT, button_event);
+}

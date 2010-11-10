@@ -8,7 +8,8 @@ extern "C" {
 #define PRESSED 1
 #define RELEASE 2
 #define NOEVT 0
-    
+#define DEBOUNCE_DELAY 2
+
 int ledPin =  13;
 int buttonPin = 5;
 int button_state = BUTTON_OFF;
@@ -17,9 +18,9 @@ int p_button_state;
 void setup()   {
   pinMode(buttonPin, INPUT);
   pinMode(ledPin, OUTPUT);
-  set_debounce_time(20);
+  set_debounce_time(DEBOUNCE_DELAY);
   p_button_state = button_state;
-  Serial.begin(9600);
+  Serial.begin(38400);
 }
 
 int main(void) {
@@ -39,7 +40,7 @@ void loop() {
             Serial.print(RELEASE,DEC);
             // led_off();
         }else {
-            Serial.print(NOEVT,DEC);
+            // Serial.print(NOEVT,DEC);
         }
         p_button_state = button_state;
     }

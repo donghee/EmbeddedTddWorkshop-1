@@ -1,6 +1,9 @@
 import serial,sys
 filename = 'i.log'
-s=serial.Serial("Com1", 1200)
+print "> entered"
+s=serial.Serial("Com1", 38400)
+s.flush()
+print "> serial opened"
 f=open(filename,'w')
 event = None
 value = None
@@ -37,7 +40,7 @@ try:
             sys.stdout.write('P')
         if event=='RELEASED':
             sys.stdout.write('R')
-            sys.stdout.write('%03d'%i)
+            sys.stdout.write('%03d\n'%i)
             i+=1
         
         sys.stdout.flush()
@@ -45,9 +48,6 @@ try:
 
         
         f.flush()
-        
-except:
-	pass
 finally:
 	f.close()
 	s.close()

@@ -13,9 +13,6 @@ int process_debouncing(int button_state) {
         return is_pressed();
     }
     return button_state;
-    
 }
 
 void (*_delay)(long unsigned);
-
-
