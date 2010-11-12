@@ -16,8 +16,8 @@ TODO:
  X get_event 테스트 케이스 만들기
   * NOEVT 테스트 케이스
  * 두개 버튼 테스트 만들기
- * 준비물 챙기기 (폼보드, 알루미늄테이프, 니퍼, 가위, 전선)
- * mock expect button sequence ? scenario
+ X 준비물 챙기기 (폼보드, 알루미늄테이프, 니퍼, 가위, 전선)
+ X mock expect button sequence ? scenario
  * 개발환경 공유
  
 */
@@ -93,7 +93,7 @@ TEST(Debouncing, test_button_on1)
 TEST(Debouncing, test_button_event)
 {
     set_debounce_time(db_time);
-    int button_event = 0; 
+    int button_event = NOEVT; 
     mock_expect_button_sequence(BUTTON_ON, db_time, BUTTON_ON);
     button_event = get_event();
     LONGS_EQUAL(PRESSED, button_event);
@@ -104,12 +104,12 @@ TEST(Debouncing, test_button_event)
     LONGS_EQUAL(RELEASE, button_event);
 
     // p_button_state = OFF
-    mock_expect_button_sequence(BUTTON_OFF, db_time, BUTTON_OFF);
-    button_event = get_event();
-    LONGS_EQUAL(NOEVT, button_event);
-
-    // TODO: make NOEVT test case
-    // mock_expectCall_is_pressed_delay_is_pressed(BUTTON_ON, db_time, BUTTON_OFF);
+    // mock_expect_button_sequence(BUTTON_OFF, db_time, BUTTON_OFF);
     // button_event = get_event();
     // LONGS_EQUAL(NOEVT, button_event);
+
+    // TODO: make NOEVT test case
+    mock_expect_button_sequence(BUTTON_ON, db_time, BUTTON_OFF);
+    button_event = get_event();
+    LONGS_EQUAL(NOEVT, button_event);
 }

@@ -1,4 +1,4 @@
-cscope 15 C:\work\workspace\EmbeddedTddWorkshop"               0000531382
+cscope 15 C:\work\workspace\EmbeddedTddWorkshop"               0000519819
 	@C:\work\workspace\EmbeddedTddWorkshop\ArduinoCore\HardwareSerial.cpp
 
 22 
@@ -10011,1350 +10011,6 @@ LOW
 	}
 }
 
-	@C:\work\workspace\EmbeddedTddWorkshop\Blinky\Bounce.h
-
-27 #iâdeà
-Bounû_h
-
-
-28 
-	#Bounû_h
-
-
-	)
-
-30 
-	~<š‰y³s.h
->
-
-32 þas 
-	cBounû
-
-
-35 
-	mpublic
-:
-
-37 
-Bounû
-(
-ušt8_t
- 
-pš
-, 
-š‹rv®_mžlis
- );
-
-39 
-š‹rv®
-(
-š‹rv®_mžlis
-);
-
-43 
-upd©e
-();
-
-47 
-»bounû
-(
-š‹rv®
-);
-
-49 
-»ad
-();
-
-51 
-wr™e
-(
-Ãw_¡©e
-);
-
-53 
-du¿tiÚ
-();
-
-55 
-	m´Ùeùed
-:
-
-56 
-debounû
-();
-
-57 
-	m´evious_mžlis
-, 
-	mš‹rv®_mžlis
-, 
-	m»bounû_mžlis
-;
-
-58 
-ušt8_t
- 
-	m¡©e
-;
-
-59 
-ušt8_t
- 
-	mpš
-;
-
-	@C:\work\workspace\EmbeddedTddWorkshop\Blinky\Release\main.cpp
-
-1 
-	~<WProg¿m.h
->
-
-2 
-	~<m©h.h
->
-
-5 
-	~"../../ChÜdedKeybßrd/‹¡s/keyev’t.h
-"
-
-8 
-ËdPš
- = 13;
-
-10 
-boÞ—n
- 
-	gA
-;
-
-11 
-	gev’t
-;
-
-12 
-by‹
- 
-	gfœ¡A
-;
-
-13 
-by‹
- 
-	g£cÚdA
-;
-
-14 
-	ga
-;
-
-17 
-	$£tup
-() {
-
-19 
-	`pšMode
-(5, 
-INPUT
-);
-
-20 
-	`pšMode
-(
-ËdPš
-, 
-OUTPUT
-);
-
-21 
-S”Ÿl
-.
-	`begš
-(9600);
-
-22 
-	`£t_unû¹aš_couÁ
-(100);
-
-23 
-	}
-}
-
-25 
-	$maš
-() {
-
-27 
-	`š™
-();
-
-28 
-	`£tup
-();
-
-30 
-	`dig™®Wr™e
-(
-ËdPš
-, 
-HIGH
-);
-
-31 
-A
- = 
-	`dig™®R—d
-(5);
-
-32 ià(
-A
- =ð
-LOW
-) {
-
-33 
-	`key_¡•
-(
-ON
-);
-
-36 
-	`key_¡•
-(
-OFF
-);
-
-38 
-ev’t
- = 
-	`g‘_ev’t
-();
-
-39 ià(
-ev’t
- !ð
-NOEVT
-è
-S”Ÿl
-.
-	`´št
-Óv’t, 
-DEC
-);
-
-41 
-	}
-}
-
-	@C:\work\workspace\EmbeddedTddWorkshop\Blinky\Release\testpoint.cpp
-
-1 
-	~<WProg¿m.h
->
-
-2 
-	~<m©h.h
->
-
-4 
-	gËdPš
- = 13;
-
-6 
-boÞ—n
- 
-	gA
-;
-
-9 
-	$£tup
-() {
-
-11 
-	`pšMode
-(5, 
-INPUT
-);
-
-12 
-	`pšMode
-(
-ËdPš
-, 
-OUTPUT
-);
-
-13 
-S”Ÿl
-.
-	`begš
-(9600);
-
-14 
-	}
-}
-
-16 
-	$maš
-() {
-
-18 
-	`š™
-();
-
-19 
-	`£tup
-();
-
-21 
-	`dig™®Wr™e
-(
-ËdPš
-, 
-HIGH
-);
-
-22 
-A
- = 
-	`dig™®R—d
-(5);
-
-23 
-S”Ÿl
-.
-	`´št
-(
-A
-, 
-BYTE
-);
-
-25 
-	}
-}
-
-	@C:\work\workspace\EmbeddedTddWorkshop\Blinky\bounce.cpp
-
-1 
-	~<WProg¿m.h
->
-
-2 
-	~<m©h.h
->
-
-5 
-	gËdPš
- = 13;
-
-7 
-	gaPš
- = 3;
-
-8 
-	gbPš
- = 5;
-
-9 
-	gcPš
- = 6;
-
-10 
-	gdPš
- = 7;
-
-11 
-	gePš
- = 8;
-
-13 
-boÞ—n
- 
-	gA
-,
-	gB
-,
-	gC
-,
-	gD
-,
-	gE
-;
-
-16 
-	$£tup
-() {
-
-18 
-	`pšMode
-(
-aPš
-, 
-INPUT
-);
-
-19 
-	`pšMode
-(
-bPš
-, 
-INPUT
-);
-
-20 
-	`pšMode
-(
-cPš
-, 
-INPUT
-);
-
-21 
-	`pšMode
-(
-dPš
-, 
-INPUT
-);
-
-22 
-	`pšMode
-(
-ePš
-, 
-INPUT
-);
-
-24 
-	`pšMode
-(
-ËdPš
-, 
-OUTPUT
-);
-
-25 
-S”Ÿl
-.
-	`begš
-(9600);
-
-27 
-	}
-}
-
-29 
-	$bUpd©e
-() {
-
-31 
-	}
-}
-
-33 
-boÞ—n
- 
-	$bR—d
-(
-pš
-) {
-
-34 
-boÞ—n
- 
-v®ue
-;
-
-35 
-v®ue
- = 
-	`dig™®R—d
-(
-pš
-);
-
-36  
-v®ue
-;
-
-37 
-	}
-}
-
-39 
-	$maš
-() {
-
-41 
-	`š™
-();
-
-42 
-	`£tup
-();
-
-44 
-	`bUpd©e
-();
-
-45 
-A
- = 
-	`bR—d
-(
-aPš
-);
-
-46 
-	`dig™®Wr™e
-(
-ËdPš
-, !
-A
-);
-
-48 
-	}
-}
-
-	@C:\work\workspace\EmbeddedTddWorkshop\Blinky\bounce1.cpp
-
-1 
-	~<WProg¿m.h
->
-
-2 
-	~<m©h.h
->
-
-5 
-	gËdPš
- = 13;
-
-7 
-	gaPš
- = 3;
-
-8 
-	gbPš
- = 5;
-
-9 
-	gcPš
- = 6;
-
-10 
-	gdPš
- = 7;
-
-11 
-	gePš
- = 8;
-
-13 
-boÞ—n
- 
-	gA
-,
-	gB
-,
-	gC
-,
-	gD
-,
-	gE
-;
-
-18 
-	$£tup
-() {
-
-20 
-	`pšMode
-(
-aPš
-, 
-INPUT
-);
-
-21 
-	`pšMode
-(
-bPš
-, 
-INPUT
-);
-
-22 
-	`pšMode
-(
-cPš
-, 
-INPUT
-);
-
-23 
-	`pšMode
-(
-dPš
-, 
-INPUT
-);
-
-24 
-	`pšMode
-(
-ePš
-, 
-INPUT
-);
-
-25 
-	`pšMode
-(
-ËdPš
-, 
-OUTPUT
-);
-
-27 
-	}
-}
-
-30 
-	$maš
-() {
-
-32 
-	`š™
-();
-
-33 
-	`£tup
-();
-
-35 
-A
-ð
-	`dig™®R—d
-(
-ËdPš
-);
-
-37 
-	}
-}
-
-	@C:\work\workspace\EmbeddedTddWorkshop\Blinky\main.cpp
-
-1 
-	~<WProg¿m.h
->
-
-2 
-	~<m©h.h
->
-
-5 
-	~"../../ChÜdedKeybßrd/‹¡s/keyev’t.h
-"
-
-8 
-ËdPš
- = 13;
-
-10 
-boÞ—n
- 
-	gA
-;
-
-11 
-	gev’t
-;
-
-12 
-by‹
- 
-	gfœ¡A
-;
-
-13 
-by‹
- 
-	g£cÚdA
-;
-
-14 
-	ga
-;
-
-17 
-	$£tup
-() {
-
-19 
-	`pšMode
-(5, 
-INPUT
-);
-
-20 
-	`pšMode
-(
-ËdPš
-, 
-OUTPUT
-);
-
-21 
-S”Ÿl
-.
-	`begš
-(9600);
-
-22 
-	`£t_unû¹aš_couÁ
-(200);
-
-23 
-	}
-}
-
-25 
-	$maš
-() {
-
-27 
-	`š™
-();
-
-28 
-	`£tup
-();
-
-30 
-	`dig™®Wr™e
-(
-ËdPš
-, 
-HIGH
-);
-
-31 
-A
- = 
-	`dig™®R—d
-(5);
-
-33 ià(
-A
- =ð
-LOW
-) {
-
-34 
-	`key_¡•
-(
-ON
-);
-
-37 
-	`key_¡•
-(
-OFF
-);
-
-39 
-ev’t
- = 
-	`g‘_ev’t
-();
-
-40 ià(
-ev’t
- !ð
-NOEVT
-è
-S”Ÿl
-.
-	`´št
-Óv’t, 
-DEC
-);
-
-42 
-	}
-}
-
-	@C:\work\workspace\EmbeddedTddWorkshop\Blinky\testpoint.cpp
-
-1 
-	~<WProg¿m.h
->
-
-2 
-	~<m©h.h
->
-
-4 
-	gËdPš
- = 13;
-
-6 
-boÞ—n
- 
-	gA
-;
-
-9 
-	$£tup
-() {
-
-11 
-	`pšMode
-(5, 
-INPUT
-);
-
-12 
-	`pšMode
-(
-ËdPš
-, 
-OUTPUT
-);
-
-13 
-S”Ÿl
-.
-	`begš
-(9600);
-
-14 
-	}
-}
-
-16 
-	$maš
-() {
-
-18 
-	`š™
-();
-
-19 
-	`£tup
-();
-
-21 
-	`dig™®Wr™e
-(
-ËdPš
-, 
-HIGH
-);
-
-22 
-A
- = 
-	`dig™®R—d
-(5);
-
-23 
-S”Ÿl
-.
-	`´št
-(
-A
-, 
-BYTE
-);
-
-25 
-	}
-}
-
-	@C:\work\workspace\EmbeddedTddWorkshop\Blinky\testpoint.cpp~
-
-1 
-	~<WProg¿m.h
->
-
-2 
-	~<m©h.h
->
-
-4 
-	gËdPš
- = 13;
-
-6 
-boÞ—n
- 
-	gA
-;
-
-9 
-	$£tup
-() {
-
-11 
-	`pšMode
-(5, 
-INPUT
-);
-
-12 
-	`pšMode
-(
-ËdPš
-, 
-OUTPUT
-);
-
-13 
-S”Ÿl
-.
-	`begš
-(9600);
-
-14 
-	}
-}
-
-16 
-	$maš
-() {
-
-18 
-	`š™
-();
-
-19 
-	`£tup
-();
-
-21 
-	`dig™®Wr™e
-(
-ËdPš
-, 
-HIGH
-);
-
-22 
-A
- = 
-	`dig™®R—d
-(5);
-
-23 
-S”Ÿl
-.
-	`´št
-(
-A
-, 
-BYTE
-);
-
-25 
-	}
-}
-
-	@C:\work\workspace\EmbeddedTddWorkshop\Blinky\testpoint_inner.cpp
-
-1 
-	~<WProg¿m.h
->
-
-2 
-	~<m©h.h
->
-
-5 
-	~"../../ChÜdedKeybßrd/‹¡s/keyev’t.h
-"
-
-8 
-	#BUF_SIZE
- 700
-
-	)
-
-10 
-ËdPš
- = 13;
-
-12 
-boÞ—n
- 
-	gA
-;
-
-13 
-	gev’t
-;
-
-14 
-	gev’t_ÿÎs
-;
-
-16 
-by‹
- 
-	gfœ¡A
-;
-
-17 
-by‹
- 
-	g£cÚdA
-;
-
-18 
-	gi
-=0;
-
-21 
-	gbufãr
-[
-BUF_SIZE
-];
-
-24 
-	$£tup
-() {
-
-26 
-	`pšMode
-(5, 
-INPUT
-);
-
-27 
-	`pšMode
-(
-ËdPš
-, 
-OUTPUT
-);
-
-28 
-S”Ÿl
-.
-	`begš
-(1200);
-
-29 
-	`£t_unû¹aš_couÁ
-(200);
-
-30 
-	`dig™®Wr™e
-(
-ËdPš
-, 
-HIGH
-);
-
-31 
-	}
-}
-
-33 
-	$´štBufãr
-(){
-
-34 
-i
-=0; i< 
-BUF_SIZE
- ;i++) {
-
-36 
-S”Ÿl
-.
-	`´št
-(
-bufãr
-[
-i
-], 
-DEC
-);
-
-38 
-	}
-}
-
-40 
-	$maš
-() {
-
-41 
-ùime
-=0;
-
-42 
-k
-=0;
-
-44 
-	`š™
-();
-
-45 
-	`£tup
-();
-
-52 ;;
-k
-++) {
-
-53 
-A
- = 
-	`dig™®R—d
-(5);
-
-63 ià(
-A
- =ð
-LOW
-) {
-
-64 
-	`key_¡•
-(
-ON
-);
-
-67 
-	`key_¡•
-(
-OFF
-);
-
-69 
-ev’t
- = 
-	`g‘_ev’t
-();
-
-70 ià(
-ev’t
- !ð
-NOEVT
-è
-S”Ÿl
-.
-	`´št
-Óv’t, 
-DEC
-);
-
-99 
-	}
-}
-
-	@C:\work\workspace\EmbeddedTddWorkshop\Blinky\testpoint_inner.cpp~
-
-1 
-	~<WProg¿m.h
->
-
-2 
-	~<m©h.h
->
-
-5 
-	~"../../ChÜdedKeybßrd/‹¡s/keyev’t.h
-"
-
-8 
-	#BUF_SIZE
- 500
-
-	)
-
-10 
-ËdPš
- = 13;
-
-12 
-boÞ—n
- 
-	gA
-;
-
-13 
-	gev’t
-;
-
-14 
-by‹
- 
-	gfœ¡A
-;
-
-15 
-by‹
- 
-	g£cÚdA
-;
-
-16 
-	gi
-=0;
-
-18 
-	gbufãr
-[
-BUF_SIZE
-];
-
-21 
-	$£tup
-() {
-
-23 
-	`pšMode
-(5, 
-INPUT
-);
-
-24 
-	`pšMode
-(
-ËdPš
-, 
-OUTPUT
-);
-
-25 
-S”Ÿl
-.
-	`begš
-(9600);
-
-26 
-	`£t_unû¹aš_couÁ
-(100);
-
-27 
-	}
-}
-
-29 
-	$´štBufãr
-(){
-
-30 
-i
-=0; i< 
-BUF_SIZE
- ;i++) {
-
-31 
-S”Ÿl
-.
-	`´št
-(1,
-DEC
-);
-
-34 
-	}
-}
-
-36 
-	$maš
-() {
-
-38 
-	`š™
-();
-
-39 
-	`£tup
-();
-
-41 
-	`dig™®Wr™e
-(
-ËdPš
-, 
-HIGH
-);
-
-42 
-A
- = 
-	`dig™®R—d
-(5);
-
-43 ià(
-A
- =ð
-LOW
-) {
-
-44 
-	`key_¡•
-(
-ON
-);
-
-47 
-	`key_¡•
-(
-OFF
-);
-
-49 
-ev’t
- = 
-	`g‘_ev’t
-();
-
-52 
-bufãr
-[
-i
-] = 
-A
-;
-
-53 
-i
-++;
-
-55 ià(
-ev’t
- =ð
-RELEASED
-) {
-
-56 
-	`´štBufãr
-();
-
-59 ià(
-i
- >ð
-BUF_SIZE
-) {
-
-60 
-i
-=0;
-
-65 
-	}
-}
-
 	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\include\debounce.h
 
 1 
@@ -11386,6 +10042,34 @@ mžli£cs
  0
 
 	)
+
+	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\include\event.h
+
+1 
+	#PRESSED
+ 1
+
+	)
+
+2 
+	#RELEASE
+ 2
+
+	)
+
+3 
+	#NOEVT
+ 0
+
+	)
+
+5 
+g‘_ev’t
+();
+
+6 (*
+_´oûss_debouncšg
+)();
 
 	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\include\press_button.h
 
@@ -11469,13 +10153,93 @@ debounû_time
 bu‰Ú_¡©e
 ;
 
-17 
+16 
 	}
 }
 
-19 (*
+18 (*
 _d–ay
 )();
+
+	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\event.c
+
+1 
+	~"ev’t.h
+"
+
+2 
+	~"debounû.h
+"
+
+4 
+	gp_bu‰Ú_¡©e
+=
+BUTTON_OFF
+;
+
+6 
+	$g‘_ev’t
+() {
+
+7 
+bu‰Ú_¡©e
+;
+
+8 
+ev’t
+;
+
+9 
+bu‰Ú_¡©e
+ = 
+	`´oûss_debouncšg
+(
+p_bu‰Ú_¡©e
+);
+
+10 ià(!
+p_bu‰Ú_¡©e
+ && 
+bu‰Ú_¡©e
+)
+
+11 
+ev’t
+ = 
+PRESSED
+;
+
+12 ià(
+p_bu‰Ú_¡©e
+ && !
+bu‰Ú_¡©e
+)
+
+13 
+ev’t
+ = 
+RELEASE
+;
+
+15 
+ev’t
+ = 
+NOEVT
+;
+
+16 
+p_bu‰Ú_¡©e
+ = 
+bu‰Ú_¡©e
+;
+
+17  
+ev’t
+;
+
+18 
+	}
+}
 
 	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\press_button.c
 
@@ -11707,41 +10471,45 @@ Debouncšg
 
 	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\test_debouncing.cpp
 
-20 
+26 
 	~"CµUTe¡/Te¡H¬Ãss.h
 "
 
-21 
+27 
 	~"CµUTe¡Ext/MockSuµÜt.h
 "
 
-25 
+31 
 	~"´ess_bu‰Ú.h
 "
 
-26 
+32 
 	~"debounû.h
 "
 
-29 
+33 
+	~"ev’t.h
+"
+
+36 
 	$TEST_GROUP
 (
 Debouncšg
 )
 
-31 
+38 
 cu¼’t_time
 ;
 
-32 
+39 
 	`mock_is_´es£d
 () {
 
-33 
+40 
 ´es£d
 ;
 
-34 
+41 
 ´es£d
  = 
 	`mock
@@ -11753,17 +10521,17 @@ cu¼’t_time
 	`g‘IÁV®ue
 ();
 
-35  
+42  
 ´es£d
 ;
 
-38 
+45 
 	`mock_d–ay
 (
 mžli£cs
 ) {
 
-39 
+46 
 	`mock
 ().
 	`aùu®C®l
@@ -11773,23 +10541,23 @@ mžli£cs
 mžli£cs
 );
 
-41 
+50 
 db_time
 ;
 
-42 
+51 
 bu‰Ú_¡©e
 ;
 
-43 
+52 
 	`£tup
 () {
 
-44 
+53 
 db_time
  = 20;
 
-45 
+54 
 	`UT_PTR_SET
 (
 is_´es£d
@@ -11797,7 +10565,7 @@ is_´es£d
 mock_is_´es£d
 );
 
-46 
+55 
 	`UT_PTR_SET
 (
 _d–ay
@@ -11805,15 +10573,55 @@ _d–ay
 mock_d–ay
 );
 
-49 
+58 
 	`‹¬down
 () {
 
-52 
+62 
+	`mock_ex³ù_bu‰Ú_£qu’û
+(
+bu‰Ú1
+, 
+db_time
+, 
+bu‰Ú2
+ )
+
+64 
+	`mock
+().
+	`ex³ùOÃC®l
+("is_´es£d").
+	`ªdR‘uºV®ue
+(
+bu‰Ú1
+);
+
+65 
+	`mock
+().
+	`ex³ùOÃC®l
+("d–ay").
+	`w™hP¬am‘”
+("mžli£cs",
+db_time
+);
+
+66 
+	`mock
+().
+	`ex³ùOÃC®l
+("is_´es£d").
+	`ªdR‘uºV®ue
+(
+bu‰Ú2
+);
+
+69 
 	}
 };
 
-54 
+71 
 	$TEST
 (
 Debouncšg
@@ -11821,67 +10629,45 @@ Debouncšg
 ‹¡_bu‰Ú_Ú
 )
 
-57 
+73 
 bu‰Ú_¡©e
  = 
 BUTTON_OFF
 ;
 
-58 
+74 
 	`£t_debounû_time
 (
 db_time
 );
 
-59 
-	`mock
-().
-	`ex³ùOÃC®l
-("is_´es£d").
-	`ªdR‘uºV®ue
+76 
+	`mock_ex³ù_bu‰Ú_£qu’û
 (
 BUTTON_ON
-);
-
-60 
-	`mock
-().
-	`ex³ùOÃC®l
-("d–ay").
-	`w™hP¬am‘”
-("mžli£cs",
+,
 db_time
-);
+, BUTTON_ON);
 
-61 
-	`mock
-().
-	`ex³ùOÃC®l
-("is_´es£d").
-	`ªdR‘uºV®ue
-(
-BUTTON_ON
-);
-
-62 
+78 
 bu‰Ú_¡©e
 =
 	`´oûss_debouncšg
 (button_state);
 
-63 
+79 
 	`LONGS_EQUAL
 (
-bu‰Ú_¡©e
- , 
 BUTTON_ON
+,
+bu‰Ú_¡©e
 );
 
-64 
+80 
 	}
 }
 
-66 
+82 
 	$TEST
 (
 Debouncšg
@@ -11889,87 +10675,245 @@ Debouncšg
 ‹¡_bu‰Ú_Ú1
 )
 
-68 
+84 
 bu‰Ú_¡©e
  = 
 BUTTON_OFF
 ;
 
-69 
+85 
 	`£t_debounû_time
 (
 db_time
 );
 
-70 
-	`mock
-().
-	`ex³ùOÃC®l
-("is_´es£d").
-	`ªdR‘uºV®ue
+87 
+	`mock_ex³ù_bu‰Ú_£qu’û
 (
 BUTTON_ON
-);
-
-71 
-	`mock
-().
-	`ex³ùOÃC®l
-("d–ay").
-	`w™hP¬am‘”
-("mžli£cs",
+,
 db_time
-);
-
-72 
-	`mock
-().
-	`ex³ùOÃC®l
-("is_´es£d").
-	`ªdR‘uºV®ue
-(
+, 
 BUTTON_OFF
 );
 
-73 
+89 
 bu‰Ú_¡©e
 =
 	`´oûss_debouncšg
 (button_state);
 
-74 
+90 
 	`LONGS_EQUAL
 (
-bu‰Ú_¡©e
-, 
 BUTTON_OFF
+, 
+bu‰Ú_¡©e
 );
 
-75 
+91 
 	}
 }
 
-77 
+93 
 	$TEST
 (
 Debouncšg
 , 
-‹¡_bu‰Ú_off
+‹¡_bu‰Ú_ev’t
 )
 
-84 
+95 
+	`£t_debounû_time
+(
+db_time
+);
+
+96 
+bu‰Ú_ev’t
+ = 0;
+
+97 
+	`mock_ex³ù_bu‰Ú_£qu’û
+(
+BUTTON_ON
+, 
+db_time
+, BUTTON_ON);
+
+98 
+bu‰Ú_ev’t
+ = 
+	`g‘_ev’t
+();
+
+99 
+	`LONGS_EQUAL
+(
+PRESSED
+, 
+bu‰Ú_ev’t
+);
+
+102 
+	`mock_ex³ù_bu‰Ú_£qu’û
+(
+BUTTON_OFF
+, 
+db_time
+, BUTTON_OFF);
+
+103 
+bu‰Ú_ev’t
+ = 
+	`g‘_ev’t
+();
+
+104 
+	`LONGS_EQUAL
+(
+RELEASE
+, 
+bu‰Ú_ev’t
+);
+
+107 
+	`mock_ex³ù_bu‰Ú_£qu’û
+(
+BUTTON_OFF
+, 
+db_time
+, BUTTON_OFF);
+
+108 
+bu‰Ú_ev’t
+ = 
+	`g‘_ev’t
+();
+
+109 
+	`LONGS_EQUAL
+(
+NOEVT
+, 
+bu‰Ú_ev’t
+);
+
+115 
 	}
 }
 
-87 
-	$TEST
+	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\test_event.cpp
+
+7 
+	~"CµUTe¡/Te¡H¬Ãss.h
+"
+
+8 
+	~"CµUTe¡Ext/MockSuµÜt.h
+"
+
+13 
+	~"debounû.h
+"
+
+14 
+	~"ev’t.h
+"
+
+17 
+	$TEST_GROUP
 (
-Debouncšg
-, 
-‹¡_bu‰Ú_off1
+Bu‰ÚEv’t
 )
 
-94 
+19 
+	`mock_´oûss_debouncšg
+(
+bu‰Ú_¡©e
+) {
+
+20 
+	`mock
+().
+	`aùu®C®l
+("´oûss_debouncšg").
+	`w™hP¬am‘”
+("bu‰Ú_¡©e",
+bu‰Ú_¡©e
+).
+	`»tuºV®ue
+().
+	`g‘IÁV®ue
+();
+
+24 
+	`£tup
+() {
+
+25 
+	`UT_PTR_SET
+(
+_´oûss_debouncšg
+,&
+mock_´oûss_debouncšg
+);
+
+28 
+	`‹¬down
+() {
+
+30 
+	}
+};
+
+	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\test_event.cpp~
+
+7 
+	~"CµUTe¡/Te¡H¬Ãss.h
+"
+
+8 
+	~"CµUTe¡Ext/MockSuµÜt.h
+"
+
+13 
+	~"´ess_bu‰Ú.h
+"
+
+17 
+	$TEST_GROUP
+(
+BUTTON_EVENT
+)
+
+19 
+	`£tup
+() {
+
+21 
+	`‹¬down
+() {
+
+23 
+	}
+};
+
+25 
+	$TEST
+(
+BUTTON_EVENT
+, 
+‹¡_´ess_ev’t
+)
+
+28 
+p_bu‰Ú_¡©e
+ = 
+BUTTON_OFF
+;
+
+33 
 	}
 }
 
@@ -12306,1390 +11250,6 @@ P»ssBu‰Ú
 89 
 	}
 }
-
-	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\src\AllTests.h
-
-1 
-IMPORT_TEST_GROUP
-(
-Fœ¡Te¡
-);
-
-	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\src\keyevent.c
-
-1 
-	~"keyev’t.h
-"
-
-3 
-	gkeydown_ev’t_couÁ
-=0;
-
-4 
-	gkeydown_ev’t_couÁs
-[]={0,0,0,0,0};
-
-5 
-	gkeydown_ev’t
-=0;
-
-6 
-	g_key_¡©e
-=0;
-
-7 
-	g_key_¡©es
-[]={0,0,0,0,0};
-
-8 
-	g_chªÃl
-=0;
-
-10 
-	$keydown_ev’t_ÿÎback
-() {
-
-11 
-keydown_ev’t_couÁs
-[
-_chªÃl
-] += 1;
-
-12 
-keydown_ev’t_couÁ
- = 
-keydown_ev’t_couÁs
-[
-_chªÃl
-];
-
-13 
-keydown_ev’t
-=
-PRESSED
-;
-
-14 
-	}
-}
-
-16 
-	$keydown_ev’t_»Ëa£_ÿÎback
-() {
-
-17 
-keydown_ev’t
-=
-RELEASED
-;
-
-18 
-	}
-}
-
-22 
-	$£t_key_¡©e
-(
-¡©e
-) {
-
-23 
-_key_¡©e
-=
-_key_¡©es
-[
-_chªÃl
-];
-
-24 ià(
-_key_¡©e
-==0 && 
-¡©e
-==1) {
-
-25 
-	`keydown_ev’t_ÿÎback
-();
-
-27 ià(
-_key_¡©e
-==1 && 
-¡©e
-==0) {
-
-28 
-	`keydown_ev’t_»Ëa£_ÿÎback
-();
-
-30 
-_key_¡©es
-[
-_chªÃl
-]=
-¡©e
-;
-
-31 
-	}
-}
-
-33 
-	$£t_key
-(
-chªÃl
-) {
-
-34 
-_chªÃl
-=
-chªÃl
-;
-
-35 
-	}
-}
-
-	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\src\keyevent.h
-
-1 
-	#ON
- 1
-
-	)
-
-2 
-	#OFF
- 0
-
-	)
-
-4 
-	#PRESSED
- 1
-
-	)
-
-5 
-	#RELEASED
- 2
-
-	)
-
-7 
-keydown_ev’t_couÁ
-;
-
-8 
-keydown_ev’t_couÁs
-[];
-
-9 * 
-keydown_ev’t_cb
-;
-
-10 
-keydown_ev’t
-;
-
-12 
-£t_key_¡©e
-(
-¡©e
-);
-
-13 
-£t_key
-(
-chªÃl
-);
-
-	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\src\realtime.c
-
-	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\src\realtime.h
-
-1 
-my_d–ay
-();
-
-2 
-my_mžlis
-();
-
-5 
-	$my_d–ay
-(
-§m¶e_¿‹
-) {
-
-7 
-	}
-}
-
-9 
-	$my_mžlis
-() {
-
-11 
-	}
-}
-
-	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\tests\AllTests.cpp
-
-2 
-	~"CµUTe¡/CommªdLšeTe¡RuÂ”.h
-"
-
-4 
-	$maš
-(
-ac
-, ** 
-av
-)
-
-6  
-CommªdLšeTe¡RuÂ”
-::
-	`RunAÎTe¡s
-(
-ac
-, 
-av
-);
-
-7 
-	}
-}
-
-9 
-	~"AÎTe¡s.h
-"
-
-	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\tests\AllTests.h
-
-1 
-IMPORT_TEST_GROUP
-(
-KeydownEv’t
-);
-
-	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\tests\keyevent.c
-
-1 
-	~"keyev’t.h
-"
-
-2 
-	~"time.h
-"
-
-4 
-	gkey_¡©e
-=0;
-
-5 
-	g_key_¡©e
-=0;
-
-6 
-	gp_key_¡©e
-=0;
-
-8 
-	g_unû¹aš_couÁ
-;
-
-10 
-	g_¡©e
-=0;
-
-12 
-	g_ev’t
-=
-NOEVT
-;
-
-14 
-	gkeydown_ev’t
-=0;
-
-16 
-	g§m¶e_¿‹
-;
-
-18 
-	gdebounû_³riod
-;
-
-19 
-	gÏ¡_debounû_time
-=0;
-
-21 
-	$š™_¡©es
-() {
-
-22 
-key_¡©e
-=0;
-
-23 
-_¡©e
-=0;
-
-24 
-	}
-}
-
-26 
-	$keydown_ev’t_ÿÎback
-() {
-
-27 
-keydown_ev’t
-=
-PRESSED
-;
-
-28 
-	}
-}
-
-30 
-	$keydown_ev’t_»Ëa£_ÿÎback
-() {
-
-31 
-keydown_ev’t
-=
-RELEASED
-;
-
-32 
-	}
-}
-
-34 (*
-keydown_ev’t_cb
-)(èð
-keydown_ev’t_ÿÎback
-;
-
-36 
-	$£t_key_¡©e
-(
-¡©e
-) {
-
-37 
-_key_¡©e
- = 
-¡©e
-;
-
-38 
-	}
-}
-
-40 
-	$»ad_key_¡©e
-(){
-
-41  
-key_¡©e
-;
-
-42 
-	}
-}
-
-44 
-	$£t_unû¹aš_couÁ
-(
-couÁ
-) {
-
-45 
-_unû¹aš_couÁ
- = 
-couÁ
-;
-
-46 
-	`š™_¡©es
-();
-
-47 
-	}
-}
-
-49 
-	$Ãxt_¡©e
-(
-šp
-, 
-k
-, 
-n
-) {
-
-50 ià(!
-šp
- && 
-k
-)
-
-51  (
-k
-+1è% (
-n
-+1);
-
-53  
-šp
-;
-
-54 
-	}
-}
-
-56 
-	$´oûss_key_ch©‹ršg
-() {
-
-57 
-_¡©e
- = 
-	`Ãxt_¡©e
-(
-_key_¡©e
-, _¡©e, 
-_unû¹aš_couÁ
-);
-
-58 
-p_key_¡©e
-=
-key_¡©e
-;
-
-59 
-key_¡©e
- = 0 < 
-_¡©e
-;
-
-60 
-	}
-}
-
-62 
-	$key_¡•
-(
-k
-) {
-
-63 
-	`£t_key_¡©e
-(
-k
-);
-
-65 
-	`´oûss_debouncšg
-();
-
-67 
-	}
-}
-
-69 
-	$g‘_ev’t
-() {
-
-71 ià(!
-p_key_¡©e
- && 
-key_¡©e
-)
-
-72 
-_ev’t
-=
-PRESSED
-;
-
-73 ià(
-p_key_¡©e
- && !
-key_¡©e
-)
-
-74 
-_ev’t
-=
-RELEASED
-;
-
-76 
-_ev’t
-=
-NOEVT
-;
-
-77  
-_ev’t
-;
-
-78 
-	}
-}
-
-80 
-	$£t_debounû_³riod
-(
-d–ay
-) {
-
-81 
-debounû_³riod
- = 
-d–ay
-;
-
-82 
-	}
-}
-
-85 
-	$£t_§m¶šg_¿‹
-(
-mžlis
-) {
-
-86 
-§m¶e_¿‹
- = 
-mžlis
-;
-
-87 
-	}
-}
-
-89 
-	$»£t_Ï¡_debounû_time
-() {
-
-90 
-Ï¡_debounû_time
- = 
-	`my_mžlis
-();
-
-91 
-	}
-}
-
-93 
-	$´oûss_debouncšg
-() {
-
-94 ià(
-_key_¡©e
- !ð
-p_key_¡©e
-) {
-
-95 
-	`»£t_Ï¡_debounû_time
-();
-
-98 ià((
-	`my_mžlis
-(è- 
-Ï¡_debounû_time
-è> 
-debounû_³riod
-) {
-
-99 
-key_¡©e
- = 
-_key_¡©e
-;
-
-103 
-p_key_¡©e
- = 
-_key_¡©e
-;
-
-104 
-	}
-}
-
-107 
-	$»ad_key
-() {
-
-108  
-key_¡©e
-;
-
-109 
-	}
-}
-
-111 
-	$£t_key
-(
-¡©e
-) {
-
-112 
-_key_¡©e
- = 
-¡©e
-;
-
-113 
-	}
-}
-
-	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\tests\keyevent.h
-
-1 
-	#ON
- 1
-
-	)
-
-2 
-	#OFF
- 0
-
-	)
-
-4 
-	#NOEVT
- 0
-
-	)
-
-5 
-	#PRESSED
- 1
-
-	)
-
-6 
-	#RELEASED
- 2
-
-	)
-
-8 (*
-keydown_ev’t_cb
-)();
-
-9 
-keydown_ev’t
-;
-
-12 
-Ï¡_debounû_time
-;
-
-13 
-debounû_³riod
-;
-
-15 
-	`£t_key_¡©e
-(
-¡©e
-);
-
-17 
-	`£t_key_¡©e1
-(
-¡©e
-);
-
-19 
-	`»ad_key_¡©e
-();
-
-20 
-	`»ad_keydown_ev’t
-();
-
-22 
-	`£t_unû¹aš_couÁ
-(
-couÁ
-);
-
-23 
-	`´oûss_key_ch©‹ršg
-();
-
-24 
-	`´oûss_key_ch©‹ršg1
-();
-
-26 
-	`key_¡•
-(
-¡©e
-);
-
-27 
-	`g‘_ev’t
-();
-
-29 
-	`£t_debounû_³riod
-(
-d–ay
-);
-
-30 
-	`£t_§m¶šg_¿‹
-(
-mžlis
-);
-
-31 
-	`£t_key
-(
-¡©e
-);
-
-32 
-	`´oûss_debouncšg
-();
-
-33 
-	`»ad_key
-();
-
-	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\tests\test_keyevent.cpp
-
-1 
-	~<io¡»am
->
-
-2 
-	~<¡ršg
->
-
-3 
-	~<s¡»am
->
-
-5 
-	~"CµUTe¡/CommªdLšeTe¡RuÂ”.h
-"
-
-9 
-	~<¡dio.h
->
-
-10 
-	~<¡ršg.h
->
-
-11 
-	~"keyev’t.h
-"
-
-12 
-	~"time.h
-"
-
-16 
-	#CHAR2VAL
-(
-x
-è((x)=='-'?
-ON
-:
-OFF
-)
-
-	)
-
-17 
-	#CHAR2EVT
-(
-x
-è((x)=='^'?
-PRESSED
-:((x)=='v'?
-RELEASED
-:
-NOEVT
-è)
-
-	)
-
-19 
-	#ASSERT_KEYSTATE
-(
-š
-,
-out
-) \
-
-20 
-	`as£¹_key¡©e_loÿtiÚ
-((
-š
-),(
-out
-), 
-__FILE__
-,
-__LINE__
-)
-
-	)
-
-22 
-	#ASSERT_KEYSTATE_t
-(
-š
-,
-out
-) \
-
-23 
-	`as£¹_key¡©e_t_loÿtiÚ
-((
-š
-),(
-out
-), 
-__FILE__
-,
-__LINE__
-)
-
-	)
-
-25 
-__ùime
- = 0;
-
-28 
-	$as£¹_debouncšg_bufãr
-(
-š
-,
-out
-,
-
-29 
-exp_ùime
-,
-
-30 
-exp_Ï¡_debounû_time
-)
-
-32 
-aùu®
-;
-
-33 
-_ùime
-;
-
-34 
-	`my_d–ay
-(5);
-
-35 
-_ùime
- = 
-	`my_mžlis
-();
-
-36 
-	`LONGS_EQUAL
-(
-exp_ùime
-, 
-_ùime
-);
-
-37 
-	`£t_key
-(
-	`CHAR2VAL
-(
-š
-));
-
-38 
-	`´oûss_debouncšg
-();
-
-39 
-aùu®
- = 
-	`»ad_key
-();
-
-40 
-	`LONGS_EQUAL
-(
-	`CHAR2VAL
-(
-out
-),
-aùu®
-);
-
-41 
-	`LONGS_EQUAL
-(
-exp_Ï¡_debounû_time
-,
-Ï¡_debounû_time
-);
-
-42 
-	}
-}
-
-44 
-	$as£¹_key¡©e_t_loÿtiÚ
-(* 
-š
-, * 
-out
-,cÚ¡ * 
-fže
-, 
-lše
-) {
-
-49 
-	}
-}
-
-51 
-	$as£¹_key¡©e_loÿtiÚ
-(* 
-š
-, * 
-out
-,cÚ¡ * 
-fže
-, 
-lše
-)
-
-53 
-key_¡©e
- = 0;
-
-54 
-i
-=0;
-
-55 
-¡d
-::
-o¡ršg¡»am
- 
-ss
-;
-
-56 (*
-š
-))
-
-58 
-	`£t_key_¡©e
-(
-	`CHAR2VAL
-(*
-š
-));
-
-59 
-	`´oûss_key_ch©‹ršg
-();
-
-61 
-key_¡©e
- = 
-	`»ad_key_¡©e
-();
-
-63 ià(
-	`CHAR2VAL
-(*
-out
-)!=
-key_¡©e
-)
-
-65 
-ss
-<<(*
-out
-è<< "ƒx³ùed buˆ" << (*
-š
-è<< "‡ˆ" << 
-i
-;
-
-66 
-	`FAIL_LOCATION
-(
-ss
-.
-	`¡r
-().
-	`c_¡r
-(),
-fže
-,
-lše
-);
-
-68 
-š
-++;
-out
-++;
-i
-++;
-
-70 
-	}
-}
-
-73 
-	$TEST_GROUP
-(
-KeydownEv’t
-)
-
-76 
-	`my_mock_d–ay
-(
-mžlis
-) {
-
-77 
-__ùime
- = __ùim+ 
-mžlis
-;
-
-80 
-	`my_mock_mžlis
-() {
-
-81  
-__ùime
-;
-
-85 
-	`£tup
-()
-
-87 
-my_d–ay
-=
-my_mock_d–ay
-;
-
-88 
-my_mžlis
-=
-my_mock_mžlis
-;
-
-90 
-	`‹¬down
-()
-
-93 
-	}
-};
-
-96 
-	$TEST
-(
-KeydownEv’t
-, 
-‹¡_key_Ú
-)
-
-98 
-š_s
-[]="__----";
-
-99 
-ou_s
-[]="__----";
-
-101 
-	`£t_unû¹aš_couÁ
-(3);
-
-102 
-	`ASSERT_KEYSTATE
-(
-š_s
-,
-ou_s
-);
-
-103 
-	}
-}
-
-105 
-	$TEST
-(
-KeydownEv’t
-, 
-‹¡_key_Ú_off1
-)
-
-107 
-š_s
-[]="__--__";
-
-108 
-ou_s
-[]="__----";
-
-110 
-	`£t_unû¹aš_couÁ
-(3);
-
-111 
-	`ASSERT_KEYSTATE
-(
-š_s
-,
-ou_s
-);
-
-112 
-	}
-}
-
-114 
-	$TEST
-(
-KeydownEv’t
-, 
-‹¡_key_Ú_off2
-)
-
-116 
-š_s
-[]="__--___";
-
-117 
-ou_s
-[]="__----_";
-
-119 
-	`£t_unû¹aš_couÁ
-(3);
-
-120 
-	`ASSERT_KEYSTATE
-(
-š_s
-,
-ou_s
-);
-
-122 
-š_s1
-[]="__--___";
-
-123 
-ou_s1
-[]="__----_";
-
-125 
-	`£t_unû¹aš_couÁ
-(3);
-
-126 
-	`ASSERT_KEYSTATE
-(
-š_s1
-,
-ou_s1
-);
-
-127 
-	}
-};
-
-129 
-	$TEST
-(
-KeydownEv’t
-, 
-‹¡_key_´ess_»Ëa£
-)
-
-141 
-	}
-}
-
-163 
-	$TEST
-(
-KeydownEv’t
-, 
-‹¡2
-){
-
-164 
-šputBufãr
-[] = "_-----";
-
-165 
-ex³ùedBufãr
-[] = "_____-";
-
-167 
-s_¿‹
- = 5, 
-exp_time
-=5, 
-exp_Ï¡_deb_time
-=0;
-
-168 
-i
-=0;
-
-170 
-	`£t_§m¶šg_¿‹
-(
-s_¿‹
-);
-
-171 
-	`£t_debounû_³riod
-(15);
-
-173 
-	`as£¹_debouncšg_bufãr
-(
-šputBufãr
-[
-i
-],
-ex³ùedBufãr
-[i],
-
-174 
-exp_time
-,
-
-175 
-exp_Ï¡_deb_time
-);
-
-177 
-exp_Ï¡_deb_time
-=10;
-i
-++;
-
-179 ; 
-i
- < 
-	`¡¾’
-(
-šputBufãr
-); i++) {
-
-180 
-exp_time
-+=
-s_¿‹
-;
-
-181 
-	`as£¹_debouncšg_bufãr
-(
-šputBufãr
-[
-i
-],
-ex³ùedBufãr
-[i],
-
-182 
-exp_time
-,
-
-183 
-exp_Ï¡_deb_time
-);
-
-185 
-	}
-}
-
-	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\tests\time.c
-
-1 #ifdeà
-__AVR__
-
-
-2 
-	~"../../ArdušoCÜe/WProg¿m.h
-"
-
-3 (*
-my_d–ay
-)(èð
-d–ay
-;
-
-4 (*
-my_mžlis
-)(èð
-mžlis
-;
-
-6 (*
-my_d–ay
-)();
-
-7 (*
-my_mžlis
-)();
-
-	@C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\tests\time.h
-
-1 (* 
-my_d–ay
-)();
-
-2 (* 
-my_mžlis
-)();
 
 	@C:\work\workspace\EmbeddedTddWorkshop\CppUTest\examples\AllTests\AllTests.cpp
 
@@ -89811,31 +87371,61 @@ nuÎTe¡
 	~<WProg¿m.h
 >
 
-2 
-	~<m©h.h
->
-
-5 
+4 
 	~"../ChÜdedKeybßrd/šþude/´ess_bu‰Ú.h
 "
 
-6 
+5 
 	~"../ChÜdedKeybßrd/šþude/debounû.h
 "
 
-9 
+8 
+	#PRESSED
+ 1
+
+	)
+
+9 
+	#RELEASE
+ 2
+
+	)
+
+10 
+	#NOEVT
+ 0
+
+	)
+
+11 
+	#DEBOUNCE_DELAY
+ 2
+
+	)
+
+13 
 ËdPš
  = 13;
 
-10 
+14 
 	gbu‰ÚPš
  = 5;
 
-12 
+15 
+	gbu‰Ú_¡©e
+ = 
+BUTTON_OFF
+;
+
+16 
+	gp_bu‰Ú_¡©e
+;
+
+18 
 	$£tup
 () {
 
-13 
+19 
 	`pšMode
 (
 bu‰ÚPš
@@ -89843,7 +87433,7 @@ bu‰ÚPš
 INPUT
 );
 
-14 
+20 
 	`pšMode
 (
 ËdPš
@@ -89851,27 +87441,99 @@ INPUT
 OUTPUT
 );
 
-15 
+21 
+	`£t_debounû_time
+(
+DEBOUNCE_DELAY
+);
+
+22 
+p_bu‰Ú_¡©e
+ = 
+bu‰Ú_¡©e
+;
+
+23 
+S”Ÿl
+.
+	`begš
+(38400);
+
+24 
 	}
 }
 
-17 
+26 
 	$maš
 () {
 
-18 
+27 
 	`š™
 ();
 
-19 
+28 
 	`£tup
 ();
 
-20 
-	`¡¬t
+30 
+	`loÝ
 ();
 
-21 
+31 
+	}
+}
+
+33 
+	$loÝ
+() {
+
+35 
+bu‰Ú_¡©e
+ = 
+	`´oûss_debouncšg
+(
+p_bu‰Ú_¡©e
+);
+
+36 ià(!
+p_bu‰Ú_¡©e
+ && 
+bu‰Ú_¡©e
+) {
+
+37 
+S”Ÿl
+.
+	`´št
+(
+PRESSED
+,
+DEC
+);
+
+39 }ià(
+p_bu‰Ú_¡©e
+ && !
+bu‰Ú_¡©e
+) {
+
+40 
+S”Ÿl
+.
+	`´št
+(
+RELEASE
+,
+DEC
+);
+
+45 
+p_bu‰Ú_¡©e
+ = 
+bu‰Ú_¡©e
+;
+
+47 
 	}
 }
 
@@ -89879,8 +87541,8 @@ OUTPUT
 1
 .
 0
-240
-19702
+222
+18498
 C:\work\workspace\EmbeddedTddWorkshop\ArduinoCore\HardwareSerial.cpp
 C:\work\workspace\EmbeddedTddWorkshop\ArduinoCore\HardwareSerial.h
 C:\work\workspace\EmbeddedTddWorkshop\ArduinoCore\Print.cpp
@@ -89899,37 +87561,19 @@ C:\work\workspace\EmbeddedTddWorkshop\ArduinoCore\wiring_digital.c
 C:\work\workspace\EmbeddedTddWorkshop\ArduinoCore\wiring_private.h
 C:\work\workspace\EmbeddedTddWorkshop\ArduinoCore\wiring_pulse.c
 C:\work\workspace\EmbeddedTddWorkshop\ArduinoCore\wiring_shift.c
-C:\work\workspace\EmbeddedTddWorkshop\Blinky\Bounce.h
-C:\work\workspace\EmbeddedTddWorkshop\Blinky\Release\main.cpp
-C:\work\workspace\EmbeddedTddWorkshop\Blinky\Release\testpoint.cpp
-C:\work\workspace\EmbeddedTddWorkshop\Blinky\bounce.cpp
-C:\work\workspace\EmbeddedTddWorkshop\Blinky\bounce1.cpp
-C:\work\workspace\EmbeddedTddWorkshop\Blinky\main.cpp
-C:\work\workspace\EmbeddedTddWorkshop\Blinky\testpoint.cpp
-C:\work\workspace\EmbeddedTddWorkshop\Blinky\testpoint.cpp~
-C:\work\workspace\EmbeddedTddWorkshop\Blinky\testpoint_inner.cpp
-C:\work\workspace\EmbeddedTddWorkshop\Blinky\testpoint_inner.cpp~
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\include\debounce.h
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\include\event.h
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\include\press_button.h
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\debounce.c
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\event.c
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\press_button.c
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\util\imp.c
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\AllTests.cpp
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\AllTests.h
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\test_debouncing.cpp
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\test_event.cpp
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\test_event.cpp~
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\test_press_button.cpp
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\src\AllTests.h
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\src\keyevent.c
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\src\keyevent.h
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\src\realtime.c
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\src\realtime.h
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\tests\AllTests.cpp
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\tests\AllTests.h
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\tests\keyevent.c
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\tests\keyevent.h
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\tests\test_keyevent.cpp
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\tests\time.c
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard_old\tests\time.h
 C:\work\workspace\EmbeddedTddWorkshop\CppUTest\examples\AllTests\AllTests.cpp
 C:\work\workspace\EmbeddedTddWorkshop\CppUTest\examples\ApplicationLib\AllTests.h
 C:\work\workspace\EmbeddedTddWorkshop\CppUTest\examples\ApplicationLib\CircularBuffer.cpp

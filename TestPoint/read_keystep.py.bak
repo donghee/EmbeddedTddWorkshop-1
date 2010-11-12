@@ -1,7 +1,7 @@
 import serial,sys
 filename = 'i.log'
 print "> entered"
-s=serial.Serial("Com1", 38400)
+s=serial.Serial("Com1", 9600)
 s.flush()
 print "> serial opened"
 f=open(filename,'w')
@@ -20,11 +20,10 @@ def linereader(s):
 lr=linereader(s)
 try:
     while True:
-        # event = lr.next()
-        # if int(event) >3 :
-        #     print (event)
-        # continue
         event = s.read()
+	if event not in '012':
+            print "unexpected input: %s"%repr(event)
+	    continue
         e = int(event)
         if e == 0:
             event = 'NOEVT'

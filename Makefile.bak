@@ -18,7 +18,7 @@ CUT_INCLUDE = ChordedKeyboard/include
 CUT_SRC = ChordedKeyboard/src
 
 # Objects
-OBJS = press_button.o debounce.o  event.o
+OBJS = press_button.o debounce.o  
 IMP_OBJS = imp.o
 CPP_OBJS = main.o 
 

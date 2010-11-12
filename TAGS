@@ -806,98 +806,16 @@ ArduinoCore\WProgram.h,61
 #define WProgram_hWProgram_h2,19
 #define word(word18,262
 
-Blinky\bounce.cpp,464
-int ledPin =  13;    // LED connected to digital pin 13ledPin5,46
-int aPin = 3;aPin7,105
-int bPin = 5;bPin8,120
-int cPin = 6;cPin9,135
-int dPin = 7;dPin10,150
-int ePin = 8;ePin11,165
-boolean A,B,C,D,E;A13,182
-boolean A,B,C,D,E;B13,182
-boolean A,B,C,D,E;C13,182
-boolean A,B,C,D,E;D13,182
-boolean A,B,C,D,E;E13,182
-void setup()   {setup16,261
-void bUpdate() {bUpdate29,513
-boolean bRead(int pin) {bRead33,542
-int main(void) {main39,643
-
-Blinky\Bounce.h,396
-#define Bounce_hBounce_h28,1076
-class BounceBounce32,1117
-  unsigned long  previous_millis, interval_millis, rebounce_millis;previous_millis57,1895
-  unsigned long  previous_millis, interval_millis, rebounce_millis;interval_millis57,1895
-  unsigned long  previous_millis, interval_millis, rebounce_millis;rebounce_millis57,1895
-  uint8_t state;state58,1963
-  uint8_t pin;pin59,1980
-
-Blinky\bounce1.cpp,394
-int ledPin =  13;    // LED connected to digital pin 13ledPin5,46
-int aPin = 3;aPin7,105
-int bPin = 5;bPin8,120
-int cPin = 6;cPin9,135
-int dPin = 7;dPin10,150
-int ePin = 8;ePin11,165
-boolean A,B,C,D,E;A13,182
-boolean A,B,C,D,E;B13,182
-boolean A,B,C,D,E;C13,182
-boolean A,B,C,D,E;D13,182
-boolean A,B,C,D,E;E13,182
-void setup()   {setup18,265
-int main(void) {main30,517
-
-Blinky\main.cpp,244
-int ledPin =  13;    // LED connected to digital pin 13ledPin8,114
-boolean A;A10,173
-int event;event11,185
-byte firstA;firstA12,197
-byte secondA;secondA13,211
-int a;a14,226
-void setup()   {setup17,293
-int main(void) {main25,465
-
-Blinky\Release\main.cpp,244
-int ledPin =  13;    // LED connected to digital pin 13ledPin8,114
-boolean A;A10,173
-int event;event11,185
-byte firstA;firstA12,197
-byte secondA;secondA13,211
-int a;a14,226
-void setup()   {setup17,293
-int main(void) {main29,531
-
-Blinky\Release\testpoint.cpp,145
-int ledPin =  13;    // LED connected to digital pin 13ledPin4,44
-boolean A;A6,103
-void setup()   {setup9,174
-int main(void) {main16,317
-
-Blinky\testpoint.cpp,145
-int ledPin =  13;    // LED connected to digital pin 13ledPin4,44
-boolean A;A6,103
-void setup()   {setup9,174
-int main(void) {main16,317
-
-Blinky\testpoint_inner.cpp,392
-#define BUF_SIZE BUF_SIZE8,114
-int ledPin =  13;    // LED connected to digital pin 13ledPin10,138
-boolean A;A12,197
-int event;event13,209
-int event_calls;event_calls14,221
-byte firstA;firstA16,241
-byte secondA;secondA17,255
-int i=0;i18,270
-char buffer[BUF_SIZE];buffer21,284
-void setup()   {setup24,367
-void printBuffer(){printBuffer33,590
-int main(void) {main40,715
-
 build_ctags.bat,0
 
 ChordedKeyboard\include\debounce.h,72
 #define BUTTON_ON BUTTON_ON5,141
 #define BUTTON_OFF BUTTON_OFF6,162
+
+ChordedKeyboard\include\event.h,85
+#define PRESSED PRESSED1,0
+#define RELEASE RELEASE2,19
+#define NOEVT NOEVT3,38
 
 ChordedKeyboard\include\press_button.h,0
 
@@ -905,7 +823,11 @@ ChordedKeyboard\src\debounce.c,215
 int debounce_time;debounce_time4,52
 void set_debounce_time(int millisecs) {set_debounce_time6,74
 int process_debouncing(int button_state) {process_debouncing10,152
-void (*_delay)(long unsigned);_delay19,341
+void (*_delay)(long unsigned);_delay18,335
+
+ChordedKeyboard\src\event.c,84
+int p_button_state=BUTTON_OFF;p_button_state4,45
+int get_event() {get_event6,79
 
 ChordedKeyboard\src\press_button.c,312
 void button_pressed() button_pressed4,51
@@ -922,10 +844,10 @@ int imp_is_pressed()imp_is_pressed3,25
 void imp_led_on()imp_led_on9,112
 void imp_led_off()imp_led_off15,211
 void imp_delay(long unsigned millisecs) {imp_delay21,306
-void (*_delay)(long unsigned)=imp_delay;_delay25,377
-void (*led_on)()=imp_led_on;led_on26,419
-void (*led_off)()=imp_led_off;led_off27,449
-int (*is_pressed)()=imp_is_pressed;is_pressed28,481
+void (*_delay)(long unsigned)=imp_delay;_delay25,380
+void (*led_on)()=imp_led_on;led_on26,422
+void (*led_off)()=imp_led_off;led_off27,452
+int (*is_pressed)()=imp_is_pressed;is_pressed28,484
 
 ChordedKeyboard\tests\AllTests.cpp,39
 int main(int ac, char** av)main7,163
@@ -935,12 +857,14 @@ IMPORT_TEST_GROUP(LoopStepProcess);LoopStepProcess1,0
 IMPORT_TEST_GROUP(PressButton);PressButton2,37
 IMPORT_TEST_GROUP(Debouncing);Debouncing3,70
 
-ChordedKeyboard\tests\test_debouncing.cpp,229
-TEST_GROUP(Debouncing)TEST_GROUP29,787
-TEST(Debouncing, test_button_on)TEST54,1397
-TEST(Debouncing, test_button_on1)TEST66,1807
-TEST(Debouncing, test_button_off)TEST77,2217
-TEST(Debouncing, test_button_off1)TEST87,2398
+ChordedKeyboard\tests\test_debouncing.cpp,184
+TEST_GROUP(Debouncing)TEST_GROUP36,1016
+TEST(Debouncing, test_button_on)TEST71,1950
+TEST(Debouncing, test_button_on1)TEST82,2219
+TEST(Debouncing, test_button_event)TEST93,2492
+
+ChordedKeyboard\tests\test_event.cpp,42
+TEST_GROUP(ButtonEvent)TEST_GROUP17,241
 
 ChordedKeyboard\tests\test_press_button.cpp,428
 TEST_GROUP(LoopStepProcess)TEST_GROUP10,115
@@ -951,99 +875,6 @@ TEST(PressButton, test_is_pressed) {TEST69,1444
 TEST(PressButton, test_press_and_led_on)TEST72,1488
 TEST(PressButton, test_is_pressed_and_led_on) {TEST79,1619
 TEST(PressButton, test_is_pressed_and_led_off) {TEST85,1779
-
-ChordedKeyboard_old\src\AllTests.h,44
-IMPORT_TEST_GROUP(FirstTest);FirstTest1,0
-
-ChordedKeyboard_old\src\keyevent.c,509
-int keydown_event_count=0;keydown_event_count3,25
-int keydown_event_counts[]={0,0,0,0,0};keydown_event_counts4,53
-int keydown_event=0;keydown_event5,94
-int _key_state=0;_key_state6,116
-int _key_states[]={0,0,0,0,0};_key_states7,135
-int _channel=0;_channel8,167
-void keydown_event_callback() {keydown_event_callback10,186
-void keydown_event_release_callback() {keydown_event_release_callback16,344
-void set_key_state(int state) {set_key_state22,476
-void set_key(int channel) {set_key33,725
-
-ChordedKeyboard_old\src\keyevent.h,103
-#define ON ON1,0
-#define OFF OFF2,14
-#define PRESSED PRESSED4,31
-#define RELEASED RELEASED5,50
-
-ChordedKeyboard_old\src\realtime.c,0
-
-ChordedKeyboard_old\src\realtime.h,81
-void my_delay(int sample_rate) {my_delay5,40
-int my_millis() {my_millis9,113
-
-ChordedKeyboard_old\tests\AllTests.cpp,38
-int main(int ac, char** av)main4,49
-
-ChordedKeyboard_old\tests\AllTests.h,50
-IMPORT_TEST_GROUP(KeydownEvent);KeydownEvent1,0
-
-ChordedKeyboard_old\tests\keyevent.c,1338
-int key_state=0;key_state4,44
-int _key_state=0;_key_state5,62
-int p_key_state=0;p_key_state6,81
-int _uncertain_count;_uncertain_count8,103
-int _state=0;_state10,128
-int _event=NOEVT;_event12,145
-int keydown_event=0;keydown_event14,166
-int sample_rate;sample_rate16,190
-int debounce_period;debounce_period18,210
-unsigned long last_debounce_time=0;last_debounce_time19,232
-void init_states() {init_states21,271
-void keydown_event_callback() {keydown_event_callback26,328
-void keydown_event_release_callback() {keydown_event_release_callback30,392
-void (*keydown_event_cb)(void) = keydown_event_callback;keydown_event_cb34,465
-void set_key_state(int state) {set_key_state36,525
-int read_key_state(){read_key_state40,586
-void set_uncertain_count(int count) {set_uncertain_count44,634
-int next_state(int inp, int k, int n) {next_state49,723
-void process_key_chattering() {process_key_chattering56,833
-void key_step(int k) {key_step62,987
-int get_event() {get_event69,1099
-void set_debounce_period(int delay) {set_debounce_period80,1278
-void set_sampling_rate(int millis) {set_sampling_rate85,1354
-void reset_last_debounce_time() {reset_last_debounce_time89,1424
-void process_debouncing() {process_debouncing93,1503
-int read_key() {read_key107,1817
-void set_key(int state) {set_key111,1863
-
-ChordedKeyboard_old\tests\keyevent.h,129
-#define ON ON1,0
-#define OFF OFF2,14
-#define NOEVT NOEVT4,31
-#define PRESSED PRESSED5,48
-#define RELEASED RELEASED6,67
-
-ChordedKeyboard_old\tests\test_keyevent.cpp,810
-#define CHAR2VAL(CHAR2VAL16,214
-#define CHAR2EVT(CHAR2EVT17,253
-#define ASSERT_KEYSTATE(ASSERT_KEYSTATE19,322
-#define ASSERT_KEYSTATE_t(ASSERT_KEYSTATE_t22,419
-unsigned long __ctime = 0;__ctime25,523
-void assert_debouncing_buffer(char in,char out,assert_debouncing_buffer28,555
-void assert_keystate_t_location(char * in, char * out,const char* file, int line) {assert_keystate_t_location44,995
-void assert_keystate_location(char * in, char * out,const char* file, int line)assert_keystate_location51,1158
-TEST_GROUP(KeydownEvent)TEST_GROUP73,1617
-TEST(KeydownEvent, test_key_on)TEST96,1963
-TEST(KeydownEvent, test_key_on_off1)TEST105,2110
-TEST(KeydownEvent, test_key_on_off2)TEST114,2262
-TEST(KeydownEvent, test_key_press_release)TEST129,2531
-TEST(KeydownEvent, test2){TEST163,3227
-
-ChordedKeyboard_old\tests\time.c,220
-  void (*my_delay)(unsigned long) = delay;my_delay3,59
-  unsigned long (*my_millis)(void) = millis;my_millis4,103
-  void (*my_delay)(unsigned long);my_delay6,156
-  unsigned long (*my_millis)(void);my_millis7,192
-
-ChordedKeyboard_old\tests\time.h,0
 
 CppUTest\build\MakefileWorker.mk,3858
     COMPONENT_NAME = name_this_in_the_makefileCOMPONENT_NAME59,2471
@@ -4294,28 +4125,35 @@ TEST(UtestMyOwn, test)TEST407,9212
 class NullParameterTest: public UtestNullParameterTest412,9261
 TEST(UtestMyOwn, NullParameters)TEST416,9309
 
-src\main.cpp,126
-int ledPin =  13;ledPin9,167
-int buttonPin = 5;buttonPin10,186
-void setup()   {setup12,208
-int main(void) {main17,289
+src\main.cpp,382
+#define PRESSED PRESSED8,148
+#define RELEASE RELEASE9,167
+#define NOEVT NOEVT10,186
+#define DEBOUNCE_DELAY DEBOUNCE_DELAY11,203
+int ledPin =  13;ledPin13,231
+int buttonPin = 5;buttonPin14,250
+int button_state = BUTTON_OFF;button_state15,270
+int p_button_state;p_button_state16,302
+void setup()   {setup18,325
+int main(void) {main26,502
+void loop() {loop33,603
 
-TestPoint\read_keystep.py,475
+TestPoint\read_keystep.py,480
 import serial,sysserial1,0
 import serial,syssys1,0
 filename = 'i.log'filename2,19
-s=serial.Serial("Com1", 1200)s3,39
-f=open(filename,'w')f4,70
-event = Noneevent5,92
-value = Nonevalue6,106
-i=0i7,120
-def linereader(s):linereader9,127
-lr=linereader(s)lr17,277
-        event = s.read()event24,426
-        e = int(event)e25,452
-            event = 'NOEVT'event27,496
-            event = 'PRESSED'event29,547
-            event = 'RELEASED'event31,600
+s=serial.Serial("Com1", 38400)s4,58
+f=open(filename,'w')f7,126
+event = Noneevent8,148
+value = Nonevalue9,162
+i=0i10,176
+def linereader(s):linereader12,183
+lr=linereader(s)lr20,333
+        event = s.read()event27,482
+        e = int(event)e31,602
+            event = 'NOEVT'event33,646
+            event = 'PRESSED'event35,697
+            event = 'RELEASED'event37,750
 
 TestPoint\tdd3.py,632
 import unittestunittest2,25
