@@ -17,7 +17,7 @@ def linereader(s):
             yield ''.join(b)
             b=[]
 
-lr=linereader(s)
+#lr=linereader(s)
 try:
     while True:
         event = s.read()
@@ -31,10 +31,6 @@ try:
             event = 'PRESSED'
         elif e == 2:
             event = 'RELEASED'
-        # value = s.read()
-        # f.write("%s, %s\n" % (event, value) )
-        # f.write("========== %d \n" % i)
-        # print "%s, %s\n" % (event, value)
         if event=='PRESSED':
             sys.stdout.write('P')
         if event=='RELEASED':
@@ -43,9 +39,6 @@ try:
             i+=1
         
         sys.stdout.flush()
-        #print "=========== %d" % i
-
-        
         f.flush()
 finally:
 	f.close()

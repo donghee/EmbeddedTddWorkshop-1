@@ -15,7 +15,7 @@ void setup() {
   pinMode(buttonPin, INPUT);
   pinMode(ledPin, OUTPUT);
   set_debounce_time(DEBOUNCE_DELAY);
-  Serial.begin(9600);
+  Serial.begin(38400);
 }
 
 int main(void) {
@@ -27,7 +27,6 @@ int main(void) {
 void loop() {
     while(1) {
         button_event = get_event();
-        if (button_event != NOEVT) 
-            Serial.print(button_event,DEC);
+        Serial.print(button_event,DEC);
     }
 }

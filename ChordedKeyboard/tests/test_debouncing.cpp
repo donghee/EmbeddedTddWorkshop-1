@@ -21,8 +21,9 @@ TODO:
  * 개발환경 공유
  * makefile 합치기
  * loop_step 사용하기
- * button_pressed 시리얼로 연결하기
- 
+ * button_pressed 시리얼로 연결하기 
+ *  millis() overflow 처리.limit.h  (max - t1) + t2 or t2- t1
+ * BUTTON_ON/OFF/DEBOUNCING enum으로 바꾸기 
 */
 
 
@@ -49,13 +50,17 @@ TEST_GROUP(Debouncing)
         mock().actualCall("delay").withParameter("millisecs",(int) millisecs);
     }
 
+    static unsigned long mock_cmillis() {
+        return (unsigned long) mock().actualCall("cmillis").returnValue().getIntValue();
+    }
     
     int db_time;
     int button_state;
     void setup() {
         db_time = 20;
         UT_PTR_SET(is_pressed,&mock_is_pressed);
-        UT_PTR_SET(_delay,&mock_delay);        
+        UT_PTR_SET(_delay,&mock_delay);
+        UT_PTR_SET(cmillis,&mock_cmillis);
     }
 
     void teardown() {
@@ -64,13 +69,20 @@ TEST_GROUP(Debouncing)
 
     static void mock_expect_button_sequence(int button1, int db_time, int button2 )
     {
+        mock().expectOneCall("cmillis").andReturnValue(0);
         mock().expectOneCall("is_pressed").andReturnValue(button1);
-        mock().expectOneCall("delay").withParameter("millisecs",db_time);
+        mock().expectOneCall("cmillis").andReturnValue(db_time);
         mock().expectOneCall("is_pressed").andReturnValue(button2);
     }
-    
 };
 
+
+int process_and_check(int expected, int current) {
+    int button_state;
+    button_state=process_debouncing(current);
+    LONGS_EQUAL(expected,button_state);
+    return button_state;
+}
 TEST(Debouncing, test_button_on)
 {
     button_state = BUTTON_OFF;
@@ -78,9 +90,10 @@ TEST(Debouncing, test_button_on)
 
     mock_expect_button_sequence(BUTTON_ON,db_time, BUTTON_ON);
 
-    button_state=process_debouncing(button_state);
-    LONGS_EQUAL(BUTTON_ON,button_state);
+    button_state=process_and_check(DEBOUNCING, button_state);
+    button_state=process_and_check(BUTTON_ON, button_state);
 }
+
 
 TEST(Debouncing, test_button_on1)
 {
@@ -89,23 +102,44 @@ TEST(Debouncing, test_button_on1)
 
     mock_expect_button_sequence(BUTTON_ON,db_time, BUTTON_OFF);
 
-    button_state=process_debouncing(button_state);
-    LONGS_EQUAL(BUTTON_OFF, button_state);
+    button_state=process_and_check(DEBOUNCING, button_state);
+    button_state=process_and_check(BUTTON_OFF, button_state);
 }
 
-TEST(Debouncing, test_button_event)
+TEST(Debouncing, test_button_pressed_event)
 {
+    int button_event;    
     set_debounce_time(db_time);
-    int button_event = NOEVT; 
+
     mock_expect_button_sequence(BUTTON_ON, db_time, BUTTON_ON);
     button_event = get_event();
     LONGS_EQUAL(PRESSED, button_event);
 
-    // p_button_state = ON
+}
+
+TEST(Debouncing, test_button_released_event)
+{
+    int button_event;
+    p_button_state = BUTTON_ON;
+
+    set_debounce_time(db_time);
     mock_expect_button_sequence(BUTTON_OFF, db_time, BUTTON_OFF);
     button_event = get_event();
     LONGS_EQUAL(RELEASE, button_event);
+}
 
+TEST(Debouncing, test_button_less_db_time)
+{
+    int button_event;
+    p_button_state = BUTTON_ON;
+    //TODO less db_time
+    set_debounce_time(db_time);
+    mock_expect_button_sequence(BUTTON_OFF, db_time, BUTTON_OFF);
+    button_event = get_event();
+    LONGS_EQUAL(RELEASE, button_event);
+}
+
+/*
     // p_button_state = OFF
     // mock_expect_button_sequence(BUTTON_OFF, db_time, BUTTON_OFF);
     // button_event = get_event();
@@ -116,3 +150,5 @@ TEST(Debouncing, test_button_event)
     button_event = get_event();
     LONGS_EQUAL(NOEVT, button_event);
 }
+
+*/

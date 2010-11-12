@@ -4,4 +4,4 @@
 
 extern int get_event();
 
-
+extern int p_button_state;

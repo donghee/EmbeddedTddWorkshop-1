@@ -1,7 +1,7 @@
 import serial,sys
 filename = 'i.log'
 print "> entered"
-s=serial.Serial("Com1", 9600)
+s=serial.Serial("Com1", 38400)
 s.flush()
 print "> serial opened"
 f=open(filename,'w')
@@ -17,7 +17,7 @@ def linereader(s):
             yield ''.join(b)
             b=[]
 
-lr=linereader(s)
+#lr=linereader(s)
 try:
     while True:
         event = s.read()

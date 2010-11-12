@@ -19,10 +19,15 @@ void imp_led_off()
 }
 
 void imp_delay(long unsigned millisecs) {
-       delay(millisecs);
+    delay(millisecs);
+}
+
+unsigned long imp_cmillis() {
+    return millis();
 }
 
 void (*_delay)(long unsigned)=imp_delay;
 void (*led_on)()=imp_led_on;
 void (*led_off)()=imp_led_off;
 int (*is_pressed)()=imp_is_pressed;
+unsigned long (*cmillis)()=imp_cmillis;
