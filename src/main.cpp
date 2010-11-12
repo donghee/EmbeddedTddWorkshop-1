@@ -11,7 +11,7 @@ int ledPin =  13;
 int buttonPin = 5;
 int button_event = NOEVT;
 
-void setup()   {
+void setup() {
   pinMode(buttonPin, INPUT);
   pinMode(ledPin, OUTPUT);
   set_debounce_time(DEBOUNCE_DELAY);
