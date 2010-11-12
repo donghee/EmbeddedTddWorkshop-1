@@ -19,6 +19,9 @@ TODO:
  X 준비물 챙기기 (폼보드, 알루미늄테이프, 니퍼, 가위, 전선)
  X mock expect button sequence ? scenario
  * 개발환경 공유
+ * makefile 합치기
+ * loop_step 사용하기
+ * button_pressed 시리얼로 연결하기
  
 */
 
