@@ -1,8 +1,8 @@
 #include <WProgram.h>
 
 extern "C" {
-#include "../ChordedKeyboard/include/debounce.h"
-#include "../ChordedKeyboard/include/event.h"    
+#include "../../include/debounce.h"
+#include "../../include/event.h"    
 }
 
 #define DEBOUNCE_DELAY 20
@@ -12,16 +12,16 @@ int buttonPin = 5;
 int button_event = NOEVT;
 
 void setup() {
-  pinMode(buttonPin, INPUT);
-  pinMode(ledPin, OUTPUT);
-  set_debounce_time(DEBOUNCE_DELAY);
-  Serial.begin(38400);
+    pinMode(buttonPin, INPUT);
+    pinMode(ledPin, OUTPUT);
+    set_debounce_time(DEBOUNCE_DELAY);
+    Serial.begin(38400);
 }
 
 int main(void) {
-  init();
-  setup();
-  loop();
+    init();
+    setup();
+    loop();
 }
 
 void loop() {

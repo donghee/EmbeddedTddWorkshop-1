@@ -1,51 +1,52 @@
-# MCU 
+# MCU
 MCU = atmega168
 F_CPU = 7372800L
 
 TARGET = ChordedKeyboard
 
 # AVRDUDE
-PORT=COM1
+PORT=COM1 # TODO: Change Serial Port
 BAUD=19200
 PROTOCOL=stk500v1
 PART=m168
-AVRDUDE=C:\work\WinAVR-20100110\bin\avrdude
+AVRDUDE=C:\work\WinAVR-20100110\bin\avrdude # TODO: Change path
 
 # Directory 
+DIR_ARDUINO = lib/ArduinoCore
+CUT_INCLUDE = include
 DIR_SRC = src
-DIR_ARDUINO = ArduinoCore
-CUT_INCLUDE = ChordedKeyboard/include
-CUT_SRC = ChordedKeyboard/src
+CUT_SRC = src/keyboard
 
 # Objects
-OBJS = press_button.o debounce.o  event.o
-IMP_OBJS = imp.o
+OBJS = imp.o     
+CUT_OBJS = press_button.o debounce.o  event.o  
 CPP_OBJS = main.o 
 
-CFLAGS =  -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU=$(F_CPU) -I$(DIR_ARDUINO) -I$(CUT_INCLUDE)
-CPPFLAGS =  -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU==$(F_CPU) -I$(DIR_ARDUINO) -I$(CUT_INCLUDE) -I$(DIR_SRC)
+AVR_CFLAGS =  -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU=$(F_CPU) -I$(DIR_ARDUINO) -I$(CUT_INCLUDE)
+AVR_CPPFLAGS =  -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU==$(F_CPU) -I$(DIR_ARDUINO) -I$(CUT_INCLUDE) -I$(DIR_SRC)
 
 RM := rm -rf
 
 # All Target
-all: clean
-all: OBJS += $(IMP_OBJS)
-all: OBJS += $(CPP_OBJS)
-all: elf secondary-outputs
+upload: OBJS += $(CUT_OBJS) 
+upload: OBJS += $(CPP_OBJS) 
+upload: elf secondary-outputs 
+upload: avrclean
 
-$(OBJS): %.o: $(CUT_SRC)/%.c 
+$(CUT_OBJS): %.o: $(CUT_SRC)/%.c
 	@echo 'Compile '
-	avr-gcc $(CFLAGS) $< -o $@
+	avr-gcc $(AVR_CFLAGS) $< -o $@
 
-$(IMP_OBJS): %.o: $(CUT_SRC)/util/%.c 
+$(OBJS): %.o: $(DIR_SRC)/%.c
 	@echo 'Compile '
-	avr-gcc $(CFLAGS) $< -o $@
+	avr-gcc $(AVR_CFLAGS) $< -o $@
+
 
 $(CPP_OBJS): %.o: $(DIR_SRC)/%.cpp
 	@echo ' '
-	avr-g++ $(CPPFLAGS) $< -o $@
+	avr-g++ $(AVR_CPPFLAGS) $< -o $@
 
-elf: $(OBJS) $(IMP_OBJS) $(CPP_OBJS) 
+elf: $(OBJS) $(CUT_OBJS) $(CPP_OBJS)
 	@echo 'Building target: $(TARGET)'
 	@echo 'Invoking: AVR C++ Linker'
 	avr-gcc -Os -Wl,--gc-sections -mmcu=atmega168 -o $(TARGET).elf	$(OBJS) $(DIR_ARDUINO)/Debug/libArduinoCore.a -L"../../ArduinoCore" -lm
@@ -64,24 +65,24 @@ hex:
 	@echo 'Finished building: $@'
 	@echo ' '
 
-sizedummy:
+size:
 	@echo 'Invoking: Print Size'
 	avr-size --format=avr --mcu=atmega168 $(TARGET).elf
 	@echo 'Finished building: $@'
 	@echo ' '
 
-avrdudedummy: 
+avrdude: 
 	@echo 'Invoking: AVRDude'
 	$(AVRDUDE) -p$(PART) -carduino -P$(PORT) -b$(BAUD) -F -Uflash:w:$(TARGET).hex:a
 	@echo 'Finished building: $@'
 	@echo ' '
 
-clean:
+avrclean:
 	$(RM) $(OBJS)$(C_DEPS)$(ELFS) *.lss *.hex $(S_DEPS)$(CXX_DEPS)$(S_UPPER_DEPS)$(C++_DEPS)$(ASM_DEPS)$(CC_DEPS)$(CPP_DEPS)$(C_UPPER_DEPS) *.elf *.o
 	@echo ' '
 
-secondary-outputs: lss hex sizedummy avrdudedummy
+secondary-outputs: lss hex size avrdude
 
-.PHONY: all clean dependents testpoint
+.PHONY: upload dependents
 
 .SECONDARY:

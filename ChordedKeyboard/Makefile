@@ -16,10 +16,6 @@ CPPUTEST_HOME = ../CppUTest
 CPPUTEST_USE_EXTENSIONS = Y
 CPP_PLATFORM = Gcc
 
-#--- ArduinoCore ---#
-ARDUINO_HOME = ../ArduinoCore
-CPPUTEST_CPPFLAGS+=-D__AVR_ATmega169__
-
 ##
 #WARNINGFLAGS += -pedantic-errors -Wconversion -Wshadow  -Wextra
 WARNINGFLAGS += -Wall -Werror -Wswitch-default -Wswitch-enum 
@@ -50,7 +46,7 @@ CPPUTEST_CFLAGS += $(MEMLEAK_DETECTOR_MALLOC_MACROS)
 #to be included in main to force them to be linked in.  By convention
 #put them into an AllTests.h file in each directory
 SRC_DIRS = \
-	src \
+	src/keyboard \
 
 #TEST_SRC_DIRS is a list of directories including 
 # - A test main (AllTests.cpp by conventin)
@@ -65,10 +61,10 @@ INCLUDE_DIRS =\
   $(CPPUTEST_HOME)/include/\
   include/\
   mocks/\
-#  $(ARDUINO_HOME)/\
 
 #Flags to pass to ld
 LDFLAGS +=
 LD_LIBRARIES += -lstdc++
 
 include $(CPPUTEST_HOME)/build/ComponentMakefile
+include Makefile.avr

@@ -22,9 +22,10 @@ int process_debouncing(int button_state) {
              (deb_pres=is_pressed()) !=button_state) {
         next_btn_state=DEBOUNCING_OFF+deb_pres;
         wakeuptime=cmt+get_debounce_time();
-    } 
+    }
     return next_btn_state;
 }
 
 void (*_delay)(long unsigned);
 unsigned long (*cmillis)();
+

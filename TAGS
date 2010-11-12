@@ -1,5 +1,20 @@
 
-ArduinoCore\binary.h,18275
+build_ctags.bat,0
+
+ChordedKeyboard\include\debounce.h,161
+#define BUTTON_OFF BUTTON_OFF7,179
+#define BUTTON_ON BUTTON_ON8,201
+#define DEBOUNCING_OFF DEBOUNCING_OFF9,222
+#define DEBOUNCING_ON DEBOUNCING_ON10,248
+
+ChordedKeyboard\include\event.h,85
+#define PRESSED PRESSED1,0
+#define RELEASE RELEASE2,19
+#define NOEVT NOEVT3,38
+
+ChordedKeyboard\include\press_button.h,0
+
+ChordedKeyboard\lib\ArduinoCore\binary.h,18275
 #define Binary_hBinary_h2,17
 #define B0 B04,35
 #define B00 B005,48
@@ -512,11 +527,11 @@ ArduinoCore\binary.h,18275
 #define B11111110 B11111110512,10327
 #define B11111111 B11111111513,10349
 
-ArduinoCore\Debug\objects.mk,48
+ChordedKeyboard\lib\ArduinoCore\Debug\objects.mk,48
 USER_OBJS :=USER_OBJS5,212
 LIBS :=LIBS7,228
 
-ArduinoCore\Debug\sources.mk,653
+ChordedKeyboard\lib\ArduinoCore\Debug\sources.mk,653
 O_SRCS := O_SRCS5,212
 CPP_SRCS := CPP_SRCS6,224
 C_UPPER_SRCS := C_UPPER_SRCS7,238
@@ -541,9 +556,9 @@ C_UPPER_DEPS := C_UPPER_DEPS27,511
 SIZEDUMMY := SIZEDUMMY28,529
 SUBDIRS := \SUBDIRS31,609
 
-ArduinoCore\Debug\subdir.mk,0
+ChordedKeyboard\lib\ArduinoCore\Debug\subdir.mk,0
 
-ArduinoCore\HardwareSerial.cpp,1688
+ChordedKeyboard\lib\ArduinoCore\HardwareSerial.cpp,1688
 #define RX_BUFFER_SIZE RX_BUFFER_SIZE34,1322
 struct ring_buffer {ring_buffer36,1350
   unsigned char buffer[RX_BUFFER_SIZE];buffer37,1371
@@ -571,7 +586,7 @@ HardwareSerial Serial1(&rx_buffer1, &UBRR1H, &UBRR1L, &UCSR1A, &UCSR1B, &UDR1, R
 HardwareSerial Serial2(&rx_buffer2, &UBRR2H, &UBRR2L, &UCSR2A, &UCSR2B, &UDR2, RXEN2, TXEN2, RXCIE2, UDRE2, U2X2);Serial2217,6188
 HardwareSerial Serial3(&rx_buffer3, &UBRR3H, &UBRR3L, &UCSR3A, &UCSR3B, &UDR3, RXEN3, TXEN3, RXCIE3, UDRE3, U2X3);Serial3218,6303
 
-ArduinoCore\HardwareSerial.h,541
+ChordedKeyboard\lib\ArduinoCore\HardwareSerial.h,541
 #define HardwareSerial_hHardwareSerial_h21,872
 class HardwareSerial : public PrintHardwareSerial29,962
     ring_buffer *_rx_buffer;_rx_buffer32,1011
@@ -586,7 +601,7 @@ class HardwareSerial : public PrintHardwareSerial29,962
     uint8_t _udre;_udre41,1246
     uint8_t _u2x;_u2x42,1265
 
-ArduinoCore\pins_arduino.c,1327
+ChordedKeyboard\lib\ArduinoCore\pins_arduino.c,1327
 #define PA PA68,2126
 #define PB PB69,2139
 #define PC PC70,2152
@@ -614,7 +629,7 @@ const uint8_t PROGMEM digital_pin_to_port_PGM[] = {digital_pin_to_port_PGM386,
 const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {digital_pin_to_bit_mask_PGM409,11131
 const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {digital_pin_to_timer_PGM432,11420
 
-ArduinoCore\pins_arduino.h,1060
+ChordedKeyboard\lib\ArduinoCore\pins_arduino.h,1060
 #define Pins_Arduino_hPins_Arduino_h26,942
 #define NOT_A_PIN NOT_A_PIN30,993
 #define NOT_A_PORT NOT_A_PORT31,1013
@@ -643,7 +658,7 @@ ArduinoCore\pins_arduino.h,1060
 #define portInputRegister(portInputRegister73,2472
 #define portModeRegister(portModeRegister74,2568
 
-ArduinoCore\Print.cpp,1155
+ChordedKeyboard\lib\ArduinoCore\Print.cpp,1155
 void Print::write(const char *str)write32,1117
 void Print::write(const uint8_t *buffer, size_t size)write39,1239
 void Print::print(uint8_t b)print45,1337
@@ -668,7 +683,7 @@ void Print::println(double n)println153,2550
 void Print::printNumber(unsigned long n, uint8_t base)printNumber161,2692
 void Print::printFloat(double number, uint8_t digits) printFloat182,3066
 
-ArduinoCore\Print.h,179
+ChordedKeyboard\lib\ArduinoCore\Print.h,179
 #define Print_hPrint_h21,864
 #define DEC DEC26,937
 #define HEX HEX27,952
@@ -677,9 +692,9 @@ ArduinoCore\Print.h,179
 #define BYTE BYTE30,995
 class PrintPrint32,1011
 
-ArduinoCore\WConstants.h,0
+ChordedKeyboard\lib\ArduinoCore\WConstants.h,0
 
-ArduinoCore\WInterrupts.c,669
+ChordedKeyboard\lib\ArduinoCore\WInterrupts.c,669
 volatile static voidFuncPtr intFunc[EXTERNAL_NUM_INTERRUPTS];intFunc35,1120
 #define EICRA EICRA39,1255
 #define EIMSK EIMSK40,1275
@@ -696,7 +711,7 @@ SIGNAL(INT7_vect) {SIGNAL190,4793
 SIGNAL(INT0_vect) {SIGNAL197,4884
 SIGNAL(INT1_vect) {SIGNAL202,4968
 
-ArduinoCore\wiring.c,653
+ChordedKeyboard\lib\ArduinoCore\wiring.c,653
 #define MICROSECONDS_PER_TIMER0_OVERFLOW MICROSECONDS_PER_TIMER0_OVERFLOW29,1096
 #define MILLIS_INC MILLIS_INC32,1232
 #define FRACT_INC FRACT_INC37,1503
@@ -711,7 +726,7 @@ void delay(unsigned long ms)delay98,2723
 void delayMicroseconds(unsigned int us)delayMicroseconds109,3001
 void init()init168,4629
 
-ArduinoCore\wiring.h,1618
+ChordedKeyboard\lib\ArduinoCore\wiring.h,1618
 #define Wiring_hWiring_h26,957
 #define ARDUINO ARDUINO36,1071
 #define HIGH HIGH39,1098
@@ -760,19 +775,19 @@ typedef unsigned int word;word97,2685
 typedef uint8_t boolean;boolean101,2742
 typedef uint8_t byte;byte102,2767
 
-ArduinoCore\wiring_analog.c,225
+ChordedKeyboard\lib\ArduinoCore\wiring_analog.c,225
 uint8_t analog_reference = DEFAULT;analog_reference28,967
 void analogReference(uint8_t mode)analogReference30,1004
 int analogRead(uint8_t pin)analogRead38,1249
 void analogWrite(uint8_t pin, int val)analogWrite77,2448
 
-ArduinoCore\wiring_digital.c,233
+ChordedKeyboard\lib\ArduinoCore\wiring_digital.c,233
 void pinMode(uint8_t pin, uint8_t mode)pinMode28,979
 static inline void turnOffPWM(uint8_t timer)turnOffPWM51,1693
 void digitalWrite(uint8_t pin, uint8_t val)digitalWrite78,2527
 int digitalRead(uint8_t pin)digitalRead97,2984
 
-ArduinoCore\wiring_private.h,658
+ChordedKeyboard\lib\ArduinoCore\wiring_private.h,658
 #define WiringPrivate_hWiringPrivate_h26,935
 #define cbi(cbi41,1142
 #define sbi(sbi44,1213
@@ -788,13 +803,13 @@ ArduinoCore\wiring_private.h,658
 #define EXTERNAL_NUM_INTERRUPTS EXTERNAL_NUM_INTERRUPTS59,1545
 typedef void (*voidFuncPtr)(void);voidFuncPtr62,1587
 
-ArduinoCore\wiring_pulse.c,89
+ChordedKeyboard\lib\ArduinoCore\wiring_pulse.c,89
 unsigned long pulseIn(uint8_t pin, uint8_t state, unsigned long timeout)pulseIn32,1236
 
-ArduinoCore\wiring_shift.c,93
+ChordedKeyboard\lib\ArduinoCore\wiring_shift.c,93
 void shiftOut(uint8_t dataPin, uint8_t clockPin, uint8_t bitOrder, byte val)shiftOut27,936
 
-ArduinoCore\WMath.cpp,398
+ChordedKeyboard\lib\ArduinoCore\WMath.cpp,398
 void randomSeed(unsigned int seed)randomSeed30,1022
 long random(long howbig)random37,1104
 long random(long howsmall, long howbig)random45,1201
@@ -802,28 +817,17 @@ long map(long x, long in_min, long in_max, long out_min, long out_max)map54,13
 unsigned int makeWord(unsigned int w) { return w; }makeWord59,1517
 unsigned int makeWord(unsigned char h, unsigned char l) { return (h << 8) | l; makeWord60,1569
 
-ArduinoCore\WProgram.h,61
+ChordedKeyboard\lib\ArduinoCore\WProgram.h,61
 #define WProgram_hWProgram_h2,19
 #define word(word18,262
 
-build_ctags.bat,0
-
-ChordedKeyboard\include\debounce.h,72
-#define BUTTON_ON BUTTON_ON5,141
-#define BUTTON_OFF BUTTON_OFF6,162
-
-ChordedKeyboard\include\event.h,85
-#define PRESSED PRESSED1,0
-#define RELEASE RELEASE2,19
-#define NOEVT NOEVT3,38
-
-ChordedKeyboard\include\press_button.h,0
-
-ChordedKeyboard\src\debounce.c,215
+ChordedKeyboard\src\debounce.c,308
 int debounce_time;debounce_time4,52
 void set_debounce_time(int millisecs) {set_debounce_time6,74
-int process_debouncing(int button_state) {process_debouncing10,152
-void (*_delay)(long unsigned);_delay18,335
+int get_debounce_time() {get_debounce_time9,150
+int process_debouncing(int button_state) {process_debouncing13,209
+void (*_delay)(long unsigned);_delay29,718
+unsigned long (*cmillis)();cmillis30,750
 
 ChordedKeyboard\src\event.c,84
 int p_button_state=BUTTON_OFF;p_button_state4,45
@@ -839,15 +843,26 @@ void (*led_on)();led_on35,451
 void (*led_off)();led_off36,470
 int (*is_pressed)();is_pressed37,490
 
-ChordedKeyboard\src\util\imp.c,371
+ChordedKeyboard\src\util\imp.c,475
 int imp_is_pressed()imp_is_pressed3,25
 void imp_led_on()imp_led_on9,112
 void imp_led_off()imp_led_off15,211
 void imp_delay(long unsigned millisecs) {imp_delay21,306
-void (*_delay)(long unsigned)=imp_delay;_delay25,380
-void (*led_on)()=imp_led_on;led_on26,422
-void (*led_off)()=imp_led_off;led_off27,452
-int (*is_pressed)()=imp_is_pressed;is_pressed28,484
+unsigned long imp_cmillis() {imp_cmillis25,377
+void (*_delay)(long unsigned)=imp_delay;_delay29,435
+void (*led_on)()=imp_led_on;led_on30,477
+void (*led_off)()=imp_led_off;led_off31,507
+int (*is_pressed)()=imp_is_pressed;is_pressed32,539
+unsigned long (*cmillis)()=imp_cmillis;cmillis33,576
+
+ChordedKeyboard\src\util\main.cpp,242
+#define DEBOUNCE_DELAY DEBOUNCE_DELAY8,119
+int ledPin =  13;ledPin10,148
+int buttonPin = 5;buttonPin11,167
+int button_event = NOEVT;button_event12,187
+void setup() {setup14,216
+int main(void) {main21,365
+void loop() {loop27,428
 
 ChordedKeyboard\tests\AllTests.cpp,39
 int main(int ac, char** av)main7,163
@@ -857,14 +872,14 @@ IMPORT_TEST_GROUP(LoopStepProcess);LoopStepProcess1,0
 IMPORT_TEST_GROUP(PressButton);PressButton2,37
 IMPORT_TEST_GROUP(Debouncing);Debouncing3,70
 
-ChordedKeyboard\tests\test_debouncing.cpp,184
-TEST_GROUP(Debouncing)TEST_GROUP36,1016
-TEST(Debouncing, test_button_on)TEST71,1950
-TEST(Debouncing, test_button_on1)TEST82,2219
-TEST(Debouncing, test_button_event)TEST93,2492
-
-ChordedKeyboard\tests\test_event.cpp,42
-TEST_GROUP(ButtonEvent)TEST_GROUP17,241
+ChordedKeyboard\tests\test_debouncing.cpp,386
+TEST_GROUP(Debouncing)TEST_GROUP40,1225
+int process_and_check(int expected, int current) {process_and_check80,2382
+TEST(Debouncing, test_button_on)TEST86,2574
+TEST(Debouncing, test_button_on1)TEST98,2879
+TEST(Debouncing, test_button_pressed_event)TEST109,3185
+TEST(Debouncing, test_button_released_event)TEST120,3441
+TEST(Debouncing, test_button_less_db_time)TEST131,3727
 
 ChordedKeyboard\tests\test_press_button.cpp,428
 TEST_GROUP(LoopStepProcess)TEST_GROUP10,115
@@ -4125,20 +4140,7 @@ TEST(UtestMyOwn, test)TEST407,9212
 class NullParameterTest: public UtestNullParameterTest412,9261
 TEST(UtestMyOwn, NullParameters)TEST416,9309
 
-src\main.cpp,382
-#define PRESSED PRESSED8,148
-#define RELEASE RELEASE9,167
-#define NOEVT NOEVT10,186
-#define DEBOUNCE_DELAY DEBOUNCE_DELAY11,203
-int ledPin =  13;ledPin13,231
-int buttonPin = 5;buttonPin14,250
-int button_state = BUTTON_OFF;button_state15,270
-int p_button_state;p_button_state16,302
-void setup()   {setup18,325
-int main(void) {main26,502
-void loop() {loop33,603
-
-TestPoint\read_keystep.py,480
+testpoint\read_keystep.py,453
 import serial,sysserial1,0
 import serial,syssys1,0
 filename = 'i.log'filename2,19
@@ -4148,14 +4150,13 @@ event = Noneevent8,148
 value = Nonevalue9,162
 i=0i10,176
 def linereader(s):linereader12,183
-lr=linereader(s)lr20,333
-        event = s.read()event27,482
-        e = int(event)e31,602
-            event = 'NOEVT'event33,646
-            event = 'PRESSED'event35,697
-            event = 'RELEASED'event37,750
+        event = s.read()event23,375
+        e = int(event)e27,495
+            event = 'NOEVT'event29,539
+            event = 'PRESSED'event31,590
+            event = 'RELEASED'event33,643
 
-TestPoint\tdd3.py,632
+testpoint\tdd3.py,632
 import unittestunittest2,25
 class TestPoint:TestPoint4,44
     def __init__(self,input):__init__5,62
@@ -4172,7 +4173,7 @@ class Test(unittest.TestCase):Test36,788
     def testNextPoint(self):testNextPoint78,2119
     def testx(self):testx85,2347
 
-TestPoint\test.py,552
+testpoint\test.py,552
 import unittestunittest2,25
 class TestPoint:TestPoint4,44
     def __init__(self,input):__init__5,62
@@ -4187,7 +4188,7 @@ class Test(unittest.TestCase):Test31,746
     def testTimemaker(self):testTimemaker56,1428
     def testNextPoint(self):testNextPoint73,2068
 
-TestPoint\testpoint.py,800
+testpoint\testpoint.py,800
 import timetime6,97
 import serial, structserial8,135
 import serial, structstruct8,135
@@ -4207,7 +4208,7 @@ s=serial.Serial("Com1")s12,195
                     box_x= 10+x*box_widthbox_x41,1162
                     box_y= 450- y* box_heightbox_y42,1205
 
-TestPoint\testpoint2.py,609
+testpoint\testpoint2.py,609
 import timetime5,94
 import serial, structserial7,132
 import serial, structstruct7,132
@@ -4225,7 +4226,7 @@ s=serial.Serial("Com1")s10,172
                 box_x= 10+x*box_widthbox_x45,1231
                 box_y= 450- y* box_heightbox_y46,1270
 
-TestPoint\testpoint3.py,608
+testpoint\testpoint3.py,608
 import timetime5,94
 import serial, structserial7,132
 import serial, structstruct7,132
@@ -4243,7 +4244,7 @@ s=serial.Serial("Com1")s10,172
                 box_x= 10+x*box_widthbox_x34,810
                 box_y= 450- y* box_heightbox_y35,849
 
-TestPoint\testpoint_http.py,624
+testpoint\testpoint_http.py,624
 from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandlerHTTPServer5,47
 from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandlerBaseHTTPRequestHandler5,47
 import os,glob, time, random, pdbos6,109
@@ -4257,7 +4258,7 @@ class RequestHandler(BaseHTTPRequestHandler):RequestHandler9,166
     def do_GET(self):do_GET10,212
 httpd = HTTPServer(('',8085),RequestHandler)httpd80,2028
 
-TestPoint\testpoint_http2.py,658
+testpoint\testpoint_http2.py,658
 from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandlerHTTPServer5,51
 from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandlerBaseHTTPRequestHandler5,51
 import os,glob, time, random, pdbos6,114
@@ -4272,7 +4273,7 @@ class RequestHandler(BaseHTTPRequestHandler):RequestHandler9,174
 	s=serial.Serial("Com3")s11,244
 httpd = HTTPServer(('',7676),RequestHandler)httpd72,2202
 
-TestPoint\testpoint_june.py,992
+testpoint\testpoint_june.py,992
 import timetime6,96
 import serial, structserial8,134
 import serial, structstruct8,134
@@ -4297,7 +4298,7 @@ s=serial.Serial("Com1")s12,194
                         mid=(x1 + x2)/2mid51,1315
                     lastst=vlastst54,1414
 
-TestPoint\test_testpoint.py,451
+testpoint\test_testpoint.py,451
 import unittestunittest5,68
 class Serial:Serial8,89
     def __init__(self, values):__init__9,104

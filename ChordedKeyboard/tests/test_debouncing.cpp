@@ -90,7 +90,7 @@ TEST(Debouncing, test_button_on)
 
     mock_expect_button_sequence(BUTTON_ON,db_time, BUTTON_ON);
 
-    button_state=process_and_check(DEBOUNCING, button_state);
+    button_state=process_and_check(DEBOUNCING_ON, button_state);
     button_state=process_and_check(BUTTON_ON, button_state);
 }
 
@@ -102,7 +102,7 @@ TEST(Debouncing, test_button_on1)
 
     mock_expect_button_sequence(BUTTON_ON,db_time, BUTTON_OFF);
 
-    button_state=process_and_check(DEBOUNCING, button_state);
+    button_state=process_and_check(DEBOUNCING_ON, button_state);
     button_state=process_and_check(BUTTON_OFF, button_state);
 }
 
