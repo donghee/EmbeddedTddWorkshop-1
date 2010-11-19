@@ -1,7 +1,7 @@
 10
 
 dir
-591
+592
 https://cpputest.svn.sourceforge.net/svnroot/cpputest/trunk/scripts
 https://cpputest.svn.sourceforge.net/svnroot/cpputest
 
@@ -128,39 +128,8 @@ has-props
 
 131
 
-NewLibrary.sh
-file
-
-
-
-
-2010-10-31T13:28:56.128082Z
-d8db4ec7cb50641f735c62243bd82230
-2007-11-20T06:59:21.194339Z
-183
-jamesgrenning
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-931
+UnityTemplates
+dir
 
 InstallScripts.sh
 file
@@ -196,19 +165,16 @@ has-props
 
 417
 
-UnityTemplates
-dir
-
-NewClass.sh
+NewLibrary.sh
 file
 
 
 
 
 2010-10-31T13:28:56.128082Z
-31333453c6e72f2258975a80f7adb8c5
-2010-08-28T19:36:14.215000Z
-551
+d8db4ec7cb50641f735c62243bd82230
+2007-11-20T06:59:21.194339Z
+183
 jamesgrenning
 has-props
 
@@ -231,41 +197,7 @@ has-props
 
 
 
-140
-
-reformat.sh
-file
-
-
-
-
-2010-10-31T13:28:56.128082Z
-ecd4e8ecab02e668ce97007aff6a49a7
-2008-01-31T05:38:07.608224Z
-235
-jamesgrenning
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-352
+931
 
 svnignore.txt
 file
@@ -301,6 +233,74 @@ jamesgrenning
 
 105
 
+reformat.sh
+file
+
+
+
+
+2010-10-31T13:28:56.128082Z
+ecd4e8ecab02e668ce97007aff6a49a7
+2008-01-31T05:38:07.608224Z
+235
+jamesgrenning
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+352
+
+NewClass.sh
+file
+
+
+
+
+2010-10-31T13:28:56.128082Z
+31333453c6e72f2258975a80f7adb8c5
+2010-08-28T19:36:14.215000Z
+551
+jamesgrenning
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+140
+
 NewProject.sh
 file
 
@@ -334,40 +334,6 @@ jamesgrenning
 
 
 1089
-
-squeeze.sh
-file
-
-
-
-
-2010-10-31T13:28:56.132081Z
-011d242ad49aeb397ba6d97dca20374f
-2007-08-08T04:28:13.774223Z
-108
-jamesgrenning
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-32
 
 zipExclude.txt
 file
@@ -403,8 +369,39 @@ jamesgrenning
 
 211
 
-templates
-dir
+squeeze.sh
+file
+
+
+
+
+2010-10-31T13:28:56.132081Z
+011d242ad49aeb397ba6d97dca20374f
+2007-08-08T04:28:13.774223Z
+108
+jamesgrenning
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+32
 
 GenerateSrcFiles.sh
 file
@@ -439,6 +436,9 @@ has-props
 
 
 2630
+
+templates
+dir
 
 NewPackageDirs.sh
 file

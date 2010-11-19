@@ -1,15 +1,15 @@
 10
 
 dir
-591
+592
 https://cpputest.svn.sourceforge.net/svnroot/cpputest/trunk
 https://cpputest.svn.sourceforge.net/svnroot/cpputest
 
 
 
-2010-10-31T01:59:17.644665Z
-591
-basvodde
+2010-11-02T20:25:26.368776Z
+592
+jamesgrenning
 has-props
 
 
@@ -492,10 +492,10 @@ file
 
 
 
-2010-10-31T13:29:04.668083Z
-3bb338c517cb271a1c5f55a4d49abbd0
-2010-07-30T17:02:48.727039Z
-490
+2010-11-13T15:05:28.729492Z
+4d3c99213e348a8f5d7231eba695ae63
+2010-11-02T20:25:26.368776Z
+592
 jamesgrenning
 has-props
 
@@ -518,41 +518,7 @@ has-props
 
 
 
-2175
-
-makeAndRun.bat
-file
-
-
-
-
-2010-10-31T13:29:04.672080Z
-3a679b63e90bbe7e90fd3fd369088b92
-2010-08-31T22:34:14.130403Z
-555
-jamesgrenning
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-538
+2431
 
 CppUTest.dsp
 file
@@ -624,6 +590,40 @@ jamesgrenning
 
 
 2260
+
+makeVc6.bat
+file
+
+
+
+
+2010-11-13T15:05:28.796875Z
+3a679b63e90bbe7e90fd3fd369088b92
+2010-11-02T20:25:26.368776Z
+592
+jamesgrenning
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+538
 
 README_CppUTest.txt
 file
@@ -699,7 +699,7 @@ file
 
 
 
-2010-10-31T13:29:04.680083Z
+2010-11-13T15:05:17.339843Z
 3a2e5296afb63bd93dfb745bcbb2b506
 2010-10-16T23:31:47.940027Z
 583
@@ -761,12 +761,6 @@ jamesgrenning
 
 12900
 
-examples
-dir
-
-.settings
-dir
-
 Makefile_for_old_make
 file
 
@@ -800,4 +794,10 @@ basvodde
 
 
 7601
+
+.settings
+dir
+
+examples
+dir
 

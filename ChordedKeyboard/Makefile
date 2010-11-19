@@ -17,7 +17,6 @@ CPPUTEST_USE_EXTENSIONS = Y
 CPP_PLATFORM = Gcc
 
 ##
-#WARNINGFLAGS += -pedantic-errors -Wconversion -Wshadow  -Wextra
 WARNINGFLAGS += -Wall -Werror -Wswitch-default -Wswitch-enum 
 MEMLEAK_DETECTOR_NEW_MACROS += -include $(CPPUTEST_HOME)/include/CppUTest/MemoryLeakDetectorNewMacros.h
 MEMLEAK_DETECTOR_MALLOC_MACROS += -include $(CPPUTEST_HOME)/include/CppUTest/MemoryLeakDetectorMallocMacros.h
@@ -46,7 +45,7 @@ CPPUTEST_CFLAGS += $(MEMLEAK_DETECTOR_MALLOC_MACROS)
 #to be included in main to force them to be linked in.  By convention
 #put them into an AllTests.h file in each directory
 SRC_DIRS = \
-	src/keyboard \
+	src/* \
 
 #TEST_SRC_DIRS is a list of directories including 
 # - A test main (AllTests.cpp by conventin)

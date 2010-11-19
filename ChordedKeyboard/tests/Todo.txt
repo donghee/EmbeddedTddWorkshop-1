@@ -1,17 +1,27 @@
-﻿TODO: 
- X mock plugin 쓰도록 refactoring
- X 디렉토리 정리
- X _button_pressed에서 앞에 _ 빼기
- X led_on/off 구현
-  X link-time substitute 이용.
-  X TODO: 버튼 눌렀을때 led_off가 되네 수정필요.
- X is_pressed 단일 테스트
- X 전체 시스템 테스트 (누르면 Led 켜지고, 안누르면 꺼지는지)
- X bouncing 처리 test 만들기/구현
- X led_on/ led_off 따로 분리하기
-  X link-time substitute 제거하기 (레이어 추가) (util/imp.c)
- X 실제 통합테스트
-  X testpoint로 bouncing처리 확인하기
- X get_event 테스트 케이스 만들기
-  * NOEVT 테스트 케이스 
- * 두개 버튼 테스트 만들기
+TODO: 
+X mock plugin 쓰도록 refactoring
+X 디렉토리 정리
+X _button_pressed에서 앞에 _ 빼기
+X led_on/off 구현
+X link-time substitute 이용.
+X TODO: 버튼 눌렀을때 led_off가 되네 수정필요.
+X is_pressed 단일 테스트
+X 전체 시스템 테스트 (누르면 Led 켜지고, 안누르면 꺼지는지)
+X bouncing 처리 test 만들기/구현
+X led_on/ led_off 따로 분리하기
+X link-time substitute 제거하기 (레이어 추가) (util/imp.c)
+X 실제 통합테스트
+X testpoint로 bouncing처리 확인하기
+X get_event 테스트 케이스 만들기
+* NOEVT 테스트 케이스
+* 두개 버튼 테스트 만들기
+X 준비물 챙기기 (폼보드, 알루미늄테이프, 니퍼, 가위, 전선)
+X mock expect button sequence ? scenario
+X 개발환경 공유
+X makefile 합치기
+* loop_step 사용하기
+* button_pressed 시리얼로 연결하기 
+*  millis() overflow 처리.limit.h  (max - t1) + t2 or t2- t1
+* BUTTON_ON/OFF/DEBOUNCING_ON/OFF enum으로 바꾸기 
+* extern 빼기. 펑션포인터 선언 빼기 -> *.c 내용 헤더로 모아넣기 
+

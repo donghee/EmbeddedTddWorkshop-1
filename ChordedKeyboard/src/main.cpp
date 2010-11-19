@@ -1,8 +1,8 @@
 #include <WProgram.h>
 
 extern "C" {
-#include "../../include/debounce.h"
-#include "../../include/event.h"    
+#include "debounce.h"
+#include "event.h"    
 }
 
 #define DEBOUNCE_DELAY 20

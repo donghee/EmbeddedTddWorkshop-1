@@ -19,11 +19,11 @@ C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\lib\ArduinoCore\wiring_ana
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\lib\ArduinoCore\wiring_digital.c
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\lib\ArduinoCore\wiring_pulse.c
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\lib\ArduinoCore\wiring_shift.c
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\debounce.c
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\event.c
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\press_button.c
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\util\main.cpp
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\util\imp.c
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\main.cpp
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\imp.c
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\keyboard\debounce.c
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\keyboard\event.c
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\keyboard\press_button.c
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\AllTests.h
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\AllTests.cpp
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\test_debouncing.cpp
