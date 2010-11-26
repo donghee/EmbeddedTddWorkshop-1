@@ -84,6 +84,94 @@ int process_and_check(int expected, int current) {
     LONGS_EQUAL(expected,button_state);
     return button_state;
 }
+
+void check_states_scenario(int current, int occurd_event, int expect) 
+{
+    int button_state;
+    set_current_state(current);
+    occur(occurd_event);
+    button_state = get_current_state();
+    LONGS_EQUAL(expect, button_state);
+}
+
+
+TEST(Debouncing, test_temp)
+{
+    check_states_scenario(ST_BUTTON_RELEASED, EV_BUTTON_ON, ST_DEB_FOR_PR);
+}
+
+
+TEST(Debouncing, test_temp1)
+{
+    mock().expectOneCall("is_pressed").andReturnValue(BUTTON_ON);
+    check_states_scenario(ST_DEB_FOR_PR, EV_WAKE_UP, ST_BUTTON_PRESSED);
+}
+
+
+TEST(Debouncing, test_temp2)
+{
+    mock().expectOneCall("is_pressed").andReturnValue(BUTTON_OFF);
+    check_states_scenario(ST_DEB_FOR_PR, EV_WAKE_UP, ST_BUTTON_RELEASED);    
+}
+
+TEST(Debouncing, test_temp3)
+{
+    check_states_scenario(ST_BUTTON_PRESSED, EV_BUTTON_OFF, ST_DEB_FOR_RE);
+}
+
+
+TEST(Debouncing, test_temp4)
+{
+    mock().expectOneCall("is_pressed").andReturnValue(BUTTON_OFF);
+    check_states_scenario(ST_DEB_FOR_RE, EV_WAKE_UP, ST_BUTTON_RELEASED);
+}
+
+
+TEST(Debouncing, test_temp5)
+{
+    mock().expectOneCall("is_pressed").andReturnValue(BUTTON_ON);
+    check_states_scenario(ST_DEB_FOR_RE, EV_WAKE_UP, ST_BUTTON_PRESSED);
+}
+
+TEST(Debouncing, test_two_buttons1) 
+{
+    set_current_state2(0, ST_BUTTON_RELEASED);
+    occur2(0,EV_BUTTON_ON);
+    button_state = get_current_state2(0);
+    LONGS_EQUAL(ST_DEB_FOR_PR, button_state);
+}
+
+TEST(Debouncing, test_two_buttons2)
+{
+    set_current_state2(0, ST_BUTTON_RELEASED);
+    set_current_state2(1, ST_BUTTON_RELEASED);
+    occur2(0,EV_BUTTON_ON);
+
+    button_state = get_current_state2(0);
+    LONGS_EQUAL(ST_DEB_FOR_PR, button_state);
+    
+    button_state = get_current_state2(1);
+    LONGS_EQUAL(ST_BUTTON_RELEASED, button_state);
+}
+
+
+/*
+TEST(XXXX, test_temp)
+{
+    set_current_state2(0, ST_BUTTON_RELEASED);
+    occur2(0,EV_BUTTON_ON);
+    check_cs2(0, ST_DEB_FOR_PR);
+    /////////////////////////////
+    set_current_state2(0, ST_BUTTON_PRESSED);
+    set_current_state2(1, ST_BUTTON_RELEASED);
+    occur2(1,EV_BUTTON_ON);
+    check_cs2(0, ST_DEB_FOR_PR);
+    check_cs2(1, ST_BUTTON_RELEASED);
+    
+
+}
+*/
+
 TEST(Debouncing, test_button_on)
 {
     button_state = BUTTON_OFF;
@@ -154,5 +242,3 @@ LONGS_EQUAL(NOEVT, button_event);
 }
 
 */
-
-
