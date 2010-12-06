@@ -4,19 +4,20 @@ C:\work\workspace\EmbeddedTddWorkshop\build_ctags.bat,0
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\include\debounce.h,162
 #define BUTTON_OFF BUTTON_OFF8,225
 #define BUTTON_ON BUTTON_ON9,247
-#define DEBOUNCING_OFF DEBOUNCING_OFF10,268
-#define DEBOUNCING_ON DEBOUNCING_ON11,294
+#define DEBOUNCING_OFF DEBOUNCING_OFF11,270
+#define DEBOUNCING_ON DEBOUNCING_ON12,296
 
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\include\event.h,353
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\include\event.h,397
 #define PRESSED PRESSED1,0
 #define RELEASE RELEASE2,19
 #define NOEVT NOEVT3,38
 #define ST_BUTTON_RELEASED ST_BUTTON_RELEASED5,57
 #define ST_DEB_FOR_PR ST_DEB_FOR_PR6,88
 #define ST_BUTTON_PRESSED ST_BUTTON_PRESSED7,113
-#define EV_BUTTON_OFF EV_BUTTON_OFF9,144
-#define EV_BUTTON_ON EV_BUTTON_ON10,169
-#define EV_WAKE_UP EV_WAKE_UP12,195
+#define ST_DEB_FOR_RE ST_DEB_FOR_RE8,142
+#define EV_BUTTON_OFF EV_BUTTON_OFF10,169
+#define EV_BUTTON_ON EV_BUTTON_ON11,194
+#define EV_WAKE_UP EV_WAKE_UP12,218
 
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\include\press_button.h,0
 
@@ -850,13 +851,16 @@ int process_debouncing(int button_state) {process_debouncing25,359
 void (*_delay)(long unsigned);_delay40,841
 unsigned long (*cmillis)();cmillis41,873
 
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\keyboard\event.c,270
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\keyboard\event.c,504
 int p_button_state=BUTTON_OFF;p_button_state5,72
-int current_state;current_state8,158
-int get_event() {get_event11,182
-void set_current_state(int state)set_current_state28,662
-void occur(int event)occur33,733
-int get_current_state() get_current_state46,1054
+int current_states[5] = {ST_BUTTON_RELEASED, ST_BUTTON_RELEASED,current_states8,158
+int get_event() {get_event13,341
+void set_current_state(int state)set_current_state31,823
+void set_current_state2(int button, int state)set_current_state236,898
+void occur2(int button, int event)occur241,991
+void occur(int event) occur47,1076
+int get_current_state() get_current_state61,1387
+int get_current_state2(int button) get_current_state267,1458
 
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\keyboard\press_button.c,312
 void button_pressed() button_pressed4,51
@@ -885,17 +889,23 @@ IMPORT_TEST_GROUP(LoopStepProcess);LoopStepProcess1,0
 IMPORT_TEST_GROUP(PressButton);PressButton2,37
 IMPORT_TEST_GROUP(Debouncing);Debouncing3,70
 
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\test_debouncing.cpp,515
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\test_debouncing.cpp,846
 TEST_GROUP(Debouncing)TEST_GROUP41,1343
 int process_and_check(int expected, int current) {process_and_check81,2496
-TEST(Debouncing, test_temp)TEST89,2692
-TEST(Debouncing, test_temp1)TEST104,3020
-TEST(Debouncing, test_temp2)TEST117,3300
-TEST(Debouncing, test_button_on)TEST147,3972
-TEST(Debouncing, test_button_on1)TEST159,4277
-TEST(Debouncing, test_button_pressed_event)TEST170,4583
-TEST(Debouncing, test_button_released_event)TEST181,4839
-TEST(Debouncing, test_button_less_db_time)TEST192,5125
+void check_states_scenario(int current, int occurd_event, int expect) check_states_scenario88,2690
+TEST(Debouncing, test_temp)TEST98,2935
+TEST(Debouncing, test_temp1)TEST104,3051
+TEST(Debouncing, test_temp2)TEST111,3232
+TEST(Debouncing, test_temp3)TEST117,3417
+TEST(Debouncing, test_temp4)TEST123,3534
+TEST(Debouncing, test_temp5)TEST130,3717
+TEST(Debouncing, test_two_buttons1) TEST136,3896
+TEST(Debouncing, test_two_buttons2)TEST144,4109
+TEST(Debouncing, test_button_on)TEST175,4864
+TEST(Debouncing, test_button_on1)TEST187,5169
+TEST(Debouncing, test_button_pressed_event)TEST198,5475
+TEST(Debouncing, test_button_released_event)TEST209,5731
+TEST(Debouncing, test_button_less_db_time)TEST220,6017
 
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\test_press_button.cpp,486
 TEST_GROUP(LoopStepProcess)TEST_GROUP10,115
@@ -4334,19 +4344,20 @@ C:\work\workspace\EmbeddedTddWorkshop\build_ctags.bat,0
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\include\debounce.h,162
 #define BUTTON_OFF BUTTON_OFF8,225
 #define BUTTON_ON BUTTON_ON9,247
-#define DEBOUNCING_OFF DEBOUNCING_OFF10,268
-#define DEBOUNCING_ON DEBOUNCING_ON11,294
+#define DEBOUNCING_OFF DEBOUNCING_OFF11,270
+#define DEBOUNCING_ON DEBOUNCING_ON12,296
 
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\include\event.h,353
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\include\event.h,397
 #define PRESSED PRESSED1,0
 #define RELEASE RELEASE2,19
 #define NOEVT NOEVT3,38
 #define ST_BUTTON_RELEASED ST_BUTTON_RELEASED5,57
 #define ST_DEB_FOR_PR ST_DEB_FOR_PR6,88
 #define ST_BUTTON_PRESSED ST_BUTTON_PRESSED7,113
-#define EV_BUTTON_OFF EV_BUTTON_OFF9,144
-#define EV_BUTTON_ON EV_BUTTON_ON10,169
-#define EV_WAKE_UP EV_WAKE_UP12,195
+#define ST_DEB_FOR_RE ST_DEB_FOR_RE8,142
+#define EV_BUTTON_OFF EV_BUTTON_OFF10,169
+#define EV_BUTTON_ON EV_BUTTON_ON11,194
+#define EV_WAKE_UP EV_WAKE_UP12,218
 
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\include\press_button.h,0
 
@@ -5180,13 +5191,16 @@ int process_debouncing(int button_state) {process_debouncing25,359
 void (*_delay)(long unsigned);_delay40,841
 unsigned long (*cmillis)();cmillis41,873
 
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\keyboard\event.c,270
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\keyboard\event.c,504
 int p_button_state=BUTTON_OFF;p_button_state5,72
-int current_state;current_state8,158
-int get_event() {get_event11,182
-void set_current_state(int state)set_current_state28,662
-void occur(int event)occur33,733
-int get_current_state() get_current_state46,1054
+int current_states[5] = {ST_BUTTON_RELEASED, ST_BUTTON_RELEASED,current_states8,158
+int get_event() {get_event13,341
+void set_current_state(int state)set_current_state31,823
+void set_current_state2(int button, int state)set_current_state236,898
+void occur2(int button, int event)occur241,991
+void occur(int event) occur47,1076
+int get_current_state() get_current_state61,1387
+int get_current_state2(int button) get_current_state267,1458
 
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\src\keyboard\press_button.c,312
 void button_pressed() button_pressed4,51
@@ -5215,17 +5229,23 @@ IMPORT_TEST_GROUP(LoopStepProcess);LoopStepProcess1,0
 IMPORT_TEST_GROUP(PressButton);PressButton2,37
 IMPORT_TEST_GROUP(Debouncing);Debouncing3,70
 
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\test_debouncing.cpp,515
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\test_debouncing.cpp,846
 TEST_GROUP(Debouncing)TEST_GROUP41,1343
 int process_and_check(int expected, int current) {process_and_check81,2496
-TEST(Debouncing, test_temp)TEST89,2692
-TEST(Debouncing, test_temp1)TEST104,3020
-TEST(Debouncing, test_temp2)TEST117,3300
-TEST(Debouncing, test_button_on)TEST147,3972
-TEST(Debouncing, test_button_on1)TEST159,4277
-TEST(Debouncing, test_button_pressed_event)TEST170,4583
-TEST(Debouncing, test_button_released_event)TEST181,4839
-TEST(Debouncing, test_button_less_db_time)TEST192,5125
+void check_states_scenario(int current, int occurd_event, int expect) check_states_scenario88,2690
+TEST(Debouncing, test_temp)TEST98,2935
+TEST(Debouncing, test_temp1)TEST104,3051
+TEST(Debouncing, test_temp2)TEST111,3232
+TEST(Debouncing, test_temp3)TEST117,3417
+TEST(Debouncing, test_temp4)TEST123,3534
+TEST(Debouncing, test_temp5)TEST130,3717
+TEST(Debouncing, test_two_buttons1) TEST136,3896
+TEST(Debouncing, test_two_buttons2)TEST144,4109
+TEST(Debouncing, test_button_on)TEST175,4864
+TEST(Debouncing, test_button_on1)TEST187,5169
+TEST(Debouncing, test_button_pressed_event)TEST198,5475
+TEST(Debouncing, test_button_released_event)TEST209,5731
+TEST(Debouncing, test_button_less_db_time)TEST220,6017
 
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\test_press_button.cpp,486
 TEST_GROUP(LoopStepProcess)TEST_GROUP10,115

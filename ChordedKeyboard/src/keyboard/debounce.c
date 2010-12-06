@@ -28,9 +28,9 @@ int process_debouncing(int button_state) {
     unsigned long cmt=cmillis();
 
     if (button_state>=DEBOUNCING_OFF && cmt >=get_wakeup_time())
-        next_btn_state=is_pressed();
+        next_btn_state=is_pressed(0);
     else if (button_state<DEBOUNCING_OFF &&
-             (deb_pres=is_pressed()) !=button_state) {
+             (deb_pres=is_pressed(0)) !=button_state) {
         next_btn_state=DEBOUNCING_OFF+deb_pres;
         set_wakeup_time(cmt+get_debounce_time());
     }

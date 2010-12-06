@@ -34,7 +34,7 @@ TEST(LoopStepProcess, test_multiful_loop_step) {
 
     int _nloop=5;
     int shd_stop=1;
-    mock().expectNCalls(_nloop-1, "loop_step").andReturnValue(!shd_stop);
+   mock().expectNCalls(_nloop-1, "loop_step").andReturnValue(!shd_stop);
     mock().expectOneCall("loop_step").andReturnValue(shd_stop);
 	start();
 }
@@ -42,9 +42,9 @@ TEST(LoopStepProcess, test_multiful_loop_step) {
 
 TEST_GROUP(PressButton)
 {
-    static int mock_is_pressed() {
+    static int mock_is_pressed(int button) {
         int pressed;
-        pressed = mock().actualCall("is_pressed").returnValue().getIntValue();
+        pressed = mock().actualCall("is_pressed").withParameter("button",(int) button).returnValue().getIntValue();
         return pressed;
     }
 
@@ -57,7 +57,7 @@ TEST_GROUP(PressButton)
     }
 
     void setup() {
-        UT_PTR_SET(is_pressed,&mock_is_pressed);        
+        UT_PTR_SET(is_pressed,&mock_is_pressed);
         UT_PTR_SET(led_on,&mock_led_on);
         UT_PTR_SET(led_off,&mock_led_off);
     }
@@ -77,13 +77,13 @@ TEST(PressButton, test_press_and_led_on)
 }
 
 TEST(PressButton, test_is_pressed_and_led_on) {
-    mock().expectOneCall("is_pressed").andReturnValue(1);
+    mock().expectOneCall("is_pressed").withParameter("button",0).andReturnValue(1);
     mock().expectOneCall("led_on"); 
 	loop_step();
 }
 
 TEST(PressButton, test_is_pressed_and_led_off) {
-    mock().expectOneCall("is_pressed").andReturnValue(0);
+    mock().expectOneCall("is_pressed").withParameter("button",0).andReturnValue(0);
     mock().expectOneCall("led_off");
     loop_step();
 }

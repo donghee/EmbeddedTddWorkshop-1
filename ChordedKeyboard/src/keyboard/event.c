@@ -30,7 +30,7 @@ int get_event() {
 
 void set_current_state(int state)
 {
-    current_states[0] = state;
+    set_current_state2(0, state);
 }
 
 void set_current_state2(int button, int state)
@@ -40,33 +40,29 @@ void set_current_state2(int button, int state)
 
 void occur2(int button, int event)
 {
-    current_states[button] += 1;     
+    int current_state = get_current_state2(button);
+    set_current_state2(button, current_state+1);
 
+    if (event == EV_WAKE_UP) {
+        if (is_pressed(button)) 
+            set_current_state2(button, ST_BUTTON_PRESSED);
+        else
+            set_current_state2(button, ST_BUTTON_RELEASED);
+    }
 }
 
 void occur(int event) 
 {
-    int current_state = get_current_state();
-    set_current_state(current_state+1);
-    
-    if (event == EV_WAKE_UP) {
-        if (is_pressed()) 
-            set_current_state(ST_BUTTON_PRESSED);
-        else
-            set_current_state(ST_BUTTON_RELEASED);
-    }
+    occur2(0,event);
 }
 
 
 int get_current_state() 
 {
-    return current_states[0];
-    
+    return get_current_state2(0);
 }
 
 int get_current_state2(int button) 
 {
-    if (button) return ST_BUTTON_RELEASED;
     return current_states[button];
-    
 }
