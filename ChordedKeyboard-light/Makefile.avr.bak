@@ -1,0 +1,87 @@
+# MCU
+MCU = atmega168
+F_CPU = 7372800L
+
+TARGET = ChordedKeyboard
+
+# AVRDUDE
+PORT=COM1 # TODO: Change Serial Port
+BAUD=19200
+PROTOCOL=stk500v1
+PART=m168
+AVRDUDE=avrdude 
+
+# Directory 
+DIR_ARDUINO = lib/ArduinoCore
+CUT_INCLUDE = include
+DIR_SRC = src
+CUT_SRC = src # TODO: change directory of CUT(Code Under Test)
+
+# Objects
+OBJS = keyboard.o # TODO:
+CUT_OBJS =   # TODO: add object files in CUT_SRC
+CPP_OBJS = send_serial.o main.o # TODO:
+
+AVR_CFLAGS =  -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU=$(F_CPU) -I$(DIR_ARDUINO) -I$(CUT_INCLUDE)
+AVR_CPPFLAGS =  -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU==$(F_CPU) -I$(DIR_ARDUINO) -I$(CUT_INCLUDE) -I$(DIR_SRC)
+
+RM := rm -rf
+
+# All Target
+upload: OBJS += $(CUT_OBJS) 
+upload: OBJS += $(CPP_OBJS) 
+upload: elf secondary-outputs 
+upload: avrclean
+
+$(CUT_OBJS): %.o: $(CUT_SRC)/%.c
+	@echo 'Compile '
+	avr-gcc $(AVR_CFLAGS) $< -o $@
+
+$(OBJS): %.o: $(DIR_SRC)/%.c
+	@echo 'Compile '
+	avr-gcc $(AVR_CFLAGS) $< -o $@
+
+$(CPP_OBJS): %.o: $(DIR_SRC)/%.cpp
+	@echo 'Compile'
+	avr-g++ $(AVR_CPPFLAGS) $< -o $@
+
+elf: $(OBJS) $(CUT_OBJS) $(CPP_OBJS)
+	@echo 'Building target: $(TARGET)'
+	@echo 'Invoking: AVR C++ Linker'
+	avr-gcc -Os -Wl,--gc-sections -mmcu=atmega168 -o $(TARGET).elf	$(OBJS) $(DIR_ARDUINO)/Debug/libArduinoCore.a -L"../../ArduinoCore" -lm
+	@echo 'Finished building target: $(TARGET)'
+	@echo ' '
+
+lss: 
+	@echo 'Invoking: AVR Create Extended Listing'
+	avr-objdump -h -S $(TARGET).elf > $(TARGET).lss
+	@echo 'Finished building: $(TARGET)'
+	@echo ' '
+
+hex: 
+	@echo 'Create Flash image (ihex format)'
+	avr-objcopy -R .eeprom -O ihex $(TARGET).elf $(TARGET).hex
+	@echo 'Finished building: $@'
+	@echo ' '
+
+size:
+	@echo 'Invoking: Print Size'
+	avr-size --format=avr --mcu=atmega168 $(TARGET).elf
+	@echo 'Finished building: $@'
+	@echo ' '
+
+avrdude: 
+	@echo 'Invoking: AVRDude'
+	$(AVRDUDE) -p$(PART) -carduino -P$(PORT) -b$(BAUD) -F -Uflash:w:$(TARGET).hex:a
+	@echo 'Finished building: $@'
+	@echo ' '
+
+avrclean:
+	$(RM) $(OBJS)$(C_DEPS)$(ELFS) *.lss *.hex $(S_DEPS)$(CXX_DEPS)$(S_UPPER_DEPS)$(C++_DEPS)$(ASM_DEPS)$(CC_DEPS)$(CPP_DEPS)$(C_UPPER_DEPS) *.elf *.o
+	@echo ' '
+
+secondary-outputs: lss hex size avrdude
+
+.PHONY: upload dependents
+
+.SECONDARY:

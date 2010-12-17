@@ -59,7 +59,7 @@ void mock_expect_buttons_scenario(int* buttons)
 }
 
 
-TEST(Keyboard, test_read_all_buttons1)
+TEST(Keyboard, test_real_all_buttons)
 {
     int button_code = 0;
     int buttons_scenario[5] = [BUTTON_ON, BUTTON_OFF, BUTTON_OFF, BUTTON_OFF, BUTTON_OFF];
@@ -109,12 +109,10 @@ TEST(Keyboard, test_is_pressed_0)
     button_code = mock().expectOneCall("read_all_buttons").andReturnValue(1);
     //mock().expectOneCall("send_serial").withParameter("btn_code", button_code);
     start2();
-    
 // is any_presse buton?
 //  delay 100 secs
 //  read all button
 //  make buttons composition
 //  send serial
-    
-}
 
+}
