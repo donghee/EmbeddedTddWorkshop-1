@@ -5,25 +5,25 @@ F_CPU = 7372800L
 TARGET = ChordedKeyboard
 
 # AVRDUDE
-PORT=COM1 # TODO: Change Serial Port
+PORT=COM8 # TODO: Change Serial Port
 BAUD=19200
 PROTOCOL=stk500v1
 PART=m168
-AVRDUDE=avrdude # TODO: Change path
+AVRDUDE=avrdude 
 
 # Directory 
 DIR_ARDUINO = lib/ArduinoCore
-CUT_INCLUDE = include
+INCLUDE = include
 DIR_SRC = src
-CUT_SRC = src/keyboard
+CUT_SRC = $(DIR_SRC)/keyboard
 
 # Objects
-OBJS = imp.o     
-CUT_OBJS = press_button.o debounce.o  event.o  
-CPP_OBJS = main.o 
+OBJS =  # TODO:
+CUT_OBJS = keyboard.o # TODO: add object files under CUT_SRC directory
+CPP_OBJS = send_serial.o main.o # TODO: add main object and cpp objects
 
-AVR_CFLAGS =  -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU=$(F_CPU) -I$(DIR_ARDUINO) -I$(CUT_INCLUDE)
-AVR_CPPFLAGS =  -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU==$(F_CPU) -I$(DIR_ARDUINO) -I$(CUT_INCLUDE) -I$(DIR_SRC)
+AVR_CFLAGS =  -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU=$(F_CPU) -I$(DIR_ARDUINO) -I$(INCLUDE)
+AVR_CPPFLAGS =  -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU==$(F_CPU) -I$(DIR_ARDUINO) -I$(INCLUDE) -I$(DIR_SRC)
 
 RM := rm -rf
 
@@ -41,9 +41,8 @@ $(OBJS): %.o: $(DIR_SRC)/%.c
 	@echo 'Compile '
 	avr-gcc $(AVR_CFLAGS) $< -o $@
 
-
 $(CPP_OBJS): %.o: $(DIR_SRC)/%.cpp
-	@echo ' '
+	@echo 'Compile'
 	avr-g++ $(AVR_CPPFLAGS) $< -o $@
 
 elf: $(OBJS) $(CUT_OBJS) $(CPP_OBJS)

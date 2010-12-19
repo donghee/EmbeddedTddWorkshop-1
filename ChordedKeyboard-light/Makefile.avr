@@ -13,17 +13,17 @@ AVRDUDE=avrdude
 
 # Directory 
 DIR_ARDUINO = lib/ArduinoCore
-CUT_INCLUDE = include
+INCLUDE = include
 DIR_SRC = src
-CUT_SRC = src # TODO: change directory of CUT(Code Under Test)
+CUT_SRC = $(DIR_SRC)/keyboard
 
 # Objects
-OBJS = keyboard.o # TODO:
-CUT_OBJS =   # TODO: add object files in CUT_SRC
-CPP_OBJS = send_serial.o main.o # TODO:
+OBJS =  # TODO:
+CUT_OBJS = keyboard.o # TODO: add object files under CUT_SRC directory
+CPP_OBJS = send_serial.o main.o # TODO: add main object and cpp objects
 
-AVR_CFLAGS =  -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU=$(F_CPU) -I$(DIR_ARDUINO) -I$(CUT_INCLUDE)
-AVR_CPPFLAGS =  -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU==$(F_CPU) -I$(DIR_ARDUINO) -I$(CUT_INCLUDE) -I$(DIR_SRC)
+AVR_CFLAGS =  -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU=$(F_CPU) -I$(DIR_ARDUINO) -I$(INCLUDE)
+AVR_CPPFLAGS =  -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU==$(F_CPU) -I$(DIR_ARDUINO) -I$(INCLUDE) -I$(DIR_SRC)
 
 RM := rm -rf
 
