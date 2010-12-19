@@ -1,5 +1,6 @@
 #include <WProgram.h>
 #include "keyboard.h"
+
 #define MAX_BUTTON 5
 
 static int wakeup_time;
@@ -17,7 +18,11 @@ int is_pressed(int button) {
     return !digitalRead(pin);
 }
 
-int real_all_buttons() {
+int any_button_pressed() {
+    return read_all_buttons() > 0 ? true : false;
+}
+
+int read_all_buttons() {
     int i;
     int code = 0;
     for (i = 0; i<MAX_BUTTON ; i++){
@@ -27,7 +32,7 @@ int real_all_buttons() {
     return code ;
 }
 
-void set_composite_wakeup1(int time)
+void set_composite_wakeup(int time)
 {
     wakeup_time = time;
 }
@@ -51,21 +56,13 @@ void delay_for_composite()
     delay(wakeup_time);
 }
 
-int any_button_pressed() {
-    int i;
-    for (i=0; i< MAX_BUTTON; i++) {
-        if (is_pressed(i+1))
-            return 1;
-    }
-    return 0;
-}
 
 int loop_keyboard_step() {
-    static int code;
+    static int key_code;
     if (any_button_pressed()) {
         delay_for_composite();
-        code = real_all_buttons();
-        send_serial(code);
+        key_code = read_all_buttons();
+        send_serial(key_code);
         while(any_button_pressed()) {}
     }
     return 0;

@@ -51,8 +51,9 @@ c:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\lib\ArduinoCore\wiri
 c:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\lib\ArduinoCore\wiring_pulse.c
 c:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\lib\ArduinoCore\wiring_shift.c
 c:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\src\main.cpp
+c:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\src\main.cpp~
 c:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\src\send_serial.cpp
-c:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\src\keyboard.c
+c:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\src\send_serial.cpp~
 c:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\src\keyboard\keyboard.c
 c:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\tests\AllTests.h
 c:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\tests\fake_digital_controller.h

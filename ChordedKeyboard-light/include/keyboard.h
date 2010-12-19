@@ -1,9 +1,9 @@
 int is_pressed(int pin);
-int real_all_buttons();
+int read_all_buttons();
 
 enum {BUTTON_ON = 1, BUTTON_OFF = 0}; 
 
-void set_composite_wakeup1(int time);
+void set_composite_wakeup(int time);
 void delay_for_composite();
 
 int any_button_pressed();

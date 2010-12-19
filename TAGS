@@ -915,13 +915,13 @@ TEST(Debouncing, test_button_pressed_event)TEST252,7258
 TEST(Debouncing, test_button_released_event)TEST263,7514
 TEST(Debouncing, test_button_less_db_time)TEST275,7802
 
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\test_keyboard.cpp,331
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\test_keyboard.cpp,330
 TEST_GROUP(Keyboard)TEST_GROUP11,165
 void mock_expect_buttons_scenario(int* buttons) mock_expect_buttons_scenario51,1288
-TEST(Keyboard, test_read_all_buttons1)TEST62,1504
-TEST(Keyboard, test_read_all_buttons2)TEST73,1845
-TEST(Keyboard, test_read_all_buttons_on)TEST85,2181
-TEST(Keyboard, test_is_pressed_0)TEST102,2849
+TEST(Keyboard, test_read_all_buttons)TEST62,1504
+TEST(Keyboard, test_read_all_buttons2)TEST73,1844
+TEST(Keyboard, test_read_all_buttons_on)TEST85,2180
+TEST(Keyboard, test_is_pressed_0)TEST102,2848
 
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard\tests\test_press_button.cpp,486
 TEST_GROUP(LoopStepProcess)TEST_GROUP10,115
@@ -935,8 +935,8 @@ TEST(PressButton, test_is_pressed_and_led_off) {TEST85,1843
 TEST(PressButton, test_two_button_pressed) {TEST93,2039
 
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\include\keyboard.h,109
-enum {BUTTON_ON = 1, BUTTON_OFF = 0}; BUTTON_ON4,54
-enum {BUTTON_ON = 1, BUTTON_OFF = 0}; BUTTON_OFF4,54
+enum {BUTTON_ON = 1, BUTTON_OFF = 0}; BUTTON_ON4,53
+enum {BUTTON_ON = 1, BUTTON_OFF = 0}; BUTTON_OFF4,53
 
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\lib\ArduinoCore\binary.h,18275
 #define Binary_hBinary_h2,17
@@ -1745,49 +1745,49 @@ C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\lib\ArduinoCore\WPro
 #define WProgram_hWProgram_h2,19
 #define word(word18,262
 
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\src\keyboard\keyboard.c,651
-#define MAX_BUTTON MAX_BUTTON3,46
-static int wakeup_time;wakeup_time5,70
-static int button_pins[MAX_BUTTON] = {1,2,3,4,5};button_pins6,95
-static int button_to_pin(button) {button_to_pin8,148
-int is_pressed1(int button) {is_pressed114,258
-int read_all_buttons1() {read_all_buttons120,373
-void set_composite_wakeup1(int time)set_composite_wakeup130,563
-void set_buttons_pin(int btn1, int btn2, int btn3, int btn4, int btn5)set_buttons_pin35,634
-void delay_for_composite()delay_for_composite49,958
-int any_button_pressed() {any_button_pressed54,1019
-int loop_step1() {loop_step163,1177
-void (*send_serial)(int);send_serial74,1416
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\readkey.py,372
+import serial,sys, ctypesserial1,0
+import serial,sys, ctypessys1,0
+import serial,sys, ctypesctypes1,0
+filename = 'i.log'filename3,29
+s=serial.Serial("Com8", 38400)s5,68
+f=open(filename,'w')f8,136
+event = Noneevent9,158
+value = Nonevalue10,172
+i=0i11,186
+        event = s.read()event15,216
+            keycode = ord(event) + ord("A") -1keycode17,268
 
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\src\keyboard.c,651
-#define MAX_BUTTON MAX_BUTTON3,46
-static int wakeup_time;wakeup_time5,70
-static int button_pins[MAX_BUTTON] = {1,2,3,4,5};button_pins6,95
-static int button_to_pin(button) {button_to_pin8,148
-int is_pressed1(int button) {is_pressed114,258
-int read_all_buttons1() {read_all_buttons120,373
-void set_composite_wakeup1(int time)set_composite_wakeup130,563
-void set_buttons_pin(int btn1, int btn2, int btn3, int btn4, int btn5)set_buttons_pin35,634
-void delay_for_composite()delay_for_composite49,958
-int any_button_pressed() {any_button_pressed54,1019
-int loop_step1() {loop_step163,1177
-void (*send_serial)(int);send_serial74,1409
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\src\keyboard\keyboard.c,661
+#define MAX_BUTTON MAX_BUTTON4,48
+static int wakeup_time;wakeup_time6,72
+static int button_pins[MAX_BUTTON] = {1,2,3,4,5};button_pins7,97
+static int button_to_pin(button) {button_to_pin9,150
+int is_pressed(int button) {is_pressed15,260
+int any_button_pressed() {any_button_pressed21,374
+int read_all_buttons() {read_all_buttons25,458
+void set_composite_wakeup(int time)set_composite_wakeup35,646
+void set_buttons_pin(int btn1, int btn2, int btn3, int btn4, int btn5)set_buttons_pin40,716
+void delay_for_composite()delay_for_composite54,1040
+int loop_keyboard_step() {loop_keyboard_step60,1103
+void (*send_serial)(int);send_serial71,1361
 
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\src\main.cpp,147
 int ledPin =  13;ledPin7,67
 int buttonPin = 5;buttonPin8,86
 void setup() {setup10,108
-int main(void) {main17,254
-void loop() {loop23,317
+int main(void) {main17,250
+void loop() {loop23,313
 
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\src\send_serial.cpp,115
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\src\send_serial.cpp,116
 void imp_send_serial(int code) {imp_send_serial3,25
-void (*send_serial)(int) = imp_send_serial;send_serial7,93
+void (*send_serial)(int) = imp_send_serial;send_serial8,112
 
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\tests\AllTests.cpp,39
 int main(int ac, char** av)main7,163
 
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\tests\AllTests.h,0
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\tests\AllTests.h,44
+IMPORT_TEST_GROUP(Keyboard2);Keyboard21,0
 
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\tests\fake_digital_controller.c,513
 #define MAX_PINS MAX_PINS3,40
@@ -1809,19 +1809,19 @@ TEST(FakeDigitalController, fake_digitalWrite_1_HIGH)TEST22,276
 TEST(FakeDigitalController, TestInitial)TEST28,412
 TEST(FakeDigitalController, fake_three_digitalWrite_LOW_HIGH_LOW)TEST34,552
 
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\tests\test_keyboard.cpp,659
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\tests\test_keyboard.cpp,667
 TEST_GROUP(Keyboard2)TEST_GROUP10,160
-static void fake_buttons_on(int btn1, int btn2, int btn3, int btn4, int btn5)fake_buttons_on23,332
-TEST(Keyboard2, test_is_pressed_1) {TEST35,594
-TEST(Keyboard2, test_is_pressed_1_2) {TEST40,711
-TEST(Keyboard2, test_is_pressed_default_low) {TEST47,912
-TEST(Keyboard2, test_set_buttons_mode) TEST52,1045
-TEST(Keyboard2, test_read_all_buttons) TEST60,1203
-TEST(Keyboard2, test_read_all_buttons_2)TEST67,1377
-TEST(Keyboard2, test_read_all_buttons_3)TEST73,1543
-TEST(Keyboard2, test_one_loop)TEST79,1711
-TEST(Keyboard2, test_any_button_pressed)TEST95,2162
-TEST(Keyboard2, test_loop_step1)TEST123,3151
+static void fake_buttons_on(int btn1, int btn2, int btn3, int btn4, int btn5)fake_buttons_on22,322
+TEST(Keyboard2, test_is_pressed_1) {TEST31,574
+TEST(Keyboard2, test_is_pressed_1_2) {TEST36,690
+TEST(Keyboard2, test_is_pressed_default_low) {TEST43,891
+TEST(Keyboard2, test_set_buttons_mode) TEST48,1022
+TEST(Keyboard2, test_read_all_buttons) TEST56,1179
+TEST(Keyboard2, test_read_all_buttons_2)TEST63,1352
+TEST(Keyboard2, test_read_all_buttons_3)TEST69,1517
+TEST(Keyboard2, test_one_loop)TEST75,1684
+TEST(Keyboard2, test_any_button_pressed)TEST91,2134
+TEST(Keyboard2, test_loop_keyboard_step)TEST100,2442
 
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\tests\WProgram.h,149
 #define HIGH HIGH1,0

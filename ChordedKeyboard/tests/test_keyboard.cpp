@@ -59,7 +59,7 @@ void mock_expect_buttons_scenario(int* buttons)
 }
 
 
-TEST(Keyboard, test_real_all_buttons)
+TEST(Keyboard, test_read_all_buttons)
 {
     int button_code = 0;
     int buttons_scenario[5] = [BUTTON_ON, BUTTON_OFF, BUTTON_OFF, BUTTON_OFF, BUTTON_OFF];
