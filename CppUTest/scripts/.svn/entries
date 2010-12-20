@@ -1,14 +1,14 @@
 10
 
 dir
-592
+596
 https://cpputest.svn.sourceforge.net/svnroot/cpputest/trunk/scripts
 https://cpputest.svn.sourceforge.net/svnroot/cpputest
 
 
 
-2010-10-16T23:31:47.940027Z
-583
+2010-11-25T14:26:32.342877Z
+595
 jamesgrenning
 has-props
 
@@ -128,8 +128,39 @@ has-props
 
 131
 
-UnityTemplates
-dir
+NewLibrary.sh
+file
+
+
+
+
+2010-10-31T13:28:56.128082Z
+d8db4ec7cb50641f735c62243bd82230
+2007-11-20T06:59:21.194339Z
+183
+jamesgrenning
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+931
 
 InstallScripts.sh
 file
@@ -165,107 +196,8 @@ has-props
 
 417
 
-NewLibrary.sh
-file
-
-
-
-
-2010-10-31T13:28:56.128082Z
-d8db4ec7cb50641f735c62243bd82230
-2007-11-20T06:59:21.194339Z
-183
-jamesgrenning
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-931
-
-svnignore.txt
-file
-
-
-
-
-2010-10-31T13:28:56.128082Z
-82982bc302136a45363c1a7615bebef4
-2008-08-02T21:14:51.468178Z
-285
-jamesgrenning
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-105
-
-reformat.sh
-file
-
-
-
-
-2010-10-31T13:28:56.128082Z
-ecd4e8ecab02e668ce97007aff6a49a7
-2008-01-31T05:38:07.608224Z
-235
-jamesgrenning
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-352
+UnityTemplates
+dir
 
 NewClass.sh
 file
@@ -301,6 +233,74 @@ has-props
 
 140
 
+reformat.sh
+file
+
+
+
+
+2010-10-31T13:28:56.128082Z
+ecd4e8ecab02e668ce97007aff6a49a7
+2008-01-31T05:38:07.608224Z
+235
+jamesgrenning
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+352
+
+svnignore.txt
+file
+
+
+
+
+2010-10-31T13:28:56.128082Z
+82982bc302136a45363c1a7615bebef4
+2008-08-02T21:14:51.468178Z
+285
+jamesgrenning
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+105
+
 NewProject.sh
 file
 
@@ -334,40 +334,6 @@ jamesgrenning
 
 
 1089
-
-zipExclude.txt
-file
-
-
-
-
-2010-10-31T13:28:56.132081Z
-4902cc1bfdbee8bbad4f1c23dad3e5cc
-2010-05-10T19:09:03.993878Z
-429
-jamesgrenning
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-211
 
 squeeze.sh
 file
@@ -403,6 +369,43 @@ has-props
 
 32
 
+zipExclude.txt
+file
+
+
+
+
+2010-10-31T13:28:56.132081Z
+4902cc1bfdbee8bbad4f1c23dad3e5cc
+2010-05-10T19:09:03.993878Z
+429
+jamesgrenning
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+211
+
+templates
+dir
+
 GenerateSrcFiles.sh
 file
 
@@ -436,9 +439,6 @@ has-props
 
 
 2630
-
-templates
-dir
 
 NewPackageDirs.sh
 file

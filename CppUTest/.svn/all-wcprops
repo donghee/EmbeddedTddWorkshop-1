@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 36
-/svnroot/cpputest/!svn/ver/592/trunk
+/svnroot/cpputest/!svn/ver/596/trunk
 END
 .cdtproject
 K 25
@@ -9,17 +9,17 @@ svn:wc:ra_dav:version-url
 V 47
 /svnroot/cpputest/!svn/ver/10/trunk/.cdtproject
 END
-Doxyfile
-K 25
-svn:wc:ra_dav:version-url
-V 45
-/svnroot/cpputest/!svn/ver/286/trunk/Doxyfile
-END
 todo.txt
 K 25
 svn:wc:ra_dav:version-url
 V 45
 /svnroot/cpputest/!svn/ver/516/trunk/todo.txt
+END
+Doxyfile
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svnroot/cpputest/!svn/ver/286/trunk/Doxyfile
 END
 .project
 K 25
@@ -69,23 +69,17 @@ svn:wc:ra_dav:version-url
 V 55
 /svnroot/cpputest/!svn/ver/277/trunk/README_Symbian.txt
 END
-Makefile_CppUTestExt-old
-K 25
-svn:wc:ra_dav:version-url
-V 61
-/svnroot/cpputest/!svn/ver/551/trunk/Makefile_CppUTestExt-old
-END
 makeVc6.bat
 K 25
 svn:wc:ra_dav:version-url
 V 48
 /svnroot/cpputest/!svn/ver/592/trunk/makeVc6.bat
 END
-CppUTest.sln
+Makefile_CppUTestExt-old
 K 25
 svn:wc:ra_dav:version-url
-V 49
-/svnroot/cpputest/!svn/ver/581/trunk/CppUTest.sln
+V 61
+/svnroot/cpputest/!svn/ver/551/trunk/Makefile_CppUTestExt-old
 END
 README_CppUTest.txt
 K 25
@@ -93,17 +87,17 @@ svn:wc:ra_dav:version-url
 V 56
 /svnroot/cpputest/!svn/ver/551/trunk/README_CppUTest.txt
 END
+CppUTest.sln
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svnroot/cpputest/!svn/ver/581/trunk/CppUTest.sln
+END
 CppUTest.dsw
 K 25
 svn:wc:ra_dav:version-url
 V 49
 /svnroot/cpputest/!svn/ver/339/trunk/CppUTest.dsw
-END
-CppUTest_tests.txt
-K 25
-svn:wc:ra_dav:version-url
-V 55
-/svnroot/cpputest/!svn/ver/583/trunk/CppUTest_tests.txt
 END
 CppUTest.vcproj
 K 25

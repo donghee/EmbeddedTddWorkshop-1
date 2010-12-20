@@ -13,7 +13,7 @@ AVRDUDE=avrdude
 
 # Directory 
 DIR_ARDUINO = lib/ArduinoCore
-INCLUDE = include
+CUT_INCLUDE = include
 DIR_SRC = src
 CUT_SRC = $(DIR_SRC)/keyboard
 
@@ -22,8 +22,8 @@ OBJS =  # TODO:
 CUT_OBJS = keyboard.o # TODO: add object files under CUT_SRC directory
 CPP_OBJS = send_serial.o main.o # TODO: add main object and cpp objects
 
-AVR_CFLAGS =  -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU=$(F_CPU) -I$(DIR_ARDUINO) -I$(INCLUDE)
-AVR_CPPFLAGS =  -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU==$(F_CPU) -I$(DIR_ARDUINO) -I$(INCLUDE) -I$(DIR_SRC)
+AVR_CFLAGS =  -c -g -Os -w -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU=$(F_CPU) -I$(DIR_ARDUINO) -I$(CUT_INCLUDE)
+AVR_CPPFLAGS =  -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -mmcu=$(MCU) -DF_CPU==$(F_CPU) -I$(DIR_ARDUINO) -I$(CUT_INCLUDE) -I$(DIR_SRC)
 
 RM := rm -rf
 
@@ -48,7 +48,7 @@ $(CPP_OBJS): %.o: $(DIR_SRC)/%.cpp
 elf: $(OBJS) $(CUT_OBJS) $(CPP_OBJS)
 	@echo 'Building target: $(TARGET)'
 	@echo 'Invoking: AVR C++ Linker'
-	avr-gcc -Os -Wl,--gc-sections -mmcu=atmega168 -o $(TARGET).elf	$(OBJS) $(DIR_ARDUINO)/Debug/libArduinoCore.a -L"../../ArduinoCore" -lm
+	avr-gcc -Os -Wl,--gc-sections -mmcu=$(MCU) -o $(TARGET).elf	$(OBJS) $(DIR_ARDUINO)/Debug/libArduinoCore.a -L"../../ArduinoCore" -lm
 	@echo 'Finished building target: $(TARGET)'
 	@echo ' '
 
@@ -66,7 +66,7 @@ hex:
 
 size:
 	@echo 'Invoking: Print Size'
-	avr-size --format=avr --mcu=atmega168 $(TARGET).elf
+	avr-size --format=avr --mcu=$(MCU) $(TARGET).elf
 	@echo 'Finished building: $@'
 	@echo ' '
 

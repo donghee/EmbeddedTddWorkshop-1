@@ -1,5 +1,6 @@
 int is_pressed(int pin);
-int read_all_buttons();
+int read_all_buttons
+();
 
 enum {BUTTON_ON = 1, BUTTON_OFF = 0}; 
 
@@ -13,4 +14,4 @@ extern void (*send_serial)(int code);
 int loop_keyboard_step();
 
 
-void set_buttons_pin(int btn1, int btn2, int btn3, int btn4, int btn5);
+void set_buttons_pin(int* btns);

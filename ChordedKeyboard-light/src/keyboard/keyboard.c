@@ -37,19 +37,28 @@ void set_composite_wakeup(int time)
     wakeup_time = time;
 }
 
-void set_buttons_pin(int btn1, int btn2, int btn3, int btn4, int btn5)
-{
+void set_buttons_pin(int * btn) {
     int i;
-    button_pins[0] = btn1;
-    button_pins[1] = btn2;
-    button_pins[2] = btn3;
-    button_pins[3] = btn4;
-    button_pins[4] = btn5;
-    
     for (i=0 ; i< MAX_BUTTON; i++) {
+        button_pins[i] = btn[i];
         pinMode(button_pins[i], INPUT);
     }
+
 }
+
+/* void set_buttons_pin(int btn1, int btn2, int btn3, int btn4, int btn5) */
+/* { */
+/*     int i; */
+/*     button_pins[0] = btn1; */
+/*     button_pins[1] = btn2; */
+/*     button_pins[2] = btn3; */
+/*     button_pins[3] = btn4; */
+/*     button_pins[4] = btn5; */
+    
+/*     for (i=0 ; i< MAX_BUTTON; i++) { */
+/*         pinMode(button_pins[i], INPUT); */
+/*     } */
+/* } */
 
 void delay_for_composite()
 {

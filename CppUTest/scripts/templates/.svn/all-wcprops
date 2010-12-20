@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 54
-/svnroot/cpputest/!svn/ver/551/trunk/scripts/templates
+/svnroot/cpputest/!svn/ver/595/trunk/scripts/templates
 END
 FunctionNameC.h
 K 25
@@ -33,23 +33,17 @@ svn:wc:ra_dav:version-url
 V 78
 /svnroot/cpputest/!svn/ver/332/trunk/scripts/templates/ClassNameCPolymorphic.h
 END
-ClassNameTest.cpp
-K 25
-svn:wc:ra_dav:version-url
-V 72
-/svnroot/cpputest/!svn/ver/372/trunk/scripts/templates/ClassNameTest.cpp
-END
 ClassName.cpp
 K 25
 svn:wc:ra_dav:version-url
 V 66
 /svnroot/cpputest/!svn/ver/9/trunk/scripts/templates/ClassName.cpp
 END
-ClassNameCTest.cpp
+ClassNameTest.cpp
 K 25
 svn:wc:ra_dav:version-url
-V 73
-/svnroot/cpputest/!svn/ver/372/trunk/scripts/templates/ClassNameCTest.cpp
+V 72
+/svnroot/cpputest/!svn/ver/372/trunk/scripts/templates/ClassNameTest.cpp
 END
 ClassNameC.c
 K 25
@@ -57,17 +51,23 @@ svn:wc:ra_dav:version-url
 V 67
 /svnroot/cpputest/!svn/ver/286/trunk/scripts/templates/ClassNameC.c
 END
-ClassNameCMultipleInstanceTest.cpp
+ClassNameCTest.cpp
 K 25
 svn:wc:ra_dav:version-url
-V 89
-/svnroot/cpputest/!svn/ver/372/trunk/scripts/templates/ClassNameCMultipleInstanceTest.cpp
+V 73
+/svnroot/cpputest/!svn/ver/372/trunk/scripts/templates/ClassNameCTest.cpp
 END
 ClassNameCMultipleInstance.c
 K 25
 svn:wc:ra_dav:version-url
 V 83
-/svnroot/cpputest/!svn/ver/332/trunk/scripts/templates/ClassNameCMultipleInstance.c
+/svnroot/cpputest/!svn/ver/595/trunk/scripts/templates/ClassNameCMultipleInstance.c
+END
+ClassNameCMultipleInstanceTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/cpputest/!svn/ver/595/trunk/scripts/templates/ClassNameCMultipleInstanceTest.cpp
 END
 ClassName.h
 K 25
@@ -75,17 +75,17 @@ svn:wc:ra_dav:version-url
 V 64
 /svnroot/cpputest/!svn/ver/9/trunk/scripts/templates/ClassName.h
 END
-ClassNameCIoDriverTest.cpp
-K 25
-svn:wc:ra_dav:version-url
-V 81
-/svnroot/cpputest/!svn/ver/388/trunk/scripts/templates/ClassNameCIoDriverTest.cpp
-END
 ClassNameCIoDriver.c
 K 25
 svn:wc:ra_dav:version-url
 V 75
 /svnroot/cpputest/!svn/ver/418/trunk/scripts/templates/ClassNameCIoDriver.c
+END
+ClassNameCIoDriverTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/cpputest/!svn/ver/388/trunk/scripts/templates/ClassNameCIoDriverTest.cpp
 END
 ClassNameC.h
 K 25
@@ -97,7 +97,7 @@ ClassNameCMultipleInstance.h
 K 25
 svn:wc:ra_dav:version-url
 V 83
-/svnroot/cpputest/!svn/ver/332/trunk/scripts/templates/ClassNameCMultipleInstance.h
+/svnroot/cpputest/!svn/ver/595/trunk/scripts/templates/ClassNameCMultipleInstance.h
 END
 ClassNameCIoDriver.h
 K 25

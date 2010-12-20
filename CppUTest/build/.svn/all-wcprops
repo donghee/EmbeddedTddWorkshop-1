@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 42
-/svnroot/cpputest/!svn/ver/583/trunk/build
+/svnroot/cpputest/!svn/ver/596/trunk/build
 END
 cpputest.mmp
 K 25
@@ -43,5 +43,5 @@ MakefileWorker.mk
 K 25
 svn:wc:ra_dav:version-url
 V 60
-/svnroot/cpputest/!svn/ver/583/trunk/build/MakefileWorker.mk
+/svnroot/cpputest/!svn/ver/596/trunk/build/MakefileWorker.mk
 END

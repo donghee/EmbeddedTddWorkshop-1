@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 44
-/svnroot/cpputest/!svn/ver/583/trunk/scripts
+/svnroot/cpputest/!svn/ver/595/trunk/scripts
 END
 ReleaseCppUTest.sh
 K 25
@@ -21,29 +21,17 @@ svn:wc:ra_dav:version-url
 V 61
 /svnroot/cpputest/!svn/ver/286/trunk/scripts/NewCInterface.sh
 END
-NewLibrary.sh
-K 25
-svn:wc:ra_dav:version-url
-V 58
-/svnroot/cpputest/!svn/ver/183/trunk/scripts/NewLibrary.sh
-END
 InstallScripts.sh
 K 25
 svn:wc:ra_dav:version-url
 V 62
 /svnroot/cpputest/!svn/ver/388/trunk/scripts/InstallScripts.sh
 END
-NewClass.sh
+NewLibrary.sh
 K 25
 svn:wc:ra_dav:version-url
-V 56
-/svnroot/cpputest/!svn/ver/551/trunk/scripts/NewClass.sh
-END
-reformat.sh
-K 25
-svn:wc:ra_dav:version-url
-V 56
-/svnroot/cpputest/!svn/ver/235/trunk/scripts/reformat.sh
+V 58
+/svnroot/cpputest/!svn/ver/183/trunk/scripts/NewLibrary.sh
 END
 svnignore.txt
 K 25
@@ -51,23 +39,35 @@ svn:wc:ra_dav:version-url
 V 58
 /svnroot/cpputest/!svn/ver/285/trunk/scripts/svnignore.txt
 END
+reformat.sh
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/cpputest/!svn/ver/235/trunk/scripts/reformat.sh
+END
+NewClass.sh
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/cpputest/!svn/ver/551/trunk/scripts/NewClass.sh
+END
 NewProject.sh
 K 25
 svn:wc:ra_dav:version-url
 V 58
 /svnroot/cpputest/!svn/ver/395/trunk/scripts/NewProject.sh
 END
-squeeze.sh
-K 25
-svn:wc:ra_dav:version-url
-V 55
-/svnroot/cpputest/!svn/ver/108/trunk/scripts/squeeze.sh
-END
 zipExclude.txt
 K 25
 svn:wc:ra_dav:version-url
 V 59
 /svnroot/cpputest/!svn/ver/429/trunk/scripts/zipExclude.txt
+END
+squeeze.sh
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/cpputest/!svn/ver/108/trunk/scripts/squeeze.sh
 END
 GenerateSrcFiles.sh
 K 25

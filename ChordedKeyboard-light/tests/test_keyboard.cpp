@@ -7,11 +7,13 @@ extern "C"
 #include "keyboard.h"    
 }
 
+static int btn_pins[5] = {1,2,3,4,5};
+
 TEST_GROUP(Keyboard2)
 {
     void setup() {
        digitalPinSetting();
-       set_buttons_pin(1,2,3,4,5);    
+       set_buttons_pin(btn_pins);    
     }
 
     void teardown() {
@@ -47,7 +49,8 @@ TEST(Keyboard2, test_is_pressed_default_low) {
 
 TEST(Keyboard2, test_set_buttons_mode) 
 {
-   set_buttons_pin(3,5,6,7,8);
+   int pins[5] = {3,5,6,7,8};
+   set_buttons_pin(pins);
    fake_digitalWrite(5, HIGH);    
    LONGS_EQUAL(false, is_pressed(2))
 }
