@@ -11,7 +11,7 @@ int buttonPins[5] = {2,3,5,6,7};
 void setup() {
     pinMode(ledPin, OUTPUT);
     set_buttons_pin(buttonPins);
-    set_composite_wakeup(70);
+    set_composite_wakeup(30);
     Serial.begin(38400);
 }
 

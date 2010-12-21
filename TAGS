@@ -935,8 +935,8 @@ TEST(PressButton, test_is_pressed_and_led_off) {TEST85,1843
 TEST(PressButton, test_two_button_pressed) {TEST93,2039
 
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\include\keyboard.h,109
-enum {BUTTON_ON = 1, BUTTON_OFF = 0}; BUTTON_ON4,53
-enum {BUTTON_ON = 1, BUTTON_OFF = 0}; BUTTON_OFF4,53
+enum {BUTTON_ON = 1, BUTTON_OFF = 0}; BUTTON_ON5,55
+enum {BUTTON_ON = 1, BUTTON_OFF = 0}; BUTTON_OFF5,55
 
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\lib\ArduinoCore\binary.h,18275
 #define Binary_hBinary_h2,17
@@ -1758,7 +1758,7 @@ i=0i11,186
         event = s.read()event15,216
             keycode = ord(event) + ord("A") -1keycode17,268
 
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\src\keyboard\keyboard.c,661
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\src\keyboard\keyboard.c,624
 #define MAX_BUTTON MAX_BUTTON4,48
 static int wakeup_time;wakeup_time6,72
 static int button_pins[MAX_BUTTON] = {1,2,3,4,5};button_pins7,97
@@ -1767,17 +1767,18 @@ int is_pressed(int button) {is_pressed15,260
 int any_button_pressed() {any_button_pressed21,374
 int read_all_buttons() {read_all_buttons25,458
 void set_composite_wakeup(int time)set_composite_wakeup35,646
-void set_buttons_pin(int btn1, int btn2, int btn3, int btn4, int btn5)set_buttons_pin40,716
-void delay_for_composite()delay_for_composite54,1040
-int loop_keyboard_step() {loop_keyboard_step60,1103
-void (*send_serial)(int);send_serial71,1361
+void set_buttons_pin(int * btn) {set_buttons_pin40,716
+void delay_for_composite()delay_for_composite63,1286
+int loop_keyboard_step() {loop_keyboard_step69,1349
+void (*send_serial)(int);send_serial80,1607
 
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\src\main.cpp,147
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\src\main.cpp,197
 int ledPin =  13;ledPin7,67
 int buttonPin = 5;buttonPin8,86
-void setup() {setup10,108
-int main(void) {main17,250
-void loop() {loop23,313
+int buttonPins[5] = {2,3,5,6,7};buttonPins9,106
+void setup() {setup11,142
+int main(void) {main18,284
+void loop() {loop24,347
 
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\src\send_serial.cpp,116
 void imp_send_serial(int code) {imp_send_serial3,25
@@ -1809,19 +1810,21 @@ TEST(FakeDigitalController, fake_digitalWrite_1_HIGH)TEST22,276
 TEST(FakeDigitalController, TestInitial)TEST28,412
 TEST(FakeDigitalController, fake_three_digitalWrite_LOW_HIGH_LOW)TEST34,552
 
-C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\tests\test_keyboard.cpp,667
-TEST_GROUP(Keyboard2)TEST_GROUP10,160
-static void fake_buttons_on(int btn1, int btn2, int btn3, int btn4, int btn5)fake_buttons_on22,322
-TEST(Keyboard2, test_is_pressed_1) {TEST31,574
-TEST(Keyboard2, test_is_pressed_1_2) {TEST36,690
-TEST(Keyboard2, test_is_pressed_default_low) {TEST43,891
-TEST(Keyboard2, test_set_buttons_mode) TEST48,1022
-TEST(Keyboard2, test_read_all_buttons) TEST56,1179
-TEST(Keyboard2, test_read_all_buttons_2)TEST63,1352
-TEST(Keyboard2, test_read_all_buttons_3)TEST69,1517
-TEST(Keyboard2, test_one_loop)TEST75,1684
-TEST(Keyboard2, test_any_button_pressed)TEST91,2134
-TEST(Keyboard2, test_loop_keyboard_step)TEST100,2442
+C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\tests\test_keyboard.cpp,783
+static int btn_pins[5] = {1,2,3,4,5};btn_pins10,160
+TEST_GROUP(Keyboard2)TEST_GROUP12,201
+static void fake_buttons_on(int btn1, int btn2, int btn3, int btn4, int btn5)fake_buttons_on24,362
+TEST(Keyboard2, test_is_pressed_1) {TEST33,614
+TEST(Keyboard2, test_is_pressed_1_2) {TEST38,730
+TEST(Keyboard2, test_is_pressed_default_low) {TEST45,931
+TEST(Keyboard2, test_set_buttons_mode) TEST50,1062
+TEST(Keyboard2, test_read_all_buttons) TEST59,1245
+TEST(Keyboard2, test_read_all_buttons_2)TEST66,1418
+TEST(Keyboard2, test_read_all_buttons_3)TEST72,1583
+TEST(Keyboard2, test_one_loop)TEST78,1750
+TEST(Keyboard2, test_any_button_pressed)TEST94,2199
+TEST(Keyboard2, test_loop_keyboard_step)TEST103,2507
+TEST(Keyboard2, test_one_delay_for_composition)TEST112,2808
 
 C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\tests\WProgram.h,149
 #define HIGH HIGH1,0
@@ -1831,59 +1834,60 @@ C:\work\workspace\EmbeddedTddWorkshop\ChordedKeyboard-light\tests\WProgram.h,149
 #define INPUT INPUT7,77
 #define OUTPUT OUTPUT8,96
 
-C:\work\workspace\EmbeddedTddWorkshop\CppUTest\build\MakefileWorker.mk,3858
-    COMPONENT_NAME = name_this_in_the_makefileCOMPONENT_NAME59,2471
-	CPPUTEST_ENABLE_DEBUG = YCPPUTEST_ENABLE_DEBUG64,2576
-	CPPUTEST_USE_MEM_LEAK_DETECTION = YCPPUTEST_USE_MEM_LEAK_DETECTION69,2706
-	CPPUTEST_USE_STD_CPP_LIB = YCPPUTEST_USE_STD_CPP_LIB74,2813
-	CPPUTEST_USE_GCOV = NCPPUTEST_USE_GCOV79,2902
-	CPPUTEST_WARNINGFLAGS = -pedantic-errors -Wall -Wextra -Werror -Wshadow -Wswitch-default -Wswitch-enum -WconversionCPPUTEST_WARNINGFLAGS84,2980
-    CPPUTEST_OBJS_DIR = objsCPPUTEST_OBJS_DIR89,3170
-    CPPUTEST_LIB_DIR = libCPPUTEST_LIB_DIR94,3267
-	CPPUTEST_MAP_FILE = NCPPUTEST_MAP_FILE99,3346
-	CPPUTEST_USE_EXTENSIONS = NCPPUTEST_USE_EXTENSIONS104,3434
-	CPPUTEST_USE_VPATH := NCPPUTEST_USE_VPATH109,3518
-	CPPUTEST_USE_VPATH := CPPUTEST_USE_VPATH113,3645
-	    	CPPUTEST_MEMLEAK_DETECTOR_NEW_MACRO_FILE = -include $(CPPUTEST_HOME)/include/CppUTest/MemoryLeakDetectorNewMacros.hCPPUTEST_MEMLEAK_DETECTOR_NEW_MACRO_FILE123,3959
-	    CPPUTEST_MEMLEAK_DETECTOR_MALLOC_MACRO_FILE = -include $(CPPUTEST_HOME)/include/CppUTest/MemoryLeakDetectorMallocMacros.hCPPUTEST_MEMLEAK_DETECTOR_MALLOC_MACRO_FILE126,4146
-TARGET_MAP = $(COMPONENT_NAME).map.txtTARGET_MAP147,4757
-CPPUTEST_LIB = $(CPPUTEST_HOME)/lib/libCppUTest.a CPPUTEST_LIB153,4903
-TARGET_LIB = \TARGET_LIB161,5086
-TEST_TARGET = \TEST_TARGET164,5153
-get_src_from_dir  = $(wildcard $1/*.cpp) $(wildcard $1/*.c)get_src_from_dir168,5216
-get_dirs_from_dirspec  = $(wildcard $1)get_dirs_from_dirspec169,5276
-get_src_from_dir_list = $(foreach dir, $1, $(call get_src_from_dir,$(dir)))get_src_from_dir_list170,5316
-__src_to = $(subst .c,$1, $(subst .cpp,$1,$(if $(CPPUTEST_USE_VPATH),$(notdir $2),$2)))__src_to171,5392
-src_to = $(addprefix $(CPPUTEST_OBJS_DIR)/,$(call __src_to,$1,$2))src_to172,5480
-src_to_o = $(call src_to,.o,$1)src_to_o173,5547
-src_to_d = $(call src_to,.d,$1)src_to_d174,5579
-src_to_gcda = $(call src_to,.gcda,$1)src_to_gcda175,5611
-src_to_gcno = $(call src_to,.gcno,$1)src_to_gcno176,5649
-time = $(shell date +%s)time177,5687
-delta_t = $(eval minus, $1, $2)delta_t178,5712
-debug_print_list = $(foreach word,$1,echo "  $(word)";) echo;debug_print_list179,5744
-OBJ = $(call src_to_o,$(SRC))OBJ185,5971
-TEST_SRC = $(call get_src_from_dir_list, $(TEST_SRC_DIRS))TEST_SRC189,6028
-TEST_OBJS = $(call src_to_o,$(TEST_SRC))TEST_OBJS190,6087
-MOCKS_SRC = $(call get_src_from_dir_list, $(MOCKS_SRC_DIRS))MOCKS_SRC194,6161
-MOCKS_OBJS = $(call src_to_o,$(MOCKS_SRC))MOCKS_OBJS195,6222
-ALL_SRC = $(SRC) $(TEST_SRC) $(MOCKS_SRC)ALL_SRC198,6298
-	CPPUTEST_OBJS_DIR := $(addsuffix /$(COMPONENT_NAME),$(CPPUTEST_OBJS_DIR))CPPUTEST_OBJS_DIR205,6573
-GCOV_OUTPUT = gcov_output.txtGCOV_OUTPUT209,6680
-GCOV_REPORT = gcov_report.txtGCOV_REPORT210,6710
-GCOV_ERROR = gcov_error.txtGCOV_ERROR211,6740
-GCOV_GCDA_FILES = $(call src_to_gcda, $(ALL_SRC))GCOV_GCDA_FILES212,6768
-GCOV_GCNO_FILES = $(call src_to_gcno, $(ALL_SRC))GCOV_GCNO_FILES213,6818
-TEST_OUTPUT = $(TEST_TARGET).txtTEST_OUTPUT214,6868
-GCOV_CLEAN = $(SILENCE)rm -f $(GCOV_GCDA_FILES) $(GCOV_OUTPUT) $(GCOV_REPORT) $(GCOV_ERROR)GCOV_CLEAN229,7178
-RUN_TEST_TARGET = $(SILENCE)  $(GCOV_CLEAN) ; echo "Running $(TEST_TARGET)"; ./$(TEST_TARGET) $(CPPUTEST_EXE_FLAGS)RUN_TEST_TARGET230,7270
-INCLUDES_DIRS_EXPANDED = $(call get_dirs_from_dirspec, $(INCLUDE_DIRS))INCLUDES_DIRS_EXPANDED232,7387
-MOCK_DIRS_EXPANDED = $(call get_dirs_from_dirspec, $(MOCKS_SRC_DIRS))MOCK_DIRS_EXPANDED234,7523
-DEP_FILES = $(call src_to_d, $(ALL_SRC))DEP_FILES238,7655
-CFLAGS = $(CPPUTEST_CFLAGS) $(CPPUTEST_ADDITIONAL_CFLAGS)CFLAGS243,7950
-CPPFLAGS = $(CPPUTEST_CPPFLAGS) $(CPPUTEST_ADDITIONAL_CPPFLAGS)CPPFLAGS244,8008
-CXXFLAGS = $(CPPUTEST_CXXFLAGS) $(CPPUTEST_ADDITIONAL_CXXFLAGS)CXXFLAGS245,8072
-LDFLAGS = $(CPPUTEST_LDFLAGS) $(CPPUTEST_ADDITIONAL_LDFLAGS)LDFLAGS246,8136
+C:\work\workspace\EmbeddedTddWorkshop\CppUTest\build\MakefileWorker.mk,3881
+	CC := gccCC59,2552
+    COMPONENT_NAME = name_this_in_the_makefileCOMPONENT_NAME63,2592
+	CPPUTEST_ENABLE_DEBUG = YCPPUTEST_ENABLE_DEBUG68,2697
+	CPPUTEST_USE_MEM_LEAK_DETECTION = YCPPUTEST_USE_MEM_LEAK_DETECTION73,2827
+	CPPUTEST_USE_STD_CPP_LIB = YCPPUTEST_USE_STD_CPP_LIB78,2934
+	CPPUTEST_USE_GCOV = NCPPUTEST_USE_GCOV83,3023
+	CPPUTEST_WARNINGFLAGS = -pedantic-errors -Wall -Wextra -Werror -Wshadow -Wswitch-default -Wswitch-enum -WconversionCPPUTEST_WARNINGFLAGS88,3101
+    CPPUTEST_OBJS_DIR = objsCPPUTEST_OBJS_DIR93,3291
+    CPPUTEST_LIB_DIR = libCPPUTEST_LIB_DIR98,3388
+	CPPUTEST_MAP_FILE = NCPPUTEST_MAP_FILE103,3467
+	CPPUTEST_USE_EXTENSIONS = NCPPUTEST_USE_EXTENSIONS108,3555
+	CPPUTEST_USE_VPATH := NCPPUTEST_USE_VPATH113,3639
+	CPPUTEST_USE_VPATH := CPPUTEST_USE_VPATH117,3766
+	    	CPPUTEST_MEMLEAK_DETECTOR_NEW_MACRO_FILE = -include $(CPPUTEST_HOME)/include/CppUTest/MemoryLeakDetectorNewMacros.hCPPUTEST_MEMLEAK_DETECTOR_NEW_MACRO_FILE127,4080
+	    CPPUTEST_MEMLEAK_DETECTOR_MALLOC_MACRO_FILE = -include $(CPPUTEST_HOME)/include/CppUTest/MemoryLeakDetectorMallocMacros.hCPPUTEST_MEMLEAK_DETECTOR_MALLOC_MACRO_FILE130,4267
+TARGET_MAP = $(COMPONENT_NAME).map.txtTARGET_MAP151,4878
+CPPUTEST_LIB = $(CPPUTEST_HOME)/lib/libCppUTest.a CPPUTEST_LIB157,5024
+TARGET_LIB = \TARGET_LIB165,5207
+TEST_TARGET = \TEST_TARGET168,5274
+get_src_from_dir  = $(wildcard $1/*.cpp) $(wildcard $1/*.c)get_src_from_dir172,5337
+get_dirs_from_dirspec  = $(wildcard $1)get_dirs_from_dirspec173,5397
+get_src_from_dir_list = $(foreach dir, $1, $(call get_src_from_dir,$(dir)))get_src_from_dir_list174,5437
+__src_to = $(subst .c,$1, $(subst .cpp,$1,$(if $(CPPUTEST_USE_VPATH),$(notdir $2),$2)))__src_to175,5513
+src_to = $(addprefix $(CPPUTEST_OBJS_DIR)/,$(call __src_to,$1,$2))src_to176,5601
+src_to_o = $(call src_to,.o,$1)src_to_o177,5668
+src_to_d = $(call src_to,.d,$1)src_to_d178,5700
+src_to_gcda = $(call src_to,.gcda,$1)src_to_gcda179,5732
+src_to_gcno = $(call src_to,.gcno,$1)src_to_gcno180,5770
+time = $(shell date +%s)time181,5808
+delta_t = $(eval minus, $1, $2)delta_t182,5833
+debug_print_list = $(foreach word,$1,echo "  $(word)";) echo;debug_print_list183,5865
+OBJ = $(call src_to_o,$(SRC))OBJ189,6092
+TEST_SRC = $(call get_src_from_dir_list, $(TEST_SRC_DIRS))TEST_SRC193,6149
+TEST_OBJS = $(call src_to_o,$(TEST_SRC))TEST_OBJS194,6208
+MOCKS_SRC = $(call get_src_from_dir_list, $(MOCKS_SRC_DIRS))MOCKS_SRC198,6282
+MOCKS_OBJS = $(call src_to_o,$(MOCKS_SRC))MOCKS_OBJS199,6343
+ALL_SRC = $(SRC) $(TEST_SRC) $(MOCKS_SRC)ALL_SRC202,6419
+	CPPUTEST_OBJS_DIR := $(addsuffix /$(COMPONENT_NAME),$(CPPUTEST_OBJS_DIR))CPPUTEST_OBJS_DIR209,6694
+GCOV_OUTPUT = gcov_output.txtGCOV_OUTPUT213,6801
+GCOV_REPORT = gcov_report.txtGCOV_REPORT214,6831
+GCOV_ERROR = gcov_error.txtGCOV_ERROR215,6861
+GCOV_GCDA_FILES = $(call src_to_gcda, $(ALL_SRC))GCOV_GCDA_FILES216,6889
+GCOV_GCNO_FILES = $(call src_to_gcno, $(ALL_SRC))GCOV_GCNO_FILES217,6939
+TEST_OUTPUT = $(TEST_TARGET).txtTEST_OUTPUT218,6989
+GCOV_CLEAN = $(SILENCE)rm -f $(GCOV_GCDA_FILES) $(GCOV_OUTPUT) $(GCOV_REPORT) $(GCOV_ERROR)GCOV_CLEAN233,7299
+RUN_TEST_TARGET = $(SILENCE)  $(GCOV_CLEAN) ; echo "Running $(TEST_TARGET)"; ./$(TEST_TARGET) $(CPPUTEST_EXE_FLAGS)RUN_TEST_TARGET234,7391
+INCLUDES_DIRS_EXPANDED = $(call get_dirs_from_dirspec, $(INCLUDE_DIRS))INCLUDES_DIRS_EXPANDED236,7508
+MOCK_DIRS_EXPANDED = $(call get_dirs_from_dirspec, $(MOCKS_SRC_DIRS))MOCK_DIRS_EXPANDED238,7644
+DEP_FILES = $(call src_to_d, $(ALL_SRC))DEP_FILES242,7776
+CFLAGS = $(CPPUTEST_CFLAGS) $(CPPUTEST_ADDITIONAL_CFLAGS)CFLAGS247,8071
+CPPFLAGS = $(CPPUTEST_CPPFLAGS) $(CPPUTEST_ADDITIONAL_CPPFLAGS)CPPFLAGS248,8129
+CXXFLAGS = $(CPPUTEST_CXXFLAGS) $(CPPUTEST_ADDITIONAL_CXXFLAGS)CXXFLAGS249,8193
+LDFLAGS = $(CPPUTEST_LDFLAGS) $(CPPUTEST_ADDITIONAL_LDFLAGS)LDFLAGS250,8257
 
 C:\work\workspace\EmbeddedTddWorkshop\CppUTest\CppUTest.mak,2043
 CFG=CppUTest - Win32 DebugCFG3,94
@@ -2955,19 +2959,20 @@ C:\work\workspace\EmbeddedTddWorkshop\CppUTest\scripts\templates\ClassNameCIoDri
 TEST_GROUP(ClassName)TEST_GROUP9,163
 TEST(ClassName, Create)TEST24,349
 
-C:\work\workspace\EmbeddedTddWorkshop\CppUTest\scripts\templates\ClassNameCMultipleInstance.c,240
-struct ClassNameClassName6,94
-    int placeHolderForHiddenStructElements;placeHolderForHiddenStructElements8,115
-ClassName* ClassName_Create(void)ClassName_Create11,166
-void ClassName_Destroy(ClassName* self)ClassName_Destroy18,321
+C:\work\workspace\EmbeddedTddWorkshop\CppUTest\scripts\templates\ClassNameCMultipleInstance.c,279
+typedef struct _ClassName_ClassName6,94
+    int placeHolderForHiddenStructElements;placeHolderForHiddenStructElements8,124
+} _ClassName;_ClassName9,169
+ClassName ClassName_Create(void)ClassName_Create11,186
+void ClassName_Destroy(ClassName self)ClassName_Destroy17,301
 
-C:\work\workspace\EmbeddedTddWorkshop\CppUTest\scripts\templates\ClassNameCMultipleInstance.h,94
+C:\work\workspace\EmbeddedTddWorkshop\CppUTest\scripts\templates\ClassNameCMultipleInstance.h,97
 #define D_ClassName_HD_ClassName_H2,23
-typedef struct ClassName ClassName;ClassName10,258
+typedef struct _ClassName * ClassName;ClassName10,258
 
 C:\work\workspace\EmbeddedTddWorkshop\CppUTest\scripts\templates\ClassNameCMultipleInstanceTest.cpp,75
 TEST_GROUP(ClassName)TEST_GROUP9,143
-TEST(ClassName, Create)TEST24,353
+TEST(ClassName, Create)TEST24,352
 
 C:\work\workspace\EmbeddedTddWorkshop\CppUTest\scripts\templates\ClassNameCPolymorphic.c,248
 typedef struct ClassNameClassName6,94
@@ -3041,7 +3046,7 @@ TEST(ClassName, Create)TEST24,349
 
 C:\work\workspace\EmbeddedTddWorkshop\CppUTest\scripts\UnityTemplates\ClassNameCMultipleInstanceTest.cpp,75
 TEST_GROUP(ClassName)TEST_GROUP9,143
-TEST(ClassName, Create)TEST24,353
+TEST(ClassName, Create)TEST24,352
 
 C:\work\workspace\EmbeddedTddWorkshop\CppUTest\scripts\UnityTemplates\ClassNameCTest.cpp,75
 TEST_GROUP(ClassName)TEST_GROUP9,143

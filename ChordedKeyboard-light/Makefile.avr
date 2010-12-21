@@ -52,7 +52,7 @@ elf: $(OBJS) $(CUT_OBJS) $(CPP_OBJS)
 	@echo 'Finished building target: $(TARGET)'
 	@echo ' '
 
-lss: 
+lss:
 	@echo 'Invoking: AVR Create Extended Listing'
 	avr-objdump -h -S $(TARGET).elf > $(TARGET).lss
 	@echo 'Finished building: $(TARGET)'

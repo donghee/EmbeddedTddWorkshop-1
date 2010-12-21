@@ -5,7 +5,8 @@ int read_all_buttons
 enum {BUTTON_ON = 1, BUTTON_OFF = 0}; 
 
 void set_composite_wakeup(int time);
-void delay_for_composite();
+void wait_for_composite();
+void wait_for_debouncing();
 
 int any_button_pressed();
 

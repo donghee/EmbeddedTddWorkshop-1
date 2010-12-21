@@ -81,7 +81,7 @@ TEST(Keyboard2, test_one_loop)
     set_composite_wakeup(20);
     fake_buttons_on(BUTTON_ON, BUTTON_OFF, BUTTON_OFF, BUTTON_OFF, BUTTON_OFF);
     fake_set_ctime(ctime);
-    delay_for_composite();
+    wait_for_debouncing();
     ctime = get_ctime();
     LONGS_EQUAL(20, ctime);
     LONGS_EQUAL(1, read_all_buttons());
@@ -109,6 +109,28 @@ TEST(Keyboard2, test_loop_keyboard_step)
     LONGS_EQUAL(0, shd_stop);
 }
 
+TEST(Keyboard2, test_one_wait_for_composition)
+{
+    unsigned long ctime = 0;
+    set_composite_wakeup(20);
+
+    fake_buttons_on(BUTTON_ON, BUTTON_OFF, BUTTON_OFF, BUTTON_OFF, BUTTON_OFF);
+    fake_set_ctime(ctime);
+    wait_for_debouncing();    
+    LONGS_EQUAL(1, read_all_buttons());
+
+    fake_buttons_on(BUTTON_ON, BUTTON_ON, BUTTON_OFF, BUTTON_OFF, BUTTON_OFF);
+    wait_for_composite();
+    ctime = get_ctime();
+    LONGS_EQUAL(40, ctime);
+
+    fake_buttons_on(BUTTON_ON, BUTTON_ON, BUTTON_ON, BUTTON_OFF, BUTTON_OFF);
+    wait_for_composite();
+    ctime = get_ctime();
+    LONGS_EQUAL(60, ctime);
+
+}
+
 // loop_step을 mock 사용하지 않고 하는 방법 있을까?
 // TEST(Keyboard2, test_loop_step)
 // {
@@ -120,7 +142,7 @@ TEST(Keyboard2, test_loop_keyboard_step)
 //  // read all buttons
 //  // send serial
 //     mock().expectOneCall("any_button_pressed").andReturnValue(true);
-//     mock().expectOneCall("delay_for_composite");
+//     mock().expectOneCall("wait_for_composite");
 //     mock().expectOneCall("read_all_buttons").andReturnValue(keycode);
 //     mock().expectOneCall("send_serial").withParameter("code", keycode).andReturnValue(1);
 //     mock().expectOneCall("any_button_pressed").andReturnValue(false);

@@ -5,6 +5,7 @@
 
 static int wakeup_time;
 static int button_pins[MAX_BUTTON] = {1,2,3,4,5};
+static int last_key_code;
 
 static int button_to_pin(button) {
     int pin;
@@ -19,7 +20,8 @@ int is_pressed(int button) {
 }
 
 int any_button_pressed() {
-    return read_all_buttons() > 0 ? true : false;
+    last_key_code = read_all_buttons();    
+    return last_key_code > 0 ? true : false;
 }
 
 int read_all_buttons() {
@@ -46,21 +48,20 @@ void set_buttons_pin(int * btn) {
 
 }
 
-/* void set_buttons_pin(int btn1, int btn2, int btn3, int btn4, int btn5) */
-/* { */
-/*     int i; */
-/*     button_pins[0] = btn1; */
-/*     button_pins[1] = btn2; */
-/*     button_pins[2] = btn3; */
-/*     button_pins[3] = btn4; */
-/*     button_pins[4] = btn5; */
-    
-/*     for (i=0 ; i< MAX_BUTTON; i++) { */
-/*         pinMode(button_pins[i], INPUT); */
-/*     } */
-/* } */
+void wait_for_composite()
+{
+    //TODO: change wakeup_time to composite time
+    int composite_time = wakeup_time;
+    int key_code = read_all_buttons();
+    while(last_key_code  < key_code) {
+        last_key_code = key_code;
+        delay(composite_time);
+        composite_time = composite_time/2;
+        key_code = read_all_buttons();
+    }
+}
 
-void delay_for_composite()
+void wait_for_debouncing()
 {
     delay(wakeup_time);
 }
@@ -69,7 +70,8 @@ void delay_for_composite()
 int loop_keyboard_step() {
     static int key_code;
     if (any_button_pressed()) {
-        delay_for_composite();
+        wait_for_debouncing();
+        wait_for_composite();
         key_code = read_all_buttons();
         send_serial(key_code);
         while(any_button_pressed()) {}
